@@ -7197,7 +7197,9 @@
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.SET_PED_RESET_FLAG">
             <summary>
-            PED::SET_PED_RESET_FLAG(PLAYER::PLAYER_PED_ID(), 240, 1);
+            **Known values**
+            
+            PRF_PreventGoingIntoStillInVehicleState = 236 _(fanatic2.c)_
             </summary>
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.SET_PED_TO_RAGDOLL">
@@ -7453,10 +7455,7 @@
         </member>
         <member name="F:CitizenFX.Core.Native.Hash.TASK_PLAY_ANIM_ADVANCED">
             <summary>
-            ```
-            It's similar to the one above, except the first 6 floats let you specify the initial position and rotation of the task. (Ped gets teleported to the position). animTime is a float from 0.0 -&gt; 1.0, lets you start an animation from given point. The rest as in AI::TASK_PLAY_ANIM.   
-            Rotation information : rotX and rotY don't seem to have any effect, only rotZ works.  
-            ```
+            It's similar to the one above, except the first 6 floats let you specify the initial position and rotation of the task. (Ped gets teleported to the position).
             
             [Animations list](https://alexguirre.github.io/animations-list/)
             </summary>
@@ -8648,7 +8647,8 @@
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetPedResetFlag(System.Int32,System.Int32,System.Boolean)">
             <summary>
-            PED::SET_PED_RESET_FLAG(PLAYER::PLAYER_PED_ID(), 240, 1);
+            **Known values**
+            PRF_PreventGoingIntoStillInVehicleState = 236 _(fanatic2.c)_
             </summary>
         </member>
         <member name="M:CitizenFX.Core.Native.API.SetPedToRagdoll(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
@@ -8907,12 +8907,48 @@
         </member>
         <member name="M:CitizenFX.Core.Native.API.TaskPlayAnimAdvanced(System.Int32,System.String,System.String,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Int32,System.Single,System.Int32,System.Int32)">
             <summary>
-            ```
-            It's similar to the one above, except the first 6 floats let you specify the initial position and rotation of the task. (Ped gets teleported to the position). animTime is a float from 0.0 -&gt; 1.0, lets you start an animation from given point. The rest as in AI::TASK_PLAY_ANIM.
-            Rotation information : rotX and rotY don't seem to have any effect, only rotZ works.
-            ```
+            It's similar to the one above, except the first 6 floats let you specify the initial position and rotation of the task. (Ped gets teleported to the position).
             [Animations list](https://alexguirre.github.io/animations-list/)
             </summary>
+            <param name="ped">
+            The target ped
+            </param>
+            <param name="animDict">
+            Name of the animation dictionary
+            </param>
+            <param name="animName">
+            Name of the animation
+            </param>
+            <param name="posX">
+            Initial X position of the task
+            </param>
+            <param name="posY">
+            Initial Y position of the task
+            </param>
+            <param name="posZ">
+            Initial Z position of the task
+            </param>
+            <param name="rotX">
+            Initial X rotation of the task, doesn't seem to have any effect
+            </param>
+            <param name="rotY">
+            Initial Y rotation of the task, doesn't seem to have any effect
+            </param>
+            <param name="rotZ">
+            Initial Z rotation of the task
+            </param>
+            <param name="animEnterSpeed">
+            Adjust character speed to fully enter animation
+            </param>
+            <param name="animExitSpeed">
+            Adjust character speed to fully exit animation (useless `ClearPedTasksImmediately()` is called)
+            </param>
+            <param name="duration">
+            Time in milliseconds
+            </param>
+            <param name="animTime">
+            Value between 0.0 and 1.0, lets you start an animation from the given point
+            </param>
         </member>
         <member name="M:CitizenFX.Core.Native.API.TaskShootAtEntity(System.Int32,System.Int32,System.Int32,System.UInt32)">
             <summary>
