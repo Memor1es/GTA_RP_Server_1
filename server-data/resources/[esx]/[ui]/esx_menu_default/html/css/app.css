@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+
+@font-face {
+	font-family: bankgothic;
+	src: url('../fonts/bankgothic.ttf');
+}
+
+@font-face {
+	font-family: pcdown;
+	src: url('../fonts/pdown.ttf');
+}
+
+@font-face {
+  font-family: signpainter;
+  src: url('../fonts/signpainter.ttf');
+}
+
+@font-face {
+  font-family: arial;
+  src: url('../fonts/arial.ttf');
+}
+
+@font-face {
+    font-family: 'Font2';
+    src: url(https://runtime.fivem.net/temp/ChaletLondonNineteenSixty.otf?a);
+}
+
+@font-face {
+    font-family: 'Font2_cond';
+    src: url(https://runtime.fivem.net/temp/chaletcomprime-colognesixty-webfont.ttf?a);
+}
+
+.menu {
+	background-color: rgba(0,0,0,0.7);
+	font-family: 'Noto Sans TC';
+	font-size: 18px;
+	min-width: 400px;
+	color: #fff;
+	position: absolute;
+}
+
+.menu.align-left {
+	left: 40;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.menu.align-top-left {
+	left: 30;
+	top: 120;
+}
+
+.menu.align-top {
+	left: 50%;
+	top: 40;
+	transform: translate(-50%, 0);
+}
+
+.menu.align-top-right {
+	right: 10;
+	top: 40;
+}
+
+.menu.align-right {
+	right: 40;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.menu.align-bottom-right {
+	left: 30;
+	top: 120;
+}
+
+.menu.align-bottom {
+	left: 50%;
+	bottom: 40;
+	transform: translate(-50%, 0);
+}
+
+.menu.align-bottom-left {
+	left: 40;
+	bottom: 40;
+}
+
+.menu.align-center {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.menu .head {
+	text-align: center;
+	color: #42a4f5;
+	// font-family: Font2_cond;
+	font-size       : 26px;
+	height: 48px;
+	line-height     : 48px;
+}
+
+.menu .menu-items {
+	max-height: 600px;
+	overflow-y: hidden;
+}
+
+.menu .menu-items .menu-item {
+ 	font-family:  'Noto Sans TC';
+	height: 40px;
+	display: block;
+	background-color: rgba(0, 0, 0, 0.6);
+	height: 34px;
+	line-height: 34px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
+.menu .menu-items .menu-item.selected {
+  	background-image: linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,0.45));
+  	color :black;
+}
