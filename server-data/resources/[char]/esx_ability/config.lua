@@ -13,7 +13,7 @@ Config.LevelRange.mid             = 50
 
 Config.LevelRange.high            = 100
 
-Config.LevelPoint                 = {}
+Config.LevelPercent                 = {}
 
 Config.LevelPercent.low             = 10    -- <low
 
