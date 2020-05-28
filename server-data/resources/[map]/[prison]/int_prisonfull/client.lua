@@ -10,7 +10,7 @@ end)
 
 
 RegisterCommand("alarm_on", function(source, args, rawCommand)
-    local alarmIpl = GetInteriorAtCoordsWithType(1787.004,2593.1984,45.7978,"int_prison_main")
+    --[[local alarmIpl = GetInteriorAtCoordsWithType(1787.004,2593.1984,45.7978,"int_prison_main")
 
     RefreshInterior(alarmIpl)
     EnableInteriorProp(alarmIpl, "prison_alarm")
@@ -26,11 +26,18 @@ RegisterCommand("alarm_on", function(source, args, rawCommand)
                 TriggerServerEvent("int_prisonfull:setprison",is_on,GetPlayerServerId(GetPlayerPed(player)))
             end
         end
-    end)
+    end)--]]
+
+    is_on = true
+    for _,player in ipairs(GetActivePlayers()) do
+        if GetPlayerPed(player) ~= GetPlayerPed(-1) then
+            TriggerServerEvent("int_prisonfull:setprison",is_on,GetPlayerServerId(GetPlayerPed(player)))
+        end
+    end
 end, false)
 
 RegisterCommand("alarm_off", function(source, args, rawCommand)
-    local alarmIpl = GetInteriorAtCoordsWithType(1787.004,2593.1984,45.7978,"int_prison_main")
+    --[[local alarmIpl = GetInteriorAtCoordsWithType(1787.004,2593.1984,45.7978,"int_prison_main")
 
     RefreshInterior(alarmIpl)
     DisableInteriorProp(alarmIpl, "prison_alarm")
@@ -46,7 +53,14 @@ RegisterCommand("alarm_off", function(source, args, rawCommand)
                 TriggerServerEvent("int_prisonfull:setprison",is_on,GetPlayerServerId(GetPlayerPed(player)))
             end
         end
-            end)
+            end)--]]
+
+    is_on = false
+    for _,player in ipairs(GetActivePlayers()) do
+        if GetPlayerPed(player) ~= GetPlayerPed(-1) then
+            TriggerServerEvent("int_prisonfull:setprison",is_on,GetPlayerServerId(GetPlayerPed(player)))
+        end
+    end
 end, false)
 
 
