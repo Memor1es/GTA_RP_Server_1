@@ -1,4 +1,6 @@
-resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
+fx_version 'adamant'
+
+game 'gta5'
 
 description 'ability'
 
@@ -10,7 +12,7 @@ server_scripts {
   --'translation/en.lua',
   --'translation/pl.lua',
   'config.lua',
-  'server/main.lua'
+  'server/server.lua'
 }
 
 client_scripts {
@@ -19,10 +21,11 @@ client_scripts {
   --'translation/en.lua',
   --'translation/pl.lua',
   'config.lua',
-  'client/main.lua'
+  'client/client.lua'
 }
 
 exports {
   'GetAbility',
-  'GetAbilityLevel'
+  'GetAbilityLevel',
+  'parseability'
 }

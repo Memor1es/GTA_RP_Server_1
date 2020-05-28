@@ -48,6 +48,10 @@ function GetAbilityLevel()
 	return ability_level
 end
 
+function parseability()
+    return ability_level
+end
+
 function CheckAbilityRange()
     local ran = math.random(0,100)
     --ran = math.random(0,100)
