@@ -89,7 +89,8 @@ end)
 
 Citizen.CreateThread(function()
 	while true do
-		flag = TriggerServerEvent('int_prisonfull:getflag')
+        --flag = TriggerServerEvent('int_prisonfull:getflag')
+        ESX.TriggerServerCallback('int_prisonfull:getflag', function(flag)
             if flag ~= is_on then
                 if flag then
                     TriggerEvent('int_prisonfull:on')
@@ -98,7 +99,8 @@ Citizen.CreateThread(function()
                 end
             end
         
-		Citizen.Wait(1000*60)
+        Citizen.Wait(1000*10)
+        end)
 	end
 end)
 

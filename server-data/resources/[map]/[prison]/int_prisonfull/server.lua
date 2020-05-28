@@ -6,8 +6,8 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 RegisterNetEvent('int_prisonfull:setprison')
 AddEventHandler('int_prisonfull:setprison', function(flag)
     is_on = flag
-    --[[
-    for _,player in ipairs(GetActivePlayers()) do
+    
+    for _, player in ipairs(GetActivePlayers()) do
         local ped = GetPlayerPed(player)
 
         if DoesEntityExist(ped) then
@@ -18,7 +18,7 @@ AddEventHandler('int_prisonfull:setprison', function(flag)
             end
         end
     end
-    --]]
+    
 end)
 
 ESX.RegisterServerCallback('int_prisonfull:getflag', function(source, cb)
