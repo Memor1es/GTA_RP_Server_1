@@ -54,3 +54,19 @@ AddEventHandler('esx_ability:levelup', function(num)
 end)
 
 
+ESX.RegisterCommand('setability', 'admin', function(xPlayer, args, showError)
+	if DoesAbilityExist(args.job) then
+		args.playerId.TriggerEvent("esx_ability:setability",args.job)
+	else
+		showError("天賦不存在")
+	end
+end, true, {help = "設置天賦", validate = true, arguments = {
+	{name = 'playerId', help = "玩家ID", type = 'player'},
+	{name = 'ability', help = "天賦", type = 'string'}
+}})
+
+function DoesAbilityExist(job)
+    if Config.AbilityList.job then
+        return true
+    return false
+end

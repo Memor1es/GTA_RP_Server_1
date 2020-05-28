@@ -22,3 +22,15 @@ Config.LevelPercent.mid             = 30    -- low<x<mid
 Config.LevelPercent.high            = 50    -- mid<x<high
 
 Config.LevelPercent.veryhigh        = 80    -- >high
+
+Config.AbilityList                 = {}
+
+Config.AbilityList.ambulance       = true
+
+Config.AbilityList.chef       = true
+
+Config.AbilityList.gun       = true
+
+Config.AbilityList.lock       = true
+
+Config.AbilityList.mechanic       = true
