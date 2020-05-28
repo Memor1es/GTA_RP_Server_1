@@ -110,6 +110,11 @@ end)
 
 
 Citizen.CreateThread(function()
+    while true do
+        if ESX == nil then
+            Citizen.wait(0)
+        end
+    end
 	while true do
         --flag = TriggerServerEvent('int_prisonfull:getflag')
         ESX.TriggerServerCallback('int_prisonfull:getflag', function(flag)
