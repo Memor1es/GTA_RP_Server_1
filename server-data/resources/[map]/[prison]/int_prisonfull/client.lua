@@ -66,7 +66,7 @@ AddEventHandler('int_prisonfull:on', function()
         is_on = true
         --TriggerServerEvent("int_prisonfull:setprison",is_on)
     end)
-end
+end)
 
 RegisterNetEvent('int_prisonfull:off')
 AddEventHandler('int_prisonfull:off', function()
@@ -83,7 +83,7 @@ AddEventHandler('int_prisonfull:off', function()
         is_on = false
         --TriggerServerEvent("int_prisonfull:setprison",is_on)
     end)
-end
+end)
 
 
 --[[
