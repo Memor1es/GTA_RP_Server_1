@@ -25,9 +25,8 @@ ESX.RegisterServerCallback('int_prisonfull:getflag', function(source, cb)
 	cb(is_on)
 end)
 --]]
---[[
+
 RegisterNetEvent('int_prisonfull:getflag')
 AddEventHandler('int_prisonfull:getflag', function(flag)
     return is_on
 end)
---]]
