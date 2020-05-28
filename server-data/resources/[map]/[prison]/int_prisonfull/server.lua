@@ -28,3 +28,7 @@ AddEventHandler('int_prisonfull:getflag', function(flag)
     return is_on
 end)
 
+RegisterNetEvent('int_prisonfull:setflag')
+AddEventHandler('int_prisonfull:setflag', function(flag)
+    is_on = flag
+end)

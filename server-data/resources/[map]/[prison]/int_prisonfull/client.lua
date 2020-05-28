@@ -29,9 +29,11 @@ RegisterCommand("alarm_on", function(source, args, rawCommand)
     end)--]]
 
     is_on = true
-    for _,player in ipairs(GetActivePlayers()) do
-        TriggerServerEvent("int_prisonfull:setprison",is_on,GetPlayerServerId(GetPlayerPed(player)))
-    end
+    --[[for _,player in ipairs(GetActivePlayers()) do
+        TriggerServerEvent("int_prisonfull:setprison",is_on,GetPlayerServerId(GetPlayerPed(player))
+    end--]]
+    TriggerServerEvent("int_prisonfull:setflag",is_on)
+    ESX.ShowNotification("警報將在15秒內啟動")
 end, false)
 
 RegisterCommand("alarm_off", function(source, args, rawCommand)
@@ -54,9 +56,11 @@ RegisterCommand("alarm_off", function(source, args, rawCommand)
             end)--]]
 
     is_on = false
-    for _,player in ipairs(GetActivePlayers()) do
+    --[[for _,player in ipairs(GetActivePlayers()) do
         TriggerServerEvent("int_prisonfull:setprison",is_on,GetPlayerServerId(GetPlayerPed(player))
-    end
+    end--]]
+    TriggerServerEvent("int_prisonfull:setflag",is_on)
+    ESX.ShowNotification("警報將在15秒內停止")
 end, false)
 
 
