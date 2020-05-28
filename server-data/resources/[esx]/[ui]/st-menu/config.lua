@@ -43,7 +43,7 @@ rootMenuConfig =  {
         enableMenu = function()
         fuck = exports["esx_ambulancejob"]:GetDeath()
         ability = exports["esx_ability"]:GetAbility()
-            if ability ~= "ambulance" and not fuck then
+            if ability == "ambulance" and not fuck then
                 return true
             end
         end,
@@ -57,7 +57,7 @@ rootMenuConfig =  {
         enableMenu = function()
         fuck = exports["esx_ambulancejob"]:GetDeath()
         ability = exports["esx_ability"]:GetAbility()
-            if ability ~= "chef" and not fuck then
+            if ability == "chef" and not fuck then
                 return true
             end
         end,
@@ -71,7 +71,7 @@ rootMenuConfig =  {
         enableMenu = function()
         fuck = exports["esx_ambulancejob"]:GetDeath()
         ability = exports["esx_ability"]:GetAbility()
-            if ability ~= "mechanic" and not fuck then
+            if ability == "mechanic" and not fuck then
                 return true
             end
         end,
@@ -85,7 +85,7 @@ rootMenuConfig =  {
         enableMenu = function()
         fuck = exports["esx_ambulancejob"]:GetDeath()
         ability = exports["esx_ability"]:GetAbility()
-            if ability ~= "lock" and not fuck then
+            if ability == "lock" and not fuck then
                 return true
             end
         end,
@@ -99,7 +99,7 @@ rootMenuConfig =  {
         enableMenu = function()
         fuck = exports["esx_ambulancejob"]:GetDeath()
         ability = exports["esx_ability"]:GetAbility()
-            if ability ~= "gun" and not fuck then
+            if ability == "gun" and not fuck then
                 return true
             end
         end,

@@ -55,8 +55,8 @@ end)
 
 
 ESX.RegisterCommand('setability', 'admin', function(xPlayer, args, showError)
-	if DoesAbilityExist(args.job) then
-		args.playerId.TriggerEvent("esx_ability:setability",args.job)
+	if DoesAbilityExist(args.ability) then
+		xPlayer.triggerEvent("esx_ability:setability",args.ability)
 	else
 		showError("天賦不存在")
 	end
@@ -66,7 +66,8 @@ end, true, {help = "設置天賦", validate = true, arguments = {
 }})
 
 function DoesAbilityExist(job)
-    if Config.AbilityList.job then
+    if Config.AbilityList[job] then
         return true
+    end
     return false
 end

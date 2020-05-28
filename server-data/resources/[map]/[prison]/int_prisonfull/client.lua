@@ -112,7 +112,7 @@ end)
 Citizen.CreateThread(function()
     while true do
         if ESX == nil then
-            Citizen.wait(0)
+            Citizen.Wait(0)
         end
     end
 	while true do
