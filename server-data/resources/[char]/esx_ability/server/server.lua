@@ -15,11 +15,11 @@ AddEventHandler('esx_ability:checkability', function()
             ['@identifier'] = xPlayer.identifier
         }, function(result)
             if result[1].ability ~= nil then
-                xPlayer.TriggerEvent("esx_ability:setability",result[1].ability)
+                xPlayer.triggerEvent("esx_ability:setability",result[1].ability)
             end
 
             if result[1].ability_level ~= nil then
-                xPlayer.TriggerEvent("esx_ability:setlevel",result[1].ability_level)
+                xPlayer.triggerEvent("esx_ability:setlevel",result[1].ability_level)
             end
         end)
     end
