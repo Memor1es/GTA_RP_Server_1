@@ -86,7 +86,7 @@ AddEventHandler('int_prisonfull:off', function()
 end
 
 
-
+--[[
 Citizen.CreateThread(function()
 	while true do
 		flag = TriggerServerEvent('int_prisonfull:getflag')
@@ -102,3 +102,4 @@ Citizen.CreateThread(function()
 	end
 end)
 
+--]]
