@@ -10,7 +10,7 @@ server_scripts {
   --'translation/en.lua',
   --'translation/pl.lua',
   'config.lua',
-  'server/main.lua',
+  'server/main.lua'
 }
 
 client_scripts {
@@ -19,7 +19,7 @@ client_scripts {
   --'translation/en.lua',
   --'translation/pl.lua',
   'config.lua',
-  'client/main.lua',
+  'client/main.lua'
 }
 
 exports {
