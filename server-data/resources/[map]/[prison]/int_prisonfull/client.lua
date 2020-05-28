@@ -30,9 +30,7 @@ RegisterCommand("alarm_on", function(source, args, rawCommand)
 
     is_on = true
     for _,player in ipairs(GetActivePlayers()) do
-        if GetPlayerPed(player) ~= GetPlayerPed(-1) then
-            TriggerServerEvent("int_prisonfull:setprison",is_on,GetPlayerServerId(GetPlayerPed(player)))
-        end
+        TriggerServerEvent("int_prisonfull:setprison",is_on,GetPlayerServerId(GetPlayerPed(player)))
     end
 end, false)
 
@@ -57,9 +55,7 @@ RegisterCommand("alarm_off", function(source, args, rawCommand)
 
     is_on = false
     for _,player in ipairs(GetActivePlayers()) do
-        if GetPlayerPed(player) ~= GetPlayerPed(-1) then
-            TriggerServerEvent("int_prisonfull:setprison",is_on,GetPlayerServerId(GetPlayerPed(player)))
-        end
+        TriggerServerEvent("int_prisonfull:setprison",is_on,GetPlayerServerId(GetPlayerPed(player))
     end
 end, false)
 
