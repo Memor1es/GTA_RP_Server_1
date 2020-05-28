@@ -1,12 +1,13 @@
 local is_on = false
-ESX = nil
-
+--ESX = nil
+--[[
 Citizen.CreateThread(function()
 	while ESX == nil do
 		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 		Citizen.Wait(0)
 	end
 end)
+--]]
 
 RegisterCommand("alarm_on", function(source, args, rawCommand)
     local alarmIpl = GetInteriorAtCoordsWithType(1787.004,2593.1984,45.7978,"int_prison_main")
@@ -40,7 +41,7 @@ RegisterCommand("alarm_off", function(source, args, rawCommand)
     end)
 end, false)
 
-
+--[[
 RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function(playerData)
     ESX.TriggerServerCallback('int_prisonfull:getflag', function(flag)
@@ -100,3 +101,5 @@ Citizen.CreateThread(function()
 		Citizen.Wait(1000*60)
 	end
 end)
+
+--]]
