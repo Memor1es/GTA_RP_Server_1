@@ -49,7 +49,7 @@ AddEventHandler('esx:playerLoaded', function(playerData)
             TriggerEvent('int_prisonfull:on')
         end
     end)
-end
+end)
 
 RegisterNetEvent('int_prisonfull:on')
 AddEventHandler('int_prisonfull:on', function()
