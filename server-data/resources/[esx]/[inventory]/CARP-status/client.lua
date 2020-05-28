@@ -34,6 +34,22 @@ Citizen.CreateThread(function()
         TriggerEvent('esx_status:getStatus', 'drunk', function(status)
             drunk = status.val / 10000
         end)
+        --gift tree
+        TriggerEvent('esx_status:getStatus', 'str', function(status)
+            str = status.val / 10000
+        end)
+
+        TriggerEvent('esx_status:getStatus', 'agi', function(status)
+            agi = status.val / 10000
+        end)
+
+        TriggerEvent('esx_status:getStatus', 'int', function(status)
+            int = status.val / 10000
+        end)
+
+        TriggerEvent('esx_status:getStatus', 'luk', function(status)
+            luk = status.val / 10000
+        end)
 
 
         SendNUIMessage({
@@ -45,6 +61,10 @@ Citizen.CreateThread(function()
             food = food,
             drugs = drugs,
             drunk = drunk,
+            str = str,
+            agi = agi,
+            int = int,
+            luk = luk
         });
 
   end
