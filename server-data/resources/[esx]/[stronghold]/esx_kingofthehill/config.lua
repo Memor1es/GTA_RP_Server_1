@@ -1,6 +1,6 @@
 Config = {}
-Config.BlockEmergencyServices = true -- Allow/Disallow Police & EMS from capturing
-Config.RequiredCapturersMin = 3 -- Minimum members required for capture group
+Config.BlockEmergencyServices = false -- Allow/Disallow Police & EMS from capturing
+Config.RequiredCapturersMin = 1 -- Minimum members required for capture group
 Config.RequiredCapturersMax = 5 -- Max allowed number of capturers in a group
 Config.RequiredCaptureDistance = 20.0 -- How clost to capture point you need to be to start a capture
 Config.CaptureBreakingDistance = 50.0 -- How far you can go without leaving the capturing
@@ -11,7 +11,7 @@ Config.ThreeOwnerTime = 30 * 600 -- 30 minutes - Time it takes to capture when 3
 Config.FourOwnerTime = 20 * 600 -- 20 minutes - Time it takes to capture when 4 of the owners are online
 Config.FiveOwnerTime = 15 * 600 -- 15 minutes - Time it takes to capture when 5 of the owners are online
 Config.PayoutInterval = 12 * 60000 -- 12 minutes - Payout interval
-Config.PayoutItem = 'marijuana' -- Reward item (make sure whatever you reward, is in the DB)
+Config.PayoutItem = 'weed' -- Reward item (make sure whatever you reward, is in the DB)
 Config.PayoutCount = 10 -- Count of item reward
 Config.CoolDownSetting = 300 * 60000 -- 5 hours - Cooldown time afer successful capture before another capture can be started
 Config.CoolDown = 0 -- Gets set on capture - default must be 0
