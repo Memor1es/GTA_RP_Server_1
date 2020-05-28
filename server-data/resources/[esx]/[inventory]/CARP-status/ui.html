@@ -1,0 +1,258 @@
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<style>
+			#heal {
+				position:absolute;
+				left: 26.55%;
+				top:27%;
+				margin: 1.12%;
+				margin-left: 2.0%;
+				width: 7.1%;
+				height: 1%;
+				padding:0px;
+				text-align: center;
+				border-style: solid;
+				border-width: 3px;
+				/*border-color: black;*/
+				float:left;
+				background-color:#696969;
+				opacity: 1;
+				border: 1px solid rgba(0, 0, 0, 0.3) !important;		
+			}
+			#armor {
+				position:absolute;
+				left: 16.70%;
+				top: 48%;
+				margin: 1.12%;
+				margin-left: 11.73%;
+				width: 7.1%;
+				height: 1%;
+				padding:0px;
+				text-align: center;
+				border-style: solid;
+				border-width: 3px;
+				/*border-color: black;*/
+				background-color:#696969;
+				opacity: 1;
+				border: 1px solid rgba(0, 0, 0, 0.3) !important;		
+			}
+			
+			
+			#food {
+				position:absolute;
+				left: 26.55%;
+				top:33%;;
+				margin: 1.12%;
+				margin-left: 2%;
+				width: 7.1%;
+				height: 1%;
+				padding:0px;
+				text-align: center;
+				border-style: solid;
+				border-width: 3px;
+				/*border-color: black;*/
+				background-color:#696969;
+				opacity: 1;
+				border: 1px solid rgba(0, 0, 0, 0.3) !important;					
+			}
+			#thirst {
+				position:absolute;
+				left: 23.75%;
+				top:30%;
+				margin: 1.12%;
+				margin-left: 4.83%;
+				width: 7.1%;
+				height: 1%;
+				padding:0px;
+				text-align: center;
+				border-style: solid;
+				border-width: 3px;
+				/*border-color: black;*/
+				float:left;
+				background-color:#696969;
+				opacity: 0.9;
+				border: 1px solid rgba(0, 0, 0, 0.3) !important;						
+			}
+			#drugs {
+				position:absolute;
+				left: 15.05%;
+				top:51%;
+				margin: 1.12%;
+				margin-left: 13.32%;
+				width: 7.1%;
+				height: 1%;
+				padding:0px;
+				text-align: center;
+				border-style: solid;
+				border-width: 3px;
+				/*border-color: black;*/
+				float:left;
+				background-color:#696969;
+				opacity: 1;
+				border: 1px solid rgba(0, 0, 0, 0.3) !important;						
+			}
+			#drunk {
+				position:absolute;
+				left: 17.90%;
+				top:54.0%;
+				margin: 1.12%;
+				margin-left: 10.50%;
+				width: 7.1%;
+				height: 1%;
+				padding:0px;
+				text-align: center;
+				border-style: solid;
+				border-width: 3px;
+				/*border-color: black;*/
+				float:left;
+				background-color:#696969;
+				opacity: 1;
+				border: 1px solid rgba(0, 0, 0, 0.3) !important;						
+			}
+
+		
+
+			#box, #boxArmor, #boxFood, #boxThirst, #boxDrugs, #boxDrunk{
+				background: #12a402;
+				width: 100%;
+				height: 100%;
+			}
+
+			#box{
+
+				background: #25872c; /* Old browsers */
+background: -moz-linear-gradient(45deg, #25872c 0%, #40ce40 11%, #4bea55 24%, #4cef57 27%, #39bf39 42%, #62c99c 50%, #3ac172 51%, #40d17c 59%, #4bed6e 71%, #4df27c 71%, #39bf85 84%, #268935 100%); 
+background: -webkit-linear-gradient(45deg, #25872c 0%,#40ce40 11%,#4bea55 24%,#4cef57 27%,#39bf39 42%,#62c99c 50%,#3ac172 51%,#40d17c 59%,#4bed6e 71%,#4df27c 71%,#39bf85 84%,#268935 100%); 
+background: linear-gradient(45deg, #25872c 0%,#40ce40 11%,#4bea55 24%,#4cef57 27%,#39bf39 42%,#62c99c 50%,#3ac172 51%,#40d17c 59%,#4bed6e 71%,#4df27c 71%,#39bf85 84%,#268935 100%);
+			}
+
+
+			#boxArmor {
+background: #292a2d; /* Old browsers */
+background: -moz-linear-gradient(45deg, #292a2d 0%, #000000 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #292a2d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #292a2d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			}
+
+			#boxThirst {
+				/*background: #1085a3;*/
+				background: #26558b; /* Old browsers */
+background: -moz-linear-gradient(45deg, #26558b 0%, #419ad6 11%, #4bb8f0 24%, #4bb8f0 27%, #3a8bc2 42%, #6199c7 50%, #3a84c3 51%, #419ad6 59%, #4bb8f0 71%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%); 
+background: -webkit-linear-gradient(45deg, #26558b 0%,#419ad6 11%,#4bb8f0 24%,#4bb8f0 27%,#3a8bc2 42%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%); 
+background: linear-gradient(45deg, #26558b 0%,#419ad6 11%,#4bb8f0 24%,#4bb8f0 27%,#3a8bc2 42%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%);
+			}
+
+			#boxFood {
+				background: #894c26; /* Old browsers */
+background: -moz-linear-gradient(45deg, #894c26 0%, #cc7641 11%, #ea744d 24%, #eda14b 27%, #bf8039 42%, #cc9b63 50%, #c1833c 51%, #ce8c40 59%, #ea884b 71%, #ea954b 72%, #bc7638 84%, #8c5d27 100%); 
+background: -webkit-linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27%,#bf8039 42%,#cc9b63 50%,#c1833c 51%,#ce8c40 59%,#ea884b 71%,#ea954b 72%,#bc7638 84%,#8c5d27 100%); 
+background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27%,#bf8039 42%,#cc9b63 50%,#c1833c 51%,#ce8c40 59%,#ea884b 71%,#ea954b 72%,#bc7638 84%,#8c5d27 100%); 
+			}						
+
+			#boxDrugs {
+				background: #afbf00;
+			}
+
+			#boxDrunk {
+				background: #b900fe;
+			}
+
+			
+			#emojiPos {
+				position:relative;
+				left:-74%;
+				top:-350%;
+			}
+			
+			#alive {
+				position:absolute;
+			    border-style: solid;
+				border-width: 3px;	
+				border-color: green;					
+				left: 27%;
+				top:60.7%;
+				width:8.4%;
+			}
+
+			body {
+         		overflow:hidden;
+       		}
+
+			#heal, #armor, #food, #thirst, #drugs, #drunk, #diving {
+			background-color:rgba(44, 62, 80, 1) !important;
+			}       		
+
+		</style>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<script>
+
+				$(function() {
+					var $debug = $("#debug");
+					var $heal = $("#heal");
+					var $box = $("#box");
+					var $boxArmor = $("#boxArmor");
+					var $boxFood = $("#boxFood");
+					var $boxThirst = $("#boxThirst");
+
+					var $boxDrugs = $("#boxDrugs");
+					var $boxDrunk = $("#boxDrunk");
+
+					var $drunk = $("#drunk");
+					var $drugs = $("#drugs");
+					
+					var isAlive = true;
+
+					window.addEventListener('message', function(event){
+						if (event.data.stats) {
+							$box.css("width", (event.data.heal-100)+"%");
+							$boxArmor.css("width", (event.data.armor)+"%");
+							$boxFood.css("width", (event.data.food)+"%");
+							$boxThirst.css("width", (event.data.thirst)+"%");
+							$boxDrugs.css("width", (event.data.drugs)+"%");
+							$boxDrunk.css("width", (event.data.drunk)+"%");
+							console.log(event.data.heal-100)
+							if ((event.data.heal-100) > 0){
+								if (!isAlive) {
+									$('#alive').attr('src', "./live.gif");	
+									isAlive = true;
+								}
+							} else if (isAlive){
+								$('#alive').attr('src', "./dead.gif");
+								isAlive = false;
+							}
+						}
+
+
+						if (event.data.update) {
+						 	$('#heal').css({'opacity' : event.data.opacity})
+						 	$('#armor').css({'opacity' : event.data.opacity})
+						 	$('#food').css({'opacity' : event.data.opacity})
+						 	$('#thirst').css({'opacity' : event.data.opacity})
+						 	$('#drugs').css({'opacity' : event.data.opacity})
+						 	$('#drunk').css({'opacity' : event.data.opacity})
+						 	$('#box').css({'opacity' : event.data.opacity})
+						 	$('#boxArmor').css({'opacity' : event.data.opacity})
+						 	$('#boxFood').css({'opacity' : event.data.opacity})
+						 	$('#boxThirst').css({'opacity' : event.data.opacity})
+						 	$('#boxDrugs').css({'opacity' : event.data.opacity})
+						 	$('#boxDrunk').css({'opacity' : event.data.opacity})
+							$('#alive').css({'opacity' : event.data.opacity})
+						}
+					});
+				});
+
+		</script>
+		
+	</head>
+	<body>
+			<img id="alive" src="./live.gif"></img>
+			<div id="heal"><div id="box"></div><p id="emojiPos">💚</p></div>
+			<div id="armor"><div id="boxArmor"></div><p id="emojiPos">🛡️</p></div>
+			<div id="food"><div id="boxFood"></div><p id="emojiPos">🥪</p></div>
+			<div id="thirst"><div id="boxThirst"></div><p id="emojiPos">🍸</p></div>
+			<div id="drugs"><div id="boxDrugs"></div><p id="emojiPos">🍄</p></div>
+			<div id="drunk"><div id="boxDrunk"></div><p id="emojiPos">🍻</p></div>
+	</body>
+</html>

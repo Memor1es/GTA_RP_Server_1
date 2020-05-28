@@ -1,4 +1,4 @@
-USE `essentialmode`;
+USE `es_extended`;
 
 CREATE TABLE `owned_vehicles` (
 	`owner` varchar(22) NOT NULL,
