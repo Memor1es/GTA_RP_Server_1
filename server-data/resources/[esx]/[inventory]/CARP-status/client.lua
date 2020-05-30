@@ -14,7 +14,7 @@ local voice = false
 Citizen.CreateThread(function()
 	TriggerEvent("templarrp_status:desativar")
   while true do
-    Citizen.Wait(2000)
+    Citizen.Wait(1000*15)
         local ped = PlayerPedId()
         local health = GetEntityHealth(ped)
         local armor = GetPedArmour(ped)
@@ -38,19 +38,19 @@ Citizen.CreateThread(function()
         end)
         --gift tree
         TriggerEvent('esx_status:getStatus', 'str', function(status)
-            str = status.val / 10000
+            str = status.val 
         end)
 
         TriggerEvent('esx_status:getStatus', 'agi', function(status)
-            agi = status.val / 10000
+            agi = status.val 
         end)
 
         TriggerEvent('esx_status:getStatus', 'int', function(status)
-            int = status.val / 10000
+            int = status.val 
         end)
 
         TriggerEvent('esx_status:getStatus', 'luk', function(status)
-            luk = status.val / 10000
+            luk = status.val 
         end)
 
         for k,v in ipairs(Config.AbilityList) do

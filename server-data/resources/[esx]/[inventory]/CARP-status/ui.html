@@ -185,6 +185,55 @@
 				opacity: 1;
 				border: 1px solid rgba(0, 0, 0, 0.3) !important;					
 			}
+
+			#value {
+				color: white;
+				position:absolute;
+				left: 3.55%;
+				top:40%;
+				width: 7.1%;
+				height: 1%;
+				padding:0px;
+				text-align: center;
+				
+				
+				/*border-color: black;*/
+				
+				opacity: 1;
+								
+			}
+
+			#btn {
+				color: white;
+				position:absolute;
+				left: 3.55%;
+				top:43%;
+				width: 7.1%;
+				height: 1%;
+				padding:0px;
+				text-align: center;
+				z-index: 999;
+				
+				/*border-color: black;*/
+				
+				opacity: 1;
+								
+			}
+
+			#area {
+				position:absolute;
+				left: 3.55%;
+				top:50%;
+				width: 7.1%;
+				padding:0px;
+				text-align: center;
+				z-index: 999;
+				
+				/*border-color: black;*/
+				
+				opacity: 1;
+								
+			}
 		
 
 			#box, #boxArmor, #boxFood, #boxThirst, #boxDrugs, #boxDrunk{
@@ -260,9 +309,10 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 				width : 0%
 			}
 
-			#value {
-				display : none
+			th{
+				color: white;
 			}
+			
 			
 			#emojiPos {
 				position:relative;
@@ -293,12 +343,11 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 			<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
 		<script>
 
-			function ShowValue(x) {
-			x.children[0].style.display = "inline"
+			function test()
+			{
+				console.log("test")
 			}
-			function HideValue(x) {
-			x.children[0].style.display = "none"
-			}
+
 				$(function() {
 					var $debug = $("#debug");
 					var $heal = $("#heal");
@@ -319,8 +368,22 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 					var $boxLuk = $("#boxLuk");
 
 					var $value = $("#value");
+
+					/*var $str = $("#str");
+					$str.click(function(){
+						$("#value").show()
+					})*/
 					
 					var isAlive = true;
+					$(document).ready(function () {
+						//console.log('ready')
+						$("#btn").click(function () {
+							console.log("test")
+							print("haha")
+							$("#btn-learn").html = "123"
+						});
+						
+					})
 
 					window.addEventListener('message', function(event){
 						if (event.data.stats) {
@@ -336,7 +399,7 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 							$boxAgi.css("width", (event.data.agi)+"%");
 							$boxLuk.css("width", (event.data.luk)+"%");
 
-							$value.text = event.data.str;
+							//$value.text = 50;
 							//console.log(event.data.heal-100)
 							if ((event.data.heal-100) > 0){
 								if (!isAlive) {
@@ -374,8 +437,12 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 						 	$('#boxAgi').css({'opacity' : event.data.opacity})
 						 	$('#boxInt').css({'opacity' : event.data.opacity})
 						 	$('#boxLuk').css({'opacity' : event.data.opacity})
+
+							$('#value').css({'opacity' : event.data.opacity})
 							 
 						}
+
+						
 					});
 				});
 
@@ -390,9 +457,16 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 			<div id="thirst"><div id="boxThirst"></div><p id="emojiPos">🍸</p></div>
 			<div id="drugs"><div id="boxDrugs"></div><p id="emojiPos">🍄</p></div>
 			<div id="drunk"><div id="boxDrunk"></div><p id="emojiPos">🍻</p></div>
-			<div id="str"><div id="boxStr" onmouseover="ShowValue(this)" onmouseout="HideValue(this)"><p id ="value"></p></div><p id="emojiPos">💪</p></div>
+			<div id="str"><div id="boxStr" ></div><p id="emojiPos" >💪</p></div>
 			<div id="agi"><div id="boxAgi"></div><p id="emojiPos">🏃</p></div>
 			<div id="int"><div id="boxInt"></div><p id="emojiPos">🧠</p></div>
 			<div id="luk"><div id="boxLuk"></div><p id="emojiPos">🍀</p></div>
+			<div id="value"><table style="width:100%"><tr><th>力:</th><th id = "val_str">0</th><th>敏:</th><th id = "val_agi">0</th><th>智:</th><th id = "val_int">0</th><th>幸:</th><th id = "val_luk">0</th></tr></table></div>
+
+			<div id="btn"><button id="btn-learn">learn</button></div>
+			<textarea id="area"  rows="10" cols="50">
+				At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+			</textarea>
+			
 	</body>
 </html>
