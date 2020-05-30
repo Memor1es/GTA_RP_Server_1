@@ -20,6 +20,7 @@
 				opacity: 1;
 				border: 1px solid rgba(0, 0, 0, 0.3) !important;		
 			}
+
 			#armor {
 				position:absolute;
 				left: 16.70%;
@@ -111,9 +112,88 @@
 				border: 1px solid rgba(0, 0, 0, 0.3) !important;						
 			}
 
+			#str {
+				position:absolute;
+				left: 3.55%;
+				top:27%;
+				margin: 1.12%;
+				margin-left: 2.0%;
+				width: 7.1%;
+				height: 1%;
+				padding:0px;
+				text-align: center;
+				border-style: solid;
+				border-width: 3px;
+				/*border-color: black;*/
+				float:left;
+				background-color:#696969;
+				opacity: 1;
+				border: 1px solid rgba(0, 0, 0, 0.3) !important;		
+			}
+
+			#agi {
+				position:absolute;
+				left: 3.55%;
+				top:30%;
+				margin: 1.12%;
+				margin-left: 2.0%;
+				width: 7.1%;
+				height: 1%;
+				padding:0px;
+				text-align: center;
+				border-style: solid;
+				border-width: 3px;
+				/*border-color: black;*/
+				float:left;
+				background-color:#696969;
+				opacity: 0.9;
+				border: 1px solid rgba(0, 0, 0, 0.3) !important;						
+			}
+
+			#int {
+				position:absolute;
+				left: 3.55%;
+				top:33%;;
+				margin: 1.12%;
+				margin-left: 2%;
+				width: 7.1%;
+				height: 1%;
+				padding:0px;
+				text-align: center;
+				border-style: solid;
+				border-width: 3px;
+				/*border-color: black;*/
+				background-color:#696969;
+				opacity: 1;
+				border: 1px solid rgba(0, 0, 0, 0.3) !important;					
+			}
+
+			#luk {
+				position:absolute;
+				left: 3.55%;
+				top:36%;;
+				margin: 1.12%;
+				margin-left: 2%;
+				width: 7.1%;
+				height: 1%;
+				padding:0px;
+				text-align: center;
+				border-style: solid;
+				border-width: 3px;
+				/*border-color: black;*/
+				background-color:#696969;
+				opacity: 1;
+				border: 1px solid rgba(0, 0, 0, 0.3) !important;					
+			}
 		
 
 			#box, #boxArmor, #boxFood, #boxThirst, #boxDrugs, #boxDrunk{
+				background: #12a402;
+				width: 100%;
+				height: 100%;
+			}
+
+			#boxStr, #boxAgi, #boxInt, #boxLuk{
 				background: #12a402;
 				width: 100%;
 				height: 100%;
@@ -152,12 +232,37 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 
 			#boxDrugs {
 				background: #afbf00;
+				width : 0%
 			}
 
 			#boxDrunk {
 				background: #b900fe;
+				width : 0%
 			}
 
+			#boxStr {
+				background: #db9719;
+				width : 0%
+			}
+
+			#boxAgi {
+				background: #0deaf1;
+				width : 0%
+			}
+
+			#boxInt {
+				background: #cb0df1;
+				width : 0%
+			}
+
+			#boxLuk {
+				background: #0df118;
+				width : 0%
+			}
+
+			#value {
+				display : none
+			}
 			
 			#emojiPos {
 				position:relative;
@@ -188,6 +293,12 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 			<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
 		<script>
 
+			function ShowValue(x) {
+			x.children[0].style.display = "inline"
+			}
+			function HideValue(x) {
+			x.children[0].style.display = "none"
+			}
 				$(function() {
 					var $debug = $("#debug");
 					var $heal = $("#heal");
@@ -201,6 +312,13 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 
 					var $drunk = $("#drunk");
 					var $drugs = $("#drugs");
+
+					var $boxStr = $("#boxStr");
+					var $boxAgi = $("#boxAgi");
+					var $boxInt = $("#boxInt");
+					var $boxLuk = $("#boxLuk");
+
+					var $value = $("#value");
 					
 					var isAlive = true;
 
@@ -212,6 +330,13 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 							$boxThirst.css("width", (event.data.thirst)+"%");
 							$boxDrugs.css("width", (event.data.drugs)+"%");
 							$boxDrunk.css("width", (event.data.drunk)+"%");
+
+							$boxStr.css("width", (event.data.str)+"%");
+							$boxInt.css("width", (event.data.int)+"%");
+							$boxAgi.css("width", (event.data.agi)+"%");
+							$boxLuk.css("width", (event.data.luk)+"%");
+
+							$value.text = event.data.str;
 							//console.log(event.data.heal-100)
 							if ((event.data.heal-100) > 0){
 								if (!isAlive) {
@@ -239,6 +364,17 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 						 	$('#boxDrugs').css({'opacity' : event.data.opacity})
 						 	$('#boxDrunk').css({'opacity' : event.data.opacity})
 							$('#alive').css({'opacity' : event.data.opacity})
+
+							$('#str').css({'opacity' : event.data.opacity})
+						 	$('#agi').css({'opacity' : event.data.opacity})
+						 	$('#int').css({'opacity' : event.data.opacity})
+						 	$('#luk').css({'opacity' : event.data.opacity})
+
+							$('#boxStr').css({'opacity' : event.data.opacity})
+						 	$('#boxAgi').css({'opacity' : event.data.opacity})
+						 	$('#boxInt').css({'opacity' : event.data.opacity})
+						 	$('#boxLuk').css({'opacity' : event.data.opacity})
+							 
 						}
 					});
 				});
@@ -254,5 +390,9 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 			<div id="thirst"><div id="boxThirst"></div><p id="emojiPos">🍸</p></div>
 			<div id="drugs"><div id="boxDrugs"></div><p id="emojiPos">🍄</p></div>
 			<div id="drunk"><div id="boxDrunk"></div><p id="emojiPos">🍻</p></div>
+			<div id="str"><div id="boxStr" onmouseover="ShowValue(this)" onmouseout="HideValue(this)"><p id ="value"></p></div><p id="emojiPos">💪</p></div>
+			<div id="agi"><div id="boxAgi"></div><p id="emojiPos">🏃</p></div>
+			<div id="int"><div id="boxInt"></div><p id="emojiPos">🧠</p></div>
+			<div id="luk"><div id="boxLuk"></div><p id="emojiPos">🍀</p></div>
 	</body>
 </html>
