@@ -36,19 +36,19 @@ Citizen.CreateThread(function()
         end)
         --gift tree
         TriggerEvent('esx_status:getStatus', 'str', function(status)
-            str = status.val / 10000
+            str = status.val 
         end)
 
         TriggerEvent('esx_status:getStatus', 'agi', function(status)
-            agi = status.val / 10000
+            agi = status.val 
         end)
 
         TriggerEvent('esx_status:getStatus', 'int', function(status)
-            int = status.val / 10000
+            int = status.val 
         end)
 
         TriggerEvent('esx_status:getStatus', 'luk', function(status)
-            luk = status.val / 10000
+            luk = status.val 
         end)
 
 

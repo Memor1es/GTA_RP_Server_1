@@ -115,3 +115,32 @@ AddEventHandler('esx_status:loaded', function(status)
 	end)--]]
 
 end)
+
+
+RegisterNetEvent('esx_gift_tree:setstr')
+AddEventHandler('esx_gift_tree:setstr', function(value)
+	-- restore hunger & thirst
+	TriggerEvent('esx_status:set', 'str', value)
+
+end)
+
+RegisterNetEvent('esx_gift_tree:setint')
+AddEventHandler('esx_gift_tree:setint', function(value)
+	-- restore hunger & thirst
+	TriggerEvent('esx_status:set', 'int', value)
+
+end)
+
+RegisterNetEvent('esx_gift_tree:setagi')
+AddEventHandler('esx_gift_tree:setagi', function(value)
+	-- restore hunger & thirst
+	TriggerEvent('esx_status:set', 'agi', value)
+
+end)
+
+RegisterNetEvent('esx_gift_tree:setluk')
+AddEventHandler('esx_gift_tree:setluk', function(value)
+	-- restore hunger & thirst
+	TriggerEvent('esx_status:set', 'luk', value)
+
+end)
