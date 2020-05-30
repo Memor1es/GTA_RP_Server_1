@@ -374,6 +374,11 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 							$boxInt.css("width", (event.data.int)+"%");
 							$boxAgi.css("width", (event.data.agi)+"%");
 							$boxLuk.css("width", (event.data.luk)+"%");
+							
+							$('#val_str').html(event.data.str)
+							$('#val_int').html(event.data.int)
+							$('#val_agi').html(event.data.agi)
+							$('#val_luk').html(event.data.luk)
 
 							if (event.data.canlearn)
 							{
