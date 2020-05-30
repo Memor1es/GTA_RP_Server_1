@@ -14,7 +14,7 @@ local voice = false
 Citizen.CreateThread(function()
 	TriggerEvent("templarrp_status:desativar")
   while true do
-    Citizen.Wait(2000)
+    Citizen.Wait(1000*15)
         local ped = PlayerPedId()
         local health = GetEntityHealth(ped)
         local armor = GetPedArmour(ped)
