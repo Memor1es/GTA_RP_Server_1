@@ -203,22 +203,6 @@
 								
 			}
 
-			#btn {
-				color: white;
-				position:absolute;
-				left: 3.55%;
-				top:43%;
-				width: 7.1%;
-				height: 1%;
-				padding:0px;
-				text-align: center;
-				z-index: 999;
-				
-				/*border-color: black;*/
-				
-				opacity: 1;
-								
-			}
 
 			#area {
 				position:absolute;
@@ -375,15 +359,7 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 					})*/
 					
 					var isAlive = true;
-					$(document).ready(function () {
-						//console.log('ready')
-						$("#btn").click(function () {
-							console.log("test")
-							print("haha")
-							$("#btn-learn").html = "123"
-						});
-						
-					})
+					
 
 					window.addEventListener('message', function(event){
 						if (event.data.stats) {
@@ -402,12 +378,12 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 							if (event.data.canlearn)
 							{
 								console.log("hehe")
-								$('#btn').show()
+								$('#area').val(event.data.canlearn)
 								$('#area').show()
 							}
 							else
 							{
-								$('#btn').hide()
+								$('#area').val("")
 								$('#area').hide()
 							}
 							//$value.text = 50;
@@ -450,7 +426,6 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 						 	$('#boxLuk').css({'opacity' : event.data.opacity})
 
 							$('#value').css({'opacity' : event.data.opacity})
-							$('#btn').css({'opacity' : event.data.opacity})
 							$('#area').css({'opacity' : event.data.opacity})
 						}
 
@@ -475,7 +450,7 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 			<div id="luk"><div id="boxLuk"></div><p id="emojiPos">🍀</p></div>
 			<div id="value"><table style="width:100%"><tr><th>力:</th><th id = "val_str">0</th><th>敏:</th><th id = "val_agi">0</th><th>智:</th><th id = "val_int">0</th><th>幸:</th><th id = "val_luk">0</th></tr></table></div>
 
-			<div id="btn"><button id="btn-learn">learn</button></div>
+			
 			<textarea id="area"  rows="10" cols="50">
 				At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
 			</textarea>
