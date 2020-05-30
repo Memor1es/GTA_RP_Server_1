@@ -399,6 +399,17 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 							$boxAgi.css("width", (event.data.agi)+"%");
 							$boxLuk.css("width", (event.data.luk)+"%");
 
+							if (event.data.canlearn)
+							{
+								console.log("hehe")
+								$('#btn').show()
+								$('#area').show()
+							}
+							else
+							{
+								$('#btn').hide()
+								$('#area').hide()
+							}
 							//$value.text = 50;
 							//console.log(event.data.heal-100)
 							if ((event.data.heal-100) > 0){
@@ -439,7 +450,8 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 						 	$('#boxLuk').css({'opacity' : event.data.opacity})
 
 							$('#value').css({'opacity' : event.data.opacity})
-							 
+							$('#btn').css({'opacity' : event.data.opacity})
+							$('#area').css({'opacity' : event.data.opacity})
 						}
 
 						
