@@ -14,10 +14,12 @@ local voice = false
 Citizen.CreateThread(function()
 	TriggerEvent("templarrp_status:desativar")
   while true do
-    Citizen.Wait(2000)
+    Citizen.Wait(1000*15)
         local ped = PlayerPedId()
         local health = GetEntityHealth(ped)
         local armor = GetPedArmour(ped)
+        
+        local canlearn = {}
 
         TriggerEvent('esx_status:getStatus', 'hunger', function(status)
             food = status.val / 10000
@@ -36,36 +38,61 @@ Citizen.CreateThread(function()
         end)
         --gift tree
         TriggerEvent('esx_status:getStatus', 'str', function(status)
-            str = status.val / 10000
+            str = status.val 
         end)
 
         TriggerEvent('esx_status:getStatus', 'agi', function(status)
-            agi = status.val / 10000
+            agi = status.val 
         end)
 
         TriggerEvent('esx_status:getStatus', 'int', function(status)
-            int = status.val / 10000
+            int = status.val 
         end)
 
         TriggerEvent('esx_status:getStatus', 'luk', function(status)
-            luk = status.val / 10000
+            luk = status.val 
         end)
 
+        for k,v in ipairs(Config.AbilityList) do
+            if str>v.str and int>v.int and agi>v.agi and luk>v.luk then
+                table.insert(canlearn,k)
+            end
+        end
 
-        SendNUIMessage({
-			stats = true,
-            heal = health,
-            voiceVolume = volume,
-            armor = armor,
-            thirst = thirst,
-            food = food,
-            drugs = drugs,
-            drunk = drunk,
-            str = str,
-            agi = agi,
-            int = int,
-            luk = luk
-        });
+        if #canlearn then
+            SendNUIMessage({
+                stats = true,
+                heal = health,
+                voiceVolume = volume,
+                armor = armor,
+                thirst = thirst,
+                food = food,
+                drugs = drugs,
+                drunk = drunk,
+                str = str,
+                agi = agi,
+                int = int,
+                luk = luk
+                canlearn = canlearn
+            });
+        else
+
+            SendNUIMessage({
+                stats = true,
+                heal = health,
+                voiceVolume = volume,
+                armor = armor,
+                thirst = thirst,
+                food = food,
+                drugs = drugs,
+                drunk = drunk,
+                str = str,
+                agi = agi,
+                int = int,
+                luk = luk
+                
+            });
+        end
 
   end
 end)
