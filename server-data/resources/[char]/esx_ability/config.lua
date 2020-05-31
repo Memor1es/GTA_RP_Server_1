@@ -28,7 +28,7 @@ Config.AbilityList                 = {
     ["chef"] = true,
     ["gun"] = true,
     ["lock"] = true,
-    ["mechnic"] = true,
+    ["mechanic"] = true,
     ["none"] = true
 }
 --[[
