@@ -27,6 +27,7 @@ end)
 RegisterNetEvent('esx_ability:setability')
 AddEventHandler('esx_ability:setability', function(skill)
     ability = skill
+    TriggerServerEvent('esx_ability:setability',skill)
 end)
 
 RegisterNetEvent('esx_ability:setlevel')

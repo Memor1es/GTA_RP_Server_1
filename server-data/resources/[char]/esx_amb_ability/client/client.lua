@@ -55,6 +55,7 @@ end)
 
 RegisterNetEvent('esx_amb_ability:generateMedkit')
 AddEventHandler('esx_amb_ability:generateMedkit', function()
+    --print("hihi")
     if timer then
         ESX.shownotification("技能冷卻中")
     elseif exports["esx_ability"]:CheckAbilityRange() then

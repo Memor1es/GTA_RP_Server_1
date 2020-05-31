@@ -46,7 +46,7 @@ AddEventHandler('esx_ability:levelup', function(num)
                 xPlayer.TriggerEvent("esx_ability:setlevel",result[1].ability_level)
             end
         end)--]]
-        MySQL.Sync.execute('UPDATE user SET ability_level = ability_level + @num WHERE identifier = @identifier', {
+        MySQL.Sync.execute('UPDATE users SET ability_level = ability_level + @num WHERE identifier = @identifier', {
             ['@num'] = num,
             ['@identifier'] = xPlayer.identifier
         })
@@ -64,8 +64,26 @@ AddEventHandler('esx_ability:setlevel', function(num)
 
     if xPlayer ~= nil then
         
-        MySQL.Sync.execute('UPDATE user SET ability_level = @num WHERE identifier = @identifier', {
+        MySQL.Sync.execute('UPDATE users SET ability_level = @num WHERE identifier = @identifier', {
             ['@num'] = num,
+            ['@identifier'] = xPlayer.identifier
+        })
+    end
+end)
+
+RegisterServerEvent('esx_ability:setability')
+AddEventHandler('esx_ability:setability', function(name)
+    if ESX == nil then
+        return 
+    end
+    
+    local _source = source
+    local xPlayer = ESX.GetPlayerFromId(source)
+
+    if xPlayer ~= nil then
+        
+        MySQL.Sync.execute('UPDATE users SET ability = @name WHERE identifier = @identifier', {
+            ['@name'] = name,
             ['@identifier'] = xPlayer.identifier
         })
     end
