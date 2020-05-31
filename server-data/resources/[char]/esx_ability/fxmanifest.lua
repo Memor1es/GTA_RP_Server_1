@@ -28,5 +28,6 @@ client_scripts {
 exports {
   'GetAbility',
   'GetAbilityLevel',
-  'parseability'
+  'parseability',
+  'CheckAbilityRange'
 }

@@ -21,7 +21,7 @@ end)
 
 RegisterNetEvent('esx_amb_ability:generateBandage')
 AddEventHandler('esx_amb_ability:generateBandage', function()
-    if timer then
+    if timer>0 then
         ESX.ShowNotification("技能冷卻中")
     elseif exports["esx_ability"]:CheckAbilityRange() then
         TriggerEvent("mythic_progressbar:client:progress", {
@@ -56,7 +56,8 @@ end)
 RegisterNetEvent('esx_amb_ability:generateMedkit')
 AddEventHandler('esx_amb_ability:generateMedkit', function()
     --print("hihi")
-    if timer then
+    if timer>0 then
+        --print(timer)
         ESX.ShowNotification("技能冷卻中")
     elseif exports["esx_ability"]:CheckAbilityRange() then
         TriggerEvent("mythic_progressbar:client:progress", {
@@ -90,9 +91,10 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-        if timer then
+        if timer>0 then
             timer = timer -1
             Citizen.Wait(0)
         end
     end
 end)
+
