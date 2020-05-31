@@ -24,5 +24,7 @@ end)
 
 RegisterNetEvent('esx_autogang:start')
 AddEventHandler('esx_autogang:start', function()
-	TriggerServerEvent('dispatch:createDispatch', Config)
+	Citizen.CreateThread(function()
+    TriggerServerEvent('dispatch:createDispatch', Config)
+  end)
 end)
