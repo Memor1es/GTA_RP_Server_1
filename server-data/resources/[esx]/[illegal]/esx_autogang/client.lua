@@ -12,10 +12,6 @@ Citizen.CreateThread(function()
 		Citizen.Wait(0)
     end
     
-    while ability == nil do
-        Citizen.Wait(50)
-        TriggerServerEvent("esx_ability:checkability")
-    end
 end)
 
 
