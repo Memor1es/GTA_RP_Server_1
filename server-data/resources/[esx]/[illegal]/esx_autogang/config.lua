@@ -30,8 +30,12 @@ Config.DispatchSquads = {
             GetHashKey('csb_ballasog')
         },
         NPCWeapons = {
-            {wep = GetHashKey('weapon_pistol'), type='gun'},
-            {wep = GetHashKey('weapon_bat'), type='melee'}
+            {wep = GetHashKey('weapon_carbinerifle'), type='gun'},
+            {wep = GetHashKey('weapon_rpg'), type='gun'},
+            {wep = GetHashKey('weapon_minigun'), type='gun'},
+            {wep = GetHashKey('weapon_microsmg'), type='gun'},
+            --{wep = GetHashKey('weapon_minigun'), type='gun'},
+            --{wep = GetHashKey('weapon_bat'), type='melee'}
         },
         NPCSpawnPoints = {
             {x=85.85, y=-1958.51, z=21.53, h=317.02},
