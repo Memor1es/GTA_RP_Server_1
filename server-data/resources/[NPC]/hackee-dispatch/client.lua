@@ -19,6 +19,7 @@ RegisterNetEvent('dispatch:createAOEListener')
 AddEventHandler('dispatch:createAOEListener', function(config)
   for i, squad in pairs(config.DispatchSquads) do
     if config.DebugMode then
+      --print("hehe")
       CreateDebugMarker(squad)
     end
     Citizen.CreateThread(function()
@@ -29,11 +30,15 @@ AddEventHandler('dispatch:createAOEListener', function(config)
       Lock = false
 
       while true do
+        --print("haha")
         local plyPed = GetPlayerPed(-1)
         local plyPos = GetEntityCoords(plyPed)
         Citizen.Wait(1)
-        if ESX.PlayerData.job ~= nil and table.contains( squad.EnemiesWith, ESX.PlayerData.job.name) and (GetVecDist(plyPos, squad.CentralPos) < squad.TriggerDistance) and IsShockingEventInSphere(squad.Event, squad.CentralPos.x, squad.CentralPos.y, squad.CentralPos.z, squad.TriggerDistance) then
+        --if ESX.PlayerData.job ~= nil and table.contains( squad.EnemiesWith, ESX.PlayerData.job.name) and (GetVecDist(plyPos, squad.CentralPos) < squad.TriggerDistance) and IsShockingEventInSphere(squad.Event, squad.CentralPos.x, squad.CentralPos.y, squad.CentralPos.z, squad.TriggerDistance) then
+        --if ESX.PlayerData.job ~= nil and (GetVecDist(plyPos, squad.CentralPos) < squad.TriggerDistance) and IsShockingEventInSphere(squad.Event, squad.CentralPos.x, squad.CentralPos.y, squad.CentralPos.z, squad.TriggerDistance) then 
+        if ESX.PlayerData.job ~= nil and (GetVecDist(plyPos, squad.CentralPos) < squad.TriggerDistance)  then  
           SpawnEnemyDispatch(squad)
+          --print("haha")
           Citizen.Wait(squad.TimeBeforeUpAgain)
         end
       end
