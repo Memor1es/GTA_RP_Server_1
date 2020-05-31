@@ -53,6 +53,24 @@ AddEventHandler('esx_ability:levelup', function(num)
     end
 end)
 
+RegisterServerEvent('esx_ability:setlevel')
+AddEventHandler('esx_ability:setlevel', function(num)
+    if ESX == nil then
+        return 
+    end
+    
+    local _source = source
+    local xPlayer = ESX.GetPlayerFromId(source)
+
+    if xPlayer ~= nil then
+        
+        MySQL.Sync.execute('UPDATE user SET ability_level = @num WHERE identifier = @identifier', {
+            ['@num'] = num,
+            ['@identifier'] = xPlayer.identifier
+        })
+    end
+end)
+
 
 ESX.RegisterCommand('setability', 'admin', function(xPlayer, args, showError)
 	if DoesAbilityExist(args.ability) then
@@ -64,6 +82,12 @@ end, true, {help = "設置天賦", validate = true, arguments = {
 	{name = 'playerId', help = "玩家ID", type = 'player'},
 	{name = 'ability', help = "天賦", type = 'string'}
 }})
+
+ESX.RegisterCommand('resetmylevel', 'admin', function(xPlayer, args, showError)
+
+	xPlayer.triggerEvent("esx_ability:levelreset")
+	
+end, true, {help = "等級歸零", validate = true})
 
 function DoesAbilityExist(job)
     if Config.AbilityList[job] then

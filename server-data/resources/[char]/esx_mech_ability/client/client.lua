@@ -42,7 +42,7 @@ AddEventHandler('esx_mech_ability:generateFixkit', function()
         }, function(status)
             if not status then
                 TriggerServerEvent("esx_mech_ability:giveItem",'fixkit',1)
-                TriggerServerEvent("esx_ability:levelup",1)
+                TriggerEvent("esx_ability:levelup",1)
                 timer = timer + Config.cooltime
             end
         end)

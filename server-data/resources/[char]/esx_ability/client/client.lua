@@ -32,12 +32,19 @@ end)
 RegisterNetEvent('esx_ability:setlevel')
 AddEventHandler('esx_ability:setlevel', function(level)
     ability_level = level
+    TriggerServerEvent('esx_ability:setlevel',level)
 end)
 
 RegisterNetEvent('esx_ability:levelup')
 AddEventHandler('esx_ability:levelup', function(num)
     ability_level = ability_level + num
     TriggerServerEvent('esx_ability:levelup',num)
+end)
+
+RegisterNetEvent('esx_ability:levelreset')
+AddEventHandler('esx_ability:levelreset', function()
+    ability_level = 0
+    TriggerServerEvent('esx_ability:setlevel',0)
 end)
 
 function GetAbility()
@@ -109,4 +116,5 @@ Citizen.CreateThread(function()
         end
     end
 end)
+
 

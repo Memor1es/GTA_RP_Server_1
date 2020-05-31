@@ -43,7 +43,7 @@ AddEventHandler('esx_amb_ability:generateBandage', function()
         }, function(status)
             if not status then
                 TriggerServerEvent("esx_amb_ability:giveItem",'bandage',1)
-                TriggerServerEvent("esx_ability:levelup",1)
+                TriggerEvent("esx_ability:levelup",1)
                 timer = timer + Config.cooltime
             end
         end)
@@ -77,7 +77,7 @@ AddEventHandler('esx_amb_ability:generateMedkit', function()
         }, function(status)
             if not status then
                 TriggerServerEvent("esx_amb_ability:giveItem",'medikit',1)
-                TriggerServerEvent("esx_ability:levelup",1)
+                TriggerEvent("esx_ability:levelup",1)
                 timer = timer + Config.cooltime
             end
         end)
