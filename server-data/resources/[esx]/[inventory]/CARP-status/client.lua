@@ -21,6 +21,8 @@ Citizen.CreateThread(function()
         
         local canlearn = {}
 
+        local food,thirst,drugs,drunk,str,agi,int,luk = 0,0,0,0,0,0,0,0
+
         TriggerEvent('esx_status:getStatus', 'hunger', function(status)
             food = status.val / 10000
         end)
@@ -53,46 +55,29 @@ Citizen.CreateThread(function()
             luk = status.val 
         end)
 
-        for k,v in ipairs(Config.AbilityList) do
+        for k,v in pairs(Config.AbilityList) do
             if str>v.str and int>v.int and agi>v.agi and luk>v.luk then
-                table.insert(canlearn,k)
+                table.insert(canlearn,v.label)
             end
         end
 
-        if #canlearn then
-            SendNUIMessage({
-                stats = true,
-                heal = health,
-                voiceVolume = volume,
-                armor = armor,
-                thirst = thirst,
-                food = food,
-                drugs = drugs,
-                drunk = drunk,
-                str = str,
-                agi = agi,
-                int = int,
-                luk = luk
-                canlearn = canlearn
-            });
-        else
 
-            SendNUIMessage({
-                stats = true,
-                heal = health,
-                voiceVolume = volume,
-                armor = armor,
-                thirst = thirst,
-                food = food,
-                drugs = drugs,
-                drunk = drunk,
-                str = str,
-                agi = agi,
-                int = int,
-                luk = luk
-                
-            });
-        end
+        SendNUIMessage({
+            stats = true,
+            heal = health,
+            voiceVolume = volume,
+            armor = armor,
+            thirst = thirst,
+            food = food,
+            drugs = drugs,
+            drunk = drunk,
+            str = str,
+            agi = agi,
+            int = int,
+            luk = luk,
+            canlearn = canlearn
+        });
+        
 
   end
 end)

@@ -8,4 +8,3 @@ server_scripts {
 	'server.lua'
 }
 
-dependency 'essentialmode'

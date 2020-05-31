@@ -11,7 +11,7 @@ server_scripts {
   --'translation/pl.lua',
   'locales/tc.lua',
   'config.lua',
-  'server/main.lua',
+  'server/server.lua',
 }
 
 client_scripts {
@@ -21,6 +21,6 @@ client_scripts {
   --'translation/pl.lua',
   'locales/tc.lua',
   'config.lua',
-  'client/main.lua',
+  'client/client.lua',
 }
 

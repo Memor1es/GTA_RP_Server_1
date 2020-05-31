@@ -203,8 +203,25 @@
 								
 			}
 
+			#title {
+				color: white;
+				display: none;
+				position:absolute;
+				left: 3.55%;
+				top:47%;
+				width: 7.1%;
+				padding:0px;
+				text-align: center;
+				z-index: 999;
+				
+				/*border-color: black;*/
+				
+				opacity: 1;
+								
+			}
 
 			#area {
+				display: none;
 				position:absolute;
 				left: 3.55%;
 				top:50%;
@@ -380,15 +397,17 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 							$('#val_agi').html(event.data.agi)
 							$('#val_luk').html(event.data.luk)
 
-							if (event.data.canlearn)
+							if (event.data.canlearn!="")
 							{
-								console.log("hehe")
+								//console.log(event.data.canlearn)
 								$('#area').val(event.data.canlearn)
+								$('#title').show()
 								$('#area').show()
 							}
 							else
 							{
 								$('#area').val("")
+								$('#title').hide()
 								$('#area').hide()
 							}
 							//$value.text = 50;
@@ -432,6 +451,7 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 
 							$('#value').css({'opacity' : event.data.opacity})
 							$('#area').css({'opacity' : event.data.opacity})
+							$('#title').css({'opacity' : event.data.opacity})
 						}
 
 						
@@ -455,9 +475,9 @@ background: linear-gradient(45deg, #894c26 0%,#cc7641 11%,#ea744d 24%,#eda14b 27
 			<div id="luk"><div id="boxLuk"></div><p id="emojiPos">🍀</p></div>
 			<div id="value"><table style="width:100%"><tr><th>力:</th><th id = "val_str">0</th><th>敏:</th><th id = "val_agi">0</th><th>智:</th><th id = "val_int">0</th><th>幸:</th><th id = "val_luk">0</th></tr></table></div>
 
-			
+			<div id="title">可習得的天賦:</div>
 			<textarea id="area"  rows="10" cols="50">
-				At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+				
 			</textarea>
 			
 	</body>
