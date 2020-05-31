@@ -42,6 +42,7 @@ AddEventHandler('esx_chef_ability:generateBread', function()
         }, function(status)
             if not status then
                 TriggerServerEvent("esx_chef_ability:giveItem",'bread',1)
+                TriggerServerEvent("esx_ability:levelup",1)
                 timer = timer + Config.cooltime
             end
         end)
@@ -75,6 +76,7 @@ AddEventHandler('esx_chef_ability:generateWater', function()
         }, function(status)
             if not status then
                 TriggerServerEvent("esx_chef_ability:giveItem",'water',1)
+                TriggerServerEvent("esx_ability:levelup",1)
                 timer = timer + Config.cooltime
             end
         end)

@@ -42,6 +42,7 @@ AddEventHandler('esx_gun_ability:generateLockPick', function()
         }, function(status)
             if not status then
                 TriggerServerEvent("esx_lock_ability:giveItem",'clip',1)
+                TriggerServerEvent("esx_ability:levelup",1)
                 timer = timer + Config.cooltime
             end
         end)
