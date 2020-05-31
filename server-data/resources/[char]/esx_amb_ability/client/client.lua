@@ -22,7 +22,7 @@ end)
 RegisterNetEvent('esx_amb_ability:generateBandage')
 AddEventHandler('esx_amb_ability:generateBandage', function()
     if timer then
-        ESX.shownotification("技能冷卻中")
+        ESX.ShowNotification("技能冷卻中")
     elseif exports["esx_ability"]:CheckAbilityRange() then
         TriggerEvent("mythic_progressbar:client:progress", {
             name = "loot_body",
@@ -48,7 +48,7 @@ AddEventHandler('esx_amb_ability:generateBandage', function()
             end
         end)
     else
-        ESX.shownotification("啊!製作~r~失敗~")
+        ESX.ShowNotification("啊!製作~r~失敗~")
         timer = timer + Config.cooltime
     end
 end)
@@ -57,7 +57,7 @@ RegisterNetEvent('esx_amb_ability:generateMedkit')
 AddEventHandler('esx_amb_ability:generateMedkit', function()
     --print("hihi")
     if timer then
-        ESX.shownotification("技能冷卻中")
+        ESX.ShowNotification("技能冷卻中")
     elseif exports["esx_ability"]:CheckAbilityRange() then
         TriggerEvent("mythic_progressbar:client:progress", {
             name = "loot_body",
@@ -83,7 +83,7 @@ AddEventHandler('esx_amb_ability:generateMedkit', function()
             end
         end)
     else
-        ESX.shownotification("啊!製作~r~失敗~")
+        ESX.ShowNotification("啊!製作~r~失敗~")
         timer = timer + Config.cooltime
     end
 end)

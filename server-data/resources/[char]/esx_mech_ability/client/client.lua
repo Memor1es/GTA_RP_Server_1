@@ -21,7 +21,7 @@ end)
 RegisterNetEvent('esx_mech_ability:generateFixkit')
 AddEventHandler('esx_mech_ability:generateFixkit', function()
     if timer then
-        ESX.shownotification("技能冷卻中")
+        ESX.ShowNotification("技能冷卻中")
     elseif exports["esx_ability"]:CheckAbilityRange() then
         TriggerEvent("mythic_progressbar:client:progress", {
             name = "loot_body",
@@ -47,7 +47,7 @@ AddEventHandler('esx_mech_ability:generateFixkit', function()
             end
         end)
     else
-        ESX.shownotification("啊!製作~r~失敗~")
+        ESX.ShowNotification("啊!製作~r~失敗~")
         timer = timer + Config.cooltime
     end
 end)

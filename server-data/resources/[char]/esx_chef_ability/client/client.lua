@@ -21,7 +21,7 @@ end)
 RegisterNetEvent('esx_chef_ability:generateBread')
 AddEventHandler('esx_chef_ability:generateBread', function()
     if timer then
-        ESX.shownotification("技能冷卻中")
+        ESX.ShowNotification("技能冷卻中")
     elseif exports["esx_ability"]:CheckAbilityRange() then
         TriggerEvent("mythic_progressbar:client:progress", {
             name = "loot_body",
@@ -47,7 +47,7 @@ AddEventHandler('esx_chef_ability:generateBread', function()
             end
         end)
     else
-        ESX.shownotification("啊!製作~r~失敗~")
+        ESX.ShowNotification("啊!製作~r~失敗~")
         timer = timer + Config.cooltime
     end
 end)
@@ -55,7 +55,7 @@ end)
 RegisterNetEvent('esx_chef_ability:generateWater')
 AddEventHandler('esx_chef_ability:generateWater', function()
     if timer then
-        ESX.shownotification("技能冷卻中")
+        ESX.ShowNotification("技能冷卻中")
     elseif exports["esx_ability"]:CheckAbilityRange() then
         TriggerEvent("mythic_progressbar:client:progress", {
             name = "loot_body",
@@ -81,7 +81,7 @@ AddEventHandler('esx_chef_ability:generateWater', function()
             end
         end)
     else
-        ESX.shownotification("啊!製作~r~失敗~")
+        ESX.ShowNotification("啊!製作~r~失敗~")
         timer = timer + Config.cooltime
     end
 end)
