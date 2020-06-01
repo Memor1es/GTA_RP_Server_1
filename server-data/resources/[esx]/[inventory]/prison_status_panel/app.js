@@ -7,6 +7,9 @@ function processEvent (event) {
     case 'update': 
       updateData(event.data);
       break;
+    case 'update_bone':
+      console.log(event.data)
+      break;
     case 'open':
       setVisible(true);
       break;
