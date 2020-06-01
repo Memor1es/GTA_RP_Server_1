@@ -93,8 +93,10 @@ Citizen.CreateThread(function()
     while true do
         if timer>0 then
             timer = timer -1
-            Citizen.Wait(0)
+            
         end
+        Citizen.Wait(0)
     end
 end)
+
 
