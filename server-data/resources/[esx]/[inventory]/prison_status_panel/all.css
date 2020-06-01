@@ -1,0 +1,253 @@
+
+
+.status-panel {
+  width: 550px;
+  height: 610px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.534);
+  background-color: rgba(5, 5, 17, 0.2);
+  border: 2px solid rgba(5, 5, 5, 0.452);
+  position: relative;
+}
+
+.bar-block {
+  width: 160px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.bar-block img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+.ability .value {
+  color: white;
+  margin-right: 5px;
+  width: 40px;
+  text-align: right;
+}
+
+.bar-frame {
+  width: 100%;
+  height: 50%;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: #696969;
+}
+
+.bar-value {
+  height: 100%;
+  border-radius: 2px;
+}
+
+.str, .agi, .int, .luk{
+  position: absolute;
+  left: 10px;
+}
+
+.str .bar-value, .agi .bar-value, .int .bar-value, .luk .bar-value {
+  background-image: linear-gradient(to top, #948d44, #ffee3d);
+}
+
+.str {
+  top: 30px;
+}
+
+.agi {
+  top: 60px;
+}
+
+.int {
+  top: 90px;
+}
+
+.luk {
+  top: 120px;
+}
+
+.armor, .health{
+  position: absolute;
+  left: 10px;
+  top: 300px;
+  width: 180px;
+  height: 30px;
+}
+
+.armor .bar-frame, .helath .bar-frame {
+  width: 151px;
+  height: 15px;
+}
+
+.armor .bar-value {
+  background-image: linear-gradient(to top, #343e45, #60abe0);
+}
+
+.health {
+  top: 330px;
+}
+
+.health .bar-value {
+  background-image: linear-gradient(to top, #148f14, #23fa23);
+}
+
+.alive-status-img {
+  position: absolute;
+  width: 180px;
+  height: auto;
+  left: 10px;
+  top: 370px;
+}
+
+.drugs, .drunk {
+  position: absolute;
+  right: 10px;
+}
+
+.drugs {
+  top: 60px;
+}
+
+.drugs .bar-value {
+  background-image: linear-gradient(to top, #621896, #a426fc);
+}
+
+.drunk {
+  top: 90px;
+}
+
+.drunk .bar-value {
+  background-image: linear-gradient(to top, #9e5623, #d96c1e);
+}
+
+.food, .thirst {
+  position: absolute;
+  bottom: 140px;
+}
+
+.food {
+  right: 90px;
+}
+
+.food .vertical-value {
+  background-image: linear-gradient(to top, #ad3017, #ff7242);
+}
+
+.thirst {
+  right: 60px;
+}
+
+.thirst .vertical-value {
+  background-image: linear-gradient(to top, #2da8b5, #3decff);
+}
+
+.vertical-bar {
+  height: 200px;
+  width: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vertical-frame {
+  width: 75%;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: #696969;
+  position: relative;
+}
+
+.vertical-img {
+  width: 24px;
+  height: 24px;
+  margin-top: 5px;
+}
+
+.vertical-value {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.skill {
+  width: 100%;
+  height: 48px;
+  position: absolute;
+  bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.skill img {
+  width: 48px;
+}
+
+.skill p {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animation-blink {
+  animation: blink 1s;
+  animation-iteration-count: infinite;
+}
+
+.skill-window {
+  padding: 5px;
+  border-radius:  3px;
+  position: absolute;
+  width: 200px;
+  left: calc(50% - 107px);
+  top: 200px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.534);
+  background-color: rgba(5, 5, 5, 0.8);
+  border: 2px solid rgba(5, 5, 5, 0.452);
+  color: white;
+}
+
+.window-title {
+  position: relative;
+  border-bottom: 1px solid white;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.window-title p {
+  margin-left: 5px;
+}
+
+.window-title button {
+  margin-right: 5px;
+}
+
+.window-body tr{
+  width: 100%;
+  display: flex;
+}
+
+.window-body td {
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.td-name {
+  flex: 1;
+  color: white;
+}
