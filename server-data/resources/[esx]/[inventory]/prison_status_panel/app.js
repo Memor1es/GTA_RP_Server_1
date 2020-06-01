@@ -29,6 +29,10 @@ function updateData(data) {
   setNormalValue('drugs', data.drugs, 100);
   setNormalValue('drunk', data.drunk, 100);
 
+  checkBlink('health', data.heal, 60);
+  checkBlink('food', data.food, 15);
+  checkBlink('thirst', data.thirst, 15);
+
   if (data.learned.length) {
     // learned skill
     $('#learnedSkill').text(data.learned);
@@ -75,9 +79,10 @@ function updateLearnableSkills(learnableSkills) {
   let skills = learnableSkills.split(',');
   let skills_html = '';
   for(let i = 0; i < skills.length; i++) {
-    skills_html += `<tr><td class="td-name">${skills[i]}</td><td><button>學習</button></td></tr>`;
+    skills_html += `<tr><td class="td-name">${skills[i]}</td><td><button class="learn-button" data-item="${skills[i]}">學習</button></td></tr>`;
   }
   $('.skill-window tbody').html(skills_html);
+  registerSkillsClickEvent();
   lastLearnableSkills = learnableSkills;
 }
 
@@ -107,6 +112,14 @@ function changeAliveStatus(isAlive) {
   }
 }
 
+function checkBlink(name, value, limit) {
+  if (value <= limit) {
+    $(`.${name} img`).addClass('animation-blink');
+  } else {
+    $(`.${name} img`).removeClass('animation-blink');
+  }
+}
+
 // register click event
 function registerClickEvent() {
     $('.skill-img').click(function() {
@@ -116,6 +129,12 @@ function registerClickEvent() {
     $('.window-close').click(function() {
       $('.skill-window').hide();
     });
+}
+
+function registerSkillsClickEvent() {
+  $('.learn-button').click(function() {
+    console.log(this.dataset.item);
+  });
 }
 
 // initilize

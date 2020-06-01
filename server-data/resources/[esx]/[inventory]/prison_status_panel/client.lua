@@ -34,11 +34,13 @@ RegisterNetEvent("prison_status:open")
 AddEventHandler("prison_status:open", function() 
   updateStatus()
   SendNUIMessage({action: 'open'})
+  prisonStatusPanelisOpen = true
 end)
 
 RegisterNetEvent("prison_status:close")
 AddEventHandler("prison_status:close", function() 
   SendNUIMessage({action: 'close'})
+  prisonStatusPanelisOpen = false
 end)
 
 function updateStatus ()
