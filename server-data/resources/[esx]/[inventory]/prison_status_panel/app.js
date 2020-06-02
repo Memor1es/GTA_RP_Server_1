@@ -2,13 +2,17 @@ window.addEventListener('message', function (event) {
   processEvent(event);
 });
 
+let temp_bone_data;
 function processEvent (event) {
   switch (event.data.action) {
     case 'update': 
       updateData(event.data);
       break;
     case 'update_bone':
-      console.log(event.data)
+      if (event.data != temp_bone_data) {
+        console.log(event.data);
+        temp_bone_data = event.data;
+      }
       break;
     case 'open':
       setVisible(true);
