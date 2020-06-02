@@ -24,6 +24,9 @@ Citizen.CreateThread(function()
   while true do
     Citizen.wait(1000)
     if prisonStatusPanelIsOpen then
+      if IsControlJustPressed(1, 322) then
+        TriggerEvent("prison_status:close")
+      end
       updateStatus()
     end
   end

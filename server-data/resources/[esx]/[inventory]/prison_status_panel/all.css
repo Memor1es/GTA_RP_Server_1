@@ -6,9 +6,12 @@
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.534);
   background-color: rgba(5, 5, 17, 0.5);
   border: 2px solid rgba(5, 5, 5, 0.452);
-  position: relative;
-  top: 10%;
-  left: 15%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  transition: .3s;
 }
 
 .skelly {
