@@ -2,6 +2,7 @@ ESX = nil
 local ability = nil
 local text_timer = 0
 local ability_level = 0
+local today_level = 0
 
 
 Citizen.CreateThread(function()
@@ -39,13 +40,20 @@ end)
 RegisterNetEvent('esx_ability:levelup')
 AddEventHandler('esx_ability:levelup', function(num)
     ability_level = ability_level + num
+    today_level = today_level + num
     TriggerServerEvent('esx_ability:levelup',num)
+    TriggerServerEvent('esx_ability:settodaylevel',num)
 end)
 
 RegisterNetEvent('esx_ability:levelreset')
 AddEventHandler('esx_ability:levelreset', function()
     ability_level = 0
     TriggerServerEvent('esx_ability:setlevel',0)
+end)
+
+RegisterNetEvent('esx_ability:settodaylevel')
+AddEventHandler('esx_ability:settodaylevel', function(num)
+    today_level = num
 end)
 
 function GetAbility()

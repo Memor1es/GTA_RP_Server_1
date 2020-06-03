@@ -31,6 +31,10 @@ Config.AbilityList                 = {
     ["mechanic"] = true,
     ["none"] = true
 }
+
+Config.CronAutoResetLevel          = true
+
+Config.MaxLevelPerDay              = 5
 --[[
 Config.AbilityList.ambulance       = true
 
