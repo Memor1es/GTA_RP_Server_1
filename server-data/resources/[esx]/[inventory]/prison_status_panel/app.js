@@ -69,8 +69,12 @@ function updateBone(boneData) {
     //   LeftLeg,
     //   RightArm,
     //   RightLeg
-    for (let [key, value] of Object.entries(boneData)) {
-      $(`#${CLASS_NAME_TABLE[key]}`).css('opacity', value * 50 / 255);
+    for (let [key, className] of Object.entries(CLASS_NAME_TABLE)) {
+      if (boneData[key]) {
+        $(`#${className}`).css('opacity', boneData[key] * 50 / 255);
+      } else {
+        $(`#${className}`).css('opacity', 0);
+      }
     }
 }
 
