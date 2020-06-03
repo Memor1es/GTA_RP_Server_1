@@ -31,6 +31,7 @@ AddEventHandler('esx:playerLoaded', function(xPlayer)
 end)
 
 -- Make sure all clients have latest current owners list
+-- 從資料庫抓現在的占領者
 TriggerServerEvent('esx_kingofthehill:checkStatus')
 
 RegisterNetEvent('esx_kingofthehill:setStatusOnLoad')
