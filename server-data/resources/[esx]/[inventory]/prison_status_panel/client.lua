@@ -8,23 +8,25 @@ Citizen.CreateThread(function()
     end
 end)
 
-local prisonStatusPanelisOpen = true
-RegisterCommand('prison_status', function(source, args, rawCommand)
-  if prisonStatusPanelisOpen then
-    prisonStatusPanelisOpen = false
+local prisonStatusPanelIsOpen = true
+TriggerEvent('chat:addSuggestion', '/prisonstatusui', 'open/close prison status ui')
+RegisterCommand('prisonstatusui', function(source, args, rawCommand)
+  if prisonStatusPanelIsOpen then
     TriggerEvent("prison_status:close")
   else
-    prisonStatusPanelisOpen = true
     TriggerEvent("prison_status:open")
   end
+  TriggerEvent("MF_SkeletalSystem:openSkelly")
 end)
 
 Citizen.CreateThread(function()
   TriggerEvent("prison_status:close")
-  prisonStatusPanelisOpen = false
   while true do
     Citizen.wait(1000)
-    if prisonStatusPanelisOpen then
+    if prisonStatusPanelIsOpen then
+      if IsControlJustPressed(1, 322) then
+        TriggerEvent("prison_status:close")
+      end
       updateStatus()
     end
   end
@@ -34,13 +36,21 @@ RegisterNetEvent("prison_status:open")
 AddEventHandler("prison_status:open", function() 
   updateStatus()
   SendNUIMessage({action: 'open'})
-  prisonStatusPanelisOpen = true
+  prisonStatusPanelIsOpen = true
+  SetNuiFocus(true, true)
 end)
 
 RegisterNetEvent("prison_status:close")
 AddEventHandler("prison_status:close", function() 
   SendNUIMessage({action: 'close'})
-  prisonStatusPanelisOpen = false
+  prisonStatusPanelIsOpen = false
+  SetNuiFocus(false, false)
+end)
+
+RegisterNetEvent("prison_status:update_bone")
+AddEventHandler("prison_status:update_bone", function(data)
+  -- for test
+  updateBoneStatus(data)
 end)
 
 function updateStatus ()
@@ -117,4 +127,12 @@ function updateStatus ()
       luk = luk
     })
   end
+end
+
+function updateBoneStatus (data)
+  -- for test
+  SendNUIMessage({
+    action:'update_bone',
+    brone: data
+  })
 end

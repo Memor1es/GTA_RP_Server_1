@@ -2,10 +2,17 @@ window.addEventListener('message', function (event) {
   processEvent(event);
 });
 
+let temp_bone_data;
 function processEvent (event) {
   switch (event.data.action) {
     case 'update': 
       updateData(event.data);
+      break;
+    case 'update_bone':
+      if (event.data != temp_bone_data) {
+        console.log(event.data);
+        temp_bone_data = event.data;
+      }
       break;
     case 'open':
       setVisible(true);
@@ -122,13 +129,13 @@ function checkBlink(name, value, limit) {
 
 // register click event
 function registerClickEvent() {
-    $('.skill-img').click(function() {
-      $('.skill-window').show();
-    });
+  $('.skill-img').click(function() {
+    $('.skill-window').show();
+  });
 
-    $('.window-close').click(function() {
-      $('.skill-window').hide();
-    });
+  $('.window-close').click(function() {
+    $('.skill-window').hide();
+  });
 }
 
 function registerSkillsClickEvent() {
@@ -137,7 +144,7 @@ function registerSkillsClickEvent() {
   });
 }
 
-// initilize
+// initialize
 (function() {
   $('.status-panel').hide();
   $('.skill').hide();

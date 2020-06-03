@@ -188,7 +188,7 @@ function skeletalsystem:DrawUI()
     --Utils:DrawText(templateA)
     --Utils:DrawText(templateB)
 
-  DrawSprite(self.TextureDictA, "Base",  0.19,  0.52, 0.32, 0.70, 0.0, 255, 255, 255, 155)--completo
+    DrawSprite(self.TextureDictA, "Base",  0.19,  0.52, 0.32, 0.70, 0.0, 255, 255, 255, 155)--completo
     for k,v in pairs(self.BoneCats) do        
       DrawSprite(k, k, 0.3004, 0.52, 0.55, 0.70, 0.0, 255, 255, 255, math.min(v * 50,155))--vermelho
     end
@@ -205,6 +205,8 @@ function skeletalsystem:DrawUI()
     --    end
     --  end
     --end
+    TriggerEvent('prison_status:update_bone', self.BoneCats)
+
   end
 end
 
