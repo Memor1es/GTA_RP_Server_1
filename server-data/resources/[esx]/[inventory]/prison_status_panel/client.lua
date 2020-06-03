@@ -49,7 +49,6 @@ end)
 
 RegisterNetEvent("prison_status:update_bone")
 AddEventHandler("prison_status:update_bone", function(data)
-  -- for test
   updateBoneStatus(data)
 end)
 
@@ -130,9 +129,8 @@ function updateStatus ()
 end
 
 function updateBoneStatus (data)
-  -- for test
   SendNUIMessage({
     action:'update_bone',
-    brone: data
+    bone: data
   })
 end

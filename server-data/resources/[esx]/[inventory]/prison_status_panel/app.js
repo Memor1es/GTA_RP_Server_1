@@ -9,9 +9,9 @@ function processEvent (event) {
       updateData(event.data);
       break;
     case 'update_bone':
-      if (event.data != temp_bone_data) {
-        console.log(event.data);
-        temp_bone_data = event.data;
+      if (event.data.bone != temp_bone_data) {
+        updateBone(event.data.bone);
+        temp_bone_data = event.data.bone;
       }
       break;
     case 'open':
@@ -50,6 +50,28 @@ function updateData(data) {
   }
 
   checkAlive(data.heal);
+}
+
+const CLASS_NAME_TABLE = {
+  Body: 'skelly-body',
+  Head: 'skelly-head',
+  LeftArm: 'skelly-left-arm',
+  LeftLeg: 'skelly-left-leg',
+  RightArm: 'skelly-right-arm',
+  RightLeg: 'skelly-right-leg'
+};
+
+function updateBone(boneData) {
+    // boneType: 
+    //   Body,
+    //   Head,
+    //   LeftArm,
+    //   LeftLeg,
+    //   RightArm,
+    //   RightLeg
+    for (let [key, value] of Object.entries(boneData)) {
+      $(`#${CLASS_NAME_TABLE[key]}`).css('opacity', value * 50 / 255);
+    }
 }
 
 function setVisible(visible) {
