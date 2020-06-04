@@ -28,7 +28,7 @@ Config.JobVan = 'rumpo2'					-- spawn name for job van
 Config.ListOfDrugs = {
 	--{ drug = 'coke', label = 'Coke', Enabled = true, BuyPrice = 7500, MinReward = 1, MaxReward = 3 },
 	--{ drug = 'meth', label = 'Meth', Enabled = true, BuyPrice = 6000, MinReward = 2, MaxReward = 6 },
-	{ drug = 'heroin', label = '海洛英', Enabled = true, BuyPrice = 8000, MinReward = 1, MaxReward = 5 },
+	{ drug = 'heroin', label = '海洛英', Enabled = true, BuyPrice = 150000, MinReward = 1, MaxReward = 5 },
 	--{ drug = 'weed', label = 'Weed', Enabled = true, BuyPrice = 3500, MinReward = 4, MaxReward = 10 },
 }
 
