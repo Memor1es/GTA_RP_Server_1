@@ -51,10 +51,14 @@ end)
 
 RegisterNetEvent('esx_ability:levelup')
 AddEventHandler('esx_ability:levelup', function(num)
-    ability_level = ability_level + num
-    today_level = today_level + num
-    TriggerServerEvent('esx_ability:levelup',num)
-    TriggerServerEvent('esx_ability:settodaylevel',num)
+    if today_level + num < Config.MaxLevelPerDay then
+        ability_level = ability_level + num
+        today_level = today_level + num
+        TriggerServerEvent('esx_ability:levelup',num)
+        TriggerServerEvent('esx_ability:settodaylevel',num)
+    else
+        ESX.ShowNotification("啊!已超過今日升等上限~r~失敗~")
+    end
 end)
 
 RegisterNetEvent('esx_ability:levelreset')
