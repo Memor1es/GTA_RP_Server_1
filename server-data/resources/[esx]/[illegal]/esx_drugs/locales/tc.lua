@@ -1,0 +1,28 @@
+Locales['tc'] = {
+	['weed'] = '大麻',
+	['meth'] = '安非他命',
+	['opium'] = '鴉片',
+	['coke'] = '古柯鹼',
+	['press_collect'] = '按下 ~INPUT_CONTEXT~ 來收集 ~r~%s~s~ ',
+	['press_process'] = '按下 ~INPUT_CONTEXT~ 來加工 ~r~%s~s~',
+	['press_sell'] = '按下 ~INPUT_CONTEXT~ 來販售 ~r~%s~s~',
+	['act_imp_police'] = '抱歉, 現在警力不足: ~o~%s~s~/~y~%s~s~ 在線',
+	['no_pouches_sale'] = '你沒有足夠的 ~r~毒品袋~s~ 來販售',	
+	['pickup_in_prog'] = '~y~採集中~s~...',
+	['too_many_pouches'] = '你的背包裝不下 ~r~毒品',
+	['packing_in_prog'] = '~y~加工包裝中~s~...',
+	['inv_full'] = '你不能採收更多 ~r~%s~s~, 你的背包滿了',
+	['not_enough'] = '你沒有任何的 ~r~%s~s~',
+	['sold_one'] = '現在正在販售 ~r~%s~s~',
+	['used_one'] = '你已經使用了 ~r~%s~s~ 的 ~r~x1 ',
+	['sale_in_prog'] = '~g~販售中~s~...',
+	['exit_marker'] = '按下 ~INPUT_CONTEXT~ 來取消 ~y~販售.',
+	['foot_work'] = '你必須走路來販售.',
+	['act_call_police'] = ':警報: 涉嫌從事非法活動的市民!',
+	['stop_action'] = '按下 ~g~[%s]~w~ 來停止.',
+	
+	-- Blips
+	['field'] = '%s 區域',
+	['processing'] = '%s 包裝',
+	['dealer'] = '%s 經銷商',
+}
