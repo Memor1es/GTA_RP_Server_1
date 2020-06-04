@@ -25,6 +25,11 @@
 .skelly img{
   width: 80%;
   position: absolute;
+  opacity: 0;
+}
+
+#skelly-base {
+  opacity: 1;
 }
 
 .bar-block {
