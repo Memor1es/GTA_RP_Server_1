@@ -1,22 +1,22 @@
 USE `es_extended`;
 
 INSERT INTO `addon_account` (name, label, shared) VALUES
-	('society_cardealer','Autokauppa',1)
+	('society_cardealer','Vendedor de carros',1)
 ;
 
 INSERT INTO `addon_inventory` (name, label, shared) VALUES
-	('society_cardealer','Autokauppa',1)
+	('society_cardealer','Vendedor de carros',1)
 ;
 
 INSERT INTO `jobs` (name, label) VALUES
-	('cardealer','Autokauppa')
+	('cardealer','Vendedor de carros')
 ;
 
 INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
-	('cardealer',0,'recruit','Harjoittelija',10,'{}','{}'),
-	('cardealer',1,'novice','Aloittelija',25,'{}','{}'),
-	('cardealer',2,'experienced','Kokenut',40,'{}','{}'),
-	('cardealer',3,'boss','Pomo',0,'{}','{}')
+	('cardealer',0,'recrutar','Recrutar',10,'{}','{}'),
+	('cardealer',1,'novato','Novato',25,'{}','{}'),
+	('cardealer',2,'experiente','Experiente',40,'{}','{}'),
+	('cardealer',3,'chefe','Chefe',0,'{}','{}')
 ;
 
 CREATE TABLE `cardealer_vehicles` (
@@ -67,14 +67,14 @@ CREATE TABLE `vehicle_categories` (
 );
 
 INSERT INTO `vehicle_categories` (name, label) VALUES
-	('compacts','Compacts'),
-	('coupes','Coupés'),
+	('compacts','Compactos'),
+	('coupes','Cupês'),
 	('sedans','Sedans'),
-	('sports','Sports'),
-	('sportsclassics','Sports Classics'),
+	('sports','Esportes'),
+	('sportsclassics','Clássicos Esportivos'),
 	('super','Super'),
-	('muscle','Muscle'),
-	('offroad','Off Road'),
+	('muscle','Músculo'),
+	('offroad','Fora da estrada'),
 	('suvs','SUVs'),
 	('vans','Vans'),
 	('motorcycles','Motos')
