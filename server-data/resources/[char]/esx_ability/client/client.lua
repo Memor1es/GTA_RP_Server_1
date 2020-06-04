@@ -37,6 +37,18 @@ AddEventHandler('esx_ability:setlevel', function(level)
     TriggerServerEvent('esx_ability:setlevel',level)
 end)
 
+RegisterNetEvent('esx_ability:updateability')
+AddEventHandler('esx_ability:updateability', function(skill)
+    ability = skill
+    --TriggerServerEvent('esx_ability:setability',skill)
+end)
+
+RegisterNetEvent('esx_ability:updatelevel')
+AddEventHandler('esx_ability:updatelevel', function(level)
+    ability_level = level
+    --TriggerServerEvent('esx_ability:setlevel',level)
+end)
+
 RegisterNetEvent('esx_ability:levelup')
 AddEventHandler('esx_ability:levelup', function(num)
     ability_level = ability_level + num
