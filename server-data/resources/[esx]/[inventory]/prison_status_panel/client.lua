@@ -34,6 +34,7 @@ end)
 
 RegisterNetEvent("prison_status:open")
 AddEventHandler("prison_status:open", function() 
+  TriggerEvent("MF_SkeletalSystem:openStatusSkelly")
   updateStatus()
   SendNUIMessage({action: 'open'})
   prisonStatusPanelIsOpen = true
@@ -42,6 +43,7 @@ end)
 
 RegisterNetEvent("prison_status:close")
 AddEventHandler("prison_status:close", function() 
+  TriggerEvent("MF_SkeletalSystem:closeStatusSkelly")
   SendNUIMessage({action: 'close'})
   prisonStatusPanelIsOpen = false
   SetNuiFocus(false, false)

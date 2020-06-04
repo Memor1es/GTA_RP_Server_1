@@ -71,7 +71,7 @@ function updateBone(boneData) {
     //   RightLeg
     for (let [key, className] of Object.entries(CLASS_NAME_TABLE)) {
       if (boneData[key]) {
-        $(`#${className}`).css('opacity', boneData[key] * 50 / 255);
+        $(`#${className}`).css('opacity', Math.min(boneData[key] * 50 / 255, 255));
       } else {
         $(`#${className}`).css('opacity', 0);
       }

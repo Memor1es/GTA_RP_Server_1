@@ -1,3 +1,5 @@
+local showOnStatusPanel = false;
+
 function skeletalsystem:Start()
   while not ESX do Citizen.Wait(0); end
   while not ESX.IsPlayerLoaded() do Citizen.Wait(0); end
@@ -205,8 +207,11 @@ function skeletalsystem:DrawUI()
     --    end
     --  end
     --end
-    TriggerEvent('prison_status:update_bone', self.BoneCats)
+    -- TriggerEvent('prison_status:update_bone', self.BoneCats)
 
+  end
+  if showOnStatusPanel then
+    TriggerEvent('prison_status:update_bone', self.BoneCats)
   end
 end
 
@@ -509,6 +514,12 @@ RegisterCommand('openSkelly', function(...) if not skeletalsystem.ViewingOther t
 
 RegisterNetEvent('MF_SkeletalSystem:openSkelly')
 AddEventHandler('MF_SkeletalSystem:openSkelly', function(...) if not skeletalsystem.ViewingOther then skeletalsystem:HandleMenu(true); end; end)
+
+RegisterNetEvent('MF_SkeletalSystem:openStatusSkelly')
+AddEventHandler('MF_SkeletalSystem:openStatusSkelly', function(...) showOnStatusPanel = true; end)
+
+RegisterNetEvent('MF_SkeletalSystem:closeStatusSkelly')
+AddEventHandler('MF_SkeletalSystem:closeStatusSkelly', function(...) showOnStatusPanel = false; end)
 
 RegisterNetEvent('skeletalsystem:UseItem')
 AddEventHandler('skeletalsystem:UseItem', function(categories,medic) skeletalsystem:UseItem(categories,medic); end)
