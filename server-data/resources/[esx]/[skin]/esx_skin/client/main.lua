@@ -252,6 +252,17 @@ function OpenSaveableMenu(submitCb, cancelCb, restrict)
         TriggerEvent('skinchanger:getSkin', function(skin)
             TriggerServerEvent('esx_skin:save', skin)
 
+            --for character select
+        
+            DoScreenFadeOut(1000)
+            Citizen.Wait(1500)
+            SetEntityCoords(PlayerPedId(), -205.90, -1012.74, 30.20, 0.0, 0.0, 0.0, true)
+            Citizen.Wait(1000)
+            DoScreenFadeIn(1000)
+            DisplayRadar(true)
+            
+            --
+
             if submitCb ~= nil then
                 submitCb(data, menu)
             end
@@ -315,6 +326,7 @@ AddEventHandler('esx_skin:playerRegistered', function()
         if firstSpawn then
             ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
                 if skin == nil then
+                    TriggerEvent("charselect:enable")
                     TriggerEvent('skinchanger:loadSkin', {sex = 0}, OpenSaveableMenu)
                 else
                     TriggerEvent('skinchanger:loadSkin', skin)
