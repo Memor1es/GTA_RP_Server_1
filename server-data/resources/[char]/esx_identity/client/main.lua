@@ -88,11 +88,7 @@ if not Config.UseDeferrals then
 				DisableControlAction(0, 75,  true) -- disable exit vehicle
 				DisableControlAction(27, 75, true) -- disable exit vehicle
 			else
-				TriggerServerEvent('esx_identity:setIdentity', data, myIdentifiers)
-				EnableGui(false)
 				Citizen.Wait(500)
-				TriggerEvent('charselect:register')
-				SetTimecycleModifier('default')
 			end
 		end
 	end)

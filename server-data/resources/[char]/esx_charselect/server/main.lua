@@ -1,6 +1,28 @@
 ESX               = nil
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
+RegisterServerEvent('ur:checkRegistration')
+AddEventHandler('ur:checkRegistration', function()
+    if ESX == nil then
+        return 
+    end
+    
+    local _source = source
+    local xPlayer = ESX.GetPlayerFromId(source)
+
+    if xPlayer ~= nil then
+        MySQL.Async.fetchAll('SELECT * FROM users WHERE identifier = @identifier',{
+            ['@identifier'] = xPlayer.identifier
+        }, function(result)
+            if result[1].firstname == "" and result[1].lastname == "" and result[1].dateofbirth == "" and result[1].sex == "" and result[1].height == "" then
+                TriggerClientEvent('ur:warnning', _source)
+            else
+                TriggerClientEvent('ur:hasRegistraion', _source)
+            end
+        end)
+    end
+end)
+
 RegisterServerEvent("charselect:createsign")
 AddEventHandler("charselect:createsign", function(xPlayer)
     local _source = source
@@ -18,7 +40,7 @@ AddEventHandler("charselect:createsign", function(xPlayer)
         end
     end
 end)    
-
+--[[
 RegisterServerEvent("charselect:select")
 AddEventHandler("charselect:select", function(xPlayer)
     local _source = source
@@ -32,7 +54,7 @@ AddEventHandler("charselect:select", function(xPlayer)
         end
     end
 end)    
-
+--]]
 RegisterServerEvent("charselect:lastpos")
 AddEventHandler("charselect:lastpos", function(xPlayer)
     local _source = source

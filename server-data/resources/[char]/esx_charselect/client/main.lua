@@ -1,16 +1,34 @@
 local PlayerData                = {}
 ESX                             = nil
+local isRegistraion = false
 
 Citizen.CreateThread(function()
     while ESX == nil do
         TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
         Citizen.Wait(0)
     end
+
+    while isRegistraion == false do
+        Citizen.Wait(50)
+        TriggerServerEvent("ur:checkRegistration")
+    end
+
+end)
+
+RegisterNetEvent('ur:warnning')
+AddEventHandler('ur:warnning', function(xPlayer)
+  ESX.ShowHelpNotification("請盡快註冊")
 end)
 
 RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function(xPlayer)
   PlayerData = xPlayer
+end)
+
+RegisterNetEvent('ur:hasRegistraion')
+AddEventHandler('ur:hasRegistraion', function()
+    isRegistraion = true
+    --TriggerEvent("charselect:animation", true)
 end)
 --[[
 RegisterNetEvent('esx:playerLoaded')
