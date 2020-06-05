@@ -301,6 +301,13 @@ AddEventHandler('esx_skin:playerRegistered', function()
         if firstSpawn then
             ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
                 if skin == nil then
+                    DoScreenFadeOut(1000)
+                    Citizen.Wait(1500)
+                    SetEntityCoords(PlayerPedId(), -205.90, -1012.74, 30.20, 0.0, 0.0, 0.0, true)
+                    TriggerEvent("charselect:enable")
+                    Citizen.Wait(1000)
+                    DoScreenFadeIn(1000)
+                    DisplayRadar(true)
                     TriggerEvent('skinchanger:loadSkin', {sex = 0}, OpenSaveableMenu)
                 else
                     TriggerEvent('skinchanger:loadSkin', skin)
