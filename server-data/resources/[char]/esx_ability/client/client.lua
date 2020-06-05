@@ -87,20 +87,20 @@ end
 function CheckAbilityRange()
     local ran = math.random(0,100)
     --ran = math.random(0,100)
-    if ability_level <= Config.LevelRange.low then
+    if ability_level <= tonumber(Config.LevelRange.low) then
         if ran <= Config.LevelPercent.low then
             return true
         end
-    elseif ability_level <= Config.LevelRange.mid then
+    elseif ability_level <= tonumber(Config.LevelRange.mid) then
         if ran <= Config.LevelPercent.mid then
             return true
         end
-    elseif ability_level <= Config.LevelRange.high then
+    elseif ability_level <= tonumber(Config.LevelRange.high) then
         if ran <= Config.LevelPercent.high then
             return true
         end
     else
-        if ran <= Config.LevelPercent.veryhigh then
+        if ran <= tonumber(Config.LevelPercent.veryhigh) then
             return true
         end
     end
