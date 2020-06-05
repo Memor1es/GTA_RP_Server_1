@@ -33,7 +33,7 @@ end)
 
 RegisterNetEvent('esx_ability:setlevel')
 AddEventHandler('esx_ability:setlevel', function(level)
-    ability_level = level
+    ability_level = tonumber(level)
     TriggerServerEvent('esx_ability:setlevel',level)
 end)
 
@@ -45,7 +45,7 @@ end)
 
 RegisterNetEvent('esx_ability:updatelevel')
 AddEventHandler('esx_ability:updatelevel', function(level)
-    ability_level = level
+    ability_level = tonumber(level)
     --TriggerServerEvent('esx_ability:setlevel',level)
 end)
 
@@ -56,6 +56,7 @@ AddEventHandler('esx_ability:levelup', function(num)
         today_level = today_level + num
         TriggerServerEvent('esx_ability:levelup',num)
         TriggerServerEvent('esx_ability:settodaylevel',num)
+        ESX.ShowNotification("感覺到天賦越來越熟練了")
     else
         ESX.ShowNotification("啊!已超過今日升等上限~r~失敗~")
     end
