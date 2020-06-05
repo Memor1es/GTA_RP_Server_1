@@ -279,18 +279,6 @@ function OpenSaveableMenuNoCrime(submitCb, cancelCb, restrict)
     OpenMenu(function(data, menu)
         menu.close()
         DeleteSkinCam()
-
-        --for character select
-        
-        DoScreenFadeOut(1000)
-        Citizen.Wait(1500)
-        SetEntityCoords(PlayerPedId(), -205.90, -1012.74, 30.20, 0.0, 0.0, 0.0, true)
-        TriggerEvent("charselect:enable")
-        Citizen.Wait(1000)
-        DoScreenFadeIn(1000)
-        DisplayRadar(true)
-        
-        --
         
         TriggerEvent('skinchanger:getSkin', function(skin)
             TriggerServerEvent('esx_skin:save', skin)
