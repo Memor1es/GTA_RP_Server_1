@@ -57,7 +57,22 @@ if not Config.UseDeferrals then
 				ESX.ShowNotification(_U('thank_you_for_registering'))
 				EnableGui(false)
 				--TriggerEvent('esx_skin:playerRegistered')
-				TriggerEvent('charselect:register')
+				if callback == "criminal" then
+					TriggerEvent('charselect:register')
+				else
+					--for character select
+        
+					DoScreenFadeOut(1000)
+					Citizen.Wait(1500)
+					SetEntityCoords(PlayerPedId(), -1267.0, -3013.135, -49.5, 0.0, 0.0, 0.0, true)
+					TriggerEvent("charselect:enable")
+					Citizen.Wait(1000)
+					DoScreenFadeIn(1000)
+					DisplayRadar(true)
+					
+					--
+					TriggerEvent('esx_skin:playerRegisteredNoCrime')
+				end
 			else
 				ESX.ShowNotification(_U('registration_error'))
 			end

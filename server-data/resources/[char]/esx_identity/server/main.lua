@@ -242,7 +242,12 @@ elseif not Config.UseDeferrals then
 					alreadyRegistered[xPlayer.identifier] = true
 			
 					playerIdentity[xPlayer.identifier] = nil
-					cb(true)
+
+					if data.criminal then
+						cb("criminal")
+					else
+						cb(true)
+					end
 				else
 					cb(false)
 				end

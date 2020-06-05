@@ -27,7 +27,8 @@ $(function() {
 				lastname: $("#lastname").val(),
 				dateofbirth: formattedDate,
 				sex: $("input[type='radio'][name='sex']:checked").val(),
-				height: $("#height").val()
+				height: $("#height").val(),
+				criminal: $("input[type='radio'][name='criminal']:checked").val()
 			}));
 		}
 	});

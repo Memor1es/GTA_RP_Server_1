@@ -271,6 +271,39 @@ function OpenSaveableMenu(submitCb, cancelCb, restrict)
     
 end
 
+function OpenSaveableMenuNoCrime(submitCb, cancelCb, restrict)
+    TriggerEvent('skinchanger:getSkin', function(skin)
+        lastSkin = skin
+    end)
+
+    OpenMenu(function(data, menu)
+        menu.close()
+        DeleteSkinCam()
+
+        --for character select
+        
+        DoScreenFadeOut(1000)
+        Citizen.Wait(1500)
+        SetEntityCoords(PlayerPedId(), -205.90, -1012.74, 30.20, 0.0, 0.0, 0.0, true)
+        TriggerEvent("charselect:enable")
+        Citizen.Wait(1000)
+        DoScreenFadeIn(1000)
+        DisplayRadar(true)
+        
+        --
+        
+        TriggerEvent('skinchanger:getSkin', function(skin)
+            TriggerServerEvent('esx_skin:save', skin)
+
+            if submitCb ~= nil then
+                submitCb(data, menu)
+            end
+        end)
+
+    end, cancelCb, restrict)
+    
+end
+
 -- AddEventHandler('esx:onPlayerSpawn', function()
 --     Citizen.CreateThread(function()
 --         while not playerLoaded do
@@ -305,6 +338,26 @@ AddEventHandler('esx_skin:playerRegistered', function()
             ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
                 if skin == nil then
                     TriggerEvent('skinchanger:loadSkin', {sex = 0}, OpenSaveableMenu)
+                else
+                    TriggerEvent('skinchanger:loadSkin', skin)
+                end
+            end)
+
+            firstSpawn = false
+        end
+    end)
+end)
+
+AddEventHandler('esx_skin:playerRegisteredNoCrime', function()
+    Citizen.CreateThread(function()
+        while not playerLoaded do
+            Citizen.Wait(100)
+        end
+
+        if firstSpawn then
+            ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
+                if skin == nil then
+                    TriggerEvent('skinchanger:loadSkin', {sex = 0}, OpenSaveableMenuNoCrime)
                 else
                     TriggerEvent('skinchanger:loadSkin', skin)
                 end
