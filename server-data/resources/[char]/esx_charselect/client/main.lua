@@ -28,7 +28,7 @@ end)
 RegisterNetEvent('ur:hasRegistraion')
 AddEventHandler('ur:hasRegistraion', function()
     isRegistraion = true
-    --TriggerEvent("charselect:animation", true)
+    TriggerEvent("charselect:register")
 end)
 --[[
 RegisterNetEvent('esx:playerLoaded')
