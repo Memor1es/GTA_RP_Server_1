@@ -28,7 +28,7 @@ end)
 RegisterNetEvent('ur:hasRegistraion')
 AddEventHandler('ur:hasRegistraion', function()
     isRegistraion = true
-    TriggerEvent("charselect:register")
+    --TriggerEvent("charselect:register")
 end)
 --[[
 RegisterNetEvent('esx:playerLoaded')
@@ -108,6 +108,7 @@ AddEventHandler("charselect:animation", function(status)
                 RequestAnimDict("mp_character_creation@customise@male_a")
                 TaskPlayAnim(PlayerPedId(), "mp_character_creation@customise@male_a", "loop", 8.0, -8.0, -1, 0, 1, 0, 0, 0)
                 if IsControlJustReleased(1, 201) then
+                    TriggerEvent('esx_skin:playerRegistered')
                     CreateChar()
                 end
             end
