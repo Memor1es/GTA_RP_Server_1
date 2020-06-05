@@ -10,7 +10,11 @@ AddEventHandler("charselect:createsign", function(xPlayer)
     if result[1] then
         if xPlayer ~= nil then
             local accounts = json.decode(result[1].accounts)
-            TriggerClientEvent("charselect:createsign", _source, (result[1].firstname .. " " .. result[1].lastname), xPlayer.job.label, ("Cash: " .. accounts.money .. "$"))
+            if accounts.money == nil then
+                TriggerClientEvent("charselect:createsign", _source, (result[1].firstname .. " " .. result[1].lastname), xPlayer.job.label, ("Cash: " .. " 0 " .. "$"))
+            else
+                TriggerClientEvent("charselect:createsign", _source, (result[1].firstname .. " " .. result[1].lastname), xPlayer.job.label, ("Cash: " .. accounts.money .. "$"))
+            end
         end
     end
 end)    
