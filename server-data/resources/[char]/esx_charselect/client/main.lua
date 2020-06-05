@@ -12,14 +12,14 @@ RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function(xPlayer)
   PlayerData = xPlayer
 end)
-
+--[[
 RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function(xPlayer)
     Citizen.Wait(1000)
     TriggerServerEvent("charselect:select")
     Visible()
 end)
-
+--]]
 RegisterNetEvent("charselect:register")
 AddEventHandler("charselect:register", function()
     Citizen.Wait(1000)
