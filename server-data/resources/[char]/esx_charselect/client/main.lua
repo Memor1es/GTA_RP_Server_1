@@ -108,7 +108,6 @@ AddEventHandler("charselect:animation", function(status)
                 RequestAnimDict("mp_character_creation@customise@male_a")
                 TaskPlayAnim(PlayerPedId(), "mp_character_creation@customise@male_a", "loop", 8.0, -8.0, -1, 0, 1, 0, 0, 0)
                 if IsControlJustReleased(1, 201) then
-                    TriggerEvent('esx_skin:playerRegistered')
                     CreateChar()
                 end
             end
@@ -228,7 +227,8 @@ function CharCreator()
     RenderScriptCams(false, true, 500, true, true)      
     Citizen.Wait(100)
     SetPlayerModel(PlayerPedId(), "mp_m_freemode_01")
-    TriggerEvent('esx_skin:openSaveableMenu', PlayerPedId())
+    --TriggerEvent('esx_skin:openSaveableMenu', PlayerPedId())
+    TriggerEvent('esx_skin:playerRegistered')
 end
 
 function SpawnCharacter()
