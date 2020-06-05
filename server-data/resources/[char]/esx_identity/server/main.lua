@@ -243,7 +243,7 @@ elseif not Config.UseDeferrals then
 			
 					playerIdentity[xPlayer.identifier] = nil
 
-					if data.criminal then
+					if data.criminal =="criminal" then
 						cb("criminal")
 					else
 						cb(true)
