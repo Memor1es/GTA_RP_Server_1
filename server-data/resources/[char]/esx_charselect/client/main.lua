@@ -17,7 +17,7 @@ end)
 
 RegisterNetEvent('ur:warnning')
 AddEventHandler('ur:warnning', function(xPlayer)
-  ESX.ShowHelpNotification("請盡快註冊")
+  ESX.ShowHelpNotification("請等待右下角的waiting script消失再註冊")
 end)
 
 RegisterNetEvent('esx:playerLoaded')
