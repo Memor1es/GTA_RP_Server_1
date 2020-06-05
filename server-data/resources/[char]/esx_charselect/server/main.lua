@@ -14,7 +14,7 @@ AddEventHandler('ur:checkRegistration', function()
         MySQL.Async.fetchAll('SELECT * FROM users WHERE identifier = @identifier',{
             ['@identifier'] = xPlayer.identifier
         }, function(result)
-            if result[1].firstname == "" and result[1].lastname == "" and result[1].dateofbirth == "" and result[1].sex == "" and result[1].height == "" then
+            if result[1].firstname == nil and result[1].lastname == nil and result[1].dateofbirth == nil and result[1].sex == nil and result[1].height == nil then
                 TriggerClientEvent('ur:warnning', _source)
             else
                 TriggerClientEvent('ur:hasRegistraion', _source)
