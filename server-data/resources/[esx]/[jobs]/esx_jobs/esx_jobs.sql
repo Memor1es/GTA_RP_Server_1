@@ -1,4 +1,4 @@
-USE `essentialmode`;
+
 
 INSERT INTO `addon_account` (name, label, shared) VALUES
 	('caution', 'Caution', 0)

@@ -4,10 +4,10 @@ Citizen.CreateThread(function()
        Citizen.Wait(0)
        if stopmove then
             FreezeEntityPosition(GetPlayerPed(-1), true)
-            print("Frozen")
+            --print("Frozen")
        else
         FreezeEntityPosition(GetPlayerPed(-1), false)
-            print("Free")
+            --print("Free")
        end
    end
 end)
