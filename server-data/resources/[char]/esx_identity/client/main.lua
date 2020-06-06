@@ -13,8 +13,8 @@ AddEventHandler('esx_identity:alreadyRegistered', function()
 	while not loadingScreenFinished do
 		Citizen.Wait(100)
 	end
-	TriggerEvent("charselect:register")
-	--TriggerEvent('esx_skin:playerRegistered')
+	--TriggerEvent("charselect:register")
+	TriggerEvent('esx_skin:playerRegisteredNoCrime')
 end)
 
 AddEventHandler('esx:loadingScreenOff', function()
