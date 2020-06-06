@@ -160,7 +160,7 @@ ESX.RegisterServerCallback('garage:getOutOwnedCars', function(source, cb)
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	
 	MySQL.Async.fetchAll('SELECT * FROM owned_vehicles WHERE owner = @owner AND Type = @Type AND `stored` = @stored', {
-		['@owner'] = GetPlayerIdentifiers(source)[1],
+		['@owner'] = xPlayer.identifier,
 		['@Type']   = 'car',
 		['@stored'] = false
 	}, function(data) 
