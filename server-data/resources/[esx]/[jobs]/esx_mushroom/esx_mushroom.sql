@@ -1,4 +1,4 @@
-USE `essentialmode`;
+
 
 INSERT INTO `items` (`name`, `label`, `limit`, `rare`, `can_remove`) VALUES
 	('mushroom', 'Mushroom', -1, 0, 1),
@@ -7,6 +7,3 @@ INSERT INTO `items` (`name`, `label`, `limit`, `rare`, `can_remove`) VALUES
 	
 ;
 
-INSERT INTO `licenses` (`type`, `label`) VALUES
-	('mushroom_processing', 'Mushroom Processing License')
-;

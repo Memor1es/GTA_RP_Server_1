@@ -49,7 +49,7 @@ Citizen.CreateThread(function()
 						 
 							name = "unique_action_name",
 							duration = 3500,
-							label = "งมเห็ด....",
+							label = "採採採....",
 							useWhileDead = false,
 							canCancel = true,
 							controlDisables = {
