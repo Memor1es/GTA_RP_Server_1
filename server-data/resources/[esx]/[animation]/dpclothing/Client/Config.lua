@@ -1,5 +1,5 @@
 Config = {
-	Language = "en",					-- You can change the language here. I translated some with a tool online so they might not be 100% accurate. Let me know!
+	Language = "tc",					-- You can change the language here. I translated some with a tool online so they might not be 100% accurate. Let me know!
 	ExtrasEnabled = true,				-- This toggles the extra commands (Shirt, Pants) in case you dont want your players stripping their clothes for whatever reason.
 	Debug = false,						-- Enables logging and on screen display of what your character is wearing.
 	GUI = {
