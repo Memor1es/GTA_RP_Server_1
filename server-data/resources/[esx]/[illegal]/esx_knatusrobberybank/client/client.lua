@@ -171,8 +171,14 @@ end)
 RegisterNetEvent('esx_holdupbank:plantedbomb')
 AddEventHandler('esx_holdupbank:plantedbomb', function(x,y,z,doortype)
 	local coords = vector3(x,y,z) -- fix for vectors
-	local obs, distance = ESX.Game.GetClosestObject(doortype, coords)
-
+	--local obs, distance = ESX.Game.GetClosestObject(doortype, coords)
+	--[[local DoorAvailable = {}
+	for i = 1, #doortype do
+		DoorAvailable[GetHashKey(doortype[i])] = true
+	end
+	local obs, distance = ESX.Game.GetClosestEntity(ESX.Game.GetObjects(), false, coords, DoorAvailable)
+--]]
+	local obs = GetClosestObjectOfType(x, y, z, 3.0, GetHashKey(doortype), false, false, false)
     --AddExplosion( bank.bombposition.x,  bank.bombposition.y, bank.bombposition.z , 0, 0.5, 1, 0, 1065353216, 0)
     AddExplosion( x,  y, z , 0, 0.5, 1, 0, 1065353216, 0)
     AddExplosion( x,  y, z , 0, 0.5, 1, 0, 1065353216, 0)
@@ -186,7 +192,9 @@ AddEventHandler('esx_holdupbank:plantedbomb', function(x,y,z,doortype)
 	Citizen.CreateThread(function()
 		while dooropen do
 			Wait(2000)
-			local obs, distance = ESX.Game.GetClosestObject(globalbombDoortype, globalbombcoords)
+			--local obs, distance = ESX.Game.GetClosestObject(globalbombDoortype, globalbombcoords)
+			--local obs, distance = ESX.Game.GetClosestEntity(ESX.Game.GetObjects(), false, globalbombcoords, DoorAvailable)
+			local obs = GetClosestObjectOfType(x, y, z, 3.0, GetHashKey(globalbombDoortype), false, false, false)
 			SetEntityHeading(obs, globalbombrotation)
 			Citizen.Wait(0);
 		end
@@ -201,8 +209,14 @@ AddEventHandler('esx_holdupbank:opendoors', function(x,y,z,doortype)
 	ESX.ShowNotification("X: "..x)
 		
 	local coords = vector3(x,y,z) -- fix for vectors
-	local obs, distance = ESX.Game.GetClosestObject(doortype, coords) -- instant open for people already in site
-
+	--local obs, distance = ESX.Game.GetClosestObject(doortype, coords) -- instant open for people already in site
+	--[[local DoorAvailable = {}
+	for i = 1, #doortype do
+		DoorAvailable[GetHashKey(doortype[i])] = true
+	end
+	local obs, distance = ESX.Game.GetClosestEntity(ESX.Game.GetObjects(), false, coords, DoorAvailable)
+	--]]
+	local obs = GetClosestObjectOfType(x, y, z, 3.0, GetHashKey(doortype), false, false, false)
 	local pos = GetEntityCoords(obs);
 
 
@@ -213,7 +227,9 @@ AddEventHandler('esx_holdupbank:opendoors', function(x,y,z,doortype)
 	Citizen.CreateThread(function()
 	while dooropen do
 		Wait(2000)
-		local obs, distance = ESX.Game.GetClosestObject(globalDoortype, globalcoords)
+		--local obs, distance = ESX.Game.GetClosestObject(globalDoortype, globalcoords)
+		--local obs, distance = ESX.Game.GetClosestEntity(ESX.Game.GetObjects(), false, globalcoords, DoorAvailable)
+		local obs = GetClosestObjectOfType(x, y, z, 3.0, GetHashKey(globalDoortype), false, false, false)
 		SetEntityHeading(obs, globalrotation)
 	end
 	end)
