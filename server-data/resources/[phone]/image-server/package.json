@@ -1,0 +1,32 @@
+{
+  "name": "image-server",
+  "version": "1.0.0",
+  "description": "A Typescript image server using express",
+  "main": "app.js",
+  "scripts": {
+    "test": "eslint src",
+    "lint": "eslint --fix src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrJacz/image-server.git"
+  },
+  "author": "Jacz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrJacz/image-server/issues"
+  },
+  "homepage": "https://github.com/MrJacz/image-server#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "helmet": "^3.18.0",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1"
+  }
+}
