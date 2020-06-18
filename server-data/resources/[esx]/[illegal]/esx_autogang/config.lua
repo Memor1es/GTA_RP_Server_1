@@ -12,7 +12,8 @@ Config.DispatchSquads = {
             'police',
             'cardealer',
             'mechanic',
-            'taxi'
+            'taxi',
+            'mafia'
         },
         Event = 89, -- number cooresponts to https://runtime.fivem.net/doc/natives/?_0x1374ABB7C15BAB92
         NumberOfWaves = 3,

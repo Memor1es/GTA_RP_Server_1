@@ -1,6 +1,7 @@
 ESX = nil
 IsLocked = false
 ThreadIds = {}
+local ShowText = false
 
 Citizen.CreateThread(function()
 	while ESX == nil do
@@ -161,6 +162,7 @@ function CreateNPCThread(squad, plyPed)
             Citizen.Wait(1000)
           end
         end
+        ShowText = true
       end
 
       -- player has now died or left area
@@ -180,6 +182,7 @@ function CreateNPCThread(squad, plyPed)
       end
 
       DeleteNPC(createdNPC)
+      ShowText = false
     end)
   end
 end
@@ -225,3 +228,24 @@ function table.length(table)
   for _ in pairs(table) do count = count + 1 end
   return count
 end
+
+function DrawMissionText(text)
+  SetTextScale(0.5, 0.5)
+  SetTextFont(1)
+  SetTextProportional(1)
+  SetTextEdge(2, 0, 0, 0, 150)
+  SetTextEntry("STRING")
+  SetTextCentre(1)
+  SetTextOutline()
+  AddTextComponentString(text)
+  DrawText(0.5,0.955)
+end
+
+Citizen.CreateThread(function()
+  while true do
+      if ShowText then
+        DrawMissionText("在卡林殘黨的襲擊下，守衛我們的地盤")
+      end
+      Citizen.Wait(0)
+  end
+end)
