@@ -129,8 +129,9 @@ AddEventHandler('esx_ability:setText', function(text)
         Citizen.CreateThread(function()
             while text_timer>0 do
                 DrawMissionText(text)
+                Citizen.Wait(0)
             end
-            Citizen.Wait(0)
+            --Citizen.Wait(0)
         end)
     end
 end)
