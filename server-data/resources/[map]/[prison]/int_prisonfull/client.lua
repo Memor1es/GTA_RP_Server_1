@@ -111,9 +111,10 @@ end)
 
 
 Citizen.CreateThread(function()
-    plyPed = GetPlayerPed(-1)
+    
 	while true do
         --flag = TriggerServerEvent('int_prisonfull:getflag')
+        local plyPed = GetPlayerPed(-1)
         if GetVecDist(GetEntityCoords(plyPed), Config.PrisonLoaction) < Config.TriggerDistance then
             ESX.TriggerServerCallback('int_prisonfull:getflag', function(flag)
                 if flag ~= is_on then
