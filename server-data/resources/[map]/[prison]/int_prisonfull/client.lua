@@ -110,6 +110,7 @@ end)
 
 
 Citizen.CreateThread(function()
+    plyPed = GetPlayerPed(-1)
 	while true do
         --flag = TriggerServerEvent('int_prisonfull:getflag')
         if GetVecDist(GetEntityCoords(plyPed), Config.PrisonLoaction) < Config.TriggerDistance then
