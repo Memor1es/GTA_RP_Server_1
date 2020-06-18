@@ -1,7 +1,7 @@
 Locales ['en'] = {
   -- weed
-  ['weed_pickupprompt'] = 'press ~INPUT_CONTEXT~ to harvest the ~g~Mushroom~s~.',
-  ['weed_inventoryfull'] = 'you do not have any more inventory space for ~g~Mushroom~s~.',
+  ['weed_pickupprompt'] = '按下 ~INPUT_CONTEXT~ 來撿取 ~g~垃圾~s~.',
+  ['weed_inventoryfull'] = '你身上沒有足夠的空間來放 ~g~垃圾~s~.',
   ['weed_processprompt'] = 'press ~INPUT_CONTEXT~ to start ~g~Process Mushroom~s~.',
   ['weed_processingstarted'] = 'processing ~g~Mushroom~s~ into ~g~Transparent Glass ~s~...',
   ['weed_processingfull'] = 'processing ~r~canceled~s~ due to full inventory!',
