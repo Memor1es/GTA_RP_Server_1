@@ -29,6 +29,7 @@ RegisterNetEvent('esx_ability:setability')
 AddEventHandler('esx_ability:setability', function(skill)
     ability = skill
     TriggerServerEvent('esx_ability:setability',skill)
+    TriggerEvent('esx_ability:setText','按下F3查看學習的天賦')
 end)
 
 RegisterNetEvent('esx_ability:setlevel')
