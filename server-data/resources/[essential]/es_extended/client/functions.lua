@@ -45,6 +45,9 @@ ESX.SetPlayerData = function(key, val)
 end
 
 ESX.ShowNotification = function(msg)
+	if not IsPedInAnyVehicle(PlayerPedId()) then
+		msg = msg.."\n\n"
+	end
 	SetNotificationTextEntry('STRING')
 	AddTextComponentString(msg)
 	DrawNotification(0,1)
