@@ -13,7 +13,7 @@ AddEventHandler('esx_mushroom:pickedUpCannabis', function()
 	else
 		xPlayer.addInventoryItem(xItem.name, 1)
 	end--]]
-	xPlayer.addInventoryItem('mushroom_d', 1)
+	xPlayer.addInventoryItem('trash', 1)
 end)
 
 ESX.RegisterServerCallback('esx_mushroom:canPickUp', function(source, cb, item)
