@@ -3,7 +3,7 @@ Config.DrawDistance               = 100.0
 --language currently available EN and SV
 Config.Locale                     = 'en'
 
-Config.texttime                   = 1000
+Config.texttime                   = 250  --5sec
 
 Config.LevelRange                 = {}
 
