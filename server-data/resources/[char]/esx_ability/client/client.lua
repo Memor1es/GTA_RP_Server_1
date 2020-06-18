@@ -136,7 +136,7 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-        if text_timer then
+        if text_timer>0 then
             text_timer = text_timer -1
         end
         Citizen.Wait(0)
