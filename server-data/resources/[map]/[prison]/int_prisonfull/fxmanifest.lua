@@ -7,8 +7,13 @@ description 'int_prisonfull'
 
 version '1.2.0'
 
-server_script 'server.lua'
-client_script 'client.lua'
+server_scripts {
+    'server.lua'
+}
+client_scripts {
+    'client.lua',
+    'Config.lua'
+}
 
 data_file 'INTERIOR_PROXY_ORDER_FILE' 'interiorproxies.meta'
 

@@ -112,17 +112,19 @@ end)
 Citizen.CreateThread(function()
 	while true do
         --flag = TriggerServerEvent('int_prisonfull:getflag')
-        ESX.TriggerServerCallback('int_prisonfull:getflag', function(flag)
-            if flag ~= is_on then
-                if flag then
-                    TriggerEvent('int_prisonfull:on')
-                else
-                    TriggerEvent('int_prisonfull:off')
+        if GetVecDist(GetEntityCoords(plyPed), Config.PrisonLoaction) < Config.TriggerDistance then
+            ESX.TriggerServerCallback('int_prisonfull:getflag', function(flag)
+                if flag ~= is_on then
+                    if flag then
+                        TriggerEvent('int_prisonfull:on')
+                    else
+                        TriggerEvent('int_prisonfull:off')
+                    end
                 end
-            end
-        
-        
-        end)
+            
+            
+            end)
+        end
         Citizen.Wait(1000*15)
 	end
 end)
