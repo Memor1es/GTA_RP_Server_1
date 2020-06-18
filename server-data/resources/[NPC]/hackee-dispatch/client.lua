@@ -30,7 +30,7 @@ AddEventHandler('dispatch:createAOEListener', function(config)
       table.insert(ThreadIds, {squad.Name, GetIdOfThisThread()})
       Lock = false
 
-      while true do
+      --while true do
         --print("haha")
         local plyPed = GetPlayerPed(-1)
         local plyPos = GetEntityCoords(plyPed)
@@ -42,7 +42,7 @@ AddEventHandler('dispatch:createAOEListener', function(config)
           --print("haha")
           Citizen.Wait(squad.TimeBeforeUpAgain)
         end
-      end
+      --end
     end)
   end
 end)
@@ -86,11 +86,13 @@ function SpawnEnemyDispatch(squad)
     if IsEntityDead(plyPed) or (GetVecDist(plyPos, squad.CentralPos) > squad.TriggerDistance)then
       break
     end
+    ESX.ShowNotification("第 "..j.." 波要來了")
     for j=1,squad.NumberPerWave do
       CreateNPCThread(squad, plyPed)
     end
     Citizen.Wait(squad.TimeBetweenWaves)
   end
+  ESX.ShowNotification("似乎變得平靜下來了")
 end
 
 function CreateNPCThread(squad, plyPed)
