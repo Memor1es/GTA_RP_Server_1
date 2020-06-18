@@ -1,0 +1,29 @@
+[
+  {
+    "name": "jiyuuni",
+    "master": true,
+    "password_hash": "$2a$11$8ZjhsnJFLkyAMB1JtyE1XuPkbk/7lkUYmRhs1QBYIO7WUJM2jH3Z.",
+    "providers": {
+      "citizenfx": {
+        "id": "jiyuuni",
+        "data": {
+          "nameid": "https://forum.cfx.re/internal/user/804836",
+          "name": "jiyuuni",
+          "profile": "https://forum.cfx.re/u/jiyuuni",
+          "picture": "https://forum.cfx.re/user_avatar/forum.cfx.re/jiyuuni/256/442376_2.png",
+          "sub": "919f7ca4c60978e7e23dccdb74ed0be031918ff993c925543d07e461e93d0d81"
+        }
+      }
+    },
+    "permissions": []
+  },
+  {
+    "name": "localadmin",
+    "master": false,
+    "password_hash": "$2a$11$DKNFn8WfGKWpzE.tkSEaduWYR7oFZcsGWN9efOWBJovXoLC4uoqke",
+    "providers": {},
+    "permissions": [
+      "all_permissions"
+    ]
+  }
+]

@@ -1,0 +1,380 @@
+
+================================================================
+======== FXServer starting - 2020/6/18 下午2:47:01
+================================================================
+Creating script environments for _cfx_internal
+Found new resource vMenu in C:/GTA_RP_Server\server-data/resources//vMenu
+Found new resource monitor in C:\GTA_RP_Server_1\server2\citizen/system_resources//monitor
+Found new resource webadmin in C:\GTA_RP_Server_1\server2\citizen/system_resources//webadmin
+Found new resource esx_ability in C:/GTA_RP_Server\server-data/resources//[char]/esx_ability
+Found new resource esx_amb_ability in C:/GTA_RP_Server\server-data/resources//[char]/esx_amb_ability
+Found new resource esx_charselect in C:/GTA_RP_Server\server-data/resources//[char]/esx_charselect
+Found new resource esx_chef_ability in C:/GTA_RP_Server\server-data/resources//[char]/esx_chef_ability
+Found new resource esx_gun_ability in C:/GTA_RP_Server\server-data/resources//[char]/esx_gun_ability
+Found new resource esx_identity in C:/GTA_RP_Server\server-data/resources//[char]/esx_identity
+Found new resource esx_lock_ability in C:/GTA_RP_Server\server-data/resources//[char]/esx_lock_ability
+Found new resource esx_mech_ability in C:/GTA_RP_Server\server-data/resources//[char]/esx_mech_ability
+Found new resource pd-spawn in C:/GTA_RP_Server\server-data/resources//[char]/pd-spawn
+Found new resource async in C:/GTA_RP_Server\server-data/resources//[essential]/async
+Found new resource es_extended in C:/GTA_RP_Server\server-data/resources//[essential]/es_extended
+Found new resource mysql-async in C:/GTA_RP_Server\server-data/resources//[essential]/mysql-async
+Found new resource chip_criminalDoctor in C:/GTA_RP_Server\server-data/resources//[esx]/chip_criminalDoctor
+Found new resource cron in C:/GTA_RP_Server\server-data/resources//[esx]/cron
+Found new resource esx-ecobottles in C:/GTA_RP_Server\server-data/resources//[esx]/esx-ecobottles
+Found new resource esx-kr-vehicle-push in C:/GTA_RP_Server\server-data/resources//[esx]/esx-kr-vehicle-push
+Found new resource esx_billing in C:/GTA_RP_Server\server-data/resources//[esx]/esx_billing
+Found new resource esx_dmvschool in C:/GTA_RP_Server\server-data/resources//[esx]/esx_dmvschool
+Found new resource esx_garage in C:/GTA_RP_Server\server-data/resources//[esx]/esx_garage
+Found new resource esx_license in C:/GTA_RP_Server\server-data/resources//[esx]/esx_license
+Found new resource esx_lscustom in C:/GTA_RP_Server\server-data/resources//[esx]/esx_lscustom
+Found new resource esx_society in C:/GTA_RP_Server\server-data/resources//[esx]/esx_society
+Found new resource InteractSound in C:/GTA_RP_Server\server-data/resources//[esx]/InteractSound
+Found new resource InteractSoundS in C:/GTA_RP_Server\server-data/resources//[esx]/InteractSoundS
+Found new resource new_banking in C:/GTA_RP_Server\server-data/resources//[esx]/new_banking
+Found new resource st-cctv in C:/GTA_RP_Server\server-data/resources//[esx]/st-cctv
+Found new resource vSync in C:/GTA_RP_Server\server-data/resources//[esx]/vSync
+Found new resource zffb_dice in C:/GTA_RP_Server\server-data/resources//[esx]/zffb_dice
+Found new resource basic-gamemode in C:/GTA_RP_Server\server-data/resources//[gamemodes]/basic-gamemode
+Found new resource chat in C:/GTA_RP_Server\server-data/resources//[gameplay]/chat
+Found new resource chat-theme-gtao in C:/GTA_RP_Server\server-data/resources//[gameplay]/chat-theme-gtao
+Found new resource playernames in C:/GTA_RP_Server\server-data/resources//[gameplay]/playernames
+Found new resource bob74_ipl in C:/GTA_RP_Server\server-data/resources//[map]/bob74_ipl
+Found new resource hackee-dispatch in C:/GTA_RP_Server\server-data/resources//[NPC]/hackee-dispatch
+Found new resource image-server in C:/GTA_RP_Server\server-data/resources//[phone]/image-server
+Resource loading for image-server failed:
+Could not open resource metadata file C:/GTA_RP_Server/server-data/resources//[phone]/image-server/__resource.lua.
+Found new resource baseevents in C:/GTA_RP_Server\server-data/resources//[system]/baseevents
+Found new resource hardcap in C:/GTA_RP_Server\server-data/resources//[system]/hardcap
+Found new resource rconlog in C:/GTA_RP_Server\server-data/resources//[system]/rconlog
+Found new resource runcode in C:/GTA_RP_Server\server-data/resources//[system]/runcode
+Found new resource scoreboard in C:/GTA_RP_Server\server-data/resources//[system]/scoreboard
+Found new resource sessionmanager in C:/GTA_RP_Server\server-data/resources//[system]/sessionmanager
+Found new resource sessionmanager-rdr3 in C:/GTA_RP_Server\server-data/resources//[system]/sessionmanager-rdr3
+Found new resource example-loadscreen in C:/GTA_RP_Server\server-data/resources//[test]/example-loadscreen
+Found new resource fivem in C:/GTA_RP_Server\server-data/resources//[test]/fivem
+Found new resource dpclothing in C:/GTA_RP_Server\server-data/resources//[esx]/[animation]/dpclothing
+Found new resource dpemotes in C:/GTA_RP_Server\server-data/resources//[esx]/[animation]/dpemotes
+Found new resource crafting in C:/GTA_RP_Server\server-data/resources//[esx]/[crafting]/crafting
+Found new resource esx_crafting in C:/GTA_RP_Server\server-data/resources//[esx]/[crafting]/esx_crafting
+Found new resource esx_autogang in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_autogang
+Found new resource esx_carthief in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_carthief
+Found new resource esx_doorlock_mhacking in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_doorlock_mhacking
+Found new resource esx_drugeffects in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_drugeffects
+Found new resource esx_drugs in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_drugs
+Found new resource esx_knatusblowtorch in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_knatusblowtorch
+Found new resource esx_knatusrobberybank in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_knatusrobberybank
+Found new resource esx_lootDeadbody in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_lootDeadbody
+Found new resource esx_merryweather in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_merryweather
+Found new resource esx_outlawalert in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_outlawalert
+Found new resource esx_planting in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_planting
+Found new resource esx_thief in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_thief
+Found new resource esx_vangelico_robbery in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_vangelico_robbery
+Found new resource KBurglary in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/KBurglary
+Found new resource lockpick in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/lockpick
+Found new resource mhacking in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/mhacking
+Found new resource stasiek_selldrugs in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/stasiek_selldrugs
+Found new resource t1ger_drugs in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/t1ger_drugs
+Found new resource TakeHostage in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/TakeHostage
+Found new resource x-hotwire in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/x-hotwire
+Found new resource instance in C:/GTA_RP_Server\server-data/resources//[esx]/[instance]/instance
+Found new resource CARP-status in C:/GTA_RP_Server\server-data/resources//[esx]/[inventory]/CARP-status
+Found new resource esx_inventoryhud in C:/GTA_RP_Server\server-data/resources//[esx]/[inventory]/esx_inventoryhud
+Found new resource prison_status_panel in C:/GTA_RP_Server\server-data/resources//[esx]/[inventory]/prison_status_panel
+Found new resource skeletalsystem in C:/GTA_RP_Server\server-data/resources//[esx]/[inventory]/skeletalsystem
+Found new resource esx_ambulancejob in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/esx_ambulancejob
+Found new resource esx_joblisting in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/esx_joblisting
+Found new resource esx_jobs in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/esx_jobs
+Found new resource esx_mechanicjob in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/esx_mechanicjob
+Found new resource esx_mushroom in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/esx_mushroom
+Found new resource esx_policejob in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/esx_policejob
+Found new resource esx_trash in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/esx_trash
+Found new resource Hunter in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/Hunter
+Found new resource esx_accessories in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_accessories
+Found new resource esx_foodtruck in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_foodtruck
+Found new resource esx_jimmybm in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_jimmybm
+Found new resource esx_newaccessories in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_newaccessories
+Found new resource esx_np_skinshop in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_np_skinshop
+Found new resource esx_np_skinshop_v2 in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_np_skinshop_v2
+Found new resource esx_shops in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_shops
+Found new resource esx_vehicleshop in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_vehicleshop
+Found new resource esx_weaponshop in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_weaponshop
+Found new resource esx_skin in C:/GTA_RP_Server\server-data/resources//[esx]/[skin]/esx_skin
+Found new resource skinchanger in C:/GTA_RP_Server\server-data/resources//[esx]/[skin]/skinchanger
+Found new resource esx_basicneeds in C:/GTA_RP_Server\server-data/resources//[esx]/[status]/esx_basicneeds
+Found new resource esx_gift_tree in C:/GTA_RP_Server\server-data/resources//[esx]/[status]/esx_gift_tree
+Found new resource esx_optionalneeds in C:/GTA_RP_Server\server-data/resources//[esx]/[status]/esx_optionalneeds
+Found new resource esx_status in C:/GTA_RP_Server\server-data/resources//[esx]/[status]/esx_status
+Found new resource esx_addonaccount in C:/GTA_RP_Server\server-data/resources//[esx]/[storage]/esx_addonaccount
+Found new resource esx_addoninventory in C:/GTA_RP_Server\server-data/resources//[esx]/[storage]/esx_addoninventory
+Found new resource esx_datastore in C:/GTA_RP_Server\server-data/resources//[esx]/[storage]/esx_datastore
+Found new resource esx_kingofthehill in C:/GTA_RP_Server\server-data/resources//[esx]/[stronghold]/esx_kingofthehill
+Found new resource esx_menu_default in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/esx_menu_default
+Found new resource esx_menu_dialog in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/esx_menu_dialog
+Found new resource esx_menu_list in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/esx_menu_list
+Found new resource mythic_notify in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/mythic_notify
+Found new resource mythic_progbar in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/mythic_progbar
+Found new resource mythic_progressbar in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/mythic_progressbar
+Found new resource progressBars in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/progressBars
+Found new resource st-hud in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/st-hud
+Found new resource st-menu in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/st-menu
+Found new resource carremote in C:/GTA_RP_Server\server-data/resources//[esx]/[vehicle]/carremote
+Found new resource garageshitz in C:/GTA_RP_Server\server-data/resources//[esx]/[vehicle]/garageshitz
+Found new resource whiteplate in C:/GTA_RP_Server\server-data/resources//[esx]/[vehicle]/whiteplate
+Found new resource ls-radio in C:/GTA_RP_Server\server-data/resources//[esx]/[voice]/ls-radio
+Found new resource tokovoip_script in C:/GTA_RP_Server\server-data/resources//[esx]/[voice]/tokovoip_script
+Found new resource fivem-map-hipster in C:/GTA_RP_Server\server-data/resources//[gamemodes]/[maps]/fivem-map-hipster
+Found new resource fivem-map-skater in C:/GTA_RP_Server\server-data/resources//[gamemodes]/[maps]/fivem-map-skater
+Found new resource redm-map-one in C:/GTA_RP_Server\server-data/resources//[gamemodes]/[maps]/redm-map-one
+Found new resource dons_bm_middoc in C:/GTA_RP_Server\server-data/resources//[map]/[health]/dons_bm_middoc
+Found new resource PetClinic in C:/GTA_RP_Server\server-data/resources//[map]/[health]/PetClinic
+Found new resource smokey_hory in C:/GTA_RP_Server\server-data/resources//[map]/[health]/smokey_hory
+Found new resource int_prisonfull in C:/GTA_RP_Server\server-data/resources//[map]/[prison]/int_prisonfull
+Found new resource prisonprops in C:/GTA_RP_Server\server-data/resources//[map]/[prison]/prisonprops
+Found new resource biker in C:/GTA_RP_Server\server-data/resources//[map]/[stronghold]/biker
+Found new resource bikerbarsandy in C:/GTA_RP_Server\server-data/resources//[map]/[stronghold]/bikerbarsandy
+Found new resource buldingbeach in C:/GTA_RP_Server\server-data/resources//[map]/[stronghold]/buldingbeach
+Found new resource grandehouse in C:/GTA_RP_Server\server-data/resources//[map]/[stronghold]/grandehouse
+Found new resource petitmaison in C:/GTA_RP_Server\server-data/resources//[map]/[stronghold]/petitmaison
+Found new resource vagos in C:/GTA_RP_Server\server-data/resources//[map]/[stronghold]/vagos
+Found new resource webpack in C:/GTA_RP_Server\server-data/resources//[system]/[builders]/webpack
+Found new resource yarn in C:/GTA_RP_Server\server-data/resources//[system]/[builders]/yarn
+Found new resource utk_ornateheist in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/[UTK]/utk_ornateheist
+Found new resource utk_ornateprops in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/[UTK]/utk_ornateprops
+Found new resource character in C:/GTA_RP_Server\server-data/resources//[esx]/[skin]/[eup]/character
+Found new resource fashionA in C:/GTA_RP_Server\server-data/resources//[esx]/[skin]/[eup]/fashionA
+Found new resource NativeUI in C:/GTA_RP_Server\server-data/resources//[esx]/[skin]/[eup]/NativeUI
+Found new resource UniformsB in C:/GTA_RP_Server\server-data/resources//[esx]/[skin]/[eup]/UniformsB
+Found new resource tpplage in C:/GTA_RP_Server\server-data/resources//[map]/[stronghold]/[TeleportScriptbeach]/tpplage
+Creating script environments for sessionmanager
+Started resource sessionmanager
+Creating script environments for webadmin
+Instantiated instance of script FxWebAdmin.BaseServer.
+Instantiated instance of script FxWebAdmin.HttpServer+HttpServerScript.
+Started resource webadmin
+Creating script environments for monitor
+[txAdminClientLUA] Version 2.4.2 starting...
+[txAdminClientJS] Logger started
+Started resource monitor
+Creating script environments for chat
+Started resource chat
+Creating script environments for mysql-async
+Started resource mysql-async
+Creating script environments for async
+Started resource async
+Creating script environments for es_extended
+Started resource es_extended
+Creating script environments for esx_identity
+Started resource esx_identity
+Creating script environments for esx_charselect
+Started resource esx_charselect
+Creating script environments for ls-radio
+Started resource ls-radio
+Creating script environments for tokovoip_script
+Started resource tokovoip_script
+Started resource esx_menu_default
+Started resource esx_menu_list
+Started resource esx_menu_dialog
+Started resource NativeUI
+Started resource mythic_notify
+Started resource mythic_progressbar
+Started resource progressBars
+Started resource mythic_progbar
+Creating script environments for esx_status
+Started resource esx_status
+Started resource CARP-status
+Creating script environments for skeletalsystem
+Started resource skeletalsystem
+Creating script environments for esx_gift_tree
+Started resource esx_gift_tree
+Started resource prison_status_panel
+Creating script environments for esx_addonaccount
+Started resource esx_addonaccount
+Creating script environments for esx_addoninventory
+Started resource esx_addoninventory
+Creating script environments for esx_datastore
+Started resource esx_datastore
+Creating script environments for esx_inventoryhud
+Started resource esx_inventoryhud
+Creating script environments for esx_billing
+Started resource esx_billing
+Started resource skinchanger
+Creating script environments for esx_skin
+Started resource esx_skin
+Started resource character
+Started resource fashionA
+Creating script environments for UniformsB
+Started resource UniformsB
+Creating script environments for esx_ability
+Started resource esx_ability
+Creating script environments for esx_amb_ability
+Started resource esx_amb_ability
+Creating script environments for esx_chef_ability
+Started resource esx_chef_ability
+Creating script environments for esx_gun_ability
+Started resource esx_gun_ability
+Creating script environments for esx_lock_ability
+Started resource esx_lock_ability
+Creating script environments for esx_mech_ability
+Started resource esx_mech_ability
+Creating script environments for pd-spawn
+Started resource pd-spawn
+Creating script environments for esx_joblisting
+Started resource esx_joblisting
+Creating script environments for esx_jobs
+Started resource esx_jobs
+Creating script environments for esx_vehicleshop
+Started resource esx_vehicleshop
+Creating script environments for esx_ambulancejob
+Started resource esx_ambulancejob
+Creating script environments for esx_mechanicjob
+Started resource esx_mechanicjob
+Creating script environments for esx_policejob
+Started resource esx_policejob
+Creating script environments for esx_mushroom
+Started resource esx_mushroom
+Creating script environments for esx_foodtruck
+Started resource esx_foodtruck
+Creating script environments for esx_jimmybm
+Started resource esx_jimmybm
+Creating script environments for esx_shops
+Started resource esx_shops
+Creating script environments for esx_weaponshop
+Started resource esx_weaponshop
+Creating script environments for esx_np_skinshop_v2
+Started resource esx_np_skinshop_v2
+Creating script environments for esx_newaccessories
+Started resource esx_newaccessories
+Started resource st-menu
+Started resource st-hud
+Creating script environments for dpemotes
+Started resource dpemotes
+Started resource dpclothing
+Creating script environments for garageshitz
+Started resource garageshitz
+Creating script environments for carremote
+Started resource carremote
+Creating script environments for whiteplate
+Started resource whiteplate
+Creating script environments for vMenu
+Instantiated instance of script vMenuServer.BanManager.
+Instantiated instance of script vMenuServer.MainServer.
+Started resource vMenu
+Creating script environments for cron
+Started resource cron
+Creating script environments for vSync
+Started resource vSync
+Creating script environments for esx_society
+Started resource esx_society
+Creating script environments for esx-ecobottles
+Started resource esx-ecobottles
+Creating script environments for chip_criminalDoctor
+Started resource chip_criminalDoctor
+Creating script environments for esx_license
+Started resource esx_license
+Creating script environments for esx_dmvschool
+Started resource esx_dmvschool
+Started resource st-cctv
+Creating script environments for new_banking
+Started resource new_banking
+Started resource zffb_dice
+Started resource esx-kr-vehicle-push
+Creating script environments for InteractSound
+Started resource InteractSound
+Creating script environments for InteractSoundS
+Started resource InteractSoundS
+Creating script environments for esx_lscustom
+Started resource esx_lscustom
+Couldn't find resource esx_caraction.
+Creating script environments for esx_kingofthehill
+Started resource esx_kingofthehill
+Creating script environments for hackee-dispatch
+Started resource hackee-dispatch
+Creating script environments for esx_autogang
+Started resource esx_autogang
+Creating script environments for esx_thief
+Started resource esx_thief
+Creating script environments for esx_carthief
+Started resource esx_carthief
+Creating script environments for KBurglary
+Started resource KBurglary
+Creating script environments for lockpick
+Started resource lockpick
+Started resource mhacking
+Creating script environments for t1ger_drugs
+Started resource t1ger_drugs
+Creating script environments for TakeHostage
+Started resource TakeHostage
+Creating script environments for x-hotwire
+Started resource x-hotwire
+Creating script environments for stasiek_selldrugs
+Started resource stasiek_selldrugs
+Creating script environments for esx_planting
+Started resource esx_planting
+Creating script environments for esx_merryweather
+Started resource esx_merryweather
+Creating script environments for esx_doorlock_mhacking
+Started resource esx_doorlock_mhacking
+Creating script environments for esx_vangelico_robbery
+Started resource esx_vangelico_robbery
+Creating script environments for esx_drugs
+Started resource esx_drugs
+Creating script environments for esx_drugeffects
+Started resource esx_drugeffects
+Started resource esx_lootDeadbody
+Creating script environments for esx_outlawalert
+Started resource esx_outlawalert
+Creating script environments for esx_knatusblowtorch
+Started resource esx_knatusblowtorch
+Creating script environments for esx_knatusrobberybank
+Started resource esx_knatusrobberybank
+Creating script environments for utk_ornateheist
+Started resource utk_ornateheist
+Started resource utk_ornateprops
+Creating script environments for crafting
+Started resource crafting
+Creating script environments for esx_crafting
+Started resource esx_crafting
+Creating script environments for instance
+Started resource instance
+Started resource biker
+Started resource bikerbarsandy
+Started resource grandehouse
+Started resource petitmaison
+Started resource vagos
+Started resource buldingbeach
+Started resource tpplage
+Creating script environments for int_prisonfull
+Started resource int_prisonfull
+Started resource prisonprops
+Started resource dons_bm_middoc
+Started resource smokey_hory
+Started resource PetClinic
+Creating script environments for hardcap
+Started resource hardcap
+Creating script environments for rconlog
+Started resource rconlog
+Started resource bob74_ipl
+Could not open 96x96Logo.png for reading.
+Authenticating server license key...
+Server license key authentication succeeded. Welcome!
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[txAdminClientLUA] Threads and commands set up. All Ready.
+[es_extended] [INFO] ESX developed by ESX-Org has been initialized
+Authenticating with Nucleus...
+server thread hitch warning: timer interval of 4698 milliseconds
+[mysql-async] Database server connection established.
+[ERROR] [MySQL] [esx_kingofthehill] An error happens on MySQL for query "SELECT * FROM payroll": ER_NO_SUCH_TABLE: Table 'es_extended.payroll' doesn't exist
+SCRIPT ERROR: @esx_kingofthehill/server.lua:184: bad argument #1 to 'pairs' (table expected, got nil)
+> Payout (@esx_kingofthehill/server.lua:184)
+> ref (@esx_kingofthehill/server.lua:9)
+>  (@mysql-async/mysql-async.js:14959)
+
+dp Emotes (dpemotes) is up to date. (173)
+[txAdminClientLUA] Sending resources list to txAdmin.
+        fff                          
+  cccc ff   xx  xx     rr rr    eee  
+cc     ffff   xx       rrr  r ee   e 
+cc     ff     xx   ... rr     eeeee  
+ ccccc ff   xx  xx ... rr      eeeee 
+                                     
+Authenticated with cfx.re Nucleus: https://5328765879-vq64le.users.cfx.re/

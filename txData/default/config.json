@@ -1,0 +1,33 @@
+{
+  "global": {
+    "serverName": "不治之鎮",
+    "language": "zh"
+  },
+  "logger": {},
+  "monitor": {
+    "restarterSchedule": [],
+    "heartBeat": {
+      "failThreshold": 30,
+      "failLimit": 60
+    },
+    "healthCheck": {
+      "failThreshold": 30,
+      "failLimit": 600
+    }
+  },
+  "authenticator": {},
+  "webServer": {},
+  "discordBot": {
+    "enabled": false,
+    "statusCommand": "/status",
+    "statusMessage": "**IP:** `change-me:<port>`\n**Players:** <players>\n**Uptime:** <uptime>"
+  },
+  "fxRunner": {
+    "serverDataPath": "C:/GTA_RP_Server/server-data/",
+    "cfgPath": "C:/GTA_RP_Server/server-data/server.cfg",
+    "commandLine": "",
+    "onesync": true,
+    "autostart": true,
+    "quiet": true
+  }
+}
