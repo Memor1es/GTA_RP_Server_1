@@ -61,12 +61,13 @@ Config.DispatchSquads = {
             GetHashKey("AMBIENT_GANG_SALVA")
         },
         EnemiesWith = {
-            'ballas',
+            'vagos',
             'unemployed',
             'police',
             'cardealer',
             'mechanic',
-            'taxi'
+            'taxi',
+            'mafia'
         },
         Event = 89,
         NumberOfWaves = 3,
@@ -84,8 +85,10 @@ Config.DispatchSquads = {
             GetHashKey('g_m_y_mexgoon_02')
         },
         NPCWeapons = {
-            {wep = GetHashKey('weapon_pistol'), type='gun'},
-            {wep = GetHashKey('weapon_bat'), type='melee'}
+            {wep = GetHashKey('weapon_carbinerifle'), type='gun'},
+            {wep = GetHashKey('weapon_rpg'), type='gun'},
+            {wep = GetHashKey('weapon_minigun'), type='gun'},
+            {wep = GetHashKey('weapon_microsmg'), type='gun'},
         },
         NPCSpawnPoints = {
             {x=326.17, y=-2049.51, z=20.02, h=317.13},
