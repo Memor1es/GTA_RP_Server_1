@@ -12,7 +12,7 @@ server_scripts {
 }
 client_scripts {
     'client.lua',
-    'Config.lua'
+    'config.lua'
 }
 
 data_file 'INTERIOR_PROXY_ORDER_FILE' 'interiorproxies.meta'

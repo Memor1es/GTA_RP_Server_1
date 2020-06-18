@@ -34,6 +34,7 @@ RegisterCommand("alarm_on", function(source, args, rawCommand)
     end--]]
     TriggerServerEvent("int_prisonfull:setflag",true)
     ESX.ShowNotification("警報將在15秒內啟動")
+    print(GetVecDist(GetEntityCoords(GetPlayerPed(-1)), Config.PrisonLoaction))
 end, false)
 
 RegisterCommand("alarm_off", function(source, args, rawCommand)
