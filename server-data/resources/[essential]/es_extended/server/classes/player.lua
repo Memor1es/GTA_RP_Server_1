@@ -265,10 +265,14 @@ function CreateExtendedPlayer(playerId, identifier, group, accounts, inventory, 
 	end
 
 	self.canCarryItem = function(name, count)
+		local item = self.getInventoryItem(name)
+		local limit = ESX.Items[name].limit
+		local newCount = item.count + count
+
 		local currentWeight, itemWeight = self.weight, ESX.Items[name].weight
 		local newWeight = currentWeight + (itemWeight * count)
 
-		return newWeight <= self.maxWeight
+		return (newWeight <= self.maxWeight) and (newCount <= limit)
 	end
 
 	self.canSwapItem = function(firstItem, firstItemCount, testItem, testItemCount)

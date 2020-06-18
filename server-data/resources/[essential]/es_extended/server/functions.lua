@@ -253,6 +253,12 @@ ESX.GetItemLabel = function(item)
 	end
 end
 
+ESX.GetItemLimit = function(item)
+	if ESX.Items[item] then
+		return ESX.Items[item].limit
+	end
+end
+
 ESX.CreatePickup = function(type, name, count, label, playerId, components, tintIndex)
 	local pickupId = (ESX.PickupId == 65635 and 0 or ESX.PickupId + 1)
 	local xPlayer = ESX.GetPlayerFromId(playerId)
