@@ -34,7 +34,7 @@ RegisterCommand("alarm_on", function(source, args, rawCommand)
     end--]]
     TriggerServerEvent("int_prisonfull:setflag",true)
     ESX.ShowNotification("警報將在15秒內啟動")
-    print(GetVecDist(GetEntityCoords(GetPlayerPed(-1)), Config.PrisonLoaction))
+    --print(GetVecDist(GetEntityCoords(GetPlayerPed(-1)), Config.PrisonLoaction))
 end, false)
 
 RegisterCommand("alarm_off", function(source, args, rawCommand)
@@ -131,3 +131,9 @@ Citizen.CreateThread(function()
 	end
 end)
 
+
+
+function GetVecDist(v1,v2)
+    if not v1 or not v2 or not v1.x or not v2.x then return 0; end
+    return math.sqrt(  ( (v1.x or 0) - (v2.x or 0) )*(  (v1.x or 0) - (v2.x or 0) )+( (v1.y or 0) - (v2.y or 0) )*( (v1.y or 0) - (v2.y or 0) )+( (v1.z or 0) - (v2.z or 0) )*( (v1.z or 0) - (v2.z or 0) )  )
+end
