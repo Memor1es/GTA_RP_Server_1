@@ -32,9 +32,10 @@ Config.DispatchSquads = {
         },
         NPCWeapons = {
             {wep = GetHashKey('weapon_carbinerifle'), type='gun'},
-            {wep = GetHashKey('weapon_rpg'), type='gun'},
-            {wep = GetHashKey('weapon_minigun'), type='gun'},
-            {wep = GetHashKey('weapon_microsmg'), type='gun'},
+            {wep = GetHashKey('weapon_smg'), type='gun'},
+            --{wep = GetHashKey('weapon_rpg'), type='gun'},
+            --{wep = GetHashKey('weapon_minigun'), type='gun'},
+            --{wep = GetHashKey('weapon_microsmg'), type='gun'},
             --{wep = GetHashKey('weapon_minigun'), type='gun'},
             --{wep = GetHashKey('weapon_bat'), type='melee'}
         },
@@ -86,9 +87,10 @@ Config.DispatchSquads = {
         },
         NPCWeapons = {
             {wep = GetHashKey('weapon_carbinerifle'), type='gun'},
-            {wep = GetHashKey('weapon_rpg'), type='gun'},
-            {wep = GetHashKey('weapon_minigun'), type='gun'},
-            {wep = GetHashKey('weapon_microsmg'), type='gun'},
+            {wep = GetHashKey('weapon_smg'), type='gun'},
+            --{wep = GetHashKey('weapon_rpg'), type='gun'},
+            --{wep = GetHashKey('weapon_minigun'), type='gun'},
+            --{wep = GetHashKey('weapon_microsmg'), type='gun'},
         },
         NPCSpawnPoints = {
             {x=326.17, y=-2049.51, z=20.02, h=317.13},
