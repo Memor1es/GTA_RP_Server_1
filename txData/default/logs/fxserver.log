@@ -1,11 +1,11 @@
 
 ================================================================
-======== FXServer starting - 2020/6/18 下午2:47:01
+======== FXServer starting - 2020/6/18 下午2:58:00
 ================================================================
 Creating script environments for _cfx_internal
 Found new resource vMenu in C:/GTA_RP_Server\server-data/resources//vMenu
-Found new resource monitor in C:\GTA_RP_Server_1\server2\citizen/system_resources//monitor
-Found new resource webadmin in C:\GTA_RP_Server_1\server2\citizen/system_resources//webadmin
+Found new resource monitor in C:\GTA_RP_Server_1\server2524\citizen/system_resources//monitor
+Found new resource webadmin in C:\GTA_RP_Server_1\server2524\citizen/system_resources//webadmin
 Found new resource esx_ability in C:/GTA_RP_Server\server-data/resources//[char]/esx_ability
 Found new resource esx_amb_ability in C:/GTA_RP_Server\server-data/resources//[char]/esx_amb_ability
 Found new resource esx_charselect in C:/GTA_RP_Server\server-data/resources//[char]/esx_charselect
@@ -361,16 +361,10 @@ Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 [txAdminClientLUA] Threads and commands set up. All Ready.
 [es_extended] [INFO] ESX developed by ESX-Org has been initialized
 Authenticating with Nucleus...
-server thread hitch warning: timer interval of 4698 milliseconds
+server thread hitch warning: timer interval of 4301 milliseconds
 [mysql-async] Database server connection established.
-[ERROR] [MySQL] [esx_kingofthehill] An error happens on MySQL for query "SELECT * FROM payroll": ER_NO_SUCH_TABLE: Table 'es_extended.payroll' doesn't exist
-SCRIPT ERROR: @esx_kingofthehill/server.lua:184: bad argument #1 to 'pairs' (table expected, got nil)
-> Payout (@esx_kingofthehill/server.lua:184)
-> ref (@esx_kingofthehill/server.lua:9)
->  (@mysql-async/mysql-async.js:14959)
 
 dp Emotes (dpemotes) is up to date. (173)
-[txAdminClientLUA] Sending resources list to txAdmin.
         fff                          
   cccc ff   xx  xx     rr rr    eee  
 cc     ffff   xx       rrr  r ee   e 
@@ -378,3 +372,4 @@ cc     ff     xx   ... rr     eeeee
  ccccc ff   xx  xx ... rr      eeeee 
                                      
 Authenticated with cfx.re Nucleus: https://5328765879-vq64le.users.cfx.re/
+[txAdminClientLUA] Sending resources list to txAdmin.

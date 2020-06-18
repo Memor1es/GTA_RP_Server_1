@@ -1,5 +1,7 @@
 @echo off
+taskkill /IM node.exe /F
+start /MIN node "C:\GTA_RP_Server_1\server-data\resources\[phone]\image-server\app.js"
 
-                C:/GTA_RP_Server_1/server2//FXServer.exe +set serverProfile "default"
+                C:/GTA_RP_Server_1/server2524/FXServer.exe +set serverProfile "default"
 
                 pause
