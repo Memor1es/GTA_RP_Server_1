@@ -86,13 +86,13 @@ function SpawnEnemyDispatch(squad)
     if IsEntityDead(plyPed) or (GetVecDist(plyPos, squad.CentralPos) > squad.TriggerDistance)then
       break
     end
-    ESX.ShowNotification("第 "..j.." 波要來了")
+    ESX.ShowNotification("第 "..i.." 波要來了")
     for j=1,squad.NumberPerWave do
       CreateNPCThread(squad, plyPed)
     end
     Citizen.Wait(squad.TimeBetweenWaves)
   end
-  ESX.ShowNotification("似乎變得平靜下來了")
+  ESX.ShowNotification("似乎沒有埋伏了")
 end
 
 function CreateNPCThread(squad, plyPed)
