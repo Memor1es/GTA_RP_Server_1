@@ -204,18 +204,20 @@ end)
 RegisterNetEvent('notification')
 AddEventHandler('notification', function(msg,flag)
     if flag == 2 then
-        TriggerEvent("pNotify:SendNotification", {
+        --[[TriggerEvent("pNotify:SendNotification", {
             text = msg,
             type = "error",
             timeout = 2000,
             layout = "topRight"
-        })
+        })--]]
+        exports['mythic_notify']:SendAlert('error', msg, 5000)
     else
-        TriggerEvent("pNotify:SendNotification", {
+        --[[TriggerEvent("pNotify:SendNotification", {
             text = msg,
             type = "success",
             timeout = 2000,
             layout = "topRight"
-        })
+        })--]]
+        exports['mythic_notify']:SendAlert('success', msg, 5000)
     end
 end)
