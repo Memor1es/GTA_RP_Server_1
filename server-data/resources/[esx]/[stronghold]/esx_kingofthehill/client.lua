@@ -38,27 +38,39 @@ TriggerServerEvent('esx_kingofthehill:checkStatus')
 
 RegisterNetEvent('esx_kingofthehill:setStatusOnLoad')
 AddEventHandler('esx_kingofthehill:setStatusOnLoad', function(capturedBy, captured)
-    Config.GroveStreet.capturedBy = capturedBy
-    Config.GroveStreet.captured = captured 
+    --Config.GroveStreet.capturedBy = capturedBy
+    --Config.GroveStreet.captured = captured 
+    for i=1, #Config.ZoneList then
+        Config[Config.ZoneList[i]].capturedBy = capturedBy[Config.ZoneList[i]]
+        Config[Config.ZoneList[i]].captured = captured[Config.ZoneList[i]]
+    end
 end)
 
 -- Set the cooldown afer successful capture
 RegisterNetEvent('esx_kingofthehill:setCooldown')
-AddEventHandler('esx_kingofthehill:setCooldown', function(time)
+AddEventHandler('esx_kingofthehill:setCooldown', function(time,zone)
     Config.CoolDown = time    
-    Config.GroveStreet.capturedBy = {}
-    Config.GroveStreet.captureCount = #Config.GroveStreet.capturers
+    --Config.GroveStreet.capturedBy = {}
+    --Config.GroveStreet.captureCount = #Config.GroveStreet.capturers
+    Config[zone].capturedBy = {}
+    Config[zone].captureCount = #Config[zone].capturers
 end)
 
 -- Force reset payroll
 RegisterNetEvent('esx_kingofthehill:resetPayroll')
-AddEventHandler('esx_kingofthehill:resetPayroll', function()    
-    Config.GroveStreet.capturedBy = {}    
-    Config.GroveStreet.captured = false
-    Config.GroveStreet.capturers = {} 
-    Config.GroveStreet.captureCount = #Config.GroveStreet.capturers
-    Config.GroveStreet.captureInProgress = false
-    TriggerEvent('esx_kingofthehill:updateBlip', Config.GroveStreet.capturers) 
+AddEventHandler('esx_kingofthehill:resetPayroll', function(zone)    
+    --Config.GroveStreet.capturedBy = {}    
+    --Config.GroveStreet.captured = false
+    --Config.GroveStreet.capturers = {} 
+    --Config.GroveStreet.captureCount = #Config.GroveStreet.capturers
+    --Config.GroveStreet.captureInProgress = false
+    --TriggerEvent('esx_kingofthehill:updateBlip', Config.GroveStreet.capturers) 
+    Config[zone].capturedBy = {}
+    Config[zone].captured = false
+    Config[zone].capturers = {}
+    Config[zone].captureCount = #Config[zone].capturers
+    Config[zone].captureInProgress = false
+    TriggerEvent('esx_kingofthehill:updateBlip', Config[zone].capturers)
 end)
 
 -- payroll commands
@@ -207,8 +219,35 @@ end)
 Citizen.CreateThread(function()  
     while true do
         Citizen.Wait(5)
-        local playerPed = PlayerPedId()               
-        local isCapturedBySelf = table.contains(Config.GroveStreet.capturedBy, PlayerData.identifier)      
+        local playerPed = PlayerPedId()     
+        local isCapturedBySelf = {}
+        local isCapturing = {}
+        local coords = GetEntityCoords(playerPed)
+
+        for i=1, #Config.ZoneList then
+            isCapturedBySelf[Config.ZoneList[i]] = table.contains(Config[Config.ZoneList[i]].capturedBy, PlayerData.identifier)
+            isCapturing[Config.ZoneList[i]] = table.contains(Config[Config.ZoneList[i]].capturers, PlayerData.identifier)
+
+            local dist = GetDistanceBetweenCoords(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, coords.x, coords.y, coords.z, true)  
+
+            if dist <= Config.CaptureBreakingDistance then
+                IsInRange = true                    
+                if not isCapturedBySelf then    
+                    if Config[Config.ZoneList[i]].showPercentage and Config[Config.ZoneList[i]].captureInProgress then
+                        DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, 'Capture in progress ~g~' .. perc .. '%', 0.4)                                                                                                                                                           
+                    else
+                        DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, "~g~/payroll join~w~ to join. ~g~/payroll leave ~w~to leave. ~g~/payroll start ~w~to start - [" .. Config[Config.ZoneList[i]].captureCount .. "/".. Config.RequiredCapturersMax .. "]", 0.4)                  
+                    end    
+                    if Config[Config.ZoneList[i]].showPercentage and Config[Config.ZoneList[i]].captureInProgress and isCapturing then
+                        DrawMarker(1, Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z - 8, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.CaptureBreakingDistance*2, Config.CaptureBreakingDistance*2, 30.0, 52, 207, 250, 155, false, false, 2, false)                                                                     
+                    end                                              
+                else      
+                    DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, "~g~You are on the payroll", 0.4)                                                  
+                end  
+            end      
+        end
+
+        --[[local isCapturedBySelf = table.contains(Config.GroveStreet.capturedBy, PlayerData.identifier)      
         local isCapturing = table.contains(Config.GroveStreet.capturers, PlayerData.identifier)   
         local coords = GetEntityCoords(playerPed)
         local dist = GetDistanceBetweenCoords(Config.GroveStreet.pos.x, Config.GroveStreet.pos.y, Config.GroveStreet.pos.z, coords.x, coords.y, coords.z, true)  
@@ -228,7 +267,7 @@ Citizen.CreateThread(function()
                     DrawText3D(Config.GroveStreet.pos.x, Config.GroveStreet.pos.y, Config.GroveStreet.pos.z, "~g~You are on the payroll", 0.4)                                                  
                 end  
             end      
-        end
+        end--]]
     end
 end)
 

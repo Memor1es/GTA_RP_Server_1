@@ -16,7 +16,66 @@ Config.PayoutCount = 10 -- Count of item reward
 Config.CoolDownSetting = 300 * 60000 -- 5 hours - Cooldown time afer successful capture before another capture can be started
 Config.CoolDown = 0 -- Gets set on capture - default must be 0
 
+Config.ZoneList = {
+    "GroveStreet",
+    "Bar",
+    "MidBar",
+    "Mechanic",
+    "Factory",
+    "Villa"
+}
+
 Config.GroveStreet = {      
+    pos = { x = 111.25, y = -1946.97, z = 20.74 },
+    captured = false,
+    captureInProgress = false,
+    captureCount = 0,
+    capturers = {},
+    capturedBy = {},
+    showPercentage = false
+}
+
+Config.Bar = {      
+    pos = { x = 111.25, y = -1946.97, z = 20.74 },
+    captured = false,
+    captureInProgress = false,
+    captureCount = 0,
+    capturers = {},
+    capturedBy = {},
+    showPercentage = false
+}
+
+Config.MidBar = {      
+    pos = { x = 111.25, y = -1946.97, z = 20.74 },
+    captured = false,
+    captureInProgress = false,
+    captureCount = 0,
+    capturers = {},
+    capturedBy = {},
+    showPercentage = false
+}
+
+Config.Mechanic = {      
+    pos = { x = 111.25, y = -1946.97, z = 20.74 },
+    captured = false,
+    captureInProgress = false,
+    captureCount = 0,
+    capturers = {},
+    capturedBy = {},
+    showPercentage = false
+}
+
+Config.Factory = {      
+    pos = { x = 111.25, y = -1946.97, z = 20.74 },
+    captured = false,
+    captureInProgress = false,
+    captureCount = 0,
+    capturers = {},
+    capturedBy = {},
+    showPercentage = false
+}
+
+Config.Villa = {      
     pos = { x = 111.25, y = -1946.97, z = 20.74 },
     captured = false,
     captureInProgress = false,

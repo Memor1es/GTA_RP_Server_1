@@ -109,15 +109,20 @@ end)
 RegisterServerEvent('esx_kingofthehill:checkStatus')
 AddEventHandler('esx_kingofthehill:checkStatus', function()
     local capturedBy = {}
-    local captured = false
-    MySQL.Async.fetchAll('SELECT * FROM payroll WHERE zone = @zone',{
-        ['@zone'] = zone
+    local captured = {}
+    
+    for i=1, #Config.ZoneList then
+        capturedBy[Config.ZoneList[i]]= {}
+        captured[Config.ZoneList[i]] = false
+    end
+    MySQL.Async.fetchAll('SELECT * FROM payroll ',{
+    
     }, function(result)
         if #result > 0 then
             for k,v in pairs(result) do 
-                table.insert(capturedBy, v.identifier) 
+                table.insert(capturedBy[v.zone], v.identifier) 
             end
-            captured = true
+            captured[v.zone] = true
         end   
         TriggerClientEvent('esx_kingofthehill:setStatusOnLoad', -1, capturedBy, captured)
     end)
