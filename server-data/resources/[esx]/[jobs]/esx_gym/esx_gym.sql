@@ -1,4 +1,4 @@
-USE `essentialmode`;
+
 
 CREATE TABLE `gym_memberships` (
 	`id` int(11) NOT NULL AUTO_INCREMENT,
