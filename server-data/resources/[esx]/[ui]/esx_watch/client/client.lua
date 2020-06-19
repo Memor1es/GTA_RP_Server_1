@@ -22,13 +22,13 @@ function DrawMissionText(text)
     SetTextCentre(1)
     SetTextOutline()
     AddTextComponentString(text)
-    DrawText(0.9,0.955)
+    DrawText(0.955,0)
 end
 
 Citizen.CreateThread(function()
     while true do
         if ShowText then
-            DrawMissionText("hihi")
+            DrawMissionText(GetClockHours() .. ":" .. GetClockMinutes())
         end
         Citizen.Wait(0)
     end
