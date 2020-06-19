@@ -13,10 +13,12 @@ end
 
 -- Check owners (used by /payroll owners)
 RegisterServerEvent('esx_kingofthehill:checkOwners')
-AddEventHandler('esx_kingofthehill:checkOwners', function() 
+AddEventHandler('esx_kingofthehill:checkOwners', function(zone) 
     local _source = source
     local text = 'Current owners: ^2'
-    MySQL.Async.fetchAll('SELECT * FROM payroll',{}, function(result)
+    MySQL.Async.fetchAll('SELECT * FROM payroll WHERE zone = @zone',{
+        ['@zone'] = zone
+    }, function(result)
         if #result > 0 then
             text = text .. tostring(#result)
         else
@@ -108,7 +110,9 @@ RegisterServerEvent('esx_kingofthehill:checkStatus')
 AddEventHandler('esx_kingofthehill:checkStatus', function()
     local capturedBy = {}
     local captured = false
-    MySQL.Async.fetchAll('SELECT * FROM payroll',{}, function(result)
+    MySQL.Async.fetchAll('SELECT * FROM payroll WHERE zone = @zone',{
+        ['@zone'] = zone
+    }, function(result)
         if #result > 0 then
             for k,v in pairs(result) do 
                 table.insert(capturedBy, v.identifier) 

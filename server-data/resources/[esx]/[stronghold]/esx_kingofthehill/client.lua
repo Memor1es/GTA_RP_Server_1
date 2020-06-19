@@ -32,6 +32,8 @@ end)
 
 -- Make sure all clients have latest current owners list
 -- 從資料庫抓現在的占領者
+
+--GroveStreet
 TriggerServerEvent('esx_kingofthehill:checkStatus')
 
 RegisterNetEvent('esx_kingofthehill:setStatusOnLoad')
@@ -118,7 +120,7 @@ RegisterCommand("payroll", function(source, args, rawCommand)
             ESX.ShowNotification('~r~Unauthorized')
         end
     elseif tostring(args[1]) == 'owners' then
-        TriggerServerEvent('esx_kingofthehill:checkOwners')
+        TriggerServerEvent('esx_kingofthehill:checkOwners',args[2])
     else        
         if not isCapturedBySelf then
             ESX.TriggerServerCallback('esx_kingofthehill:checkCode', function(valid)
@@ -180,12 +182,12 @@ AddEventHandler('esx_kingofthehill:capture', function(code)
                 y = Config.GroveStreet.pos.y,
                 z = Config.GroveStreet.pos.z
             })
-        else
+        else   --沒有占領者在線
             for k,v in pairs(Config.GroveStreet.capturers) do  
                 if PlayerData.identifier == v then
                     ESX.ShowNotification('~r~None of the owners are around to defend')              
                 end
-            end             
+            end        
         end    
     end)    
     ESX.TriggerServerCallback('esx_kingofthehill:checkActiveCapturedBy', function(capturedBy)
