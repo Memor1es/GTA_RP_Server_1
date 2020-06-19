@@ -58,6 +58,7 @@ function stopWorkout()
 end
 
 -- Create blip
+--[[
 Citizen.CreateThread(function()
     local blip = AddBlipForCoord(Config.Blip.Pos.x, Config.Blip.Pos.y,
                                  Config.Blip.Pos.z)
@@ -72,6 +73,7 @@ Citizen.CreateThread(function()
     AddTextComponentString(Config.Blip.Title)
     EndTextCommandSetBlipName(blip)
 end)
+--]]
 
 -- Show workouts
 Citizen.CreateThread(function()
@@ -106,9 +108,9 @@ Citizen.CreateThread(function()
                     -- start workout
                     if currentWorkout.run == false and
                         IsControlJustPressed(0, Keys['E']) then
-                        if ownsMembership == false then
-                            ESX.ShowNotification("Please buy a gym membership")
-                        elseif lastWorkTime ~= -1 then
+                        --if ownsMembership == false then
+                        --    ESX.ShowNotification("Please buy a gym membership")
+                        if lastWorkTime ~= -1 then
                             ESX.ShowNotification("You are resting...")
                         else
                             startWorkout(v.workout, v.duration * 1000,
@@ -143,6 +145,7 @@ Citizen.CreateThread(function()
         end
 
         -- Membership
+        --[[
         local distance = GetDistanceBetweenCoords(coords,
                                                   Config.Membership.Marker.x,
                                                   Config.Membership.Marker.y,
@@ -155,8 +158,10 @@ Citizen.CreateThread(function()
                        Config.MarkerSize.y, Config.MarkerSize.z,
                        Config.MarkerColour.r, Config.MarkerColour.g,
                        Config.MarkerColour.b, 255, 0, 0, 0, 1)
+                       
 
             -- show action text
+            
             if distance < 1.0 then
                 SetTextComponentFormat("STRING")
                 AddTextComponentString(string.format(
@@ -176,7 +181,8 @@ Citizen.CreateThread(function()
                     end)
                 end
             end
-        end
+            
+        end--]]
 
     end
 end)
