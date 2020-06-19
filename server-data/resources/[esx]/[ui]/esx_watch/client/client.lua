@@ -28,7 +28,12 @@ end
 Citizen.CreateThread(function()
     while true do
         if ShowText then
-            DrawMissionText(GetClockHours() .. ":" .. GetClockMinutes())
+            local h = GetClockHours()
+            local m = GetClockMinutes()
+            if tonumber(m) < 10 then
+                m = "0"..m
+            end
+            DrawMissionText(h .. ":" .. m)
         end
         Citizen.Wait(0)
     end
