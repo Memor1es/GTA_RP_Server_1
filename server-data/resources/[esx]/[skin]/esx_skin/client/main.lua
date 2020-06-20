@@ -260,7 +260,7 @@ function OpenSaveableMenu(submitCb, cancelCb, restrict)
             Citizen.Wait(1000)
             DoScreenFadeIn(1000)
             DisplayRadar(true)
-            
+            --TriggerEvent('charselect:StopText')
             --
 
             if submitCb ~= nil then
@@ -283,7 +283,7 @@ function OpenSaveableMenuNoCrime(submitCb, cancelCb, restrict)
         
         TriggerEvent('skinchanger:getSkin', function(skin)
             TriggerServerEvent('esx_skin:save', skin)
-
+            --TriggerEvent('charselect:StopText')
             if submitCb ~= nil then
                 submitCb(data, menu)
             end
@@ -332,7 +332,7 @@ AddEventHandler('esx_skin:playerRegistered', function()
                     TriggerEvent('skinchanger:loadSkin', skin)
                 end
             end)
-
+            TriggerEvent('charselect:StopText')
             firstSpawn = false
         end
     end)
@@ -352,7 +352,7 @@ AddEventHandler('esx_skin:playerRegisteredNoCrime', function()
                     TriggerEvent('skinchanger:loadSkin', skin)
                 end
             end)
-
+            TriggerEvent('charselect:StopText')
             firstSpawn = false
         end
     end)
