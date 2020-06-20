@@ -247,7 +247,7 @@ Citizen.CreateThread(function()
 
             local dist = GetDistanceBetweenCoords(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, coords.x, coords.y, coords.z, true)  
             --print(dist)
-            if dist <= Config.CaptureBreakingDistance then
+            if dist <= Config.RequiredCaptureDistance then
                 --print("hihi")
                 IsInRange = true
                 now_zone = Config.ZoneList[i]        
