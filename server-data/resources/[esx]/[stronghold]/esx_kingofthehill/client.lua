@@ -40,7 +40,7 @@ RegisterNetEvent('esx_kingofthehill:setStatusOnLoad')
 AddEventHandler('esx_kingofthehill:setStatusOnLoad', function(capturedBy, captured)
     --Config.GroveStreet.capturedBy = capturedBy
     --Config.GroveStreet.captured = captured 
-    for i=1, #Config.ZoneList then
+    for i=1, #Config.ZoneList do
         Config[Config.ZoneList[i]].capturedBy = capturedBy[Config.ZoneList[i]]
         Config[Config.ZoneList[i]].captured = captured[Config.ZoneList[i]]
     end
@@ -70,7 +70,7 @@ AddEventHandler('esx_kingofthehill:resetPayroll', function(zone)
     Config[zone].capturers = {}
     Config[zone].captureCount = #Config[zone].capturers
     Config[zone].captureInProgress = false
-    TriggerEvent('esx_kingofthehill:updateBlip', Config[zone].capturers)
+    TriggerEvent('esx_kingofthehill:updateBlip', Config[zone].capturers,zone)
 end)
 
 -- payroll commands
@@ -127,11 +127,21 @@ RegisterCommand("payroll", function(source, args, rawCommand)
         end
     elseif tostring(args[1]) == 'clear' then
         if ESX.GetPlayerData().job.name == 'mafia' then
-            TriggerServerEvent('esx_kingofthehill:resetPayroll')
+            local flag = table.contains(Config.ZoneList[i], args[2])
+            if flag == false then
+                ESX.ShowNotification("不存在此區域")
+                return
+            end
+            TriggerServerEvent('esx_kingofthehill:resetPayroll',args[2])
         else           
             ESX.ShowNotification('~r~Unauthorized')
         end
     elseif tostring(args[1]) == 'owners' then
+        local flag = table.contains(Config.ZoneList[i], args[2])
+            if flag == false then
+                ESX.ShowNotification("不存在此區域")
+                return
+            end
         TriggerServerEvent('esx_kingofthehill:checkOwners',args[2])
     else        
         if not isCapturedBySelf then
@@ -224,7 +234,7 @@ Citizen.CreateThread(function()
         local isCapturing = {}
         local coords = GetEntityCoords(playerPed)
 
-        for i=1, #Config.ZoneList then
+        for i=1, #Config.ZoneList do
             isCapturedBySelf[Config.ZoneList[i]] = table.contains(Config[Config.ZoneList[i]].capturedBy, PlayerData.identifier)
             isCapturing[Config.ZoneList[i]] = table.contains(Config[Config.ZoneList[i]].capturers, PlayerData.identifier)
 
@@ -232,7 +242,7 @@ Citizen.CreateThread(function()
 
             if dist <= Config.CaptureBreakingDistance then
                 IsInRange = true                    
-                if not isCapturedBySelf then    
+                if not isCapturedBySelf[Config.ZoneList[i]] then    
                     if Config[Config.ZoneList[i]].showPercentage and Config[Config.ZoneList[i]].captureInProgress then
                         DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, 'Capture in progress ~g~' .. perc .. '%', 0.4)                                                                                                                                                           
                     else
@@ -276,28 +286,31 @@ end)
 Citizen.CreateThread(function()      
     while true do
         Citizen.Wait(5)
-        for a, b in pairs(Config.GroveStreet.capturers) do
-            if b == PlayerData.identifier then
-                local index = table.getindex(Config.GroveStreet.capturers, b)
-                local playerPed = GetPlayerPed(-1)
-                local coords = GetEntityCoords(playerPed)
-                local dist = GetDistanceBetweenCoords(Config.GroveStreet.pos.x, Config.GroveStreet.pos.y, Config.GroveStreet.pos.z, coords.x, coords.y, coords.z, true) 
-                if dist > Config.CaptureBreakingDistance then
-                    IsInRange = false                    
-                    Config.GroveStreet.capturers[index] = nil
-                    Config.GroveStreet.captureCount = #Config.GroveStreet.capturers
-                    Cancelled = true                    
-                    ESX.ShowNotification('~r~You are no longer Capturing because you left the area')
-                    TriggerServerEvent('esx_kingofthehill:updateBlip', Config.GroveStreet.capturers)
-                end
-                if IsEntityDead(playerPed) then  
-                    Config.GroveStreet.capturers[index] = nil   
-                    Config.GroveStreet.captureCount = #Config.GroveStreet.capturers                                                      
-                    TriggerServerEvent('esx_kingofthehill:updateBlip', Config.GroveStreet.capturers)
-                    ESX.ShowNotification('~r~You are no longer Capturing')
-                end
-            end                
-        end                          
+        for i=1, #Config.ZoneList do
+            for a, b in pairs(Config[Config.ZoneList[i]].capturers) do
+                if b == PlayerData.identifier then
+                    local index = table.getindex(Config[Config.ZoneList[i]].capturers, b)
+                    local playerPed = GetPlayerPed(-1)
+                    local coords = GetEntityCoords(playerPed)
+                    local dist = GetDistanceBetweenCoords(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, coords.x, coords.y, coords.z, true) 
+                    if dist > Config.CaptureBreakingDistance then
+                        IsInRange = false                    
+                        Config[Config.ZoneList[i]].capturers[index] = nil
+                        Config[Config.ZoneList[i]].captureCount = #Config[Config.ZoneList[i]].capturers
+                        Cancelled = true                    
+                        ESX.ShowNotification('~r~You are no longer Capturing because you left the area')
+                        TriggerServerEvent('esx_kingofthehill:updateBlip', Config[Config.ZoneList[i]].capturers,ZoneList[i])
+                    end
+                    if IsEntityDead(playerPed) then  
+                        Config[Config.ZoneList[i]].capturers[index] = nil   
+                        Config[Config.ZoneList[i]].captureCount = #Config[Config.ZoneList[i]].capturers                                                      
+                        TriggerServerEvent('esx_kingofthehill:updateBlip', Config[Config.ZoneList[i]].capturers,ZoneList[i])
+                        ESX.ShowNotification('~r~You are no longer Capturing')
+                    end
+                end                
+            end
+        end
+
         if Config.CoolDown > 0 then
             Config.CoolDown = Config.CoolDown - 10
         end
@@ -306,9 +319,9 @@ end)
 
 -- Capturer blips that are shown to existing owners only during a capture
 RegisterNetEvent('esx_kingofthehill:updateBlip')
-AddEventHandler('esx_kingofthehill:updateBlip', function(capturers)
-    Config.GroveStreet.capturers = capturers
-    Config.GroveStreet.captureCount = #capturers
+AddEventHandler('esx_kingofthehill:updateBlip', function(capturers,zone)
+    Config[zone].capturers = capturers
+    Config[zone].captureCount = #capturers
 	-- Refresh all blips
 	for k, existingBlip in pairs(blipsCapturers) do
 		RemoveBlip(existingBlip)
@@ -318,9 +331,9 @@ AddEventHandler('esx_kingofthehill:updateBlip', function(capturers)
 	-- Make sure the capturer is online
     ESX.TriggerServerCallback('esx_society:getOnlinePlayers', function(players)        
         for i=1, #players, 1 do
-            local isCapturedBySelf = table.contains(Config.GroveStreet.capturedBy, PlayerData.identifier)
+            local isCapturedBySelf = table.contains(Config[zone].capturedBy, PlayerData.identifier)
             if isCapturedBySelf then
-                for c,d in pairs(Config.GroveStreet.capturers) do                    
+                for c,d in pairs(Config[zone].capturers) do                    
                     local id = GetPlayerFromServerId(players[i].source)                    
                     if NetworkIsPlayerActive(id) and players[i].identifier == d and GetPlayerPed(id) ~= PlayerPedId() then
                         createBlip(id, 1)

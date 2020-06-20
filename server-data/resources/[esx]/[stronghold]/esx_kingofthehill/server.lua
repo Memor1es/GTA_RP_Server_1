@@ -111,7 +111,7 @@ AddEventHandler('esx_kingofthehill:checkStatus', function()
     local capturedBy = {}
     local captured = {}
     
-    for i=1, #Config.ZoneList then
+    for i=1, #Config.ZoneList do
         capturedBy[Config.ZoneList[i]]= {}
         captured[Config.ZoneList[i]] = false
     end
