@@ -13,6 +13,7 @@ ESX                           = nil
 local PlayerData              = {}  
 local IsInRange               = true -- Whether or not a player is in the capture range
 local blipsCapturers          = {} -- Player map markers table
+local now_zone = 'none'
 
 Citizen.CreateThread(function()
     while ESX == nil do
@@ -75,8 +76,8 @@ end)
 
 -- payroll commands
 RegisterCommand("payroll", function(source, args, rawCommand) 
-    local isCapturing = table.contains(Config.GroveStreet.capturers, PlayerData.identifier)   
-    local isCapturedBySelf = table.contains(Config.GroveStreet.capturedBy, PlayerData.identifier) 
+    local isCapturing = table.contains(Config[now_zone].capturers, PlayerData.identifier)   
+    local isCapturedBySelf = table.contains(Config[now_zone].capturedBy, PlayerData.identifier) 
     if args[1] == nil then
         ESX.ShowNotification('Missing command, try ~r~/payroll start')
     elseif tostring(args[1]) == 'check' then
@@ -90,8 +91,8 @@ RegisterCommand("payroll", function(source, args, rawCommand)
     elseif tostring(args[1]) == 'start' then        
         if Config.BlockEmergencyServices and (ESX.GetPlayerData().job.name == 'police' or ESX.GetPlayerData().job.name == 'ambulance') then
             ESX.ShowNotification('Emergency services are not allowed to Capture') 
-        elseif Config.GroveStreet.captureCount >= Config.RequiredCapturersMin and isCapturing and Config.CoolDown == 0 then 
-            if Config.GroveStreet.captureInProgress then
+        elseif Config[now_zone].captureCount >= Config.RequiredCapturersMin and isCapturing and Config.CoolDown == 0 then 
+            if Config[now_zone].captureInProgress then
                 ESX.ShowNotification('Already being captured') 
             else
                 TriggerServerEvent('esx_kingofthehill:capture')  
@@ -102,7 +103,7 @@ RegisterCommand("payroll", function(source, args, rawCommand)
             ESX.ShowNotification('~r~You need at least ' .. Config.RequiredCapturersMin .. ' in your group')
         end
     elseif tostring(args[1]) == 'join' then
-        if Config.GroveStreet.captureCount >= Config.RequiredCapturersMax then
+        if Config[now_zone].captureCount >= Config.RequiredCapturersMax then
             ESX.ShowNotification( '~r~There are already ' .. Config.RequiredCapturersMax .. ' people in the group')
         else
             if isCapturing then
@@ -127,7 +128,7 @@ RegisterCommand("payroll", function(source, args, rawCommand)
         end
     elseif tostring(args[1]) == 'clear' then
         if ESX.GetPlayerData().job.name == 'mafia' then
-            local flag = table.contains(Config.ZoneList[i], args[2])
+            local flag = table.contains(Config.ZoneList[i], tostring(args[2]))
             if flag == false then
                 ESX.ShowNotification("不存在此區域")
                 return
@@ -137,7 +138,7 @@ RegisterCommand("payroll", function(source, args, rawCommand)
             ESX.ShowNotification('~r~Unauthorized')
         end
     elseif tostring(args[1]) == 'owners' then
-        local flag = table.contains(Config.ZoneList[i], args[2])
+        local flag = table.contains(Config.ZoneList[i], tostring(args[2]))
             if flag == false then
                 ESX.ShowNotification("不存在此區域")
                 return
@@ -145,13 +146,19 @@ RegisterCommand("payroll", function(source, args, rawCommand)
         TriggerServerEvent('esx_kingofthehill:checkOwners',args[2])
     else        
         if not isCapturedBySelf then
+
+            local flag = table.contains(Config.ZoneList[i], tostring(args[2]))
+            if flag == false then
+                ESX.ShowNotification("不存在此區域")
+                return
+            end
             ESX.TriggerServerCallback('esx_kingofthehill:checkCode', function(valid)
                 if valid then
-                    TriggerServerEvent('esx_kingofthehill:addToPayroll', PlayerData.identifier)
+                    TriggerServerEvent('esx_kingofthehill:addToPayroll', PlayerData.identifier,zone)
                 else
                     ESX.ShowNotification('~r~Invalid Code')
                 end
-            end, tostring(args[1]))            
+            end, tostring(args[1]), tostring(args[2]))            
         else
             ESX.ShowNotification('You are already on the Payroll')
         end   
@@ -160,61 +167,61 @@ end)
 
 -- Join capture group
 RegisterNetEvent('esx_kingofthehill:addCapturer')
-AddEventHandler('esx_kingofthehill:addCapturer', function(player)    
-    table.insert(Config.GroveStreet.capturers, player)
-    Config.GroveStreet.captureCount = #Config.GroveStreet.capturers
+AddEventHandler('esx_kingofthehill:addCapturer', function(player,zone)    
+    table.insert(Config[zone].capturers, player)
+    Config[zone].captureCount = #Config[zone].capturers
 end)
 
 -- Leave capture group
 RegisterNetEvent('esx_kingofthehill:removeCapturer')
-AddEventHandler('esx_kingofthehill:removeCapturer', function(player)    
-    local index = table.getindex(Config.GroveStreet.capturers, player)
-    Config.GroveStreet.capturers[index] = nil
-    Config.GroveStreet.captureCount = #Config.GroveStreet.capturers
+AddEventHandler('esx_kingofthehill:removeCapturer', function(player,zone)    
+    local index = table.getindex(Config[zone].capturers, player)
+    Config[zone].capturers[index] = nil
+    Config[zone].captureCount = #Config[zone].capturers
 end)
 
 -- Start capturing
 RegisterNetEvent('esx_kingofthehill:capture')
-AddEventHandler('esx_kingofthehill:capture', function(code)    
+AddEventHandler('esx_kingofthehill:capture', function(code,zone)    
     ESX.TriggerServerCallback('esx_kingofthehill:checkCurrentOwners', function(count)
         local timer = count
         if timer ~= nil then
-            Config.GroveStreet.captureInProgress = true
-            TriggerEvent('esx_kingofthehill:updateBlip', Config.GroveStreet.capturers) 
+            Config[zone].captureInProgress = true
+            TriggerEvent('esx_kingofthehill:updateBlip', Config[zone].capturers) 
             -- Send a message to Police at start of capture
             TriggerServerEvent('esx_phone:send', 'police', 'There seems to be a turf war breaking out in Grove Street. It\'s not safe to enter the area', false, {
-                x = Config.GroveStreet.pos.x,
-                y = Config.GroveStreet.pos.y,
-                z = Config.GroveStreet.pos.z
+                x = Config[zone].pos.x,
+                y = Config[zone].pos.y,
+                z = Config[zone].pos.z
             })
-            GetPercentage(timer)                         
+            GetPercentage(timer,zone)                         
             local playerPed = GetPlayerPed(-1)
-            for k,v in pairs(Config.GroveStreet.capturers) do  
+            for k,v in pairs(Config[zone].capturers) do  
                 if PlayerData.identifier == v and not IsEntityDead(playerPed)then
-                    TriggerServerEvent('esx_kingofthehill:confirmCapture', code)                
+                    TriggerServerEvent('esx_kingofthehill:confirmCapture', code,zone)                
                 end
             end               
-            Config.GroveStreet.captureInProgress = false
-            Config.GroveStreet.capturers = {}
-            Config.GroveStreet.captureCount = #Config.GroveStreet.capturers
-            TriggerEvent('esx_kingofthehill:updateBlip', Config.GroveStreet.capturers)
+            Config[zone].captureInProgress = false
+            Config[zone].capturers = {}
+            Config[zone].captureCount = #Config[zone].capturers
+            TriggerEvent('esx_kingofthehill:updateBlip', Config[zone].capturers)
             -- Send a message to Police at end of capture
             TriggerServerEvent('esx_phone:send', 'police', 'It looks like things have calmed down in Grove Street. The area should be safe to enter.', false, {
-                x = Config.GroveStreet.pos.x,
-                y = Config.GroveStreet.pos.y,
-                z = Config.GroveStreet.pos.z
+                x = Config[zone].pos.x,
+                y = Config[zone].pos.y,
+                z = Config[zone].pos.z
             })
         else   --沒有占領者在線
-            for k,v in pairs(Config.GroveStreet.capturers) do  
+            for k,v in pairs(Config[zone].capturers) do  
                 if PlayerData.identifier == v then
                     ESX.ShowNotification('~r~None of the owners are around to defend')              
                 end
             end        
         end    
-    end)    
+    end,zone)    
     ESX.TriggerServerCallback('esx_kingofthehill:checkActiveCapturedBy', function(capturedBy)
-        Config.GroveStreet.capturedBy = capturedBy	
-	end)
+        Config[zone].capturedBy = capturedBy	
+	end,zone)
     Cancelled = false   
 end)
 
@@ -241,12 +248,53 @@ Citizen.CreateThread(function()
             local dist = GetDistanceBetweenCoords(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, coords.x, coords.y, coords.z, true)  
 
             if dist <= Config.CaptureBreakingDistance then
-                IsInRange = true                    
+                IsInRange = true
+                now_zone = Config.ZoneList[i]        
                 if not isCapturedBySelf[Config.ZoneList[i]] then    
                     if Config[Config.ZoneList[i]].showPercentage and Config[Config.ZoneList[i]].captureInProgress then
                         DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, 'Capture in progress ~g~' .. perc .. '%', 0.4)                                                                                                                                                           
                     else
-                        DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, "~g~/payroll join~w~ to join. ~g~/payroll leave ~w~to leave. ~g~/payroll start ~w~to start - [" .. Config[Config.ZoneList[i]].captureCount .. "/".. Config.RequiredCapturersMax .. "]", 0.4)                  
+                        --DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, "~g~/payroll join~w~ to join. ~g~/payroll leave ~w~to leave. ~g~/payroll start ~w~to start - [" .. Config[Config.ZoneList[i]].captureCount .. "/".. Config.RequiredCapturersMax .. "]", 0.4)
+                        DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, "~g~[E] ~w~ to join. ~g~[F] ~w~to leave. ~g~[G] ~w~to start - [" .. Config[Config.ZoneList[i]].captureCount .. "/".. Config.RequiredCapturersMax .. "]", 0.4)       
+                        if IsControlJustPressed(0, Keys['E']) then
+                            if Config.GroveStreet.captureCount >= Config.RequiredCapturersMax then
+                                ESX.ShowNotification( '~r~There are already ' .. Config.RequiredCapturersMax .. ' people in the group')
+                            else
+                                if isCapturing then
+                                    ESX.ShowNotification('You are already in the group') 
+                                elseif isCapturedBySelf then
+                                    ESX.ShowNotification('You are already on payroll') 
+                                else
+                                    if Config.BlockEmergencyServices and (ESX.GetPlayerData().job.name == 'police' or ESX.GetPlayerData().job.name == 'ambulance') then
+                                        ESX.ShowNotification('Emergency services are not allowed to Capture') 
+                                    else
+                                        TriggerServerEvent('esx_kingofthehill:addCapturer', PlayerData.identifier,Config.ZoneList[i])
+                                        ESX.ShowNotification('~g~Joined the Capture group')
+                                    end
+                                end                        
+                            end 
+                        elseif IsControlJustPressed(0, Keys['F']) then
+                            if isCapturing then
+                                TriggerServerEvent('esx_kingofthehill:removeCapturer', PlayerData.identifier,Config.ZoneList[i])
+                                ESX.ShowNotification('~r~Left the Capture group')
+                            else
+                                ESX.ShowNotification('You\'re not in the Capture group')
+                            end
+                        elseif IsControlJustPressed(0, Keys['G']) then
+                            if Config.BlockEmergencyServices and (ESX.GetPlayerData().job.name == 'police' or ESX.GetPlayerData().job.name == 'ambulance') then
+                                ESX.ShowNotification('Emergency services are not allowed to Capture') 
+                            elseif Config[Config.ZoneList[i]].captureCount >= Config.RequiredCapturersMin and isCapturing and Config.CoolDown == 0 then 
+                                if Config[Config.ZoneList[i]].captureInProgress then
+                                    ESX.ShowNotification('Already being captured') 
+                                else
+                                    TriggerServerEvent('esx_kingofthehill:capture',Config.ZoneList[i])  
+                                end                                
+                            elseif Config.CoolDown > 0 then
+                                ESX.ShowNotification('Recently captured. You need to wait ~r~' .. Config.CoolDown / 1000 .. ' ~w~seconds')
+                            else
+                                ESX.ShowNotification('~r~You need at least ' .. Config.RequiredCapturersMin .. ' in your group')
+                            end
+                        end           
                     end    
                     if Config[Config.ZoneList[i]].showPercentage and Config[Config.ZoneList[i]].captureInProgress and isCapturing then
                         DrawMarker(1, Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z - 8, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.CaptureBreakingDistance*2, Config.CaptureBreakingDistance*2, 30.0, 52, 207, 250, 155, false, false, 2, false)                                                                     
@@ -399,12 +447,12 @@ function DrawText3D(x, y, z, text, scale)
 end
 
 -- Set and unset visibility for progress
-function GetPercentage(time)
-    Config.GroveStreet.showPercentage = true
+function GetPercentage(time,zone)
+    Config[zone].showPercentage = true
     perc = 0
     repeat
     perc = perc + 1
     Citizen.Wait(time)
-    until(perc == 100 or #Config.GroveStreet.capturers == 0)
-    Config.GroveStreet.showPercentage = false
+    until(perc == 100 or #Config[zone].capturers == 0)
+    Config[zone].showPercentage = false
 end

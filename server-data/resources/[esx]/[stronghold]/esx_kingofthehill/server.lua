@@ -39,31 +39,36 @@ end)
 
 -- Add capturer to table for all users
 RegisterServerEvent('esx_kingofthehill:addCapturer')
-AddEventHandler('esx_kingofthehill:addCapturer', function(player)    
-    TriggerClientEvent('esx_kingofthehill:addCapturer', -1, player)  
+AddEventHandler('esx_kingofthehill:addCapturer', function(player,zone)    
+    TriggerClientEvent('esx_kingofthehill:addCapturer', -1, player,zone)  
 end)
 
 -- Remove capturer to table for all users
 RegisterServerEvent('esx_kingofthehill:removeCapturer')
-AddEventHandler('esx_kingofthehill:removeCapturer', function(player)    
-    TriggerClientEvent('esx_kingofthehill:removeCapturer', -1, player) 
+AddEventHandler('esx_kingofthehill:removeCapturer', function(player,zone)    
+    TriggerClientEvent('esx_kingofthehill:removeCapturer', -1, player,zone) 
 end)
 
 -- Update blips for users
 RegisterServerEvent('esx_kingofthehill:updateBlip')
-AddEventHandler('esx_kingofthehill:updateBlip', function(capturers)   
-    TriggerClientEvent('esx_kingofthehill:updateBlip', -1, capturers) 
+AddEventHandler('esx_kingofthehill:updateBlip', function(capturers,zone)   
+    TriggerClientEvent('esx_kingofthehill:updateBlip', -1, capturers,zone) 
 end)
 
 -- Start Capture, create new code and update for all users
 RegisterServerEvent('esx_kingofthehill:capture')
-AddEventHandler('esx_kingofthehill:capture', function()    
+AddEventHandler('esx_kingofthehill:capture', function(zone)    
     local code = math.random(10000, 99999)
-    MySQL.Async.execute('DELETE FROM payroll_code', {}, function()
-        MySQL.Async.execute('INSERT INTO payroll_code (code) VALUES (@code)', {        
-            ['@code'] = code
+    MySQL.Async.execute('DELETE FROM payroll_code WHERE zone = @zone', {
+        ['@zone'] = zone
+    }, function()
+        MySQL.Async.execute('INSERT INTO payroll_code (code) VALUES (@code,@zone)', {        
+            ['@code'] = code,
+            ['@zone'] = zone
         }, function()
-            MySQL.Async.fetchAll('SELECT * FROM payroll',{}, function(result)
+            MySQL.Async.fetchAll('SELECT * FROM payroll WHERE zone = @zone',{
+                ['@zone'] = zone
+            }, function(result)
                 if #result > 0 then
                     for k,v in pairs(result) do 
                         local xPlayer = ESX.GetPlayerFromIdentifier(v.identifier)
@@ -73,27 +78,32 @@ AddEventHandler('esx_kingofthehill:capture', function()
                     end
                 end   
             end)
-            TriggerClientEvent('esx_kingofthehill:capture', -1, code)
+            TriggerClientEvent('esx_kingofthehill:capture', -1, code,zone)
         end)
     end)    
 end)
 
 -- On capture success send code to all capturers and delete all old owners from DB
 RegisterServerEvent('esx_kingofthehill:confirmCapture')
-AddEventHandler('esx_kingofthehill:confirmCapture', function(code)    
+AddEventHandler('esx_kingofthehill:confirmCapture', function(code,zone)    
     TriggerClientEvent("chatMessage", source, "^5 Payroll: ^0", {0,0,0}, string.format('You have captured the area. To get on the payroll use ^2 /payroll ' .. code))
-    TriggerClientEvent('esx_kingofthehill:setCooldown', -1, Config.CoolDownSetting)
-    MySQL.Async.execute('DELETE FROM payroll', {})
+    TriggerClientEvent('esx_kingofthehill:setCooldown', -1, Config.CoolDownSetting,zone)
+    MySQL.Async.execute('DELETE FROM payroll WHERE zone = @zone', {
+        ['@zone'] = zone
+    })
 end)
 
 -- Register new payroll player to DB
 RegisterServerEvent('esx_kingofthehill:addToPayroll')
-AddEventHandler('esx_kingofthehill:addToPayroll', function(player)
+AddEventHandler('esx_kingofthehill:addToPayroll', function(player,zone)
     local xPlayer = ESX.GetPlayerFromIdentifier(player)
-    MySQL.Async.fetchAll('SELECT * FROM payroll',{}, function(result)
+    MySQL.Async.fetchAll('SELECT * FROM payroll WHERE zone = @zone',{
+        ['@zone'] = zone
+    }, function(result)
         if #result < Config.RequiredCapturersMax then
-            MySQL.Async.execute('INSERT IGNORE INTO payroll (identifier) VALUES (@identifier)', {
-                ['@identifier'] = player
+            MySQL.Async.execute('INSERT IGNORE INTO payroll (identifier) VALUES (@identifier,@zone)', {
+                ['@identifier'] = player,
+                ['@zone'] = zone
             })
             xPlayer.addInventoryItem('reptag', Config.PayoutCount)
             TriggerClientEvent('esx_kingofthehill:confirmCapture', -1, player)
@@ -129,9 +139,11 @@ AddEventHandler('esx_kingofthehill:checkStatus', function()
 end)
 
 -- Check current owners
-ESX.RegisterServerCallback('esx_kingofthehill:checkCurrentOwners', function(source, cb)
+ESX.RegisterServerCallback('esx_kingofthehill:checkCurrentOwners', function(source, cb,zone)
 	local count = 0
-    MySQL.Async.fetchAll('SELECT * FROM payroll',{}, function(result)
+    MySQL.Async.fetchAll('SELECT * FROM payroll WHERE zone = @zone',{
+        ['@zone'] = zone
+    }, function(result)
         if #result > 0 then
             for k,v in pairs(result) do 
                 local xPlayer = ESX.GetPlayerFromIdentifier(v.identifier)
@@ -161,9 +173,11 @@ ESX.RegisterServerCallback('esx_kingofthehill:checkCurrentOwners', function(sour
 end)
 
 -- Check active current owners
-ESX.RegisterServerCallback('esx_kingofthehill:checkActiveCapturedBy', function(source, cb)
+ESX.RegisterServerCallback('esx_kingofthehill:checkActiveCapturedBy', function(source, cb,zone)
 	local capturedBy = {}
-    MySQL.Async.fetchAll('SELECT * FROM payroll',{}, function(result)
+    MySQL.Async.fetchAll('SELECT * FROM payroll WHERE zone = @zone',{
+        ['@zone'] = zone
+    }, function(result)
         if #result > 0 then
             for k,v in pairs(result) do 
                 table.insert(capturedBy, v.identifier)                
@@ -174,9 +188,11 @@ ESX.RegisterServerCallback('esx_kingofthehill:checkActiveCapturedBy', function(s
 end)
 
 -- Check payroll code
-ESX.RegisterServerCallback('esx_kingofthehill:checkCode', function(source, cb, code)
+ESX.RegisterServerCallback('esx_kingofthehill:checkCode', function(source, cb, code,zone)
     local valid = false	
-    MySQL.Async.fetchAll('SELECT * FROM payroll_code',{}, function(result)
+    MySQL.Async.fetchAll('SELECT * FROM payroll_code WHERE zone = @zone',{
+        ['@zone'] = zone
+    }, function(result)
         if #result > 0 then
             for k,v in pairs(result) do 
                 if code == v.code then
