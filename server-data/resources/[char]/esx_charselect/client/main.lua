@@ -46,6 +46,11 @@ AddEventHandler("charselect:register", function()
     Visible()
 end)
 
+RegisterNetEvent("charselect:StopText")
+AddEventHandler("charselect:StopText", function()
+    text = 0
+end)
+
 local enable = false
 local heading = 360.00
 local signmodel = GetHashKey("prop_police_id_board")
