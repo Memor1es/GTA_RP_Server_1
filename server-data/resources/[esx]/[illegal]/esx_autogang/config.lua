@@ -16,8 +16,8 @@ Config.DispatchSquads = {
             'mafia'
         },
         Event = 89, -- number cooresponts to https://runtime.fivem.net/doc/natives/?_0x1374ABB7C15BAB92
-        NumberOfWaves = 3,
-        NumberPerWave = 2,
+        NumberOfWaves = 5,
+        NumberPerWave = 5,
         TimeBetweenWaves = math.random(5000, 8000), -- in ms
         TimeBeforeUpAgain = math.random(60000, 80000), -- time here minus time between waves = total wait
         TriggerDistance = 20.78,
@@ -71,8 +71,8 @@ Config.DispatchSquads = {
             'mafia'
         },
         Event = 89,
-        NumberOfWaves = 3,
-        NumberPerWave = 2,
+        NumberOfWaves = 5,
+        NumberPerWave = 5,
         TimeBetweenWaves = math.random(5000, 8000), -- in ms
         TimeBeforeUpAgain = math.random(60000, 80000), -- time here minus time between waves = total wait
         TriggerDistance = 20.78,
@@ -110,6 +110,63 @@ Config.DispatchSquads = {
             {x=356.17, y=-2073.51, z=21.02, h=47.13},
             {x=346.17, y=-2066.51, z=20.02, h=322.13},
             {x=343.17, y=-2063.51, z=20.02, h=314.13}
+        },
+    },
+    Bar = {
+        Name = "Bar",
+        AlliesWith = {
+            GetHashKey("AMBIENT_GANG_MEXICAN"),
+            GetHashKey("AMBIENT_GANG_SALVA")
+        },
+        EnemiesWith = {
+            'vagos',
+            'unemployed',
+            'police',
+            'cardealer',
+            'mechanic',
+            'taxi',
+            'mafia'
+        },
+        Event = 89,
+        NumberOfWaves = 3,
+        NumberPerWave = 2,
+        TimeBetweenWaves = math.random(5000, 8000), -- in ms
+        TimeBeforeUpAgain = math.random(60000, 80000), -- time here minus time between waves = total wait
+        TriggerDistance = 20.78,
+        CentralPos = vector3(153.89, -1296.59, 29.01),
+        RepSet = true,
+        TauntOnKill = true,
+        NPCs = {
+            GetHashKey('g_f_y_vagos_01'),
+            GetHashKey('ig_ramp_mex'),
+            GetHashKey('ig_ortega'),
+            GetHashKey('g_m_y_mexgoon_02')
+        },
+        NPCWeapons = {
+            {wep = GetHashKey('weapon_carbinerifle'), type='gun'},
+            {wep = GetHashKey('weapon_smg'), type='gun'},
+            --{wep = GetHashKey('weapon_rpg'), type='gun'},
+            --{wep = GetHashKey('weapon_minigun'), type='gun'},
+            --{wep = GetHashKey('weapon_microsmg'), type='gun'},
+        },
+        NPCSpawnPoints = {
+            {x=167.89, y=-1293.82, z=29.45, h=317.13},
+            {x=161.06, y=-1309.68, z=34.34, h=325.13},
+            {x=170.32, y=-1301.92, z=35.46, h=59.61},
+            {x=167.84, y=-1290.92, z=35.02, h=317.13},
+            {x=157.59, y=-1317.87, z=29.19, h=151.13},
+            {x=169.35, y=-1270.46, z=29.2, h=136.13},
+            {x=161.35, y=-1266.46, z=29.2, h=136.13},
+            {x=154.35, y=-1274.46, z=29.2, h=136.13},
+            {x=157.06, y=-1315.68, z=34.34, h=325.13},
+            {x=169.8, y=-1301.43, z=35.46, h=73.29},
+            {x=169.06, y=-1284.14, z=35.02, h=94.07},
+            {x=139.15, y=-1292.44, z=29.2, h=136.13},
+            {x=129.22, y=-1298.59, z=29.2, h=136.13},
+            {x=117.1, y=-1306.37, z=29.2, h=136.13},
+            {x=117.49, y=-1281.37, z=28.27, h=136.13},
+            {x=125.08, y=-1281.58, z=29.28, h=136.13},
+            {x=133.09, y=-1293.73, z=29.2, h=136.13},
         },
     }
 }
