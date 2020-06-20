@@ -240,14 +240,15 @@ Citizen.CreateThread(function()
         local isCapturedBySelf = {}
         local isCapturing = {}
         local coords = GetEntityCoords(playerPed)
-
+        --print(#Config.ZoneList)
         for i=1, #Config.ZoneList do
             isCapturedBySelf[Config.ZoneList[i]] = table.contains(Config[Config.ZoneList[i]].capturedBy, PlayerData.identifier)
             isCapturing[Config.ZoneList[i]] = table.contains(Config[Config.ZoneList[i]].capturers, PlayerData.identifier)
 
             local dist = GetDistanceBetweenCoords(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, coords.x, coords.y, coords.z, true)  
-
+            --print(dist)
             if dist <= Config.CaptureBreakingDistance then
+                --print("hihi")
                 IsInRange = true
                 now_zone = Config.ZoneList[i]        
                 if not isCapturedBySelf[Config.ZoneList[i]] then    
@@ -257,12 +258,12 @@ Citizen.CreateThread(function()
                         --DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, "~g~/payroll join~w~ to join. ~g~/payroll leave ~w~to leave. ~g~/payroll start ~w~to start - [" .. Config[Config.ZoneList[i]].captureCount .. "/".. Config.RequiredCapturersMax .. "]", 0.4)
                         DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, "~g~[E] ~w~ to join. ~g~[F] ~w~to leave. ~g~[G] ~w~to start - [" .. Config[Config.ZoneList[i]].captureCount .. "/".. Config.RequiredCapturersMax .. "]", 0.4)       
                         if IsControlJustPressed(0, Keys['E']) then
-                            if Config.GroveStreet.captureCount >= Config.RequiredCapturersMax then
+                            if Config[Config.ZoneList[i]].captureCount >= Config.RequiredCapturersMax then
                                 ESX.ShowNotification( '~r~There are already ' .. Config.RequiredCapturersMax .. ' people in the group')
                             else
-                                if isCapturing then
+                                if isCapturing[Config.ZoneList[i]] then
                                     ESX.ShowNotification('You are already in the group') 
-                                elseif isCapturedBySelf then
+                                elseif isCapturedBySelf[Config.ZoneList[i]] then
                                     ESX.ShowNotification('You are already on payroll') 
                                 else
                                     if Config.BlockEmergencyServices and (ESX.GetPlayerData().job.name == 'police' or ESX.GetPlayerData().job.name == 'ambulance') then

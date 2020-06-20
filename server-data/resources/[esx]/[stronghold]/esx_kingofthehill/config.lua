@@ -36,7 +36,7 @@ Config.GroveStreet = {
 }
 
 Config.Bar = {      
-    pos = { x = 128, y = -1301, z = 39.23 },
+    pos = { x = 153.89, y = -1296.59, z = 29.01 },
     captured = false,
     captureInProgress = false,
     captureCount = 0,
@@ -66,7 +66,7 @@ Config.Mechanic = {
 }
 
 Config.Factory = {      
-    pos = { x = 9.03, y = 541, z = 176 },
+    pos = { x = 9.03, y = 541.0, z = 176.0 },
     captured = false,
     captureInProgress = false,
     captureCount = 0,
@@ -76,7 +76,7 @@ Config.Factory = {
 }
 
 Config.Villa = {      
-    pos = { x = 9.03, y = 541, z = 176 },
+    pos = { x = 9.03, y = 541.0, z = 176.0 },
     captured = false,
     captureInProgress = false,
     captureCount = 0,
