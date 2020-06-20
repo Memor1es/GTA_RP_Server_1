@@ -169,4 +169,62 @@ Config.DispatchSquads = {
             {x=133.09, y=-1293.73, z=29.2, h=136.13},
         },
     }
+    ,
+    MidBar = {
+        Name = "MidBar",
+        AlliesWith = {
+            GetHashKey("AMBIENT_GANG_MEXICAN"),
+            GetHashKey("AMBIENT_GANG_SALVA")
+        },
+        EnemiesWith = {
+            'vagos',
+            'unemployed',
+            'police',
+            'cardealer',
+            'mechanic',
+            'taxi',
+            'mafia'
+        },
+        Event = 89,
+        NumberOfWaves = 3,
+        NumberPerWave = 2,
+        TimeBetweenWaves = math.random(5000, 8000), -- in ms
+        TimeBeforeUpAgain = math.random(60000, 80000), -- time here minus time between waves = total wait
+        TriggerDistance = 20.78,
+        CentralPos = vector3(1999.12, 3066.11, 47.05),
+        RepSet = true,
+        TauntOnKill = true,
+        NPCs = {
+            GetHashKey('g_f_y_vagos_01'),
+            GetHashKey('ig_ramp_mex'),
+            GetHashKey('ig_ortega'),
+            GetHashKey('g_m_y_mexgoon_02')
+        },
+        NPCWeapons = {
+            {wep = GetHashKey('weapon_carbinerifle'), type='gun'},
+            {wep = GetHashKey('weapon_smg'), type='gun'},
+            --{wep = GetHashKey('weapon_rpg'), type='gun'},
+            --{wep = GetHashKey('weapon_minigun'), type='gun'},
+            --{wep = GetHashKey('weapon_microsmg'), type='gun'},
+        },
+        NPCSpawnPoints = {
+            {x=1980.12, y=3061.42, z=47.14, h=317.13},
+            {x=1980.37, y=3068.26, z=47.14, h=317.13},
+            {x=1980.12, y=3061.42, z=47.14, h=317.13},
+            {x=2005.94, y=3047.37, z=47.14, h=317.13},
+            {x=2014.22, y=3051.7, z=47.14, h=317.13},
+            {x=1986.04, y=3055.75, z=47.14, h=317.13},
+            {x=1996.31, y=3048.68, z=47.14, h=317.13},
+            {x=1992.69, y=3044.17, z=47.14, h=317.13},
+            {x=1982.07, y=3052.02, z=47.14, h=317.13},
+            {x=2022.0, y=3069.38, z=47.16, h=317.13},
+            {x=2020.92, y=3072.24, z=47.17, h=317.13},
+            {x=2004.88, y=3081.88, z=47.06, h=317.13},
+            {x=1985.31, y=3092.39, z=46.96, h=317.13},
+            {x=1976.57, y=3062.78, z=47.14, h=317.13},
+            {x=1977.7, y=3065.74, z=47.14, h=317.13},
+            {x=2012.81, y=3045.62, z=47.14, h=317.13},
+            {x=2010.45, y=3042.52, z=47.14, h=317.13},
+        },
+    }
 }

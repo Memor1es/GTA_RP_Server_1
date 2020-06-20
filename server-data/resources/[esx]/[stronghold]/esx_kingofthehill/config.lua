@@ -46,7 +46,7 @@ Config.Bar = {
 }
 
 Config.MidBar = {      
-    pos = { x = 1991.6, y = 3053.99, z = 47.23 },
+    pos = { x = 1999.12, y = 3066.11, z = 47.05 },
     captured = false,
     captureInProgress = false,
     captureCount = 0,
