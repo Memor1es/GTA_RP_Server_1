@@ -1,5 +1,5 @@
 Config = {}
-Config.DebugMode = true
+Config.DebugMode = false
 Config.DispatchSquads = {
     Ballas = {
         Name = "Ballas",
@@ -20,7 +20,7 @@ Config.DispatchSquads = {
         NumberPerWave = 5,
         TimeBetweenWaves = math.random(5000, 8000), -- in ms
         TimeBeforeUpAgain = math.random(60000, 80000), -- time here minus time between waves = total wait
-        TriggerDistance = 20.78,
+        TriggerDistance = 40.78,
         CentralPos = vector3(108.48, -1946.71, 20.78),
         RepSet = true,
         TauntOnKill = true,
@@ -75,7 +75,7 @@ Config.DispatchSquads = {
         NumberPerWave = 5,
         TimeBetweenWaves = math.random(5000, 8000), -- in ms
         TimeBeforeUpAgain = math.random(60000, 80000), -- time here minus time between waves = total wait
-        TriggerDistance = 20.78,
+        TriggerDistance = 40.78,
         CentralPos = vector3(332.86, -2039.41, 20.78),
         RepSet = true,
         TauntOnKill = true,
@@ -132,7 +132,7 @@ Config.DispatchSquads = {
         NumberPerWave = 2,
         TimeBetweenWaves = math.random(5000, 8000), -- in ms
         TimeBeforeUpAgain = math.random(60000, 80000), -- time here minus time between waves = total wait
-        TriggerDistance = 20.78,
+        TriggerDistance = 40.78,
         CentralPos = vector3(153.89, -1296.59, 29.01),
         RepSet = true,
         TauntOnKill = true,
@@ -190,7 +190,7 @@ Config.DispatchSquads = {
         NumberPerWave = 2,
         TimeBetweenWaves = math.random(5000, 8000), -- in ms
         TimeBeforeUpAgain = math.random(60000, 80000), -- time here minus time between waves = total wait
-        TriggerDistance = 20.78,
+        TriggerDistance = 40.78,
         CentralPos = vector3(1999.12, 3066.11, 47.05),
         RepSet = true,
         TauntOnKill = true,

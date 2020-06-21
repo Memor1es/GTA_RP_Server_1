@@ -192,6 +192,10 @@ AddEventHandler('esx_kingofthehill:capture', function(code,zone)
     ESX.TriggerServerCallback('esx_kingofthehill:checkCurrentOwners', function(count)
         local timer = count
         if timer ~= nil then
+            --npc spawn
+            TriggerEvent("esx_autogang:start")
+
+            
             Config[zone].captureInProgress = true
             TriggerEvent('esx_kingofthehill:updateBlip', Config[zone].capturers,zone) 
             -- Send a message to Police at start of capture
