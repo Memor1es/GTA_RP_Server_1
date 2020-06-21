@@ -387,6 +387,7 @@ AddEventHandler('esx_kingofthehill:updateBlip', function(capturers,zone)
     ESX.TriggerServerCallback('esx_society:getOnlinePlayers', function(players)        
         for i=1, #players, 1 do
             local isCapturedBySelf = table.contains(Config[zone].capturedBy, PlayerData.identifier)
+            --print(isCapturedBySelf)
             if isCapturedBySelf then
                 for c,d in pairs(Config[zone].capturers) do                    
                     local id = GetPlayerFromServerId(players[i].source)                    
