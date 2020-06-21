@@ -75,15 +75,21 @@ AddEventHandler('esx_kingofthehill:resetPayroll', function(zone)
 end)
 
 -- payroll commands
-RegisterCommand("payroll", function(source, args, rawCommand) 
-    local isCapturing = table.contains(Config[now_zone].capturers, PlayerData.identifier)   
-    local isCapturedBySelf = table.contains(Config[now_zone].capturedBy, PlayerData.identifier) 
+RegisterCommand("payroll", function(source, args, rawCommand)
+    local isCapturedBySelf = {}
+    local isCapturing = {}
+    --local isCapturing = table.contains(Config[now_zone].capturers, PlayerData.identifier)   
+    --local isCapturedBySelf = table.contains(Config[now_zone].capturedBy, PlayerData.identifier) 
+    for i=1, #Config.ZoneList do
+        isCapturedBySelf[Config.ZoneList[i]] = table.contains(Config[Config.ZoneList[i]].capturedBy, PlayerData.identifier)
+        isCapturing[Config.ZoneList[i]] = table.contains(Config[Config.ZoneList[i]].capturers, PlayerData.identifier)
+    end
     if args[1] == nil then
         ESX.ShowNotification('Missing command, try ~r~/payroll start')
     elseif tostring(args[1]) == 'check' then
-        if isCapturing then
+        if isCapturing[now_zone] then
             ESX.ShowNotification('You are in the capturing group')
-        elseif isCapturedBySelf then
+        elseif isCapturedBySelf[now_zone] then
             ESX.ShowNotification('You are on the payroll')
         else
             ESX.ShowNotification('You are not in a capture group, and you aren\'t on the payroll')
@@ -106,9 +112,9 @@ RegisterCommand("payroll", function(source, args, rawCommand)
         if Config[now_zone].captureCount >= Config.RequiredCapturersMax then
             ESX.ShowNotification( '~r~There are already ' .. Config.RequiredCapturersMax .. ' people in the group')
         else
-            if isCapturing then
+            if isCapturing[now_zone] then
                 ESX.ShowNotification('You are already in the group') 
-            elseif isCapturedBySelf then
+            elseif isCapturedBySelf[now_zone] then
                 ESX.ShowNotification('You are already on payroll') 
             else
                 if Config.BlockEmergencyServices and (ESX.GetPlayerData().job.name == 'police' or ESX.GetPlayerData().job.name == 'ambulance') then
@@ -128,7 +134,7 @@ RegisterCommand("payroll", function(source, args, rawCommand)
         end
     elseif tostring(args[1]) == 'clear' then
         if ESX.GetPlayerData().job.name == 'mafia' then
-            local flag = table.contains(Config.ZoneList[i], tostring(args[2]))
+            local flag = table.contains(Config.ZoneList, tostring(args[2]))
             if flag == false then
                 ESX.ShowNotification("不存在此區域")
                 return
@@ -138,23 +144,23 @@ RegisterCommand("payroll", function(source, args, rawCommand)
             ESX.ShowNotification('~r~Unauthorized')
         end
     elseif tostring(args[1]) == 'owners' then
-        local flag = table.contains(Config.ZoneList[i], tostring(args[2]))
+        local flag = table.contains(Config.ZoneList, tostring(args[2]))
             if flag == false then
                 ESX.ShowNotification("不存在此區域")
                 return
             end
         TriggerServerEvent('esx_kingofthehill:checkOwners',args[2])
     else        
-        if not isCapturedBySelf then
+        if not isCapturedBySelf[now_zone] then
 
-            local flag = table.contains(Config.ZoneList[i], tostring(args[2]))
+            local flag = table.contains(Config.ZoneList, tostring(args[2]))
             if flag == false then
                 ESX.ShowNotification("不存在此區域")
                 return
             end
             ESX.TriggerServerCallback('esx_kingofthehill:checkCode', function(valid)
                 if valid then
-                    TriggerServerEvent('esx_kingofthehill:addToPayroll', PlayerData.identifier,zone)
+                    TriggerServerEvent('esx_kingofthehill:addToPayroll', PlayerData.identifier,tostring(args[2]))
                 else
                     ESX.ShowNotification('~r~Invalid Code')
                 end
@@ -187,7 +193,7 @@ AddEventHandler('esx_kingofthehill:capture', function(code,zone)
         local timer = count
         if timer ~= nil then
             Config[zone].captureInProgress = true
-            TriggerEvent('esx_kingofthehill:updateBlip', Config[zone].capturers) 
+            TriggerEvent('esx_kingofthehill:updateBlip', Config[zone].capturers,zone) 
             -- Send a message to Police at start of capture
             TriggerServerEvent('esx_phone:send', 'police', 'There seems to be a turf war breaking out in Grove Street. It\'s not safe to enter the area', false, {
                 x = Config[zone].pos.x,
@@ -204,7 +210,7 @@ AddEventHandler('esx_kingofthehill:capture', function(code,zone)
             Config[zone].captureInProgress = false
             Config[zone].capturers = {}
             Config[zone].captureCount = #Config[zone].capturers
-            TriggerEvent('esx_kingofthehill:updateBlip', Config[zone].capturers)
+            TriggerEvent('esx_kingofthehill:updateBlip', Config[zone].capturers,zone)
             -- Send a message to Police at end of capture
             TriggerServerEvent('esx_phone:send', 'police', 'It looks like things have calmed down in Grove Street. The area should be safe to enter.', false, {
                 x = Config[zone].pos.x,
@@ -227,9 +233,9 @@ end)
 
 -- Successfully capture
 RegisterNetEvent('esx_kingofthehill:confirmCapture')
-AddEventHandler('esx_kingofthehill:confirmCapture', function(player)
-    Config.GroveStreet.captured = true
-    table.insert(Config.GroveStreet.capturedBy, player)
+AddEventHandler('esx_kingofthehill:confirmCapture', function(player,zone)
+    Config[zone].captured = true
+    table.insert(Config[zone].capturedBy, player)
 end)
 
 -- Triggers for joining, leaving, starting a capture

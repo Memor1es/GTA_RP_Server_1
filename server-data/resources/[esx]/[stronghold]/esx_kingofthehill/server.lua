@@ -106,7 +106,7 @@ AddEventHandler('esx_kingofthehill:addToPayroll', function(player,zone)
                 ['@zone'] = zone
             })
             xPlayer.addInventoryItem('reptag', Config.PayoutCount)
-            TriggerClientEvent('esx_kingofthehill:confirmCapture', -1, player)
+            TriggerClientEvent('esx_kingofthehill:confirmCapture', -1, player,zone)
             TriggerClientEvent('esx:showNotification', xPlayer.source, '~g~You\'ve been added to the payroll')
         else
             TriggerClientEvent('esx:showNotification', xPlayer.source, '~r~There are already ' .. Config.RequiredCapturersMax .. ' people using the code')
@@ -130,9 +130,10 @@ AddEventHandler('esx_kingofthehill:checkStatus', function()
     }, function(result)
         if #result > 0 then
             for k,v in pairs(result) do 
-                table.insert(capturedBy[v.zone], v.identifier) 
+                table.insert(capturedBy[v.zone], v.identifier)
+                captured[v.zone] = true 
             end
-            captured[v.zone] = true
+            
         end   
         TriggerClientEvent('esx_kingofthehill:setStatusOnLoad', -1, capturedBy, captured)
     end)
