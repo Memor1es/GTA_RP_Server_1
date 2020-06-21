@@ -62,7 +62,7 @@ AddEventHandler('esx_kingofthehill:capture', function(zone)
     MySQL.Async.execute('DELETE FROM payroll_code WHERE zone = @zone', {
         ['@zone'] = zone
     }, function()
-        MySQL.Async.execute('INSERT INTO payroll_code (code) VALUES (@code,@zone)', {        
+        MySQL.Async.execute('INSERT INTO payroll_code (code,zone) VALUES (@code,@zone)', {        
             ['@code'] = code,
             ['@zone'] = zone
         }, function()
@@ -101,7 +101,7 @@ AddEventHandler('esx_kingofthehill:addToPayroll', function(player,zone)
         ['@zone'] = zone
     }, function(result)
         if #result < Config.RequiredCapturersMax then
-            MySQL.Async.execute('INSERT IGNORE INTO payroll (identifier) VALUES (@identifier,@zone)', {
+            MySQL.Async.execute('INSERT IGNORE INTO payroll (identifier,zone) VALUES (@identifier,@zone)', {
                 ['@identifier'] = player,
                 ['@zone'] = zone
             })
