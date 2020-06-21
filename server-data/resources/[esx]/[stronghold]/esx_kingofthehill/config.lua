@@ -10,7 +10,7 @@ Config.TwoOwnerTime = 35 * 600 -- 35 minutes - Time it takes to capture when 2 o
 Config.ThreeOwnerTime = 30 * 600 -- 30 minutes - Time it takes to capture when 3 of the owners are online
 Config.FourOwnerTime = 20 * 600 -- 20 minutes - Time it takes to capture when 4 of the owners are online
 Config.FiveOwnerTime = 15 * 600 -- 15 minutes - Time it takes to capture when 5 of the owners are online
-Config.PayoutInterval = 12 * 60000 -- 12 minutes - Payout interval
+Config.PayoutInterval = 60 * 60000 -- 60 minutes - Payout interval
 Config.PayoutItem = 'weed' -- Reward item (make sure whatever you reward, is in the DB)
 Config.PayoutCount = 10 -- Count of item reward
 Config.CoolDownSetting = 300 * 60000 -- 5 hours - Cooldown time afer successful capture before another capture can be started
@@ -35,6 +35,7 @@ Config.GroveStreet = {
     showPercentage = false
 }
 
+
 Config.Bar = {      
     pos = { x = 153.89, y = -1296.59, z = 29.01 },
     captured = false,
@@ -42,8 +43,10 @@ Config.Bar = {
     captureCount = 0,
     capturers = {},
     capturedBy = {},
-    showPercentage = false
+    showPercentage = false,
+    money = 5000
 }
+
 
 Config.MidBar = {      
     pos = { x = 1999.12, y = 3066.11, z = 47.05 },
@@ -52,7 +55,8 @@ Config.MidBar = {
     captureCount = 0,
     capturers = {},
     capturedBy = {},
-    showPercentage = false
+    showPercentage = false,
+    money = 4000
 }
 
 Config.Mechanic = {      
@@ -62,7 +66,10 @@ Config.Mechanic = {
     captureCount = 0,
     capturers = {},
     capturedBy = {},
-    showPercentage = false
+    showPercentage = false,
+    reward = 'fixkit',
+    rewardCount = 1,
+    money = 4000
 }
 
 Config.Factory = {      
@@ -82,5 +89,6 @@ Config.Villa = {
     captureCount = 0,
     capturers = {},
     capturedBy = {},
-    showPercentage = false
+    showPercentage = false,
+    money = 8000
 }

@@ -210,8 +210,18 @@ function Payout(players)
     for k,v in pairs(players) do 
         local xPlayer = ESX.GetPlayerFromIdentifier(v.identifier)
         if xPlayer ~= nil then
-            xPlayer.addInventoryItem(Config.PayoutItem, Config.PayoutCount)
-            TriggerClientEvent('esx:showNotification', xPlayer.source, '~g~You earned some reputation from the Payroll')
+            local flag = table.contains(Config.ZoneList, v.zone)
+            if flag then
+                if Config[v.zone].reward ~= nil then
+                    xPlayer.addInventoryItem(Config[v.zone].reward, Config[v.zone].rewardCount)
+                end
+                if Config[v.zone].money ~= nil then
+                    xPlayer.addMoney(Config[v.zone].money)
+                end
+            else
+                xPlayer.addInventoryItem(Config.PayoutItem, Config.PayoutCount)
+                TriggerClientEvent('esx:showNotification', xPlayer.source, '~g~You earned some reputation from the Payroll')
+            end
         end           
     end  
     Wait(Config.PayoutInterval)
