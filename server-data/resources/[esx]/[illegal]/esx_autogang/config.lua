@@ -21,7 +21,7 @@ Config.DispatchSquads = {
         TimeBetweenWaves = math.random(5000, 8000), -- in ms
         TimeBeforeUpAgain = math.random(60000, 80000), -- time here minus time between waves = total wait
         TriggerDistance = 40.78,
-        CentralPos = vector3(108.48, -1946.71, 20.78),
+        CentralPos = vector3(111.25, -1946.97, 20.74),
         RepSet = true,
         TauntOnKill = true,
         NPCs = {
