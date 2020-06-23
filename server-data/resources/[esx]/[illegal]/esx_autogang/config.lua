@@ -168,8 +168,7 @@ Config.DispatchSquads = {
             {x=125.08, y=-1281.58, z=29.28, h=136.13},
             {x=133.09, y=-1293.73, z=29.2, h=136.13},
         },
-    }
-    ,
+    },
     MidBar = {
         Name = "MidBar",
         AlliesWith = {
@@ -225,6 +224,63 @@ Config.DispatchSquads = {
             {x=1977.7, y=3065.74, z=47.14, h=317.13},
             {x=2012.81, y=3045.62, z=47.14, h=317.13},
             {x=2010.45, y=3042.52, z=47.14, h=317.13},
+        },
+    },
+    Villa = {
+        Name = "Villa",
+        AlliesWith = {
+            GetHashKey("AMBIENT_GANG_MEXICAN"),
+            GetHashKey("AMBIENT_GANG_SALVA")
+        },
+        EnemiesWith = {
+            'vagos',
+            'unemployed',
+            'police',
+            'cardealer',
+            'mechanic',
+            'taxi',
+            'mafia'
+        },
+        Event = 89,
+        NumberOfWaves = 3,
+        NumberPerWave = 2,
+        TimeBetweenWaves = math.random(5000, 8000), -- in ms
+        TimeBeforeUpAgain = math.random(60000, 80000), -- time here minus time between waves = total wait
+        TriggerDistance = 40.78,
+        CentralPos = vector3(1999.12, 3066.11, 47.05),
+        RepSet = true,
+        TauntOnKill = true,
+        NPCs = {
+            GetHashKey('g_f_y_vagos_01'),
+            GetHashKey('ig_ramp_mex'),
+            GetHashKey('ig_ortega'),
+            GetHashKey('g_m_y_mexgoon_02')
+        },
+        NPCWeapons = {
+            {wep = GetHashKey('weapon_carbinerifle'), type='gun'},
+            {wep = GetHashKey('weapon_smg'), type='gun'},
+            --{wep = GetHashKey('weapon_rpg'), type='gun'},
+            --{wep = GetHashKey('weapon_minigun'), type='gun'},
+            --{wep = GetHashKey('weapon_microsmg'), type='gun'},
+        },
+        NPCSpawnPoints = {
+            {x=24.85, y=541.34, z=176.03, h=317.13},
+            {x=5.1, y=539.04, z=179.66, h=317.13},
+            {x=11.72, y=536.5, z=179.56, h=317.13},
+            {x=15.09, y=537.6, z=179.56, h=317.13},
+            {x=24.86, y=540.59, z=179.56, h=317.13},
+            {x=26.68, y=544.9, z=179.56, h=317.13},
+            {x=17.45, y=527.11, z=178.61, h=317.13},
+            {x=28.92, y=537.44, z=176.02, h=317.13},
+            {x=1.07, y=533.75, z=175.34, h=317.13},
+            {x=12.62, y=531.55, z=174.63, h=317.13},
+            {x=-7.24, y=523.74, z=174.82, h=317.13},
+            {x=8.49, y=575.58, z=184.12, h=317.13},
+            {x=-3.79, y=568.93, z=187.21, h=317.13},
+            {x=-12.43, y=565.44, z=186.39, h=317.13},
+            {x=-4.73, y=538.14, z=173.89, h=317.13},
+            {x=-16.45, y=552.51, z=175.17, h=317.13},
+            {x=-18.15, y=558.05, z=180.58, h=317.13},
         },
     }
 }
