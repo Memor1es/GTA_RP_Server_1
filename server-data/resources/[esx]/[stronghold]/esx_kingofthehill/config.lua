@@ -13,7 +13,7 @@ Config.FiveOwnerTime = 15 * 600 -- 15 minutes - Time it takes to capture when 5 
 Config.PayoutInterval = 60 * 60000 -- 60 minutes - Payout interval
 Config.PayoutItem = 'weed' -- Reward item (make sure whatever you reward, is in the DB)
 Config.PayoutCount = 10 -- Count of item reward
-Config.CoolDownSetting = 300 * 60000 -- 5 hours - Cooldown time afer successful capture before another capture can be started
+Config.CoolDownSetting = 1440 * 60000 -- 5 hours - Cooldown time afer successful capture before another capture can be started
 Config.CoolDown = 0 -- Gets set on capture - default must be 0
 
 Config.ZoneList = {
@@ -32,7 +32,8 @@ Config.GroveStreet = {
     captureCount = 0,
     capturers = {},
     capturedBy = {},
-    showPercentage = false
+    showPercentage = false,
+    name = "黑人區"
 }
 
 
@@ -44,7 +45,8 @@ Config.Bar = {
     capturers = {},
     capturedBy = {},
     showPercentage = false,
-    money = 5000
+    money = 5000,
+    name = "酒吧"
 }
 
 
@@ -56,7 +58,8 @@ Config.MidBar = {
     capturers = {},
     capturedBy = {},
     showPercentage = false,
-    money = 4000
+    money = 4000,
+    name = "中部酒吧"
 }
 
 Config.Mechanic = {      
@@ -69,7 +72,8 @@ Config.Mechanic = {
     showPercentage = false,
     reward = 'fixkit',
     rewardCount = 1,
-    money = 4000
+    money = 4000,
+    name = "修車廠"
 }
 
 Config.Factory = {      
@@ -79,7 +83,8 @@ Config.Factory = {
     captureCount = 0,
     capturers = {},
     capturedBy = {},
-    showPercentage = false
+    showPercentage = false,
+    name = "毒品工廠"
 }
 
 Config.Villa = {      
@@ -90,5 +95,6 @@ Config.Villa = {
     capturers = {},
     capturedBy = {},
     showPercentage = false,
-    money = 8000
+    money = 8000,
+    name = "豪宅區"
 }
