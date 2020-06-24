@@ -138,6 +138,13 @@ Citizen.CreateThread(function()
                         IsControlJustPressed(0, Keys['Q']) then
                         stopWorkout()
                         lastWorkTime = -1
+                        if Config.Ability then
+                            local luck = math.random(1,100)
+                            if Config.RandomAbility >= luck then
+                                TriggerEvent("esx_status:add",Config.IncreseAbility,1)
+                                TriggerEvent("esx_status:remove",Config.DecreseAbility,1)
+                            end
+                        end
                     end
                 end
 

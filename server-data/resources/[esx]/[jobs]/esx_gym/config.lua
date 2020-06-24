@@ -5,6 +5,11 @@ Config.MarkerSize = {x = 0.3, y = 0.3, z = 0.3}
 Config.MarkerColour = {r = 50, g = 50, b = 204}
 Config.RestTime = 60 -- Time between workouts in seconds
 
+Config.Ability = true
+Config.RandomAbility = 5  ---  5/100
+Config.IncreseAbility = "str"
+Config.DecreseAbility = "int"
+
 Config.Blip = {
     Title = "Gym",
     Pos = {x = -1201.23, y = -1568.87, z = 4.61},
