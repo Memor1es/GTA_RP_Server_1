@@ -221,3 +221,33 @@ AddEventHandler('notification', function(msg,flag)
         exports['mythic_notify']:SendAlert('success', msg, 5000)
     end
 end)
+
+RegisterNetEvent('reload:game1')
+AddEventHandler('reload:game1', function()
+    local finished = taskBar(4000,math.random(5,15))
+    if finished ~= 100 then
+        TriggerEvent('notification', 'You\'re trash at this...', 2)
+        --TriggerEvent('notification', 'Failed', 2)
+    else
+        --local finished2 = exports["reload-skillbar"]:taskBar(6000,math.random(5,15))
+        local finished2 = taskBar(3000,math.random(5,15))
+        if finished2 ~= 100 then
+            TriggerEvent('notification', 'You\'re trash at this...', 2)
+            --TriggerEvent('notification', 'Failed', 2)
+        else
+            --local finished3 = exports["reload-skillbar"]:taskBar(6000,math.random(5,15))
+            local finished3 = taskBar(2000,math.random(5,15))
+            if finished3 ~= 100 then
+                TriggerEvent('notification', '感覺到手藝上升了一點...', 2)
+                TriggerEvent("esx_status:add",'agi',1)
+                --TriggerEvent('notification', 'Failed', 2)
+            else
+                TriggerEvent('notification', '感覺到手藝下降了一點...', 1)
+                TriggerEvent("esx_status:remove",'agi',1)
+                --TriggerEvent('notification', 'Finished, now here\'s a cookie! xD',1)
+                -- Do what you want them to do here...
+                --HotWireCar()
+            end
+        end
+    end
+end)

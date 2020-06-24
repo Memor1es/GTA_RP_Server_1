@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap');
+
+* {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: transparent;
+    overflow: hidden;
+    
+}
+
+.test {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.hud {
+	position: absolute;
+	top: 30.630vh;
+	right: 1vw;
+	width: 16.105vw;
+	padding: 30px;
+    text-align: center;
+	display: none;
+}
+
+
+
+.hud .profile {
+	box-shadow: 0.105vw 0.105vw 0.158vw rgba(0,0,0,0.5);
+	z-index: 1;
+	display: inline-block;
+	width: 6.211vw;
+	height: 6.211vw;
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+.card {
+	border-radius: 10vw;	
+}
+
+.hud .container {
+	position: absolute;
+    top: 50%;
+    right: 0;
+    height: auto;
+    width: 400px;
+    padding: 20px;
+	background: transparent;
+	/* Note: backdrop-filter has minimal browser support */
+}
+
+.hud .container .type {
+	width: 6.421vw;
+	height: 1.111vh;
+	margin: 0.263vw 0;
+}
+
+.hud .container .type .svg {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: -0.211vw;
+	width: 0.737vw;
+	text-align: center;
+}
+
+.hud .container .type .progress {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: -0.211vw;
+	margin-left: 0.421vw;
+	width: calc(100% - 22px);
+	height: 0.648vh;
+	background-color: rgba(187, 200, 222, 0.3);
+	border-radius: 0.526vw;
+	
+}
+
+.hud .container .type .progress div {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #BBC8DE;
+	border-radius: 0.526vw;
+	box-shadow: 0.105vw 0.105vw 0.158vw rgba(0,0,0,0.5);
+}
+
+.hud #hour {
+	position: absolute;
+	z-index: 2;
+	color: white;
+	text-align: center;
+	font-size: 0.737vw;
+	width: 8.947vw;
+	right: 0;
+	top: -1.389vh;
+}
+
+.hud .notification {
+	display: none;
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	line-height: 21px;
+	background-color: #EE5253;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	z-index: 2;
+	border-radius: 100%;
+	top: -7px;
+	left: 0;
+}
+
+.hud .icons {
+	position: absolute;
+	z-index: 2;
+	right: 0;
+	top: -1.481vh;
+}
+.txt{
+        
+        text-align: left;
+        top: auto;
+        right: auto;
+        width: 13.021vw;
+        font-size: 0.7vw;
+        font-weight: bold;
+        color: #ffbe00;
+    }
+.thongtin{
+	text-align: left;
+        top: auto;
+        right: auto;
+        width: 13.021vw;
+        font-size: 0.7vw;
+        font-weight: bold;
+        color: white;
+}
+
+.time{
+	top: 7.813vw;
+	margin-left:3.125vw;
+	color: white;
+}

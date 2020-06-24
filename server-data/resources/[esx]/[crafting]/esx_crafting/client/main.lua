@@ -41,6 +41,8 @@ RegisterNUICallback('CraftingSuccess', function()
     ClearPedTasks(GetPlayerPed(-1))
     FreezeEntityPosition(GetPlayerPed(-1),false)
     TriggerServerEvent("rs_crafting:CraftingSuccess", CurrentCraft)
+    TriggerEvent('notification', '感覺到手藝上升了一點...', 2)
+    TriggerEvent("esx_status:add",'agi',1)
 end)
 
 -- NUI that get triggered on fail
@@ -49,6 +51,8 @@ RegisterNUICallback('CraftingFailed', function()
     ClearPedTasks(GetPlayerPed(-1))
     FreezeEntityPosition(GetPlayerPed(-1),false)
     TriggerServerEvent("rs_crafting:CraftingFailed", CurrentCraft)
+    TriggerEvent('notification', '感覺到手藝下降了一點...', 1)
+    TriggerEvent("esx_status:remove",'agi',1)
 end)
 
 function OpenCraftMenu(kind)
