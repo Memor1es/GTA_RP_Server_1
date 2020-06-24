@@ -15,6 +15,7 @@ Config.PayoutItem = 'weed' -- Reward item (make sure whatever you reward, is in 
 Config.PayoutCount = 10 -- Count of item reward
 Config.CoolDownSetting = 1440 * 60000 -- 5 hours - Cooldown time afer successful capture before another capture can be started
 Config.CoolDown = 0 -- Gets set on capture - default must be 0
+Config.ShowBlip = true
 
 Config.ZoneList = {
     "GroveStreet",

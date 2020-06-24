@@ -468,3 +468,21 @@ function GetPercentage(time,zone)
     until(perc == 100 or #Config[zone].capturers == 0)
     Config[zone].showPercentage = false
 end
+
+if Config.ShowBlip then
+    Citizen.CreateThread(function()
+        for i=1, #Config.ZoneList do
+            local blip = AddBlipForCoord(Config[Config.ZoneList[i]].pos.x,Config[Config.ZoneList[i]].pos.y,Config[Config.ZoneList[i]].pos.z)
+  
+            SetBlipSprite(blip, 491)
+            SetBlipScale(blip, 0.8)
+            SetBlipColour(blip, 2)
+            SetBlipAsShortRange(blip, true)
+    
+            BeginTextCommandSetBlipName('STRING')
+            AddTextComponentSubstringPlayerName(Config[Config.ZoneList[i]].name)
+            EndTextCommandSetBlipName(blip)
+
+        end
+    end)
+end
