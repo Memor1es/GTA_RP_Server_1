@@ -142,7 +142,10 @@ Citizen.CreateThread(function()
                             local luck = math.random(1,100)
                             if Config.RandomAbility >= luck then
                                 TriggerEvent("esx_status:add",Config.IncreseAbility,1)
+                                --ESX.ShowNotification("感覺到力量上升了")
+                                exports['mythic_notify']:SendAlert('success', '感覺到力量上升了', 5000)
                                 TriggerEvent("esx_status:remove",Config.DecreseAbility,1)
+                                exports['mythic_notify']:SendAlert('error', '感覺到智力下降了', 5000)
                             end
                         end
                     end
