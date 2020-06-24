@@ -6,7 +6,7 @@ Config.MarkerColour = {r = 50, g = 50, b = 204}
 Config.RestTime = 60 -- Time between workouts in seconds
 
 Config.Ability = true
-Config.RandomAbility = 5  ---  5/100
+Config.RandomAbility = 80  ---  5/100
 Config.IncreseAbility = "str"
 Config.DecreseAbility = "int"
 
