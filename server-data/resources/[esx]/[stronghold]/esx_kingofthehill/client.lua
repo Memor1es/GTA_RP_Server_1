@@ -274,7 +274,11 @@ Citizen.CreateThread(function()
                                 if isCapturing[Config.ZoneList[i]] then
                                     ESX.ShowNotification('You are already in the group') 
                                 elseif isCapturedBySelf[Config.ZoneList[i]] then
-                                    ESX.ShowNotification('You are already on payroll') 
+                                    ESX.ShowNotification('You are already on payroll')
+                                elseif Config.CheckJob then
+                                    if table.contains(Config.JobList,ESX.GetPlayerData().job.name) then
+                                        ESX.ShowNotification("你的職業不允許佔領地盤")
+                                    end
                                 else
                                     if Config.BlockEmergencyServices and (ESX.GetPlayerData().job.name == 'police' or ESX.GetPlayerData().job.name == 'ambulance') then
                                         ESX.ShowNotification('Emergency services are not allowed to Capture') 
@@ -381,7 +385,8 @@ RegisterNetEvent('esx_kingofthehill:updateBlip')
 AddEventHandler('esx_kingofthehill:updateBlip', function(capturers,zone)
     Config[zone].capturers = capturers
     Config[zone].captureCount = #capturers
-	-- Refresh all blips
+    -- Refresh all blips
+    --[[
 	for k, existingBlip in pairs(blipsCapturers) do
 		RemoveBlip(existingBlip)
 	end
@@ -402,6 +407,7 @@ AddEventHandler('esx_kingofthehill:updateBlip', function(capturers,zone)
             end  
         end        
     end)    
+    --]]
 end)
 
 -- Create blip for capturers
