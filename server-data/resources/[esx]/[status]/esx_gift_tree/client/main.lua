@@ -144,3 +144,11 @@ AddEventHandler('esx_gift_tree:setluk', function(value)
 	TriggerEvent('esx_status:set', 'luk', value)
 
 end)
+
+RegisterNetEvent('esx_gift_tree:randomluk')
+AddEventHandler('esx_gift_tree:randomluk', function(floor, ceil)
+  -- restore hunger & thirst
+  local luck = math.random(floor,ceil)
+	TriggerEvent('esx_status:set', 'luk', luck)
+  TriggerEvent('esx_ability:setText','獲得了天分點數' .. luck)
+end)

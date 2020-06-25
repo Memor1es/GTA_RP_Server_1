@@ -54,6 +54,7 @@ if not Config.UseDeferrals then
 	RegisterNUICallback('register', function(data, cb)
 		ESX.TriggerServerCallback('esx_identity:registerIdentity', function(callback)
 			if callback then
+				TriggerEvent('esx_gift_tree:randomluk',1,20)
 				ESX.ShowNotification(_U('thank_you_for_registering'))
 				EnableGui(false)
 				--TriggerEvent('esx_skin:playerRegistered')
