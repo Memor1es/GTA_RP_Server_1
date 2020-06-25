@@ -76,3 +76,10 @@ Citizen.CreateThread(function()
         end
     end
 end)
+
+Citizen.CreateThread(function()
+    while true do
+	N_0x4757f00bc6323cfe(GetHashKey("WEAPON_UNARMED"), 0.4) 	 
+	Wait(0)
+    end
+end)
