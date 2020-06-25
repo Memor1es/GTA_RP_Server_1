@@ -1,6 +1,6 @@
 Config = {}
 Config.BlockEmergencyServices = false -- Allow/Disallow Police & EMS from capturing
-Config.RequiredCapturersMin = 1 -- Minimum members required for capture group
+Config.RequiredCapturersMin = 5 -- Minimum members required for capture group
 Config.RequiredCapturersMax = 5 -- Max allowed number of capturers in a group
 Config.RequiredCaptureDistance = 10.0 -- How clost to capture point you need to be to start a capture
 Config.CaptureBreakingDistance = 50.0 -- How far you can go without leaving the capturing
