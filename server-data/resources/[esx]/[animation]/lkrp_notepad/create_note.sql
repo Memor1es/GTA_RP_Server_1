@@ -1,0 +1,13 @@
+CREATE TABLE `note` (
+	`id` INT NOT NULL,
+	`text` TEXT NOT NULL,
+	`x` INT NOT NULL,
+	`y` INT NOT NULL,
+	`z` INT NOT NULL
+)
+COLLATE='utf8mb4_bin'
+;
+
+ALTER TABLE `note`
+	CHANGE COLUMN `id` `id` INT(11) NOT NULL AUTO_INCREMENT FIRST,
+	ADD PRIMARY KEY (`id`);
