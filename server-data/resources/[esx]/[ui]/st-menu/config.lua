@@ -34,7 +34,7 @@ rootMenuConfig =  {
             return not fuck
         end,
         --subMenus = {"general:flipvehicle",  "general:checkoverself", "general:checktargetstates",  "general:keysgive",  "general:emotes",  "general:checkvehicle", "general:apartgivekey", "general:aparttakekey"  }
-        subMenus = {"general:flipvehicle",  "general:checkoverself", "general:emotes", "general:apartgivekey", "general:aparttakekey"  }
+        subMenus = {"general:flipvehicle",  "general:checkoverself", "general:emotes", "general:apartgivekey", "general:aparttakekey",  'prison_status_panel:open'}
     },
     {
         id = "amb-ability",
@@ -371,6 +371,11 @@ newSubMenus = {
         title = "Examine Self",
         icon = "#general-check-over-self",
         functionName = "MF_SkeletalSystem:openSkelly"
+    },
+    ['prison_status_panel:open'] = {
+        title = "能力值",
+        icon = "#general-check-over-self",
+        functionName = "prison_status:open"
     },
     --[[
     ['general:checktargetstates'] = {
