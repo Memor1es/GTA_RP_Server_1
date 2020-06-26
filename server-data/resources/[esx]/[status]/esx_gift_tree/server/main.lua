@@ -37,3 +37,23 @@ ESX.RegisterUsableItem('book', function(source)
 	xPlayer.triggerEvent('esx_status:add','int',1)
 	xPlayer.triggerEvent('notification', '感覺到智力上升了一點...', 2)
 end)
+
+ESX.RegisterUsableItem('luck1', function(source)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	xPlayer.triggerEvent('esx_gift_tree:randomluk',1,20)
+end)
+
+ESX.RegisterUsableItem('luck2', function(source)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	xPlayer.triggerEvent('esx_gift_tree:randomluk',20,40)
+end)
+
+ESX.RegisterUsableItem('luck3', function(source)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	xPlayer.triggerEvent('esx_gift_tree:randomluk',40,60)
+end)
+
+ESX.RegisterUsableItem('luck4', function(source)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	xPlayer.triggerEvent('esx_gift_tree:randomluk',60,100)
+end)
