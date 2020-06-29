@@ -109,6 +109,17 @@
         "IsZero": false
       },
       "heading": 143.522858
+    },
+    {
+      "name": "washcloth",
+      "coordinates": {
+        "X": 1781.98608,
+        "Y": 2611.91357,
+        "Z": 50.5499725,
+        "IsNormalized": false,
+        "IsZero": false
+      },
+      "heading": 183.296265
     }
   ],
   "blips": [

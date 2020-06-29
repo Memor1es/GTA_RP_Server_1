@@ -1453,6 +1453,7 @@ end)
 AddEventHandler('esx_policejob:hasEnteredMarker', function(station, part, partNum)
 	if part == 'Cloakroom' then
 		CurrentAction     = 'menu_cloakroom'
+		IntheZone         = 'menu_cloakroom'
 		CurrentActionMsg  = _U('open_cloackroom')
 		CurrentActionData = {}
 	elseif part == 'Armory' then
@@ -1884,7 +1885,7 @@ Citizen.CreateThread(function()
 			if IsControlJustReleased(0, 38) and PlayerData.job and PlayerData.job.name == 'police' then
 
 				if CurrentAction == 'menu_cloakroom' then
-					  OpenCloakroomMenu()
+					TriggerEvent('NewUniform:Menu')
 				elseif CurrentAction == 'menu_armory' then
 					if Config.MaxInService == -1 then
 						OpenArmoryMenu(CurrentActionData.station)
@@ -2028,6 +2029,19 @@ end)
 
 AddEventHandler('esx:onPlayerDeath', function(data)
 	isDead = true
+end)
+
+-- UniformZoneCheck
+Citizen.CreateThread(function()
+	while true do
+
+		Citizen.Wait(1000)
+		if IntheZone == 'menu_cloakroom' then
+			TriggerEvent('NewUniform:inCloakroomPolice', true)
+		else
+			TriggerEvent('NewUniform:inCloakroomPolice', false)	
+		end			
+	end
 end)
 
 AddEventHandler('onResourceStop', function(resource)
