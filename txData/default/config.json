@@ -23,8 +23,8 @@
     "statusMessage": "**IP:** `change-me:<port>`\n**Players:** <players>\n**Uptime:** <uptime>"
   },
   "fxRunner": {
-    "serverDataPath": "C:/GTA_RP_Server/server-data/",
-    "cfgPath": "C:/GTA_RP_Server/server-data/server.cfg",
+    "serverDataPath": "C:/GTA_RP_Server_1/server-data/",
+    "cfgPath": "C:/GTA_RP_Server_1/server-data/server.cfg",
     "commandLine": "",
     "onesync": true,
     "autostart": true,

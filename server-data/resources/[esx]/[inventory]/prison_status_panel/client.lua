@@ -36,7 +36,7 @@ RegisterNetEvent("prison_status:open")
 AddEventHandler("prison_status:open", function() 
   TriggerEvent("MF_SkeletalSystem:openStatusSkelly")
   updateStatus()
-  SendNUIMessage({action: 'open'})
+  SendNUIMessage({action: 'open'});
   prisonStatusPanelIsOpen = true
   SetNuiFocus(true, true)
 end)
@@ -44,7 +44,7 @@ end)
 RegisterNetEvent("prison_status:close")
 AddEventHandler("prison_status:close", function() 
   TriggerEvent("MF_SkeletalSystem:closeStatusSkelly")
-  SendNUIMessage({action: 'close'})
+  SendNUIMessage({action: 'close'});
   prisonStatusPanelIsOpen = false
   SetNuiFocus(false, false)
 end)
@@ -100,7 +100,7 @@ function updateStatus ()
 
   if #canlearn then
     SendNUIMessage({
-      action = 'update'
+      action = 'update',
       heal = health,
       armor = armor,
       thirst = thirst,
@@ -110,12 +110,12 @@ function updateStatus ()
       str = str,
       agi = agi,
       int = int,
-      luk = luk
+      luk = luk,
       canlearn = canlearn
-    })
+    });
   else
     SendNUIMessage({
-      action = 'update'
+      action = 'update',
       heal = health,
       armor = armor,
       thirst = thirst,
@@ -126,7 +126,7 @@ function updateStatus ()
       agi = agi,
       int = int,
       luk = luk
-    })
+    });
   end
 end
 
@@ -134,5 +134,5 @@ function updateBoneStatus (data)
   SendNUIMessage({
     action:'update_bone',
     bone: data
-  })
+  });
 end

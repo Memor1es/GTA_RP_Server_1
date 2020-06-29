@@ -1,150 +1,175 @@
 
 ================================================================
-======== FXServer starting - 2020/6/18 下午2:58:00
+======== FXServer starting - 2020/6/29 下午9:24:58
 ================================================================
 Creating script environments for _cfx_internal
-Found new resource vMenu in C:/GTA_RP_Server\server-data/resources//vMenu
+Found new resource vMenu in C:/GTA_RP_Server_1\server-data/resources//vMenu
 Found new resource monitor in C:\GTA_RP_Server_1\server2524\citizen/system_resources//monitor
 Found new resource webadmin in C:\GTA_RP_Server_1\server2524\citizen/system_resources//webadmin
-Found new resource esx_ability in C:/GTA_RP_Server\server-data/resources//[char]/esx_ability
-Found new resource esx_amb_ability in C:/GTA_RP_Server\server-data/resources//[char]/esx_amb_ability
-Found new resource esx_charselect in C:/GTA_RP_Server\server-data/resources//[char]/esx_charselect
-Found new resource esx_chef_ability in C:/GTA_RP_Server\server-data/resources//[char]/esx_chef_ability
-Found new resource esx_gun_ability in C:/GTA_RP_Server\server-data/resources//[char]/esx_gun_ability
-Found new resource esx_identity in C:/GTA_RP_Server\server-data/resources//[char]/esx_identity
-Found new resource esx_lock_ability in C:/GTA_RP_Server\server-data/resources//[char]/esx_lock_ability
-Found new resource esx_mech_ability in C:/GTA_RP_Server\server-data/resources//[char]/esx_mech_ability
-Found new resource pd-spawn in C:/GTA_RP_Server\server-data/resources//[char]/pd-spawn
-Found new resource async in C:/GTA_RP_Server\server-data/resources//[essential]/async
-Found new resource es_extended in C:/GTA_RP_Server\server-data/resources//[essential]/es_extended
-Found new resource mysql-async in C:/GTA_RP_Server\server-data/resources//[essential]/mysql-async
-Found new resource chip_criminalDoctor in C:/GTA_RP_Server\server-data/resources//[esx]/chip_criminalDoctor
-Found new resource cron in C:/GTA_RP_Server\server-data/resources//[esx]/cron
-Found new resource esx-ecobottles in C:/GTA_RP_Server\server-data/resources//[esx]/esx-ecobottles
-Found new resource esx-kr-vehicle-push in C:/GTA_RP_Server\server-data/resources//[esx]/esx-kr-vehicle-push
-Found new resource esx_billing in C:/GTA_RP_Server\server-data/resources//[esx]/esx_billing
-Found new resource esx_dmvschool in C:/GTA_RP_Server\server-data/resources//[esx]/esx_dmvschool
-Found new resource esx_garage in C:/GTA_RP_Server\server-data/resources//[esx]/esx_garage
-Found new resource esx_license in C:/GTA_RP_Server\server-data/resources//[esx]/esx_license
-Found new resource esx_lscustom in C:/GTA_RP_Server\server-data/resources//[esx]/esx_lscustom
-Found new resource esx_society in C:/GTA_RP_Server\server-data/resources//[esx]/esx_society
-Found new resource InteractSound in C:/GTA_RP_Server\server-data/resources//[esx]/InteractSound
-Found new resource InteractSoundS in C:/GTA_RP_Server\server-data/resources//[esx]/InteractSoundS
-Found new resource new_banking in C:/GTA_RP_Server\server-data/resources//[esx]/new_banking
-Found new resource st-cctv in C:/GTA_RP_Server\server-data/resources//[esx]/st-cctv
-Found new resource vSync in C:/GTA_RP_Server\server-data/resources//[esx]/vSync
-Found new resource zffb_dice in C:/GTA_RP_Server\server-data/resources//[esx]/zffb_dice
-Found new resource basic-gamemode in C:/GTA_RP_Server\server-data/resources//[gamemodes]/basic-gamemode
-Found new resource chat in C:/GTA_RP_Server\server-data/resources//[gameplay]/chat
-Found new resource chat-theme-gtao in C:/GTA_RP_Server\server-data/resources//[gameplay]/chat-theme-gtao
-Found new resource playernames in C:/GTA_RP_Server\server-data/resources//[gameplay]/playernames
-Found new resource bob74_ipl in C:/GTA_RP_Server\server-data/resources//[map]/bob74_ipl
-Found new resource hackee-dispatch in C:/GTA_RP_Server\server-data/resources//[NPC]/hackee-dispatch
-Found new resource image-server in C:/GTA_RP_Server\server-data/resources//[phone]/image-server
+Found new resource esx_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_ability
+Found new resource esx_amb_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_amb_ability
+Found new resource esx_charselect in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_charselect
+Found new resource esx_chef_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_chef_ability
+Found new resource esx_gun_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_gun_ability
+Found new resource esx_identity in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_identity
+Found new resource esx_lock_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_lock_ability
+Found new resource esx_mech_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_mech_ability
+Found new resource pd-spawn in C:/GTA_RP_Server_1\server-data/resources//[char]/pd-spawn
+Found new resource async in C:/GTA_RP_Server_1\server-data/resources//[essential]/async
+Found new resource es_extended in C:/GTA_RP_Server_1\server-data/resources//[essential]/es_extended
+Found new resource mysql-async in C:/GTA_RP_Server_1\server-data/resources//[essential]/mysql-async
+Found new resource chip_criminalDoctor in C:/GTA_RP_Server_1\server-data/resources//[esx]/chip_criminalDoctor
+Found new resource cron in C:/GTA_RP_Server_1\server-data/resources//[esx]/cron
+Found new resource esx-ecobottles in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx-ecobottles
+Found new resource esx-kr-vehicle-push in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx-kr-vehicle-push
+Found new resource esx_billing in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_billing
+Found new resource esx_dmvschool in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_dmvschool
+Found new resource esx_garage in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_garage
+Found new resource esx_license in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_license
+Found new resource esx_lscustom in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_lscustom
+Found new resource esx_society in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_society
+Found new resource InteractSound in C:/GTA_RP_Server_1\server-data/resources//[esx]/InteractSound
+Found new resource InteractSoundS in C:/GTA_RP_Server_1\server-data/resources//[esx]/InteractSoundS
+Found new resource new_banking in C:/GTA_RP_Server_1\server-data/resources//[esx]/new_banking
+Found new resource simpletp in C:/GTA_RP_Server_1\server-data/resources//[esx]/simpletp
+Found new resource st-cctv in C:/GTA_RP_Server_1\server-data/resources//[esx]/st-cctv
+Found new resource vSync in C:/GTA_RP_Server_1\server-data/resources//[esx]/vSync
+Found new resource zffb_dice in C:/GTA_RP_Server_1\server-data/resources//[esx]/zffb_dice
+Found new resource basic-gamemode in C:/GTA_RP_Server_1\server-data/resources//[gamemodes]/basic-gamemode
+Found new resource chat in C:/GTA_RP_Server_1\server-data/resources//[gameplay]/chat
+Found new resource chat-theme-gtao in C:/GTA_RP_Server_1\server-data/resources//[gameplay]/chat-theme-gtao
+Found new resource playernames in C:/GTA_RP_Server_1\server-data/resources//[gameplay]/playernames
+Found new resource screenshot-basic in C:/GTA_RP_Server_1\server-data/resources//[local]/screenshot-basic
+Found new resource bob74_ipl in C:/GTA_RP_Server_1\server-data/resources//[map]/bob74_ipl
+Found new resource hackee-dispatch in C:/GTA_RP_Server_1\server-data/resources//[NPC]/hackee-dispatch
+Found new resource image-server in C:/GTA_RP_Server_1\server-data/resources//[phone]/image-server
 Resource loading for image-server failed:
-Could not open resource metadata file C:/GTA_RP_Server/server-data/resources//[phone]/image-server/__resource.lua.
-Found new resource baseevents in C:/GTA_RP_Server\server-data/resources//[system]/baseevents
-Found new resource hardcap in C:/GTA_RP_Server\server-data/resources//[system]/hardcap
-Found new resource rconlog in C:/GTA_RP_Server\server-data/resources//[system]/rconlog
-Found new resource runcode in C:/GTA_RP_Server\server-data/resources//[system]/runcode
-Found new resource scoreboard in C:/GTA_RP_Server\server-data/resources//[system]/scoreboard
-Found new resource sessionmanager in C:/GTA_RP_Server\server-data/resources//[system]/sessionmanager
-Found new resource sessionmanager-rdr3 in C:/GTA_RP_Server\server-data/resources//[system]/sessionmanager-rdr3
-Found new resource example-loadscreen in C:/GTA_RP_Server\server-data/resources//[test]/example-loadscreen
-Found new resource fivem in C:/GTA_RP_Server\server-data/resources//[test]/fivem
-Found new resource dpclothing in C:/GTA_RP_Server\server-data/resources//[esx]/[animation]/dpclothing
-Found new resource dpemotes in C:/GTA_RP_Server\server-data/resources//[esx]/[animation]/dpemotes
-Found new resource crafting in C:/GTA_RP_Server\server-data/resources//[esx]/[crafting]/crafting
-Found new resource esx_crafting in C:/GTA_RP_Server\server-data/resources//[esx]/[crafting]/esx_crafting
-Found new resource esx_autogang in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_autogang
-Found new resource esx_carthief in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_carthief
-Found new resource esx_doorlock_mhacking in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_doorlock_mhacking
-Found new resource esx_drugeffects in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_drugeffects
-Found new resource esx_drugs in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_drugs
-Found new resource esx_knatusblowtorch in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_knatusblowtorch
-Found new resource esx_knatusrobberybank in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_knatusrobberybank
-Found new resource esx_lootDeadbody in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_lootDeadbody
-Found new resource esx_merryweather in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_merryweather
-Found new resource esx_outlawalert in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_outlawalert
-Found new resource esx_planting in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_planting
-Found new resource esx_thief in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_thief
-Found new resource esx_vangelico_robbery in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/esx_vangelico_robbery
-Found new resource KBurglary in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/KBurglary
-Found new resource lockpick in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/lockpick
-Found new resource mhacking in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/mhacking
-Found new resource stasiek_selldrugs in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/stasiek_selldrugs
-Found new resource t1ger_drugs in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/t1ger_drugs
-Found new resource TakeHostage in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/TakeHostage
-Found new resource x-hotwire in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/x-hotwire
-Found new resource instance in C:/GTA_RP_Server\server-data/resources//[esx]/[instance]/instance
-Found new resource CARP-status in C:/GTA_RP_Server\server-data/resources//[esx]/[inventory]/CARP-status
-Found new resource esx_inventoryhud in C:/GTA_RP_Server\server-data/resources//[esx]/[inventory]/esx_inventoryhud
-Found new resource prison_status_panel in C:/GTA_RP_Server\server-data/resources//[esx]/[inventory]/prison_status_panel
-Found new resource skeletalsystem in C:/GTA_RP_Server\server-data/resources//[esx]/[inventory]/skeletalsystem
-Found new resource esx_ambulancejob in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/esx_ambulancejob
-Found new resource esx_joblisting in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/esx_joblisting
-Found new resource esx_jobs in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/esx_jobs
-Found new resource esx_mechanicjob in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/esx_mechanicjob
-Found new resource esx_mushroom in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/esx_mushroom
-Found new resource esx_policejob in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/esx_policejob
-Found new resource esx_trash in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/esx_trash
-Found new resource Hunter in C:/GTA_RP_Server\server-data/resources//[esx]/[jobs]/Hunter
-Found new resource esx_accessories in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_accessories
-Found new resource esx_foodtruck in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_foodtruck
-Found new resource esx_jimmybm in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_jimmybm
-Found new resource esx_newaccessories in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_newaccessories
-Found new resource esx_np_skinshop in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_np_skinshop
-Found new resource esx_np_skinshop_v2 in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_np_skinshop_v2
-Found new resource esx_shops in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_shops
-Found new resource esx_vehicleshop in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_vehicleshop
-Found new resource esx_weaponshop in C:/GTA_RP_Server\server-data/resources//[esx]/[shop]/esx_weaponshop
-Found new resource esx_skin in C:/GTA_RP_Server\server-data/resources//[esx]/[skin]/esx_skin
-Found new resource skinchanger in C:/GTA_RP_Server\server-data/resources//[esx]/[skin]/skinchanger
-Found new resource esx_basicneeds in C:/GTA_RP_Server\server-data/resources//[esx]/[status]/esx_basicneeds
-Found new resource esx_gift_tree in C:/GTA_RP_Server\server-data/resources//[esx]/[status]/esx_gift_tree
-Found new resource esx_optionalneeds in C:/GTA_RP_Server\server-data/resources//[esx]/[status]/esx_optionalneeds
-Found new resource esx_status in C:/GTA_RP_Server\server-data/resources//[esx]/[status]/esx_status
-Found new resource esx_addonaccount in C:/GTA_RP_Server\server-data/resources//[esx]/[storage]/esx_addonaccount
-Found new resource esx_addoninventory in C:/GTA_RP_Server\server-data/resources//[esx]/[storage]/esx_addoninventory
-Found new resource esx_datastore in C:/GTA_RP_Server\server-data/resources//[esx]/[storage]/esx_datastore
-Found new resource esx_kingofthehill in C:/GTA_RP_Server\server-data/resources//[esx]/[stronghold]/esx_kingofthehill
-Found new resource esx_menu_default in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/esx_menu_default
-Found new resource esx_menu_dialog in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/esx_menu_dialog
-Found new resource esx_menu_list in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/esx_menu_list
-Found new resource mythic_notify in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/mythic_notify
-Found new resource mythic_progbar in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/mythic_progbar
-Found new resource mythic_progressbar in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/mythic_progressbar
-Found new resource progressBars in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/progressBars
-Found new resource st-hud in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/st-hud
-Found new resource st-menu in C:/GTA_RP_Server\server-data/resources//[esx]/[ui]/st-menu
-Found new resource carremote in C:/GTA_RP_Server\server-data/resources//[esx]/[vehicle]/carremote
-Found new resource garageshitz in C:/GTA_RP_Server\server-data/resources//[esx]/[vehicle]/garageshitz
-Found new resource whiteplate in C:/GTA_RP_Server\server-data/resources//[esx]/[vehicle]/whiteplate
-Found new resource ls-radio in C:/GTA_RP_Server\server-data/resources//[esx]/[voice]/ls-radio
-Found new resource tokovoip_script in C:/GTA_RP_Server\server-data/resources//[esx]/[voice]/tokovoip_script
-Found new resource fivem-map-hipster in C:/GTA_RP_Server\server-data/resources//[gamemodes]/[maps]/fivem-map-hipster
-Found new resource fivem-map-skater in C:/GTA_RP_Server\server-data/resources//[gamemodes]/[maps]/fivem-map-skater
-Found new resource redm-map-one in C:/GTA_RP_Server\server-data/resources//[gamemodes]/[maps]/redm-map-one
-Found new resource dons_bm_middoc in C:/GTA_RP_Server\server-data/resources//[map]/[health]/dons_bm_middoc
-Found new resource PetClinic in C:/GTA_RP_Server\server-data/resources//[map]/[health]/PetClinic
-Found new resource smokey_hory in C:/GTA_RP_Server\server-data/resources//[map]/[health]/smokey_hory
-Found new resource int_prisonfull in C:/GTA_RP_Server\server-data/resources//[map]/[prison]/int_prisonfull
-Found new resource prisonprops in C:/GTA_RP_Server\server-data/resources//[map]/[prison]/prisonprops
-Found new resource biker in C:/GTA_RP_Server\server-data/resources//[map]/[stronghold]/biker
-Found new resource bikerbarsandy in C:/GTA_RP_Server\server-data/resources//[map]/[stronghold]/bikerbarsandy
-Found new resource buldingbeach in C:/GTA_RP_Server\server-data/resources//[map]/[stronghold]/buldingbeach
-Found new resource grandehouse in C:/GTA_RP_Server\server-data/resources//[map]/[stronghold]/grandehouse
-Found new resource petitmaison in C:/GTA_RP_Server\server-data/resources//[map]/[stronghold]/petitmaison
-Found new resource vagos in C:/GTA_RP_Server\server-data/resources//[map]/[stronghold]/vagos
-Found new resource webpack in C:/GTA_RP_Server\server-data/resources//[system]/[builders]/webpack
-Found new resource yarn in C:/GTA_RP_Server\server-data/resources//[system]/[builders]/yarn
-Found new resource utk_ornateheist in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/[UTK]/utk_ornateheist
-Found new resource utk_ornateprops in C:/GTA_RP_Server\server-data/resources//[esx]/[illegal]/[UTK]/utk_ornateprops
-Found new resource character in C:/GTA_RP_Server\server-data/resources//[esx]/[skin]/[eup]/character
-Found new resource fashionA in C:/GTA_RP_Server\server-data/resources//[esx]/[skin]/[eup]/fashionA
-Found new resource NativeUI in C:/GTA_RP_Server\server-data/resources//[esx]/[skin]/[eup]/NativeUI
-Found new resource UniformsB in C:/GTA_RP_Server\server-data/resources//[esx]/[skin]/[eup]/UniformsB
-Found new resource tpplage in C:/GTA_RP_Server\server-data/resources//[map]/[stronghold]/[TeleportScriptbeach]/tpplage
+Could not open resource metadata file C:/GTA_RP_Server_1/server-data/resources//[phone]/image-server/__resource.lua.
+Found new resource mugshot in C:/GTA_RP_Server_1\server-data/resources//[phone]/mugshot
+Found new resource baseevents in C:/GTA_RP_Server_1\server-data/resources//[system]/baseevents
+Found new resource hardcap in C:/GTA_RP_Server_1\server-data/resources//[system]/hardcap
+Found new resource rconlog in C:/GTA_RP_Server_1\server-data/resources//[system]/rconlog
+Found new resource runcode in C:/GTA_RP_Server_1\server-data/resources//[system]/runcode
+Found new resource scoreboard in C:/GTA_RP_Server_1\server-data/resources//[system]/scoreboard
+Found new resource sessionmanager in C:/GTA_RP_Server_1\server-data/resources//[system]/sessionmanager
+Found new resource sessionmanager-rdr3 in C:/GTA_RP_Server_1\server-data/resources//[system]/sessionmanager-rdr3
+Found new resource yarn in C:/GTA_RP_Server_1\server-data/resources//[system]/yarn
+Found new resource example-loadscreen in C:/GTA_RP_Server_1\server-data/resources//[test]/example-loadscreen
+Found new resource fivem in C:/GTA_RP_Server_1\server-data/resources//[test]/fivem
+Found new resource weaponchange in C:/GTA_RP_Server_1\server-data/resources//[weapon]/weaponchange
+Found new resource dpclothing in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/dpclothing
+Found new resource dpemotes in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/dpemotes
+Found new resource fingerpoint in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/fingerpoint
+Found new resource lkrp_notepad in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/lkrp_notepad
+Found new resource crafting in C:/GTA_RP_Server_1\server-data/resources//[esx]/[crafting]/crafting
+Found new resource esx_crafting in C:/GTA_RP_Server_1\server-data/resources//[esx]/[crafting]/esx_crafting
+Found new resource lockpick in C:/GTA_RP_Server_1\server-data/resources//[esx]/[crafting]/lockpick
+Found new resource reload-skillbar in C:/GTA_RP_Server_1\server-data/resources//[esx]/[crafting]/reload-skillbar
+Found new resource esx_autogang in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_autogang
+Found new resource esx_carthief in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_carthief
+Found new resource esx_doorlock_mhacking in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_doorlock_mhacking
+Found new resource esx_drugeffects in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_drugeffects
+Found new resource esx_drugs in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_drugs
+Found new resource esx_GoldCurrency in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_GoldCurrency
+Found new resource esx_knatusblowtorch in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_knatusblowtorch
+Found new resource esx_knatusrobberybank in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_knatusrobberybank
+Found new resource esx_lootDeadbody in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_lootDeadbody
+Found new resource esx_merryweather in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_merryweather
+Found new resource esx_outlawalert in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_outlawalert
+Found new resource esx_planting in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_planting
+Found new resource esx_thief in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_thief
+Found new resource esx_vangelico_robbery in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_vangelico_robbery
+Found new resource KBurglary in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/KBurglary
+Found new resource mhacking in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/mhacking
+Found new resource stasiek_selldrugs in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/stasiek_selldrugs
+Found new resource t1ger_drugs in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/t1ger_drugs
+Found new resource TakeHostage in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/TakeHostage
+Found new resource x-hotwire in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/x-hotwire
+Found new resource instance in C:/GTA_RP_Server_1\server-data/resources//[esx]/[instance]/instance
+Found new resource CARP-status in C:/GTA_RP_Server_1\server-data/resources//[esx]/[inventory]/CARP-status
+Found new resource esx_inventoryhud in C:/GTA_RP_Server_1\server-data/resources//[esx]/[inventory]/esx_inventoryhud
+Found new resource prison_status_panel in C:/GTA_RP_Server_1\server-data/resources//[esx]/[inventory]/prison_status_panel
+Found new resource skeletalsystem in C:/GTA_RP_Server_1\server-data/resources//[esx]/[inventory]/skeletalsystem
+Found new resource esx_ambulancejob in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_ambulancejob
+Found new resource esx_gym in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_gym
+Found new resource esx_joblisting in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_joblisting
+Found new resource esx_jobs in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_jobs
+Found new resource esx_mechanicjob in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_mechanicjob
+Found new resource esx_mushroom in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_mushroom
+Found new resource esx_policejob in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_policejob
+Found new resource esx_trash in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_trash
+Found new resource Hunter in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/Hunter
+Found new resource esx-wanted in C:/GTA_RP_Server_1\server-data/resources//[esx]/[police]/esx-wanted
+Found new resource rad_gsr in C:/GTA_RP_Server_1\server-data/resources//[esx]/[police]/rad_gsr
+Found new resource Tackle in C:/GTA_RP_Server_1\server-data/resources//[esx]/[police]/Tackle
+Found new resource esx_accessories in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_accessories
+Found new resource esx_foodtruck in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_foodtruck
+Found new resource esx_jimmybm in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_jimmybm
+Found new resource esx_newaccessories in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_newaccessories
+Found new resource esx_np_skinshop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_np_skinshop
+Found new resource esx_np_skinshop_v2 in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_np_skinshop_v2
+Found new resource esx_shops in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_shops
+Found new resource esx_vehicleshop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_vehicleshop
+Found new resource esx_weaponshop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_weaponshop
+Found new resource esx_skin in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/esx_skin
+Found new resource skinchanger in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/skinchanger
+Found new resource esx_basicneeds in C:/GTA_RP_Server_1\server-data/resources//[esx]/[status]/esx_basicneeds
+Found new resource esx_gift_tree in C:/GTA_RP_Server_1\server-data/resources//[esx]/[status]/esx_gift_tree
+Found new resource esx_optionalneeds in C:/GTA_RP_Server_1\server-data/resources//[esx]/[status]/esx_optionalneeds
+Found new resource esx_status in C:/GTA_RP_Server_1\server-data/resources//[esx]/[status]/esx_status
+Found new resource esx_addonaccount in C:/GTA_RP_Server_1\server-data/resources//[esx]/[storage]/esx_addonaccount
+Found new resource esx_addoninventory in C:/GTA_RP_Server_1\server-data/resources//[esx]/[storage]/esx_addoninventory
+Found new resource esx_datastore in C:/GTA_RP_Server_1\server-data/resources//[esx]/[storage]/esx_datastore
+Found new resource esx_kingofthehill in C:/GTA_RP_Server_1\server-data/resources//[esx]/[stronghold]/esx_kingofthehill
+Found new resource esx_menu_default in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/esx_menu_default
+Found new resource esx_menu_dialog in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/esx_menu_dialog
+Found new resource esx_menu_list in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/esx_menu_list
+Found new resource esx_watch in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/esx_watch
+Found new resource mythic_notify in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/mythic_notify
+Found new resource mythic_progbar in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/mythic_progbar
+Found new resource mythic_progressbar in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/mythic_progressbar
+Found new resource pNotify in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/pNotify
+Found new resource progressBars in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/progressBars
+Found new resource showcoords in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/showcoords
+Found new resource st-hud in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/st-hud
+Found new resource st-menu in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/st-menu
+Found new resource carremote in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/carremote
+Found new resource ddg151 in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/ddg151
+Found new resource garageshitz in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/garageshitz
+Found new resource HMS in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/HMS
+Found new resource oceanjet in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/oceanjet
+Found new resource whiteplate in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/whiteplate
+Found new resource ls-radio in C:/GTA_RP_Server_1\server-data/resources//[esx]/[voice]/ls-radio
+Found new resource tokovoip_script in C:/GTA_RP_Server_1\server-data/resources//[esx]/[voice]/tokovoip_script
+Found new resource CLEAR_NPC in C:/GTA_RP_Server_1\server-data/resources//[esx]/[weapon]/CLEAR_NPC
+Found new resource esx_guy293_holsterweapon in C:/GTA_RP_Server_1\server-data/resources//[esx]/[weapon]/esx_guy293_holsterweapon
+Found new resource SB-NoHead in C:/GTA_RP_Server_1\server-data/resources//[esx]/[weapon]/SB-NoHead
+Found new resource fivem-map-hipster in C:/GTA_RP_Server_1\server-data/resources//[gamemodes]/[maps]/fivem-map-hipster
+Found new resource fivem-map-skater in C:/GTA_RP_Server_1\server-data/resources//[gamemodes]/[maps]/fivem-map-skater
+Found new resource redm-map-one in C:/GTA_RP_Server_1\server-data/resources//[gamemodes]/[maps]/redm-map-one
+Found new resource dons_bm_middoc in C:/GTA_RP_Server_1\server-data/resources//[map]/[health]/dons_bm_middoc
+Found new resource hospitalsandy in C:/GTA_RP_Server_1\server-data/resources//[map]/[health]/hospitalsandy
+Found new resource PetClinic in C:/GTA_RP_Server_1\server-data/resources//[map]/[health]/PetClinic
+Found new resource smokey_hory in C:/GTA_RP_Server_1\server-data/resources//[map]/[health]/smokey_hory
+Found new resource paletopd in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/paletopd
+Found new resource sandysheriff in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/sandysheriff
+Found new resource sandysheriffsmall in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/sandysheriffsmall
+Found new resource int_prisonfull in C:/GTA_RP_Server_1\server-data/resources//[map]/[prison]/int_prisonfull
+Found new resource prisonprops in C:/GTA_RP_Server_1\server-data/resources//[map]/[prison]/prisonprops
+Found new resource biker in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/biker
+Found new resource bikerbarsandy in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/bikerbarsandy
+Found new resource buldingbeach in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/buldingbeach
+Found new resource grandehouse in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/grandehouse
+Found new resource petitmaison in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/petitmaison
+Found new resource vagos in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/vagos
+Found new resource webpack in C:/GTA_RP_Server_1\server-data/resources//[system]/[builders]/webpack
+Found new resource utk_ornateheist in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/[UTK]/utk_ornateheist
+Found new resource utk_ornateprops in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/[UTK]/utk_ornateprops
+Found new resource character in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/[eup]/character
+Found new resource fashionA in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/[eup]/fashionA
+Found new resource NativeUI in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/[eup]/NativeUI
+Found new resource UniformsB in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/[eup]/UniformsB
+Found new resource tpplage in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/[TeleportScriptbeach]/tpplage
 Creating script environments for sessionmanager
 Started resource sessionmanager
 Creating script environments for webadmin
@@ -179,6 +204,10 @@ Started resource mythic_notify
 Started resource mythic_progressbar
 Started resource progressBars
 Started resource mythic_progbar
+Started resource showcoords
+Started resource pNotify
+Creating script environments for esx_watch
+Started resource esx_watch
 Creating script environments for esx_status
 Started resource esx_status
 Started resource CARP-status
@@ -187,6 +216,10 @@ Started resource skeletalsystem
 Creating script environments for esx_gift_tree
 Started resource esx_gift_tree
 Started resource prison_status_panel
+Creating script environments for esx_basicneeds
+Started resource esx_basicneeds
+Creating script environments for esx_optionalneeds
+Started resource esx_optionalneeds
 Creating script environments for esx_addonaccount
 Started resource esx_addonaccount
 Creating script environments for esx_addoninventory
@@ -230,8 +263,18 @@ Creating script environments for esx_mechanicjob
 Started resource esx_mechanicjob
 Creating script environments for esx_policejob
 Started resource esx_policejob
+Creating script environments for rad_gsr
+Started resource rad_gsr
+Creating script environments for Tackle
+Started resource Tackle
 Creating script environments for esx_mushroom
 Started resource esx_mushroom
+Creating script environments for esx_trash
+Started resource esx_trash
+Creating script environments for cron
+Started resource cron
+Creating script environments for esx_gym
+Started resource esx_gym
 Creating script environments for esx_foodtruck
 Started resource esx_foodtruck
 Creating script environments for esx_jimmybm
@@ -249,6 +292,8 @@ Started resource st-hud
 Creating script environments for dpemotes
 Started resource dpemotes
 Started resource dpclothing
+Started resource fingerpoint
+Couldn't find resource lkrp_notepad532.
 Creating script environments for garageshitz
 Started resource garageshitz
 Creating script environments for carremote
@@ -259,8 +304,6 @@ Creating script environments for vMenu
 Instantiated instance of script vMenuServer.BanManager.
 Instantiated instance of script vMenuServer.MainServer.
 Started resource vMenu
-Creating script environments for cron
-Started resource cron
 Creating script environments for vSync
 Started resource vSync
 Creating script environments for esx_society
@@ -285,6 +328,11 @@ Started resource InteractSoundS
 Creating script environments for esx_lscustom
 Started resource esx_lscustom
 Couldn't find resource esx_caraction.
+Creating script environments for simpletp
+Started resource simpletp
+Started resource CLEAR_NPC
+Started resource SB-NoHead
+Started resource esx_guy293_holsterweapon
 Creating script environments for esx_kingofthehill
 Started resource esx_kingofthehill
 Creating script environments for hackee-dispatch
@@ -334,6 +382,7 @@ Creating script environments for crafting
 Started resource crafting
 Creating script environments for esx_crafting
 Started resource esx_crafting
+Started resource reload-skillbar
 Creating script environments for instance
 Started resource instance
 Started resource biker
@@ -349,6 +398,13 @@ Started resource prisonprops
 Started resource dons_bm_middoc
 Started resource smokey_hory
 Started resource PetClinic
+Started resource hospitalsandy
+Started resource sandysheriff
+Started resource paletopd
+Started resource weaponchange
+Started resource ddg151
+Started resource oceanjet
+Started resource HMS
 Creating script environments for hardcap
 Started resource hardcap
 Creating script environments for rconlog
@@ -361,7 +417,7 @@ Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 [txAdminClientLUA] Threads and commands set up. All Ready.
 [es_extended] [INFO] ESX developed by ESX-Org has been initialized
 Authenticating with Nucleus...
-server thread hitch warning: timer interval of 4301 milliseconds
+server thread hitch warning: timer interval of 2745 milliseconds
 [mysql-async] Database server connection established.
 
 dp Emotes (dpemotes) is up to date. (173)
@@ -372,4 +428,229 @@ cc     ff     xx   ... rr     eeeee
  ccccc ff   xx  xx ... rr      eeeee 
                                      
 Authenticated with cfx.re Nucleus: https://5328765879-vq64le.users.cfx.re/
+Connecting: hoyuzi
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+server thread hitch warning: timer interval of 292 milliseconds
+[es_extended] [INFO] A player with name "Yuzi Ho" has connected to the server with assigned player id 1
+INFO: User [1] hoyuzi authenticated - [1] [1] hoyuzi@116.241.142.90:56279:56279
+Stopping resource tokovoip_script
 [txAdminClientLUA] Sending resources list to txAdmin.
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource simpletp
+Creating script environments for simpletp
+Started resource simpletp
+Stopping resource simpletp
+Creating script environments for simpletp
+Started resource simpletp
+Stopping resource simpletp
+Creating script environments for simpletp
+Started resource simpletp
+Stopping resource simpletp
+Creating script environments for simpletp
+Started resource simpletp
+Stopping resource prison_status_panel
+Started resource prison_status_panel
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Check gym expirations
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Check gym expirations
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Check gym expirations
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+[es_extended] [INFO] Saved player "Yuzi Ho"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Connecting: hoyuzi
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Yuzi Ho" has connected to the server with assigned player id 2
+INFO: User [2] hoyuzi authenticated - [1] [2] hoyuzi@116.241.142.90:60088:60088
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Check gym expirations
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Check gym expirations
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Check gym expirations
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Check gym expirations
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved 0 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
