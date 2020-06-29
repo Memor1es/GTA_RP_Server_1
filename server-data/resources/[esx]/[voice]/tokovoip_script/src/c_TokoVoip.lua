@@ -131,6 +131,7 @@ function TokoVoip.initialize(self)
 					self.mode = 1;
 				end
 				setPlayerData(self.serverId, "voip:mode", self.mode, true);
+				TriggerEvent('sh1no:toggleTokoVOIP', self.mode)
 				self:updateTokoVoipInfo();
 			end
 
