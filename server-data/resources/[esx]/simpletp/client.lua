@@ -31,7 +31,7 @@ local player = GetPlayerPed(-1)
 
 Citizen.CreateThread(function ()
     while true do
-        Citizen.Wait(5)
+        Citizen.Wait(10)
         local player = GetPlayerPed(-1)
         local playerLoc = GetEntityCoords(player)
 
