@@ -52,9 +52,11 @@ RegisterNUICallback("setPlayerTalking", function(data)
 
 	if (voip.talking == 1) then
 		setPlayerData(voip.serverId, "voip:talking", 1, true);
+		TriggerEvent('sh1no:setTalkingState', true)
 		PlayFacialAnim(GetPlayerPed(PlayerId()), "mic_chatter", "mp_facial");
 	else
 		setPlayerData(voip.serverId, "voip:talking", 0, true);
+		TriggerEvent('sh1no:setTalkingState', false)
 		PlayFacialAnim(PlayerPedId(), "mood_normal_1", "facials@gen_male@base");
 	end
 end)
