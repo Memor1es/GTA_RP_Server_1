@@ -111,8 +111,8 @@ Citizen.CreateThread(
             Citizen.Wait(0)
             if IsControlJustReleased(0, Config.OpenControl) and IsInputDisabled(0) then
                 openInventory()
-				TriggerEvent("MF_SkeletalSystem:openSkelly")
-				TriggerEvent("templarrp_status:ativar")
+				--TriggerEvent("MF_SkeletalSystem:openSkelly")
+				--TriggerEvent("templarrp_status:ativar")
             end
         end
     end
@@ -151,8 +151,8 @@ RegisterNUICallback(
     "NUIFocusOff",
     function()
         closeInventory()
-		TriggerEvent("MF_SkeletalSystem:openSkelly")
-		TriggerEvent("templarrp_status:desativar")
+		--TriggerEvent("MF_SkeletalSystem:openSkelly")
+		--TriggerEvent("templarrp_status:desativar")
     end
 )
 
@@ -210,8 +210,8 @@ RegisterNUICallback(
 
         if shouldCloseInventory(data.item.name) then
             closeInventory()
-            TriggerEvent("MF_SkeletalSystem:openSkelly")
-            TriggerEvent("templarrp_status:desativar")
+            --TriggerEvent("MF_SkeletalSystem:openSkelly")
+            --TriggerEvent("templarrp_status:desativar")
         else
             Citizen.Wait(250)
             loadPlayerInventory()
