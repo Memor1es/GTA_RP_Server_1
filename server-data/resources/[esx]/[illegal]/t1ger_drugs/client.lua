@@ -167,6 +167,7 @@ AddEventHandler("t1ger_drugs:BrowseAvailableJobs",function(spot,drugType,minRewa
 	else
 		SelectedID = id
 		TriggerEvent("t1ger_drugs:startMainEvent",id,drugType,minReward,maxReward)
+		TriggerEvent('chat:addMessage', { args = { "^5 Dispatch: " .. "訂單已經下單，請前往指定地點" }})
 		PlaySoundFrontend(-1, "Mission_Pass_Notify", "DLC_HEISTS_GENERAL_FRONTEND_SOUNDS", 0)
 	end
 end)

@@ -4,7 +4,7 @@ window.addEventListener('message', function (event) {
 
 let temp_bone_data;
 function processEvent (event) {
-  switch (event.data.action) {
+  switch (event.data.command) {
     case 'update': 
       updateData(event.data);
       break;
@@ -14,7 +14,7 @@ function processEvent (event) {
         temp_bone_data = event.data.bone;
       }
       break;
-    case 'open':
+    case 'open_menu':
       setVisible(true);
       break;
     case 'close':
@@ -181,7 +181,7 @@ function registerSkillsClickEvent() {
 
 // for test
 let data = {
-  action: 'update',
+  cmd: 'update',
   str: 30,
   agi: 40,
   int: 50,

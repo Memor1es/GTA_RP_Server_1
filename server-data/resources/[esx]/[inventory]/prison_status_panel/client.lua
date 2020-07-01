@@ -15,19 +15,29 @@ RegisterCommand('prisonstatusui', function(source, args, rawCommand)
     TriggerEvent("prison_status:close")
   else
     TriggerEvent("prison_status:open")
+    TriggerEvent("MF_SkeletalSystem:openSkelly")
   end
-  TriggerEvent("MF_SkeletalSystem:openSkelly")
+  
 end)
 
 Citizen.CreateThread(function()
   TriggerEvent("prison_status:close")
   while true do
-    Citizen.wait(1000)
+    Citizen.Wait(1000*15)
+    if prisonStatusPanelIsOpen then
+      updateStatus()
+    end
+  end
+end)
+
+Citizen.CreateThread(function()
+  TriggerEvent("prison_status:close")
+  while true do
+    Citizen.Wait(5)
     if prisonStatusPanelIsOpen then
       if IsControlJustPressed(1, 322) then
         TriggerEvent("prison_status:close")
       end
-      updateStatus()
     end
   end
 end)
@@ -36,15 +46,19 @@ RegisterNetEvent("prison_status:open")
 AddEventHandler("prison_status:open", function() 
   TriggerEvent("MF_SkeletalSystem:openStatusSkelly")
   updateStatus()
-  SendNUIMessage({action: 'open'});
+  SendNUIMessage({
+    command = 'open_menu',
+  });
   prisonStatusPanelIsOpen = true
-  SetNuiFocus(true, true)
+  --SetNuiFocus(true, true)
 end)
 
 RegisterNetEvent("prison_status:close")
 AddEventHandler("prison_status:close", function() 
   TriggerEvent("MF_SkeletalSystem:closeStatusSkelly")
-  SendNUIMessage({action: 'close'});
+  SendNUIMessage({
+    command = 'close',
+  });
   prisonStatusPanelIsOpen = false
   SetNuiFocus(false, false)
 end)
@@ -100,7 +114,7 @@ function updateStatus ()
 
   if #canlearn then
     SendNUIMessage({
-      action = 'update',
+      command = 'update',
       heal = health,
       armor = armor,
       thirst = thirst,
@@ -115,7 +129,7 @@ function updateStatus ()
     });
   else
     SendNUIMessage({
-      action = 'update',
+      command = 'update',
       heal = health,
       armor = armor,
       thirst = thirst,
@@ -132,7 +146,7 @@ end
 
 function updateBoneStatus (data)
   SendNUIMessage({
-    action:'update_bone',
-    bone: data
+    command = 'update_bone',
+    bone = data
   });
 end
