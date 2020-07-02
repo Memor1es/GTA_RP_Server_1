@@ -97,7 +97,7 @@ window.APP = {
     },
     ON_TEMPLATE_ADD({ template }) {
       if (this.templates[template.id]) {
-        this.warn(`Tried to add duplicate template '${template.id}'`)
+        this.warn(``)
       } else {
         this.templates[template.id] = template.html;
       }
@@ -184,7 +184,7 @@ window.APP = {
     warn(msg) {
       this.messages.push({
         args: [msg],
-        template: '^3<b>CHAT-WARN</b>: ^0{0}',
+        template: '',
       });
     },
     clearShowWindowTimer() {
