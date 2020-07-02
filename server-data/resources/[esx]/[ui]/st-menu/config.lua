@@ -34,7 +34,7 @@ rootMenuConfig =  {
             return not fuck
         end,
         --subMenus = {"general:flipvehicle",  "general:checkoverself", "general:checktargetstates",  "general:keysgive",  "general:emotes",  "general:checkvehicle", "general:apartgivekey", "general:aparttakekey"  }
-        subMenus = {"general:flipvehicle",  "general:checkoverself", "general:emotes", "general:apartgivekey", "general:aparttakekey",  'prison_status_panel:open'}
+        subMenus = {"general:flipvehicle",  "general:checkoverself", "general:emotes", "general:apartgivekey", "general:aparttakekey",  'prison_status_panel:open', 'dice:roll1'}
     },
     {
         id = "amb-ability",
@@ -119,7 +119,7 @@ rootMenuConfig =  {
             end
         end,
         --subMenus = {"cuffs:cuff", "cuffs:softcuff", "cuffs:uncuff", "police:escort", "police:putinvehicle", "police:unseatnearest", "cuffs:checkinventory", --[[ "cuffs:remmask",  "police:frisk", ]]--[[ "police:removeweapons" ]] "police:revive", "police:gsr", "police:openmdt", "police:getid", "police:impound"}
-        subMenus = {"esx_policejob:handcuff", "esx_policejob:unrestrain", "police:escort", "police:putinvehicle","police:takeoutvehicle", "police:unseatnearest","police:seatnearest", "cuffs:checkinventory", --[[ "cuffs:remmask",  "police:frisk", ]]--[[ "police:removeweapons" ]] "police:communityservice", "police:openmdt", "police:getid", "esx-qalle-jail:openJailMenu"}
+        subMenus = {"police:handcuffs", "esx_policejob:unrestrain", "police:escort", "police:putinvehicle","police:takeoutvehicle", "police:unseatnearest","police:seatnearest", "cuffs:checkinventory", --[[ "cuffs:remmask",  "police:frisk", ]]--[[ "police:removeweapons" ]] "police:communityservice", "police:openmdt", "police:getid", "esx-qalle-jail:openJailMenu"}
     },
     {
         id = "police-vehicle",
@@ -376,6 +376,11 @@ newSubMenus = {
         title = "能力值",
         icon = "#general-check-over-self",
         functionName = "prison_status:open"
+    },
+    ['dice:roll1'] = {
+        title = "擲骰子",
+        icon = "#animation-money",
+        functionName = "dice:roll1"
     },
     --[[
     ['general:checktargetstates'] = {

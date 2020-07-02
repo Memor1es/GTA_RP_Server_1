@@ -674,7 +674,7 @@ function OpenPoliceActionsMenu()
 						TriggerServerEvent('esx_policejob:message', GetPlayerServerId(closestPlayer), _U('being_searched'))
 						OpenBodySearchMenu(closestPlayer)
 					elseif action == 'handcuff' then
-						TriggerServerEvent('esx_policejob:handcuff')
+						TriggerServerEvent('esx_policejob:handcuff',GetPlayerServerId(closestPlayer))
 					elseif action == 'unhandcuff' then
 						TriggerServerEvent('esx_policejob:unrestrain')
 					elseif action == 'seatbelt' then
@@ -2348,4 +2348,15 @@ AddEventHandler("police:communityservice", function()
 		ESX.ShowNotification(_U('no_players_nearby'))
 	end
 end)
+
+RegisterNetEvent("police:handcuffs")
+AddEventHandler("police:handcuffs", function()
+	local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
+	if closestPlayer ~= -1 and closestDistance <= 3.0 then
+		TriggerServerEvent('esx_policejob:handcuff',GetPlayerServerId(closestPlayer))
+	else
+		ESX.ShowNotification(_U('no_players_nearby'))
+	end
+end)
+
 
