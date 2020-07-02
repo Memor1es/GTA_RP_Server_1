@@ -348,27 +348,27 @@ rootMenuConfig =  {
 
 newSubMenus = {
     ['general:emotes'] = {
-        title = "Emotes",
+        title = "動作",
         icon = "#general-emotes",
         functionName = "dp:RecieveMenu"
     },    
     ['general:keysgive'] = {
-        title = "Give Key",
+        title = "給鑰匙",
         icon = "#general-keys-give",
         functionName = "st:givekey"
     },
     ['general:apartgivekey'] = {
-        title = "Give Key",
+        title = "給鑰匙",
         icon = "#general-apart-givekey",
         functionName = "menu:givekeys"
     },
     ['general:aparttakekey'] = {
-        title = "Take Key",
+        title = "拿鑰匙",
         icon = "#general-apart-givekey",
         functionName = "menu:takekeys"
     },
     ['general:checkoverself'] = {
-        title = "Examine Self",
+        title = "檢查身體",
         icon = "#general-check-over-self",
         functionName = "MF_SkeletalSystem:openSkelly"
     },
@@ -389,168 +389,168 @@ newSubMenus = {
         functionName = "towgarage:annoyedBouce"
     }, ]]
     ['general:putinvehicle'] = {
-        title = "Seat Vehicle",
+        title = "將人押入車內",
         icon = "#general-put-in-veh",
         functionName = "police:forceEnter"
     },
     ['general:unseatnearest'] = {
-        title = "Unseat Nearest",
+        title = "將人押出車外",
         icon = "#general-unseat-nearest",
         functionName = "unseatPlayer"
     },    
     ['general:flipvehicle'] = {
-        title = "Flip Vehicle",
+        title = "翻正車輛",
         icon = "#general-flip-vehicle",
         functionName = "FlipVehicle"
     },
     ['animations:brave'] = {
-        title = "Brave",
+        title = "勇敢",
         icon = "#animation-brave",
         functionName = "AnimSet:Brave"
     },
     ['animations:hurry'] = {
-        title = "Hurry",
+        title = "匆忙",
         icon = "#animation-hurry",
         functionName = "AnimSet:Hurry"
     },
     ['animations:business'] = {
-        title = "Business",
+        title = "商業",
         icon = "#animation-business",
         functionName = "AnimSet:Business"
     },
     ['animations:tipsy'] = {
-        title = "Tipsy",
+        title = "喝醉",
         icon = "#animation-tipsy",
         functionName = "AnimSet:Tipsy"
     },
     ['animations:injured'] = {
-        title = "Injured",
+        title = "受傷",
         icon = "#animation-injured",
         functionName = "AnimSet:Injured"
     },
     ['animations:tough'] = {
-        title = "Tough",
+        title = "強硬",
         icon = "#animation-tough",
         functionName = "AnimSet:ToughGuy"
     },
     ['animations:sassy'] = {
-        title = "Sassy",
+        title = "野蠻",
         icon = "#animation-sassy",
         functionName = "AnimSet:Sassy"
     },
     ['animations:sad'] = {
-        title = "Sad",
+        title = "傷心",
         icon = "#animation-sad",
         functionName = "AnimSet:Sad"
     },
     ['animations:posh'] = {
-        title = "Posh",
+        title = "時髦",
         icon = "#animation-posh",
         functionName = "AnimSet:Posh"
     },
     ['animations:alien'] = {
-        title = "Alien",
+        title = "外星人",
         icon = "#animation-alien",
         functionName = "AnimSet:Alien"
     },
     ['animations:nonchalant'] =
     {
-        title = "Nonchalant",
+        title = "冷靜",
         icon = "#animation-nonchalant",
         functionName = "AnimSet:NonChalant"
     },
     ['animations:hobo'] = {
-        title = "Hobo",
+        title = "流浪漢",
         icon = "#animation-hobo",
         functionName = "AnimSet:Hobo"
     },
     ['animations:money'] = {
-        title = "Money",
+        title = "錢",
         icon = "#animation-money",
         functionName = "AnimSet:Money"
     },
     ['animations:swagger'] = {
-        title = "Swagger",
+        title = "昂首闊步",
         icon = "#animation-swagger",
         functionName = "AnimSet:Swagger"
     },
     ['animations:shady'] = {
-        title = "Shady",
+        title = "陰暗",
         icon = "#animation-shady",
         functionName = "AnimSet:Shady"
     },
     ['animations:maneater'] = {
-        title = "Man Eater",
+        title = "食人",
         icon = "#animation-maneater",
         functionName = "AnimSet:ManEater"
     },
     ['animations:chichi'] = {
-        title = "ChiChi",
+        title = "裝模作樣",
         icon = "#animation-chichi",
         functionName = "AnimSet:ChiChi"
     },
     ['animations:default'] = {
-        title = "Default",
+        title = "重製",
         icon = "#animation-default",
         functionName = "AnimSet:default"
     },
     ['mechanic:hijack'] = {
-        title = "Hijack",
+        title = "劫持",
         icon = "#police-vehicle",
         functionName = "st:hijack"
     },
     ['mechanic:repair'] = {
-        title = "Repair",
+        title = "修車",
         icon = "#police-vehicle",
         functionName = "st:mechrepair"
     },
     ['mechanic:clean'] = {
-        title = "Clean",
+        title = "清理",
         icon = "#police-vehicle",
         functionName = "st:mechclean"
     },
     ['mechanic:impound'] = {
-        title = "Impound",
+        title = "拖車",
         icon = "#police-vehicle",
         functionName = "st:mechimpound"
     },
     ['k9:spawn'] = {
-        title = "Summon",
+        title = "召喚",
         icon = "#k9-spawn",
         functionName = "K9:Create"
     },
     ['k9:delete'] = {
-        title = "Dismiss",
+        title = "回去",
         icon = "#k9-dismiss",
         functionName = "K9:Delete"
     },
     ['k9:follow'] = {
-        title = "Follow",
+        title = "跟隨",
         icon = "#k9-follow",
         functionName = "K9:Follow"
     },
     ['k9:vehicle'] = {
-        title = "Get in/out",
+        title = "上/下車",
         icon = "#k9-vehicle",
         functionName = "K9:Vehicle"
     },
     ['k9:sit'] = {
-        title = "Sit",
+        title = "坐",
         icon = "#k9-sit",
         functionName = "K9:Sit"
     },
     ['k9:lay'] = {
-        title = "Lay",
+        title = "趴",
         icon = "#k9-lay",
         functionName = "K9:Lay"
     },
     ['k9:stand'] = {
-        title = "Stand",
+        title = "站",
         icon = "#k9-stand",
         functionName = "K9:Stand"
     },
     ['k9:sniff'] = {
-        title = "Sniff Person",
+        title = "聞",
         icon = "#k9-sniff",
         functionName = "st:k9drugsniff"
     },
@@ -585,27 +585,27 @@ newSubMenus = {
         functionName = "appartment:TakeDM"
     }, ]]
     ['cuffs:cuff'] = {
-        title = "Hard Cuff",
+        title = "上銬",
         icon = "#cuffs-cuff",
         functionName = "st:handcuff"
     },
     ['esx_policejob:handcuff'] = {
-        title = "Hard Cuff",
+        title = "上銬",
         icon = "#cuffs-cuff",
         functionName = "esx_policejob:handcuff"
     },  
     ['cuffs:softcuff'] = {
-        title = "Soft Cuff",
+        title = "上銬",
         icon = "#cuffs-cuff",
         functionName = "st:softcuff"
     },
     ['cuffs:uncuff'] = {
-        title = "Uncuff",
+        title = "解銬",
         icon = "#cuffs-uncuff",
         functionName = "st:uncuff"
     },
     ['esx_policejob:unrestrain'] = {
-        title = "Uncuff",
+        title = "解銬",
         icon = "#cuffs-uncuff",
         functionName = "esx_policejob:unrestrain"
     },
@@ -615,32 +615,32 @@ newSubMenus = {
         functionName = "police:remmask"
     }, ]]
     ['cuffs:checkinventory'] = {
-        title = "Search Person",
+        title = "搜身",
         icon = "#cuffs-check-inventory",
         functionName = "st:search"
     },
     ['cuffs:unseat'] = {
-        title = "Unseat",
+        title = "押下車輛",
         icon = "#cuffs-unseat-player",
         functionName = "esx_ambulancejob:pullOutVehicle"
     },
     ['cuffs:checkphone'] = {
-        title = "Read Phone",
+        title = "手機",
         icon = "#cuffs-check-phone",
         functionName = "police:checkPhone"
     },
     ['medic:revive'] = {
-        title = "Revive",
+        title = "急救",
         icon = "#medic-revive",
         functionName = "medic:revive"
     },
     ['Smedic:revive'] = {
-        title = "Revive",
+        title = "急救",
         icon = "#medic-revive",
         functionName = "Smedic:revive"
     },
     ['Smedic:clean'] = {
-        title = "Clean the knife",
+        title = "清理",
         icon = "#medic-heal",
         functionName = "Smedic:clean"
     },
@@ -680,112 +680,112 @@ newSubMenus = {
         functionName = "esx_gun_ability:generateClip"
     },
     ['medic:bigheal'] = {
-        title = "Treat Serious Wounds",
+        title = "治療嚴重傷口",
         icon = "#medic-heal",
         functionName = "medic:bigheal"
     },
     ['Smedic:bigheal'] = {
-        title = "Treat Serious Wounds",
+        title = "治療嚴重傷口",
         icon = "#medic-heal",
         functionName = "Smedic:bigheal"
     },
     ['Smedic:mor'] = {
-        title = "morphie",
+        title = "嗎啡",
         icon = "#medic-heal",
         functionName = "Smedic:mor"
     },
     ['Smedic:lido'] = {
-        title = "lido",
+        title = "利多",
         icon = "#medic-heal",
         functionName = "Smedic:lido"
     },
     ['medic:putinvehicle'] = {
-        title = "Put in vehicle",
+        title = "押上車輛",
         icon = "#general-put-in-veh",
         functionName = "medic:putinvehicle"
     },
     ['medic:takeoutvehicle'] = {
-        title = "Take out vehicle",
+        title = "押下車輛",
         icon = "#general-unseat-nearest",
         functionName = "st:emstakeoutvehicle"
     },
     ['medic:drag'] = {
-        title = "Drag",
+        title = "拖",
         icon = "#general-escort",
         functionName = "st:emsdrag"
     },
     ['medic:undrag'] = {
-        title = "Undrag",
+        title = "放下",
         icon = "#general-escort",
         functionName = "st:emsundrag"
     },
     ['medic:billing'] = {
-        title = "billing",
+        title = "開單",
         icon = "#judge-licenses-grant-business",
         functionName = "medic:billing"
     },
     ['police:escort'] = {
-        title = "Escort",
+        title = "護送",
         icon = "#general-escort",
         functionName = "police:escort"
     },
     ['MF_SkeletalSystem:checkOther'] = {
-        title = "Check",
+        title = "檢查",
         icon = "#police-check-licenses",
         functionName = "MF_SkeletalSystem:checkOther"
     },
     ['MF_SkeletalSystem:useItemOther'] = {
-        title = "useItem",
+        title = "使用物品",
         icon = "#medic-heal",
         functionName = "MF_SkeletalSystem:useItemOther"
     },
     ['police:revive'] = {
-        title = "Revive",
+        title = "急救",
         icon = "#medic-revive",
         functionName = "st:pdrevive"
     },
     ['police:putinvehicle'] = {
-        title = "Seat Vehicle",
+        title = "押上車輛",
         icon = "#general-put-in-veh",
         functionName = "police:putinvehicle"
     },
     ['police:takeoutvehicle'] = {
-        title = "Seat Vehicle",
+        title = "押下車輛",
         icon = "#general-put-in-veh",
         functionName = "police:takeoutvehicle"
     },
     ['police:unseatnearest'] = {
-        title = "Unseat Nearest",
+        title = "押下車輛",
         icon = "#general-unseat-nearest",
         functionName = "police:unseatnearest"
     },
     ['police:seatnearest'] = {
-        title = "Seat Nearest",
+        title = "押上車輛",
         icon = "#general-unseat-nearest",
         functionName = "police:seatnearest"
     },
     ['police:impound'] = {
-        title = "Impound",
+        title = "拖吊",
         icon = "#police-vehicle",
         functionName = "police:impound"
     },
     ['police:communityservice'] = {
-        title = "Impound",
+        title = "拖吊",
         icon = "#police-vehicle",
         functionName = "police:communityservice"
     },
     ['police:cuff'] = {
-        title = "Cuff",
+        title = "上銬",
         icon = "#cuffs-cuff",
         functionName = "police:cuff"
     },
     ['police:checkbank'] = {
-        title = "Check Bank",
+        title = "檢查銀行",
         icon = "#police-check-bank",
         functionName = "police:checkBank"
     },
     ['police:checklicenses'] = {
-        title = "Check Licenses",
+        title = "檢查證照",
         icon = "#police-check-licenses",
         functionName = "police:checkLicenses"
     },
@@ -795,7 +795,7 @@ newSubMenus = {
         functionName = "police:removeWeapon"
     }, ]]
     ['police:gsr'] = {
-        title = "GSR Test",
+        title = "GSR",
         icon = "#police-action-gsr",
         functionName = "st:checkGSR"
     },
@@ -805,7 +805,7 @@ newSubMenus = {
         functionName = "police:openmdt"
     },
     ['police:getid'] = {
-        title = "Get ID",
+        title = "ID",
         icon = "#police-vehicle-plate",
         functionName = "police:getid"
     },
@@ -815,7 +815,7 @@ newSubMenus = {
         functionName = "startSpeedo"
     }, ]]
     ['police:runplate'] = {
-        title = "Run Plate",
+        title = "車牌",
         icon = "#police-vehicle-plate",
         functionName = "st:mdtvehiclesearch"
     },
@@ -825,7 +825,7 @@ newSubMenus = {
         functionName = "police:frisk"
     }, ]]
     ['judge:grantDriver'] = {
-        title = "Grant Drivers",
+        title = "准許證照",
         icon = "#judge-licenses-grant-drivers",
         functionName = "police:grantDriver"
     }, 

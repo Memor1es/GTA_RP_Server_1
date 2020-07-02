@@ -136,23 +136,26 @@ function TokoVoip.initialize(self)
 			end
 
 
-			if (IsControlPressed(0, self.radioKey) and self.plugin_data.radioChannel ~= -1 and self.config.radioEnabled) then -- Talk on radio
+			if (IsControlPressed(0, self.radioKey) and self.plugin_data.radioChannel ~= -1) then -- Talk on radio
 				self.plugin_data.radioTalking = true;
 				self.plugin_data.localRadioClicks = true;
-				if (self.plugin_data.radioChannel > self.config.radioClickMaxChannel) then
+				if (self.plugin_data.radioChannel > 100) then
 					self.plugin_data.localRadioClicks = false;
 				end
 				if (not getPlayerData(self.serverId, "radio:talking")) then
 					setPlayerData(self.serverId, "radio:talking", true, true);
 				end
 				self:updateTokoVoipInfo();
-				if (lastTalkState == false and self.myChannels[self.plugin_data.radioChannel] and self.config.radioAnim) then
-					if (not string.match(self.myChannels[self.plugin_data.radioChannel].name, "Call") and not IsPedSittingInAnyVehicle(PlayerPedId())) then
-						RequestAnimDict("random@arrests");
-						while not HasAnimDictLoaded("random@arrests") do
-							Wait(5);
+				if (lastTalkState == false and self.myChannels[self.plugin_data.radioChannel]) then
+					if true then --(not string.match(self.myChannels[self.plugin_data.radioChannel].name, "Call") and not IsPedSittingInAnyVehicle(PlayerPedId())) then
+						if self.plugin_data.radioChannel ~= -1 and self.plugin_data.radioChannel < 100 then
+							RequestAnimDict("random@arrests");
+							while not HasAnimDictLoaded("random@arrests") do
+								Wait(5);
+							end
+							print(self.plugin_data.radioChannel)
+							TaskPlayAnim(PlayerPedId(),"random@arrests","generic_radio_chatter", 8.0, 0.0, -1, 49, 0, 0, 0, 0);
 						end
-						TaskPlayAnim(PlayerPedId(),"random@arrests","generic_radio_chatter", 8.0, 0.0, -1, 49, 0, 0, 0, 0);
 					end
 					lastTalkState = true
 				end
@@ -163,7 +166,7 @@ function TokoVoip.initialize(self)
 				end
 				self:updateTokoVoipInfo();
 				
-				if lastTalkState == true and self.config.radioAnim then
+				if lastTalkState == true then
 					lastTalkState = false
 					StopAnimTask(PlayerPedId(), "random@arrests","generic_radio_chatter", -4.0);
 				end
