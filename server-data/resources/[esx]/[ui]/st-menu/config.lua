@@ -34,7 +34,7 @@ rootMenuConfig =  {
             return not fuck
         end,
         --subMenus = {"general:flipvehicle",  "general:checkoverself", "general:checktargetstates",  "general:keysgive",  "general:emotes",  "general:checkvehicle", "general:apartgivekey", "general:aparttakekey"  }
-        subMenus = {"general:flipvehicle",  "general:checkoverself", "general:emotes", "general:apartgivekey", "general:aparttakekey",  'prison_status_panel:open'}
+        subMenus = {"general:flipvehicle",  "general:checkoverself", "general:emotes", "general:apartgivekey", "general:aparttakekey",  'prison_status_panel:open', 'dice:roll1'}
     },
     {
         id = "amb-ability",
@@ -376,6 +376,11 @@ newSubMenus = {
         title = "能力值",
         icon = "#general-check-over-self",
         functionName = "prison_status:open"
+    },
+    ['dice:roll1'] = {
+        title = "擲骰子",
+        icon = "#animation-money",
+        functionName = "dice:roll1"
     },
     --[[
     ['general:checktargetstates'] = {
