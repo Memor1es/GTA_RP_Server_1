@@ -5,7 +5,7 @@
 Config = {}
 
 --USB
-Config.BrokenRate = 50 --50/100 chance to broken
+Config.BrokenRate = 100 --50/100 chance to broken
 Config.EnableBroken = true
 Config.NotifyUser = true
 
