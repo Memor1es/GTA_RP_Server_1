@@ -105,7 +105,7 @@ RegisterNUICallback(
             local count = tonumber(data.number)
 
             if data.item.type == "item_weapon" then
-				exports['mythic_notify']:DoHudText('error', "Desiquipa a Arma antes de a guardar")
+				exports['mythic_notify']:DoHudText('error', "取下裝備來存放武器")
                 --count = GetAmmoInPedWeapon(PlayerPedId(), GetHashKey(data.item.name))
 				--TriggerServerEvent("monster_vault:putItem", --[[ESX.GetPlayerData().identifier,--]] data.item.type, data.item.name, count)
 			elseif data.item.name == "phone" then

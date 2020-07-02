@@ -494,12 +494,12 @@ AddEventHandler("suku:SellItemToPlayer",function(source, type, item, count)
 						xPlayer.addInventoryItem(item, count)
 						TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'success', text = 'Compraste '..count.." "..list[i].label })
 					else
-						TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Não tens dinheiro suficiente!' })
+						TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = '你沒有足夠的錢!' })
 					end
 				end
             end
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Não tens espaço suficiente!' })
+            TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = '背包沒有足夠的空間!' })
         end
 	end
 	
@@ -518,15 +518,15 @@ AddEventHandler("suku:SellItemToPlayer",function(source, type, item, count)
 							xPlayer.addWeapon(list[i].name, list[i].ammo)
 							TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'success', text = 'Compraste '..list[i].label })
 						else
-							TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Não tens dinheiro suficiente!' })
+							TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = '你沒有足夠的錢!' })
 						end
 					else
-						TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Já tens esta arma!' })
+						TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = '你已經有這個武器!' })
 					end
 				end
             end
         else
-            TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Já tens esta arma!' })
+            TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = '你已經有這個武器!' })
         end
 	end
 	
@@ -544,10 +544,10 @@ AddEventHandler("suku:SellItemToPlayer",function(source, type, item, count)
 						TriggerClientEvent("suku:AddAmmoToWeapon", source, list[i].weaponhash, ammo)
 						TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'success', text = 'Compraste '..count.." "..list[i].label })
 					else
-						TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Não tens dinheiro suficiente!' })
+						TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = '你沒有足夠的錢!' })
 					end
 				else
-					TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Não tens arma para este tipo de munição!' })
+					TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = '你沒有這種彈藥的武器!' })
 				end
             end
         end
@@ -570,12 +570,12 @@ AddEventHandler('suku:buyLicense', function ()
 	local xPlayer = ESX.GetPlayerFromId(source)
 	if xPlayer.get('money') >= Config.LicensePrice then
 		xPlayer.removeMoney(Config.LicensePrice)
-		TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'success', text = 'Registaste uma licança de arma.' })
+		TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'success', text = '你註冊了武器許可證' })
 		TriggerEvent('esx_license:addLicense', _source, 'weapon', function ()
 			GetLicenses(_source)
 		end)
 	else
-		TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Não tens dinheiro suficiente!' })
+		TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = '你沒有足夠的錢!' })
 	end
 end)
 

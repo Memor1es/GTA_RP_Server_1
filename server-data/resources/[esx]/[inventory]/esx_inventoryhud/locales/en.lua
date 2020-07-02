@@ -1,11 +1,11 @@
 Locales["en"] = {
-	["cash"] = "Dinheiro",
-	["black_money"] = "Black Money",
-	["player_nearby"] = "Não está por perto!",
-	["players_nearby"] = "Não ha nínguem por perto!",
-	["openinv_help"] = "Opens inventory of another player",
-	["openinv_id"] = "Player ID",
-	["no_permissions"] = "Não tens premissoes para isso!",
-	["no_player"] = "Jogador nao encontrado!",
-	["player_inventory"] = "Inventario"
+	["cash"] = "錢",
+	["black_money"] = "黑錢",
+	["player_nearby"] = "身邊沒有人!",
+	["players_nearby"] = "身邊沒有人!",
+	["openinv_help"] = "查看旁邊的人",
+	["openinv_id"] = "ID",
+	["no_permissions"] = "你不能這樣做!",
+	["no_player"] = "找不到這個人!",
+	["player_inventory"] = "背包"
 }
