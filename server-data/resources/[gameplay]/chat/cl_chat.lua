@@ -48,6 +48,7 @@ AddEventHandler('__cfx_internal:serverPrint', function(msg)
 end)
 
 AddEventHandler('chat:addMessage', function(message)
+  message['template'] = '<div style="padding: 0.5vw; margin: 0.5vw; background-color: rgba(41, 41, 41, 0.6); border-radius: 3px;"><i class="fas fa-globe"></i>&nbsp;&nbsp;{0}:<br> {1}</div>'
   SendNUIMessage({
     type = 'ON_MESSAGE',
     message = message
