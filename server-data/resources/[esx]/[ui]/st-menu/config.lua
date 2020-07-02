@@ -119,7 +119,7 @@ rootMenuConfig =  {
             end
         end,
         --subMenus = {"cuffs:cuff", "cuffs:softcuff", "cuffs:uncuff", "police:escort", "police:putinvehicle", "police:unseatnearest", "cuffs:checkinventory", --[[ "cuffs:remmask",  "police:frisk", ]]--[[ "police:removeweapons" ]] "police:revive", "police:gsr", "police:openmdt", "police:getid", "police:impound"}
-        subMenus = {"police:handcuffs", "esx_policejob:unrestrain", "police:escort", "police:putinvehicle","police:takeoutvehicle", "police:unseatnearest","police:seatnearest", "cuffs:checkinventory", --[[ "cuffs:remmask",  "police:frisk", ]]--[[ "police:removeweapons" ]] "police:communityservice", "police:openmdt", "police:getid", "esx-qalle-jail:openJailMenu"}
+        subMenus = {"esx_policejob:handcuff", "esx_policejob:unrestrain", "police:escort", "police:putinvehicle","police:takeoutvehicle", "police:unseatnearest","police:seatnearest", "cuffs:checkinventory", --[[ "cuffs:remmask",  "police:frisk", ]]--[[ "police:removeweapons" ]] "police:communityservice", "police:openmdt", "police:getid", "esx-qalle-jail:openJailMenu"}
     },
     {
         id = "police-vehicle",
@@ -597,7 +597,7 @@ newSubMenus = {
     ['esx_policejob:handcuff'] = {
         title = "上銬",
         icon = "#cuffs-cuff",
-        functionName = "esx_policejob:handcuff"
+        functionName = "police:handcuff"
     },  
     ['cuffs:softcuff'] = {
         title = "上銬",
