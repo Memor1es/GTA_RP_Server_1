@@ -1,5 +1,5 @@
 var invLocale = new Object();
-invLocale.dropItem = "Largar";
-invLocale.useItem = "Usar";
-invLocale.giveItem = "Dar";
+invLocale.dropItem = "丟下";
+invLocale.useItem = "使用";
+invLocale.giveItem = "給予";
 invLocale.secondInventoryNotAvailable = "";

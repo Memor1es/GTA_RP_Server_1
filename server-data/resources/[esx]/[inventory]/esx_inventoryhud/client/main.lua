@@ -171,7 +171,7 @@ RegisterNUICallback(
                 table.insert(
                     elements,
                     {
-                        label = GetPlayerName(players[i]),
+                        label = "其他玩家",
                         player = GetPlayerServerId(players[i])
                     }
                 )
