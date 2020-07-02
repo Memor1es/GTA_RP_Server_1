@@ -7,6 +7,7 @@ Config = {}
 --USB
 Config.BrokenRate = 50 --50/100 chance to broken
 Config.EnableBroken = true
+Config.NotifyUser = true
 
 -- Police Settings:
 Config.PoliceDatabaseName = "police"	-- set the exact name from your jobs database for police

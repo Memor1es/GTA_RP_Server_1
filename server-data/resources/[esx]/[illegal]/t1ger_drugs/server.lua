@@ -195,6 +195,19 @@ AddEventHandler('t1ger_drugs:DrugJobInProgress', function(targetCoords, streetNa
 	TriggerClientEvent('t1ger_drugs:OutlawBlipEvent', -1, targetCoords)
 end)
 
+RegisterServerEvent('t1ger_drugs:NotifyUser')
+AddEventHandler('t1ger_drugs:NotifyUser', function()
+	local xPlayers = ESX.GetPlayers()
+
+		for i=1, #xPlayers, 1 do
+			local xPlayer = ESX.GetPlayerFromId(xPlayers[i])
+			local reqItems = xPlayer.getInventoryItem("drugItem").count >= 1
+			if reqItems then
+				xPlayer.triggerEvent('t1ger_drugs:NotifyUser')
+			end
+		end
+end)
+
 RegisterServerEvent('t1ger_drugs:DrugSaleInProgress')
 AddEventHandler('t1ger_drugs:DrugSaleInProgress', function(targetCoords, streetName)
 	TriggerClientEvent('t1ger_drugs:outlawNotify', -1,string.format("^0毒品買賣發生在 ^5%s^0",streetName))
