@@ -176,9 +176,11 @@ Citizen.CreateThread(function()
 				local flag = table.contains(Zone.capturedBy, xPlayer.identifier)
 				if not flag then
 					TriggerClientEvent("esx:showNotification",source,"你並非".. v.RequiredZone .."的占領者")
+					return
 				end
 			end
-
+			TriggerClientEvent('reload:game1',source,k)
+			--[[
 			if xPlayer.getInventoryItem(v.RewardItem).count <= v.MaxRewardItemInv.f or (not scale and xPlayer.getInventoryItem(v.RewardItem).count <= v.MaxRewardItemInv.e) then
 				if not Converting(GetPlayerIdentifier(source)) then
 					TriggerEvent("t1ger_drugs:addConvertingTimer",source,v.ConversionTime)
@@ -193,8 +195,31 @@ Citizen.CreateThread(function()
 			else
 				TriggerClientEvent("esx:showNotification",source,"你 ~r~沒有~s~ 足夠的 ~b~空間~s~ 來擁有更多 ~y~"..itemLabel.."~s~")
 			end
+			--]]
 		end)
 	end
+end)
+
+RegisterServerEvent('t1ger_drugs:GetReward')
+AddEventHandler('t1ger_drugs:GetReward', function(num)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	local v = Config.DrugConversion[num]
+
+	if xPlayer.getInventoryItem(v.RewardItem).count <= v.MaxRewardItemInv.f or (not scale and xPlayer.getInventoryItem(v.RewardItem).count <= v.MaxRewardItemInv.e) then
+		if not Converting(GetPlayerIdentifier(source)) then
+			TriggerEvent("t1ger_drugs:addConvertingTimer",source,v.ConversionTime)
+			xPlayer.removeInventoryItem(v.UsableItem,1)
+			xPlayer.removeInventoryItem(v.RequiredItem,requiredItems)
+			TriggerClientEvent("t1ger_drugs:ConvertProcess",source,k,v)
+			Citizen.Wait(v.ConversionTime)
+			xPlayer.addInventoryItem(v.RewardItem,drugOutput)
+		else
+			TriggerClientEvent("esx:showNotification",source,string.format("你 ~b~已經~s~ 轉換了",GetConvertTime(GetPlayerIdentifier(source))))	
+		end	
+	else
+		TriggerClientEvent("esx:showNotification",source,"你 ~r~沒有~s~ 足夠的 ~b~空間~s~ 來擁有更多 ~y~"..itemLabel.."~s~")
+	end
+
 end)
 
 RegisterServerEvent('t1ger_drugs:DrugJobInProgress')
