@@ -1025,7 +1025,8 @@ function OpenPharmacyMenu()
 		align    = 'top-left',
 		elements = {
 			{label = _U('pharmacy_take', _U('radio')), item = 'radio', type = 'slider', value = 1, min = 1, max = 2},
-			{label = _U('pharmacy_take', '彈匣'), item = 'clip', type = 'slider', value = 1, min = 1, max = 2}
+			{label = _U('pharmacy_take', '彈匣'), item = 'clip', type = 'slider', value = 1, min = 1, max = 2},
+			{label = _U('pharmacy_take', _U('bullet_wear')), item = 'bulletproof', type = 'slider', value = 1, min = 1, max = 2}
 		}
 	}, function(data, menu)
 		TriggerServerEvent('esx_policejob:giveItem', data.current.item, data.current.value)
