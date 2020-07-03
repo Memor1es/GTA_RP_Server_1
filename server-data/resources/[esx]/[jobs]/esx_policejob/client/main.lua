@@ -2360,4 +2360,12 @@ AddEventHandler("police:handcuffs", function()
 	end
 end)
 
+RegisterNetEvent('police:bulletproof')
+AddEventHandler('police:bulletproof', function()
+	local playerPed = GetPlayerPed(-1)
+	SetPedComponentVariation(playerPed, 9, 27, 9, 2)
+	AddArmourToPed(playerPed, 100)
+	SetPedArmour(playerPed, 100)
+end)
+
 

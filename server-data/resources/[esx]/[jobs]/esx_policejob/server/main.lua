@@ -701,3 +701,9 @@ AddEventHandler('esx_policejob:setSeatbelt', function(value)
 		TriggerClientEvent('seatbelt:setUnseatbelt', source)
 	end
 end)
+
+-------For bulletproof-------
+ESX.RegisterUsableItem('bulletproof', function(source)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	TriggerClientEvent('police:bulletproof', source, true)
+end)
