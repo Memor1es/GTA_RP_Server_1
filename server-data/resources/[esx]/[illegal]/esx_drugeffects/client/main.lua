@@ -111,7 +111,7 @@ end
 
 RegisterNetEvent('esx_drugeffects:onmor')
 AddEventHandler('esx_drugeffects:onmor', function()
-  
+  --[[
   local playerPed = GetPlayerPed(-1)
   
     RequestAnimSet("move_m@hipster@a") 
@@ -130,13 +130,37 @@ AddEventHandler('esx_drugeffects:onmor', function()
 
     Citizen.Wait(30000)
     Normal()
-
+    --]]
     --SetRunSprintMultiplierForPlayer(player, 1.0)
+    local playerPed = GetPlayerPed(-1)
+  local maxHealth = GetEntityMaxHealth(playerPed)
+
+        RequestAnimSet("move_m@hurry_butch@a") 
+    while not HasAnimSetLoaded("move_m@hurry_butch@a") do
+      Citizen.Wait(0)
+    end    
+
+    TaskStartScenarioInPlace(playerPed, "WORLD_HUMAN_SMOKING_POT", 0, 1)
+    Citizen.Wait(3000)
+    ClearPedTasksImmediately(playerPed)
+    SetTimecycleModifier("spectator5")
+    SetPedMotionBlur(playerPed, true)
+    SetPedMovementClipset(playerPed, "move_m@hurry_butch@a", true)
+    SetPedIsDrunk(playerPed, true)
+    
+    --Efects
+	local player = PlayerId()  
+    local health = GetEntityHealth(playerPed)
+    local newHealth = math.min(maxHealth , math.floor(health + maxHealth/8))
+    SetEntityHealth(playerPed, newHealth)
+
+    Citizen.Wait(30000)
+    Normal()
 end)
 
---Weed
-RegisterNetEvent('esx_drugeffects:onWeed')
-AddEventHandler('esx_drugeffects:onWeed', function()
+--Opium
+RegisterNetEvent('esx_drugeffects:onOpium')
+AddEventHandler('esx_drugeffects:onOpium', function()
   
   local playerPed = GetPlayerPed(-1)
   
@@ -163,9 +187,9 @@ AddEventHandler('esx_drugeffects:onWeed', function()
     --SetRunSprintMultiplierForPlayer(player, 1.0)
 end)
 
---Opium
-RegisterNetEvent('esx_drugeffects:onOpium')
-AddEventHandler('esx_drugeffects:onOpium', function()
+--Meth
+RegisterNetEvent('esx_drugeffects:onMeth')
+AddEventHandler('esx_drugeffects:onMeth', function()
   
   local playerPed = GetPlayerPed(-1)
   
@@ -190,9 +214,9 @@ AddEventHandler('esx_drugeffects:onOpium', function()
     Normal()
  end)
 
---Meth
-RegisterNetEvent('esx_drugeffects:onMeth')
-AddEventHandler('esx_drugeffects:onMeth', function()
+--Weed
+RegisterNetEvent('esx_drugeffects:onWeed')
+AddEventHandler('esx_drugeffects:onWeed', function()
   
   local playerPed = GetPlayerPed(-1)
   local maxHealth = GetEntityMaxHealth(playerPed)

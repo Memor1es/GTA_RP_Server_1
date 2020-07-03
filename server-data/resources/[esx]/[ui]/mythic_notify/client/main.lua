@@ -48,3 +48,21 @@ function PersistentAlert(action, id, type, text, style)
 		})
 	end
 end
+
+function DoCustomHudText(type, text, length, style)
+	SendNUIMessage({
+		type = type,
+		text = text,
+		length = length,
+		style = style
+	})
+end
+
+function DoLongHudText(type, text, style)
+	SendNUIMessage({
+		type = type,
+		text = text,
+		length = 5000,
+		style = style
+	})
+end
