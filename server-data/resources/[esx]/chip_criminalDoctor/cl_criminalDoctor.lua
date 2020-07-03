@@ -130,7 +130,7 @@ function getOnBed()
 			local BedCoords, BedHeading = GetEntityCoords(CurrentBed), GetEntityHeading(CurrentBed)
 
 			LoadAnimSet('missfbi1')
-			SetEntityCoords(PlayerPed, BedCoords)
+			SetEntityCoords(PlayerPed, BedCoords + vector3(0,0,1))
 			SetEntityHeading(PlayerPed, (BedHeading+180))
 
 			TaskPlayAnim(PlayerPed, 'missfbi1', 'cpr_pumpchest_idle', 8.0, -8.0, -1, 1, 0, false, false, false)
