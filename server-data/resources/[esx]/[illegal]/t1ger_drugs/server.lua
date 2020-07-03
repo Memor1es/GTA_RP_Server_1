@@ -170,7 +170,15 @@ Citizen.CreateThread(function()
 				TriggerClientEvent("esx:showNotification",source,"你 ~r~沒有~s~ 足夠的 ~y~"..reqItemLabel.."~s~")
 				return
 			end
-			
+
+			if v.RequiredZone then
+				local Zone = exports['esx_kingofthehill']:GetZone(v.RequiredZone)
+				local flag = table.contains(Zone.capturedBy, xPlayer.identifier)
+				if not flag then
+					TriggerClientEvent("esx:showNotification",source,"你並非".. v.RequiredZone .."的占領者")
+				end
+			end
+
 			if xPlayer.getInventoryItem(v.RewardItem).count <= v.MaxRewardItemInv.f or (not scale and xPlayer.getInventoryItem(v.RewardItem).count <= v.MaxRewardItemInv.e) then
 				if not Converting(GetPlayerIdentifier(source)) then
 					TriggerEvent("t1ger_drugs:addConvertingTimer",source,v.ConversionTime)
@@ -387,4 +395,15 @@ function Converting(source)
 		end
 	end
 	return false
+end
+
+
+-- locally native table lookup
+function table.contains(table, element)
+    for _, value in pairs(table) do
+      if value == element then  
+        return true        
+      end
+    end    
+    return false
 end

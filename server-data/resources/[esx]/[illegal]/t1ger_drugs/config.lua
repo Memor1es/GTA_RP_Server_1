@@ -281,6 +281,7 @@ Config.DrugConversion = {
 		RewardAmount 			= {a = 6, b = 10},				-- Amount of RewardItem player receives. "a" is without scale and "b" is with scale
 		MaxRewardItemInv		= {e = 44, f = 40},				-- Amount of RewardItem player can hold in inventory. "e" is without scale and "f" is with scale
 		RequiredItem 			= "drugbags",					-- item name in database for required item
+		RequiredZone 			= "Factory",
 		RequiredItemAmount 		= {c = 6, d = 10},				-- Amount of RequiredItem for conversion. "c" is without scale and "d" is with scale
 		HighQualityScale		= true,							-- enable/disable scale feature for the drugType
 		hqscale					= "hqscale",					-- item name in database for hiqh quality scale item
@@ -293,6 +294,7 @@ Config.DrugConversion = {
 		RewardAmount 			= {a = 6, b = 10},				-- Amount of RewardItem player receives. "a" is without scale and "b" is with scale
 		MaxRewardItemInv		= {e = 44, f = 40},				-- Amount of RewardItem player can hold in inventory. "e" is without scale and "f" is with scale
 		RequiredItem 			= "drugbags",					-- item name in database for required item
+		RequiredZone 			= "Factory",
 		RequiredItemAmount 		= {c = 6, d = 10},				-- Amount of RequiredItem for conversion. "c" is without scale and "d" is with scale
 		HighQualityScale		= true,							-- enable/disable scale feature for the drugType
 		hqscale					= "hqscale",					-- item name in database for hiqh quality scale item
@@ -305,6 +307,7 @@ Config.DrugConversion = {
 		RewardAmount 			= {a = 6, b = 10},				-- Amount of RewardItem player receives. "a" is without scale and "b" is with scale
 		MaxRewardItemInv		= {e = 44, f = 40},				-- Amount of RewardItem player can hold in inventory. "e" is without scale and "f" is with scale
 		RequiredItem 			= "drugbags",					-- item name in database for required item
+		RequiredZone 			= "Factory",
 		RequiredItemAmount 		= {c = 6, d = 10},				-- Amount of RequiredItem for conversion. "c" is without scale and "d" is with scale
 		HighQualityScale		= true,							-- enable/disable scale feature for the drugType
 		hqscale					= "hqscale",					-- item name in database for hiqh quality scale item
@@ -317,6 +320,7 @@ Config.DrugConversion = {
 		RewardAmount 			= {a = 8, b = 10},				-- Amount of RewardItem player receives. "a" is without scale and "b" is with scale
 		MaxRewardItemInv		= {e = 44, f = 40},				-- Amount of RewardItem player can hold in inventory. "e" is without scale and "f" is with scale
 		RequiredItem 			= "drugbags",					-- item name in database for required item
+		RequiredZone 			= "Factory",
 		RequiredItemAmount 		= {c = 8, d = 10},				-- Amount of RequiredItem for conversion. "c" is without scale and "d" is with scale
 		HighQualityScale		= true,							-- enable/disable scale feature for the drugType
 		hqscale					= "hqscale",					-- item name in database for hiqh quality scale item
@@ -329,6 +333,7 @@ Config.DrugConversion = {
 		RewardAmount 			= {a = 6, b = 10},				-- Amount of RewardItem player receives. "a" is without scale and "b" is with scale
 		MaxRewardItemInv		= {e = 44, f = 40},				-- Amount of RewardItem player can hold in inventory. "e" is without scale and "f" is with scale
 		RequiredItem 			= "drugbags",					-- item name in database for required item
+		RequiredZone 			= "Factory",
 		RequiredItemAmount 		= {c = 6, d = 10},				-- Amount of RequiredItem for conversion. "c" is without scale and "d" is with scale
 		HighQualityScale		= true,							-- enable/disable scale feature for the drugType
 		hqscale					= "hqscale",					-- item name in database for hiqh quality scale item
@@ -341,6 +346,7 @@ Config.DrugConversion = {
 		RewardAmount 			= {a = 6, b = 10},				-- Amount of RewardItem player receives. "a" is without scale and "b" is with scale
 		MaxRewardItemInv		= {e = 44, f = 40},				-- Amount of RewardItem player can hold in inventory. "e" is without scale and "f" is with scale
 		RequiredItem 			= "drugbags",					-- item name in database for required item
+		RequiredZone 			= "Factory",
 		RequiredItemAmount 		= {c = 6, d = 10},				-- Amount of RequiredItem for conversion. "c" is without scale and "d" is with scale
 		HighQualityScale		= true,							-- enable/disable scale feature for the drugType
 		hqscale					= "hqscale",					-- item name in database for hiqh quality scale item
@@ -353,6 +359,7 @@ Config.DrugConversion = {
 		RewardAmount 			= {a = 6, b = 10},				-- Amount of RewardItem player receives. "a" is without scale and "b" is with scale
 		MaxRewardItemInv		= {e = 44, f = 40},				-- Amount of RewardItem player can hold in inventory. "e" is without scale and "f" is with scale
 		RequiredItem 			= "drugbags",					-- item name in database for required item
+		RequiredZone 			= "Factory",
 		RequiredItemAmount 		= {c = 6, d = 10},				-- Amount of RequiredItem for conversion. "c" is without scale and "d" is with scale
 		HighQualityScale		= true,							-- enable/disable scale feature for the drugType
 		hqscale					= "hqscale",					-- item name in database for hiqh quality scale item
@@ -365,6 +372,7 @@ Config.DrugConversion = {
 		RewardAmount 			= {a = 4, b = 5},				-- Amount of RewardItem player receives. "a" is without scale and "b" is with scale
 		MaxRewardItemInv		= {e = 46, f = 45},				-- Amount of RewardItem player can hold in inventory. "e" is without scale and "f" is with scale
 		RequiredItem 			= "drugbags",					-- item name in database for required item
+		RequiredZone 			= "Factory",
 		RequiredItemAmount 		= {c = 4, d = 5},				-- Amount of RequiredItem for conversion. "c" is without scale and "d" is with scale
 		HighQualityScale		= true,							-- enable/disable scale feature for the drugType
 		hqscale					= "hqscale",					-- item name in database for hiqh quality scale item
@@ -377,6 +385,7 @@ Config.DrugConversion = {
 		RewardAmount 			= 2,							-- Amount of RewardItem player receives
 		MaxRewardItemInv		= {e = 44, f = 40},				-- Amount of RewardItem player can hold in inventory. "e" is without scale and "f" is with scale
 		RequiredItem 			= "rolpaper",					-- item name in database for required item
+		RequiredZone 			= "Factory",
 		RequiredItemAmount 		= 2,							-- Amount of RequiredItem for conversion
 		HighQualityScale		= false,						-- enable/disable scale feature for the drugType
 		hqscale					= "hqscale",					-- item name in database for hiqh quality scale item
