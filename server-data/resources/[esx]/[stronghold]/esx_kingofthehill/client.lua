@@ -492,3 +492,7 @@ if Config.ShowBlip then
         end
     end)
 end
+
+function GetZone(zone)
+    return Config[zone]
+end
