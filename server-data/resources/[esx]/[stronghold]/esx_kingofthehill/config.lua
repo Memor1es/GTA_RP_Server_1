@@ -84,7 +84,7 @@ Config.Mechanic = {
 }
 
 Config.Factory = {      
-    pos = { x = 9.03, y = 541.0, z = 176.0 },
+    pos = { x = 2434.4, y = 4965.64, z = 42.35 },
     captured = false,
     captureInProgress = false,
     captureCount = 0,
