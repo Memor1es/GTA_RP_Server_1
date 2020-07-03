@@ -11,6 +11,7 @@ AddEventHandler("chip_cDoc:takeMoney", function()
     if xPlayer.getMoney() > Config.toPay then
         print("Hello1")
         TriggerClientEvent("chip_cDoc:getHelp", source)
+        TriggerClientEvent('skeletalsystem:UseItem', source, {"RightArm","LeftArm","LeftLeg","RightLeg","Body","Head"},true)
         xPlayer.removeMoney(2000)
     else
         print("I aint got no dollas")
