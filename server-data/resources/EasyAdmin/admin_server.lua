@@ -905,7 +905,7 @@ Citizen.CreateThread(function()
 		if not screenshottest then
 			print("\nEasyAdmin: screenshot-basic is not installed on this Server, screenshots unavailable")
 		else
-			StartResource("screenshot-basic")
+			--StartResource("screenshot-basic")
 			screenshots = true
 		end
 		

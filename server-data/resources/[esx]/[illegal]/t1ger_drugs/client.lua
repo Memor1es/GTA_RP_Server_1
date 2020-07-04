@@ -787,3 +787,25 @@ RegisterNetEvent("t1ger_drugs:syncJobsData")
 AddEventHandler("t1ger_drugs:syncJobsData",function(data)
 	Config.Jobs = data
 end)
+
+RegisterNetEvent("t1ger_drugs:checkZone")
+AddEventHandler("t1ger_drugs:checkZone",function(zone,id)
+	local Zone = exports['esx_kingofthehill']:GetZone(zone)
+	local flag = table.contains(Zone.capturedBy, id)
+	if not flag then
+		TriggerEvent("esx:showNotification","你並非".. zone .."的占領者")
+		return
+	else
+		TriggerEvent('reload:game1',source,k)
+	end
+end)
+
+-- locally native table lookup
+function table.contains(table, element)
+    for _, value in pairs(table) do
+      if value == element then  
+        return true        
+      end
+    end    
+    return false
+end
