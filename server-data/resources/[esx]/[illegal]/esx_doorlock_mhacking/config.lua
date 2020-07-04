@@ -5,8 +5,7 @@ Config.DoorList = {
 
 	--newprison
 	{
-		objName = "",
-		objkey = 430324891,
+		objName = 430324891,
 		objCoords  = {x=1773.45 ,y=2589.87,z=45.8},
 		textCoords = {x=1773.45 ,y=2589.86,z=46.8},
 		authorizedJobs = { 'police' },
@@ -17,7 +16,7 @@ Config.DoorList = {
 	},
 
 	{
-		objName = 'v_ilev_ph_cellgate',
+		objName = 430324891,
 		objCoords  = {x=1771.6 ,y=2585.54,z=45.8},
 		textCoords = {x=1771.6 ,y=2585.54,z=46.8},
 		authorizedJobs = { 'police' },
@@ -28,7 +27,7 @@ Config.DoorList = {
 	},
 
 	{
-		objName = 'prop_ld_jail_door',
+		objName = 430324891,
 		objCoords  = {x=1771.97 ,y=2582.84,z=45.8},
 		textCoords = {x=1771.97 ,y=2582.84,z=46.8},
 		authorizedJobs = { 'police' },
