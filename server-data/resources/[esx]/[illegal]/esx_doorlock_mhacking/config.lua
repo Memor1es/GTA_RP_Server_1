@@ -38,7 +38,7 @@ Config.DoorList = {
 	},
 
 	{
-		objName = 'v_ilev_gtdoor02',
+		objName = 'v_ilev_phroofdoor',
 		objCoords  = {x=1791.07 ,y=2593.05,z=45.8},
 		textCoords = {x=1791.07 ,y=2593.05,z=45.8},
 		authorizedJobs = { 'police' },
