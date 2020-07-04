@@ -5,7 +5,7 @@ Config.DoorList = {
 
 	--newprison
 	{
-		objName = 'prop_ld_jail_door',
+		objName = '430324891',
 		objCoords  = {x=1773.45 ,y=2589.87,z=45.8},
 		textCoords = {x=1773.45 ,y=2589.86,z=46.8},
 		authorizedJobs = { 'jesus' },
