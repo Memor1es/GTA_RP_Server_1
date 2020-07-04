@@ -793,10 +793,10 @@ AddEventHandler("t1ger_drugs:checkZone",function(zone)
 	local Zone = exports['esx_kingofthehill']:GetZone(zone)
 	local flag = table.contains(Zone.capturedBy, xPlayer.identifier)
 	if not flag then
-		TriggerClientEvent("esx:showNotification",source,"你並非".. zone .."的占領者")
+		TriggerEvent("esx:showNotification",source,"你並非".. zone .."的占領者")
 		return
 	else
-		TriggerClientEvent('reload:game1',source,k)
+		TriggerEvent('reload:game1',source,k)
 	end
 end)
 
