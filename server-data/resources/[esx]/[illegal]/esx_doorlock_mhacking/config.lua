@@ -14,6 +14,17 @@ Config.DoorList = {
 		size = 1,
 		KeyPass = "jaildoor_key"
 	},
+
+	{
+		objName = 'prop_ld_jail_door',
+		objCoords  = {x=1771.6 ,y=2585.54,z=45.8},
+		textCoords = {x=1771.6 ,y=2585.54,z=46.8},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
 	
 		--[[nightclub2
 		
