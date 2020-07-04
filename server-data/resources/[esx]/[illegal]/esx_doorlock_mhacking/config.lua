@@ -5,7 +5,7 @@ Config.DoorList = {
 
 	--newprison
 	{
-		objName = 'v_ilev_ph_cellgate',
+		objName = 'prop_ld_jail_door',
 		objCoords  = {x=1773.45 ,y=2589.87,z=45.8},
 		textCoords = {x=1773.45 ,y=2589.86,z=46.8},
 		authorizedJobs = { 'jesus' },
@@ -27,7 +27,7 @@ Config.DoorList = {
 	},
 
 	{
-		objName = 'v_ilev_ph_cellgate',
+		objName = 'prop_ld_jail_door',
 		objCoords  = {x=1771.97 ,y=2582.84,z=45.8},
 		textCoords = {x=1771.97 ,y=2582.84,z=46.8},
 		authorizedJobs = { 'police' },
@@ -38,7 +38,7 @@ Config.DoorList = {
 	},
 
 	{
-		objName = 'v_ilev_phroofdoor',
+		objName = 'v_ilev_gtdoor02',
 		objCoords  = {x=1791.07 ,y=2593.05,z=45.8},
 		textCoords = {x=1791.07 ,y=2593.05,z=45.8},
 		authorizedJobs = { 'police' },
