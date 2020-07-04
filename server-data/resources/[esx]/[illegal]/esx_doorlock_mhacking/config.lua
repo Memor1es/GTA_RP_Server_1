@@ -16,7 +16,7 @@ Config.DoorList = {
 	},
 
 	{
-		objName = 'V_ILev_FINGATE',
+		objName = 'v_ilev_ph_cellgate',
 		objCoords  = {x=1771.6 ,y=2585.54,z=45.8},
 		textCoords = {x=1771.6 ,y=2585.54,z=46.8},
 		authorizedJobs = { 'police' },
