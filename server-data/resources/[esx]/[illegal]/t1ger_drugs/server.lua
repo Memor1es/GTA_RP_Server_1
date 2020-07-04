@@ -180,7 +180,7 @@ Citizen.CreateThread(function()
 					return
 				end
 				--]]
-				xPlayer.triggerEvent('t1ger_drugs:checkZone',v.RequiredZone)
+				xPlayer.triggerEvent('t1ger_drugs:checkZone',v.RequiredZone,xPlayer.identifier)
 			else
 				TriggerClientEvent('reload:game1',source,k)
 			end

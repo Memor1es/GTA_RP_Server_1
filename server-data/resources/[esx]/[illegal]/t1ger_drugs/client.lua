@@ -789,9 +789,9 @@ AddEventHandler("t1ger_drugs:syncJobsData",function(data)
 end)
 
 RegisterNetEvent("t1ger_drugs:checkZone")
-AddEventHandler("t1ger_drugs:checkZone",function(zone)
+AddEventHandler("t1ger_drugs:checkZone",function(zone,id)
 	local Zone = exports['esx_kingofthehill']:GetZone(zone)
-	local flag = table.contains(Zone.capturedBy, xPlayer.identifier)
+	local flag = table.contains(Zone.capturedBy, id)
 	if not flag then
 		TriggerEvent("esx:showNotification",source,"你並非".. zone .."的占領者")
 		return
