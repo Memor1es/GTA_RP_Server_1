@@ -71,6 +71,16 @@ Config.DoorList = {
 		KeyPass = "jaildoor_key"
 	},
 
+	{
+		objName = 430324891,
+		objCoords  = {x=1785.81 ,y=2572.02,z=44.7},
+		textCoords = {x=1785.89 ,y=2572.02,z=46.8},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
 
 	{
 		objName = 'v_ilev_gtdoor02',
