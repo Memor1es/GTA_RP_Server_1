@@ -283,7 +283,7 @@ Config.DispatchSquads = {
             {x=-18.15, y=558.05, z=180.58, h=317.13},
         },
     },
-    Villa = {
+    Factory = {
         Name = "Factory",
         AlliesWith = {
             GetHashKey("AMBIENT_GANG_MEXICAN"),
@@ -339,6 +339,64 @@ Config.DispatchSquads = {
             {x=2432.34, y=4971.2, z=42.35, h=317.13},
             {x=2429.77, y=4968.69, z=42.35, h=317.13},
             {x=2430.03, y=4964.67, z=42.35, h=317.13},
+        },
+    },
+    Mechanic = {
+        Name = "Mechanic",
+        AlliesWith = {
+            GetHashKey("AMBIENT_GANG_MEXICAN"),
+            GetHashKey("AMBIENT_GANG_SALVA")
+        },
+        EnemiesWith = {
+            'vagos',
+            'unemployed',
+            'police',
+            'cardealer',
+            'mechanic',
+            'taxi',
+            'mafia'
+        },
+        Event = 89,
+        NumberOfWaves = 3,
+        NumberPerWave = 2,
+        TimeBetweenWaves = math.random(5000, 8000), -- in ms
+        TimeBeforeUpAgain = math.random(60000, 80000), -- time here minus time between waves = total wait
+        TriggerDistance = 40.78,
+        CentralPos = vector3(2434.4, 4965.64, 42.35),
+        RepSet = true,
+        TauntOnKill = true,
+        NPCs = {
+            GetHashKey('g_f_y_vagos_01'),
+            GetHashKey('ig_ramp_mex'),
+            GetHashKey('ig_ortega'),
+            GetHashKey('g_m_y_mexgoon_02')
+        },
+        NPCWeapons = {
+            {wep = GetHashKey('weapon_carbinerifle'), type='gun'},
+            {wep = GetHashKey('weapon_smg'), type='gun'},
+            --{wep = GetHashKey('weapon_rpg'), type='gun'},
+            --{wep = GetHashKey('weapon_minigun'), type='gun'},
+            --{wep = GetHashKey('weapon_microsmg'), type='gun'},
+        },
+        NPCSpawnPoints = {
+            {x=1196.6, y=2643.56, z=37.84, h=317.13},
+            {x=1188.86, y=2654.86, z=37.84, h=317.13},
+            {x=1195.6, y=2660.81, z=37.84, h=317.13},
+            {x=1169.79, y=2636.96, z=37.84, h=317.13},
+            {x=1166.15, y=2643.7, z=37.84, h=317.13},
+            {x=1160.05, y=2652.46, z=37.84, h=317.13},
+            {x=1158.24, y=2669.45, z=37.84, h=317.13},
+            {x=1199.69, y=2662.01, z=37.84, h=317.13},
+            {x=1177.91, y=2637.69, z=37.84, h=317.13},
+            {x=1172.68, y=2637.3, z=37.84, h=317.13},
+            {x=1191.81, y=2653.03, z=40.78, h=317.13},
+            {x=1197.44, y=2661.14, z=40.75, h=317.13},
+            {x=1196.47, y=2645.2, z=40.78, h=317.13},
+            {x=1198.8, y=2642.35, z=40.78, h=317.13},
+            {x=1197.54, y=2649.74, z=42.09, h=317.13},
+            {x=1153.06, y=2662.19, z=41.48, h=317.13},
+            {x=1152.39, y=2667.87, z=41.48, h=317.13},
+            {x=1151.96, y=2654.22, z=41.59, h=317.13},
         },
     }
 

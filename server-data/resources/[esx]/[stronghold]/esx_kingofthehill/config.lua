@@ -19,7 +19,7 @@ Config.ShowBlip = true
 Config.CheckJob = true
 
 Config.ZoneList = {
-    "GroveStreet",
+    --"GroveStreet",
     "Bar",
     "MidBar",
     "Mechanic",
@@ -31,7 +31,7 @@ Config.JobList = {
     "mafia",
     "gesus"
 }
-
+--[[
 Config.GroveStreet = {      
     pos = { x = 111.25, y = -1946.97, z = 20.74 },
     captured = false,
@@ -42,7 +42,7 @@ Config.GroveStreet = {
     showPercentage = false,
     name = "黑人區"
 }
-
+--]]
 
 Config.Bar = {      
     pos = { x = 153.89, y = -1296.59, z = 29.01 },
@@ -70,7 +70,7 @@ Config.MidBar = {
 }
 
 Config.Mechanic = {      
-    pos = { x = 111.25, y = -1946.97, z = 20.74 },
+    pos = { x = 1177.77, y = 2654.3, z = 37.93 },
     captured = false,
     captureInProgress = false,
     captureCount = 0,
