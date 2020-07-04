@@ -23,32 +23,32 @@ Citizen.CreateThread(function()
             if IsInRegularShopZone(coords) then
                 if IsControlJustReleased(0, Keys["E"]) then
                     OpenShopInv("regular")
-                    Citizen.Wait(2000)
+                    Citizen.Wait(20)
                 end
             end
             if IsInRobsLiquorZone(coords) then
                 if IsControlJustReleased(0, Keys["E"]) then
                     OpenShopInv("robsliquor")
-                    Citizen.Wait(2000)
+                    Citizen.Wait(20)
                 end
             end
             if IsInYouToolZone(coords) then
                 if IsControlJustReleased(0, Keys["E"]) then
                     OpenShopInv("youtool")
-                    Citizen.Wait(2000)
+                    Citizen.Wait(20)
                 end
             end
             if IsInPrisonShopZone(coords) then
                 if IsControlJustReleased(0, Keys["E"]) then
                     OpenShopInv("prison")
-                    Citizen.Wait(2000)
+                    Citizen.Wait(20)
                 end
             end
             if IsInWeaponShopZone(coords) then
                 if IsControlJustReleased(0, Keys["E"]) then
                     --if Licenses['weapon'] ~= nil then
                     OpenShopInv("weaponshop")
-                    Citizen.Wait(2000)
+                    Citizen.Wait(20)
                     --else
                         --exports['mythic_notify']:DoHudText('error', 'You need a Fire Arms license before you can buy weapons')
                     --end
@@ -64,7 +64,7 @@ function OpenShopInv(shoptype)
     inventory = {}
 
     ESX.TriggerServerCallback("suku:getShopItems", function(shopInv)
-        Citizen.Wait(500)
+        Citizen.Wait(50)
         TriggerEvent("esx_inventoryhud:openShopInventory", data, shopInv)
     end, shoptype)
 
@@ -79,7 +79,7 @@ AddEventHandler("suku:OpenCustomShopInventory", function(type, shopinventory)
     inventory = {}
 
     ESX.TriggerServerCallback("suku:getCustomShopItems", function(shopInv)
-        Citizen.Wait(500)
+        Citizen.Wait(50)
         TriggerEvent("esx_inventoryhud:openShopInventory", data, shopInv)
     end, type, shopinventory)
 
@@ -274,37 +274,42 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(0)
+        Citizen.Wait(50)
         player = GetPlayerPed(-1)
         coords = GetEntityCoords(player)
 
         for k, v in pairs(Config.Shops.RegularShop.Locations) do
             if GetDistanceBetweenCoords(coords, Config.Shops.RegularShop.Locations[k].x, Config.Shops.RegularShop.Locations[k].y, Config.Shops.RegularShop.Locations[k].z, true) < 3.0 then
-                ESX.Game.Utils.DrawText3D(vector3(Config.Shops.RegularShop.Locations[k].x, Config.Shops.RegularShop.Locations[k].y, Config.Shops.RegularShop.Locations[k].z + 1.0), "按 [E] 來購買物品", 0.6)
+			    ESX.ShowHelpNotification('按下 ~INPUT_CONTEXT~ 使用 ~y~商店~s~')
+                -- ESX.Game.Utils.DrawText3D(vector3(Config.Shops.RegularShop.Locations[k].x, Config.Shops.RegularShop.Locations[k].y, Config.Shops.RegularShop.Locations[k].z + 1.0), "按 [E] 來購買物品", 0.6)
             end
         end
 
         for k, v in pairs(Config.Shops.RobsLiquor.Locations) do
             if GetDistanceBetweenCoords(coords, Config.Shops.RobsLiquor.Locations[k].x, Config.Shops.RobsLiquor.Locations[k].y, Config.Shops.RobsLiquor.Locations[k].z, true) < 3.0 then
-                ESX.Game.Utils.DrawText3D(vector3(Config.Shops.RobsLiquor.Locations[k].x, Config.Shops.RobsLiquor.Locations[k].y, Config.Shops.RobsLiquor.Locations[k].z + 1.0), "按 [E] 來購買物品", 0.6)
+                ESX.ShowHelpNotification('按下 ~INPUT_CONTEXT~ 使用 ~y~商店~s~')
+                -- ESX.Game.Utils.DrawText3D(vector3(Config.Shops.RobsLiquor.Locations[k].x, Config.Shops.RobsLiquor.Locations[k].y, Config.Shops.RobsLiquor.Locations[k].z + 1.0), "按 [E] 來購買物品", 0.6)
             end
         end
 
         for k, v in pairs(Config.Shops.YouTool.Locations) do
             if GetDistanceBetweenCoords(coords, Config.Shops.YouTool.Locations[k].x, Config.Shops.YouTool.Locations[k].y, Config.Shops.YouTool.Locations[k].z, true) < 3.0 then
-                ESX.Game.Utils.DrawText3D(vector3(Config.Shops.YouTool.Locations[k].x, Config.Shops.YouTool.Locations[k].y, Config.Shops.YouTool.Locations[k].z + 1.0), "按 [E] 來購買物品", 0.6)
+                ESX.ShowHelpNotification('按下 ~INPUT_CONTEXT~ 使用 ~y~商店~s~')
+                -- ESX.Game.Utils.DrawText3D(vector3(Config.Shops.YouTool.Locations[k].x, Config.Shops.YouTool.Locations[k].y, Config.Shops.YouTool.Locations[k].z + 1.0), "按 [E] 來購買物品", 0.6)
             end
         end
 
         for k, v in pairs(Config.Shops.PrisonShop.Locations) do
             if GetDistanceBetweenCoords(coords, Config.Shops.PrisonShop.Locations[k].x, Config.Shops.PrisonShop.Locations[k].y, Config.Shops.PrisonShop.Locations[k].z, true) < 3.0 then
-                ESX.Game.Utils.DrawText3D(vector3(Config.Shops.PrisonShop.Locations[k].x, Config.Shops.PrisonShop.Locations[k].y, Config.Shops.PrisonShop.Locations[k].z), "按 [E] 來購買物品", 0.6)
+                ESX.ShowHelpNotification('按下 ~INPUT_CONTEXT~ 使用 ~y~商店~s~')
+                -- ESX.Game.Utils.DrawText3D(vector3(Config.Shops.PrisonShop.Locations[k].x, Config.Shops.PrisonShop.Locations[k].y, Config.Shops.PrisonShop.Locations[k].z), "按 [E] 來購買物品", 0.6)
             end
         end
 
         for k, v in pairs(Config.Shops.WeaponShop.Locations) do
             if GetDistanceBetweenCoords(coords, Config.Shops.WeaponShop.Locations[k].x, Config.Shops.WeaponShop.Locations[k].y, Config.Shops.WeaponShop.Locations[k].z, true) < 3.0 then
-                ESX.Game.Utils.DrawText3D(vector3(Config.Shops.WeaponShop.Locations[k].x, Config.Shops.WeaponShop.Locations[k].y, Config.Shops.WeaponShop.Locations[k].z + 1.0), "按 [E] 來購買物品", 0.6)
+                ESX.ShowHelpNotification('按下 ~INPUT_CONTEXT~ 使用 ~y~商店~s~')
+                -- ESX.Game.Utils.DrawText3D(vector3(Config.Shops.WeaponShop.Locations[k].x, Config.Shops.WeaponShop.Locations[k].y, Config.Shops.WeaponShop.Locations[k].z + 1.0), "按 [E] 來購買物品", 0.6)
             end
         end
     end
