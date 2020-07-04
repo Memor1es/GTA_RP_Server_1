@@ -2,7 +2,20 @@ Config = {}
 Config.Locale = 'en'
 
 Config.DoorList = {
-		--nightclub2
+
+	--newprison
+	{
+		objName = 'prop_ld_jail_door',
+		objCoords  = {x=1773.8 ,y=2589.86	,z=45.8},
+		textCoords = {x=1773.8 ,y=2589.86	,z=46.8},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+	
+		--[[nightclub2
 		
 		{
 			objName = 'apa_p_mp_door_Apart_door_black',
@@ -45,7 +58,7 @@ Config.DoorList = {
 			size = 1,
 			KeyPass = "property8_key"
 		},
-	--nightclub
+	--[[nightclub
 	{
 		objName = 'ba_prop_door_club_generic_vip',
 		objCoords  = {x = -1607.23, y = -3006.01, z = -75.22},
@@ -77,9 +90,9 @@ Config.DoorList = {
 		distance = 2,
 		size = 1,
 		KeyPass = "property7_key"
-	},
+	},]]
 	 
-	--office
+	--[[office
 	{
 		objName = 'ex_prop_door_lowbank_ent_l',
 		objCoords  = {x = 1380.09, y = -716.45, z = 67.70},
@@ -208,10 +221,10 @@ Config.DoorList = {
 		distance = 2,
 		size = 1,
 		KeyPass = "property5_key"
-	},
+	},]]
 	
 
-	{
+	--[[{
 		objName = 'v_ilev_bl_doorsl_r2',
 		objCoords  = {x = 354.71, y = -596.59, z = 28.77},
 		textCoords = {x = 354.71, y = -596.59, z = 29.22},
@@ -298,7 +311,7 @@ Config.DoorList = {
 		distance = 2,
 		size = 2,
 		KeyPass = "property4_key"
-	},
+	},]]
 
 	-- Entrance Doors
 	{
@@ -782,7 +795,7 @@ Config.DoorList = {
 		distance = 2,
 		size = 0.3
 	},]]--
-		--property 1
+		--[[property 1
 	
 	{
 		objName = 'ex_prop_door_lowbank_ent_r',
