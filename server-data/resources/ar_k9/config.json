@@ -1,0 +1,67 @@
+{
+    "standalone":false,
+    "allowedJobGrade": "boss",
+    "vehicleBoneToAttachTo":"seat_pside_f",
+    "dog": {
+      "health":400,
+      "armor":200,
+      "speed":100.0
+    },
+    "dict":{
+      "stay":"待在原地",
+      "follow":"跟上來",
+      "attack":"擊倒",
+      "enterVehicle":"上車",
+      "exitVehicle":"下車",
+      "search":"搜聞",
+
+      "attackKeyModifier":[0, 36],
+
+      "commands": {
+        "spawn":"spawn",
+        "delete":"delete",
+        "follow":"follow",
+        "stay":"stay",
+        "enter":"enter",
+        "exit":"exit",
+        "attack":"attack",
+        "search":"search",
+        "searchVehicle":"vehicle",
+        "searchPlayer":"player"
+      },
+      
+      "alreadySearching":"~y~K9: ~w~Already searching something",
+      "noVehicleFound":"~y~K9: ~w~No vehicle found!",
+      "noPlayerFound":"~y~K9: ~w~No player found!",
+      "dogDetects":"~y~K9: ~w~Detects ~r~something...",
+      "dogDoesntDetect":"~y~K9: ~w~Detects ~y~nothing...",
+
+      "commandSearchHelp":"~y~Specify~w~: ~y~player~w~/~y~vehicle",
+      "invalidDogName":"You have not entered a valid dog name try: [~y~rott~w~,~y~husky~w~,~y~retriever~w~,~y~shepherd~w~]",
+      "dogNameNotFound":"Dog name not found",
+      "commandEnterHelp":"~y~K9: ~w~You must be in a vehicle."
+    },
+    "illegalItems": [
+      "weed20g",
+      "weed4g",
+      "weedbrick",
+      "weed_packaged",
+      "weed_untrimmed",
+      "bagofdope",
+      "meth",
+      "meth10g",
+      "meth1g",
+      "methbrick",
+      "meth_packaged",
+      "meth_raw",
+      "cocaine_cut",
+      "cocaine_packaged",
+      "cocaine_uncut",
+      "coke10g",
+      "coke1g",
+      "cokebrick"
+    ],
+    "illegalWeapons": [
+        "WEAPON_BAT"
+    ]
+  }
