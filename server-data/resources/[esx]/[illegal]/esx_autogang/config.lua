@@ -282,5 +282,64 @@ Config.DispatchSquads = {
             {x=-16.45, y=552.51, z=175.17, h=317.13},
             {x=-18.15, y=558.05, z=180.58, h=317.13},
         },
+    },
+    Villa = {
+        Name = "Factory",
+        AlliesWith = {
+            GetHashKey("AMBIENT_GANG_MEXICAN"),
+            GetHashKey("AMBIENT_GANG_SALVA")
+        },
+        EnemiesWith = {
+            'vagos',
+            'unemployed',
+            'police',
+            'cardealer',
+            'mechanic',
+            'taxi',
+            'mafia'
+        },
+        Event = 89,
+        NumberOfWaves = 3,
+        NumberPerWave = 2,
+        TimeBetweenWaves = math.random(5000, 8000), -- in ms
+        TimeBeforeUpAgain = math.random(60000, 80000), -- time here minus time between waves = total wait
+        TriggerDistance = 40.78,
+        CentralPos = vector3(2434.4, 4965.64, 42.35),
+        RepSet = true,
+        TauntOnKill = true,
+        NPCs = {
+            GetHashKey('g_f_y_vagos_01'),
+            GetHashKey('ig_ramp_mex'),
+            GetHashKey('ig_ortega'),
+            GetHashKey('g_m_y_mexgoon_02')
+        },
+        NPCWeapons = {
+            {wep = GetHashKey('weapon_carbinerifle'), type='gun'},
+            {wep = GetHashKey('weapon_smg'), type='gun'},
+            --{wep = GetHashKey('weapon_rpg'), type='gun'},
+            --{wep = GetHashKey('weapon_minigun'), type='gun'},
+            --{wep = GetHashKey('weapon_microsmg'), type='gun'},
+        },
+        NPCSpawnPoints = {
+            {x=2427.97, y=4970.47, z=42.35, h=317.13},
+            {x=2431.6, y=4961.11, z=42.35, h=317.13},
+            {x=2432.92, y=4961.35, z=46.82, h=317.13},
+            {x=2436.8, y=4957.98, z=46.81, h=317.13},
+            {x=2439.3, y=4964.96, z=46.81, h=317.13},
+            {x=2441.23, y=4962.47, z=46.81, h=317.13},
+            {x=2432.34, y=4971.2, z=42.35, h=317.13},
+            {x=2429.77, y=4968.69, z=42.35, h=317.13},
+            {x=2430.03, y=4964.67, z=42.35, h=317.13},
+            {x=2427.97, y=4970.47, z=42.35, h=317.13},
+            {x=2431.6, y=4961.11, z=42.35, h=317.13},
+            {x=2432.92, y=4961.35, z=46.82, h=317.13},
+            {x=2436.8, y=4957.98, z=46.81, h=317.13},
+            {x=2439.3, y=4964.96, z=46.81, h=317.13},
+            {x=2441.23, y=4962.47, z=46.81, h=317.13},
+            {x=2432.34, y=4971.2, z=42.35, h=317.13},
+            {x=2429.77, y=4968.69, z=42.35, h=317.13},
+            {x=2430.03, y=4964.67, z=42.35, h=317.13},
+        },
     }
+
 }
