@@ -27,7 +27,7 @@ Config.DoorList = {
 	},
 
 	{
-		objName = 'prop_ld_jail_door',
+		objName = 'v_ilev_ph_cellgate',
 		objCoords  = {x=1771.97 ,y=2582.84,z=45.8},
 		textCoords = {x=1771.97 ,y=2582.84,z=46.8},
 		authorizedJobs = { 'police' },
