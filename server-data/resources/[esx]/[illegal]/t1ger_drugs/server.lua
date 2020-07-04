@@ -172,14 +172,18 @@ Citizen.CreateThread(function()
 			end
 
 			if v.RequiredZone then
+				--[[
 				local Zone = exports['esx_kingofthehill']:GetZone(v.RequiredZone)
 				local flag = table.contains(Zone.capturedBy, xPlayer.identifier)
 				if not flag then
 					TriggerClientEvent("esx:showNotification",source,"你並非".. v.RequiredZone .."的占領者")
 					return
 				end
+				--]]
+			else
+				TriggerClientEvent('reload:game1',source,k)
 			end
-			TriggerClientEvent('reload:game1',source,k)
+			--TriggerClientEvent('reload:game1',source,k)
 			--[[
 			if xPlayer.getInventoryItem(v.RewardItem).count <= v.MaxRewardItemInv.f or (not scale and xPlayer.getInventoryItem(v.RewardItem).count <= v.MaxRewardItemInv.e) then
 				if not Converting(GetPlayerIdentifier(source)) then
