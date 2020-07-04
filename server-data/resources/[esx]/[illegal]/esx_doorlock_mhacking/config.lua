@@ -4,6 +4,7 @@ Config.Locale = 'en'
 Config.DoorList = {
 
 	--newprison
+	--cell1F
 	{
 		objName = 430324891,
 		objCoords  = {x=1773.45 ,y=2589.87,z=45.8},
@@ -29,13 +30,36 @@ Config.DoorList = {
 	{
 		objName = 430324891,
 		objCoords  = {x=1771.97 ,y=2582.84,z=45.8},
-		textCoords = {x=1771.97 ,y=2581.38,z=45.8},
+		textCoords = {x=1771.97 ,y=2581.38,z=46.8},
 		authorizedJobs = { 'police' },
 		locked = true,
 		distance = 2,
 		size = 1,
 		KeyPass = "jaildoor_key"
 	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1771.645 ,y=2578.711,z=44.79},
+		textCoords = {x=1771.66 ,y=2577.53,z=46.8},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1771.64 ,y=2575.39,z=44.79},
+		textCoords = {x=1771.8 ,y=2573.75,z=46.8},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
 
 	{
 		objName = 'v_ilev_gtdoor02',
