@@ -144,13 +144,213 @@ Config.DoorList = {
 	{
 		objName = 430324891,
 		objCoords  = {x=1787.58 ,y=2572.67,z=49.54},
-		textCoords = {x=1787.61 ,y=2574.72,z=50.54},
+		textCoords = {x=1787.61 ,y=2574.72,z=51.54},
 		authorizedJobs = { 'police' },
 		locked = true,
 		distance = 2,
 		size = 1,
 		KeyPass = "jaildoor_key"
 	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1787.57 ,y=2576.57,z=49.54},
+		textCoords = {x=1787.47 ,y=2578.63,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1787.57 ,y=2584.45,z=49.54},
+		textCoords = {x=1787.61 ,y=2586.47,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1787.58 ,y=2588.40,z=49.54},
+		textCoords = {x=1787.61 ,y=2590.58,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1787.58 ,y=2592.40,z=49.54},
+		textCoords = {x=1787.61 ,y=2594.58,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1787.58 ,y=2596.40,z=49.54},
+		textCoords = {x=1787.61 ,y=2598.58,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1787.09 ,y=2600.00,z=49.54},
+		textCoords = {x=1785.05 ,y=2600.00,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1773.65 ,y=2599.99,z=49.54},
+		textCoords = {x=1773.61 ,y=2599.45,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1771.72 ,y=2599.01,z=49.54},
+		textCoords = {x=1771.73 ,y=2597.01,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1771.72 ,y=2595.01,z=49.54},
+		textCoords = {x=1771.73 ,y=2593.01,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1771.72 ,y=2591.01,z=49.54},
+		textCoords = {x=1771.73 ,y=2589.01,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1771.72 ,y=2587.01,z=49.54},
+		textCoords = {x=1771.73 ,y=2585.01,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1771.72 ,y=2583.01,z=49.54},
+		textCoords = {x=1771.73 ,y=2581.01,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1771.72 ,y=2579.01,z=49.54},
+		textCoords = {x=1771.73 ,y=2577.01,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1771.72 ,y=2575.01,z=49.54},
+		textCoords = {x=1771.73 ,y=2573.01,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1772.63 ,y=2570.01,z=49.54},
+		textCoords = {x=1774.67 ,y=2570.01,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1776.63 ,y=2570.01,z=49.54},
+		textCoords = {x=1778.67 ,y=2570.01,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1780.63 ,y=2570.01,z=49.54},
+		textCoords = {x=1782.67 ,y=2570.01,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1784.63 ,y=2570.01,z=49.54},
+		textCoords = {x=1786.67 ,y=2570.01,z=51.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	
 
 
 
