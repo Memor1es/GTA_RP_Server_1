@@ -74,7 +74,51 @@ Config.DoorList = {
 	{
 		objName = 430324891,
 		objCoords  = {x=1785.81 ,y=2572.02,z=44.7},
-		textCoords = {x=1785.89 ,y=2572.02,z=46.8},
+		textCoords = {x=1784.94 ,y=2572.18,z=46.8},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1787.58 ,y=2572.66,z=44.7},
+		textCoords = {x=1787.51 ,y=2574.61,z=46.8},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1787.57 ,y=2576.57,z=44.7},
+		textCoords = {x=1787.65 ,y=2578.49,z=46.8},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1787.57 ,y=2584.41,z=44.7},
+		textCoords = {x=1787.5 ,y=2586.12,z=46.8},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1784.60 ,y=2590.45,z=44.7},
+		textCoords = {x=1786.46 ,y=2589.67,z=46.8},
 		authorizedJobs = { 'police' },
 		locked = true,
 		distance = 2,
