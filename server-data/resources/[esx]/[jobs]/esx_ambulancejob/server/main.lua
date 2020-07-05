@@ -355,7 +355,8 @@ ESX.RegisterCommand('revive', 'admin', function(xPlayer, args, showError)
 		--local playerId = tonumber(args[1])
 		
 		if ESX.GetPlayerFromId(args.playerId) then
-			TriggerClientEvent('esx_ambulancejob:revive', args.playerId)
+			--TriggerClientEvent('esx_ambulancejob:revive', args.playerId)
+			args.playerId.triggerEvent('esx_ambulancejob:revive')
 		else
 			--TriggerClientEvent('chat:addMessage', source, { args = { '^1SYSTEM', 'Player not online.' } })
 			xPlayer.triggerEvent('chat:addMessage', source, { args = { '^1SYSTEM', 'Player not online.' } })
@@ -380,7 +381,8 @@ ESX.RegisterCommand('heal', 'admin', function(xPlayer, args, showError)
 		if ESX.GetPlayerFromId(args.playerId) then
 			if GetPlayerName(args.playerId) then
 				--print(('esx_basicneeds: %s healed %s'):format(GetPlayerIdentifier(source, 0), GetPlayerIdentifier(playerId, 0)))
-				TriggerClientEvent('esx_basicneeds:healPlayer', args.playerId)
+				--TriggerClientEvent('esx_basicneeds:healPlayer', args.playerId)
+				args.playerId.triggerEvent('esx_basicneeds:healPlayer')
 				xPlayer.triggerEvent('chat:addMessage', source, { args = { '^5HEAL', 'You have been healed.' } })
 			else
 				xPlayer.triggerEvent('chat:addMessage', source, { args = { '^1SYSTEM', 'Player not online.' } })
