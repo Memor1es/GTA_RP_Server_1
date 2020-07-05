@@ -145,7 +145,7 @@ UTK = {
         {a = nil, x= 2703.85, y= 1487.98, z= 24.50, h = 79.07 , m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 2707.36, y= 1473.13, z= 42.25, h = 77.42 , m = 0x2EFEAFD5, r = 2, w = "weapon_sniperrifle"},
     },
-    npc2 = {
+    --[[npc2 = {
         {a = nil, x= 1538.99, y= 2583.59, z= 62.70, h = 255.91, m = 0x2EFEAFD5, r = 2, w = "weapon_sniperrifle"},
         {a = nil, x= 1572.66, y= 2677.80, z= 62.75, h = 218.38, m = 0x2EFEAFD5, r = 2, w = "weapon_sniperrifle"},
         {a = nil, x= 1650.53, y= 2754.01, z= 62.89, h = 197.42, m = 0x2EFEAFD5, r = 2, w = "weapon_sniperrifle"},
@@ -232,6 +232,7 @@ UTK = {
         {a = nil, x= 1715.93, y= 2565.70, z= 55.44, h = 214.50, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 1721.84, y= 2563.32, z= 55.44, h = 154.27, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 1751.48, y= 2595.23, z= 55.44, h = 1.83, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
+        --[[{a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
@@ -240,8 +241,7 @@ UTK = {
         {a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
-        {a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
-    }
+    }]]
 }
 
 Citizen.CreateThread(function()
@@ -1154,7 +1154,7 @@ function UTK:NPCSpawn(...)
     SetModelAsNoLongerNeeded(0x2EFEAFD5)
     TriggerServerEvent("utk_pb:handlePlayers")
 end
-function UTK:NPCSpawnPrison(...)
+--[[function UTK:NPCSpawnPrison(...)
     RequestModel(0x2EFEAFD5)
     while not HasModelLoaded(0x2EFEAFD5) do
         Citizen.Wait(1)
@@ -1183,7 +1183,7 @@ function UTK:NPCSpawnPrison(...)
     end
     SetModelAsNoLongerNeeded(0x2EFEAFD5)
     TriggerServerEvent("utk_pb:handlePlayers")
-end
+end]]
 function UTK:Blackout(...)
     TriggerEvent("utk_pb:showtime", 1)
     repeat
@@ -1711,7 +1711,7 @@ UTKreset = {
         {a = nil, x= 2703.85, y= 1487.98, z= 24.50, h = 79.07 , m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 2707.36, y= 1473.13, z= 42.25, h = 77.42 , m = 0x2EFEAFD5, r = 2, w = "weapon_sniperrifle"},
     },
-    npc2 = {
+    --[[npc2 = {
         {a = nil, x= 1538.99, y= 2583.59, z= 62.70, h = 255.91, m = 0x2EFEAFD5, r = 2, w = "weapon_sniperrifle"},
         {a = nil, x= 1572.66, y= 2677.80, z= 62.75, h = 218.38, m = 0x2EFEAFD5, r = 2, w = "weapon_sniperrifle"},
         {a = nil, x= 1650.53, y= 2754.01, z= 62.89, h = 197.42, m = 0x2EFEAFD5, r = 2, w = "weapon_sniperrifle"},
@@ -1798,6 +1798,7 @@ UTKreset = {
         {a = nil, x= 1715.93, y= 2565.70, z= 55.44, h = 214.50, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 1721.84, y= 2563.32, z= 55.44, h = 154.27, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 1751.48, y= 2595.23, z= 55.44, h = 1.83, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
+        --[[{a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
@@ -1806,6 +1807,5 @@ UTKreset = {
         {a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
         {a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
-        {a = nil, x= 2677.87, y= 1593.11, z= 32.51, h = 263.42, m = 0x2EFEAFD5, r = 1, w = "weapon_smg"},
-    }
+    }]]
 }

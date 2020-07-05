@@ -130,7 +130,7 @@ function mycb1(success, timeremaining)
 end	
 
 function ApplyDoorState(doorID)
-	local closeDoor = GetClosestObjectOfType(doorID.objCoords.x, doorID.objCoords.y, doorID.objCoords.z, 1.0, GetHashKey(doorID.objName), false, false, false)
+	local closeDoor = GetClosestObjectOfType(doorID.objCoords.x, doorID.objCoords.y, doorID.objCoords.z, 1.0, doorID.objName, false, false, false)
 	FreezeEntityPosition(closeDoor, doorID.locked)
 end
 
