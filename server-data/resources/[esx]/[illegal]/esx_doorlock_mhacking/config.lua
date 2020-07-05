@@ -102,6 +102,19 @@ Config.DoorList = {
 		distance = 2,
 		size = 1,
 		KeyPass = "jaildoor_key"
+
+		
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1787.58 ,y=2580.47,z=44.7},
+		textCoords = {x=1787.56 ,y=2582.64,z=46.8},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
 	},
 
 	{
@@ -125,6 +138,21 @@ Config.DoorList = {
 		size = 1,
 		KeyPass = "jaildoor_key"
 	},
+
+	--cell2f
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1787.58 ,y=2572.67,z=49.54},
+		textCoords = {x=1787.61 ,y=2574.72,z=50.54},
+		authorizedJobs = { 'police' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+
 
 	{
 		objName = 'v_ilev_gtdoor02',
