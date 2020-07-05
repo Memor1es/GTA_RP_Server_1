@@ -17,7 +17,7 @@ Stores = {
 	["south_merryweather"] = {
 		position = { x = 569.34, y = -3126.35, z = 18.77 },
 		reward = math.random(5000, 15000),
-		nameOfStore = "Merryweather",
+		nameOfStore = "軍火商",
 		secondsRemaining = 1000, -- seconds
 		lastRobbed = 0
 	},
