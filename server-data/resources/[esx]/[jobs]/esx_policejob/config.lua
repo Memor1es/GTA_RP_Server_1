@@ -34,11 +34,15 @@ Config.PoliceStations = {
 		},
 
 		Cloakrooms = {
-			vector3(452.6, -992.8, 30.6)
+			vector3(452.6, -992.8, 30.6),
+			vector3(1850.88, 3693.43, 34.27),
+			vector3(-435.45, 6004.5, 31.72)
 		},
 
 		Armories = {
-			vector3(451.7, -980.1, 30.6)
+			vector3(451.7, -980.1, 30.6),
+			vector3(1842.62, 3691.62, 34.27),
+			vector3(-438.33, 5988.58, 31.72)
 		},
 
 		Vehicles = {
@@ -60,6 +64,35 @@ Config.PoliceStations = {
 					{ coords = vector3(475.9, -1021.6, 28.0), heading = 276.1, radius = 6.0 },
 					{ coords = vector3(484.1, -1023.1, 27.5), heading = 302.5, radius = 6.0 }
 				}
+			},
+
+			{
+				Spawner = vector3(1859.86, 3676.98, 33.65),
+				InsideShop = vector3(1859.86, 3676.98, 33.65),
+				SpawnPoints = {
+					{ coords = vector3(1855.18, 3672.61, 33.68), heading = 276.1, radius = 6.0 },
+					--{ coords = vector3(484.1, -1023.1, 27.5), heading = 302.5, radius = 6.0 }
+				}
+			},
+
+			{
+				Spawner = vector3(-459.57, 6030.55, 31.34),
+				InsideShop = vector3(-459.57, 6030.55, 31.34),
+				SpawnPoints = {
+					{ coords = vector3(-456.24, 6039.64, 31.34), heading = 134.22, radius = 6.0 },
+					{ coords = vector3(-459.04, 6042.94, 31.34), heading = 134.22, radius = 6.0 },
+					{ coords = vector3(-462.22, 6045.99, 31.34), heading = 134.22, radius = 6.0 },
+					--{ coords = vector3(484.1, -1023.1, 27.5), heading = 302.5, radius = 6.0 }
+				}
+			},
+
+			{
+				Spawner = vector3(543.79, -33.31, 72.14),
+				InsideShop = vector3(543.79, -33.31, 72.14),
+				SpawnPoints = {
+					{ coords = vector3(534.28, -26.38, 70.63), heading = 205.71, radius = 6.0 },
+					{ coords = vector3(529.28, -28.98, 70.63), heading = 205.71, radius = 6.0 }
+				}
 			}
 		},
 
@@ -74,7 +107,9 @@ Config.PoliceStations = {
 		},
 
 		BossActions = {
-			vector3(448.4, -973.2, 30.6)
+			vector3(448.4, -973.2, 30.6),
+			vector3(1861.31, 3688.84, 34.27),
+			vector3(-437.66, 5999.38, 31.72)
 		}
 
 	}
