@@ -364,9 +364,9 @@ Config.DoorList = {
 	--monitor
 
 	{
-		objName = 430324891,
+		objName = 1028191914,
 		objCoords  = {x=1780.35 ,y=2596.01,z=50.54},
-		textCoords = {x=1780.35 ,y=2596.01,z=52.54},
+		textCoords = {x=1779.35 ,y=2596.01,z=51.54},
 		authorizedJobs = { 'jesus' },
 		locked = true,
 		distance = 2,
@@ -375,7 +375,7 @@ Config.DoorList = {
 	},
 
 	
-	
+
 
 
 	{
