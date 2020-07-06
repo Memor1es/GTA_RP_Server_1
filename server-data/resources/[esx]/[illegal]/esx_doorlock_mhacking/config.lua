@@ -435,6 +435,30 @@ Config.DoorList = {
 		size = 1,
 		KeyPass = "jailA_key"
 	},
+
+	--1fbackdoor
+
+	{
+		objName = 1028191914,
+		objCoords  = {x=1785.97 ,y=2566.89,z=45.8},
+		textCoords = {x=1785.97 ,y=2567.89,z=46.8},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailA_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1768.38 ,y=2569.31,z=44.74},
+		textCoords = {x=1768.38 ,y=2570.13,z=45.74},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
 	
 	
 		--[[nightclub2
@@ -1104,6 +1128,16 @@ Config.DoorList = {
 		objName = 'prop_gate_prison_01',
 		objCoords  = {x = 1818.542, y = 2604.812, z = 44.611},
 		textCoords = {x = 1818.542, y = 2608.40, z = 48.00},
+		authorizedJobs = { 'police', 'jesus' },
+		locked = true,
+		distance = 12,
+		size = 2
+	},
+
+	{
+		objName = 'prop_gate_prison_01',
+		objCoords  = {x = 1806.939, y = 2616.975, z = 44.611},
+		textCoords = {x = 1795.76, y = 2617.9, z = 48.00},
 		authorizedJobs = { 'police', 'jesus' },
 		locked = true,
 		distance = 12,
