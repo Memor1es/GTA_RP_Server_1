@@ -426,7 +426,7 @@ Config.DoorList = {
 	},
 
 	{
-		objName = '262839150',
+		objName = 262839150,
 		objCoords  = {x=1791.07 ,y=2592.05,z=45.8},
 		textCoords = {x=1791.07 ,y=2593.05,z=46.8},
 		authorizedJobs = { 'jesus' },
