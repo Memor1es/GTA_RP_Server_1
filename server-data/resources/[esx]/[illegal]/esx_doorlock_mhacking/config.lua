@@ -523,7 +523,7 @@ Config.DoorList = {
 	--middoubledoor
 	{
 		objName = 262839150,
-		objCoords  = {x=1787.12 ,y=2609.73,z=46.3},
+		objCoords  = {x=1784.52 ,y=2609.67,z=46.3},
 		textCoords = {x=1785.12 ,y=2609.73,z=46.8},
 		authorizedJobs = { 'jesus' },
 		locked = true,
