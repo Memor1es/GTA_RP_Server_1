@@ -371,17 +371,64 @@ Config.DoorList = {
 		locked = true,
 		distance = 2,
 		size = 1,
-		KeyPass = "jaildoor_key"
+		KeyPass = "jailmon_key"
 	},
 
 	
-
-
+	--1ffood
 
 	{
-		objName = 'v_ilev_gtdoor02',
+		objName = 1028191914,
+		objCoords  = {x=1774.91 ,y=2593.75,z=45.97},
+		textCoords = {x=1774.91 ,y=2592.89,z=46.94},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailA_key"
+	},
+
+	{
+		objName = 1028191914,
+		objCoords  = {x=1783.89 ,y=2599.20,z=45.97},
+		textCoords = {x=1783.43 ,y=2598.25,z=46.94},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailA_key"
+	},
+
+	--1fout
+
+	{
+		objName = 262839150,
+		objCoords  = {x=1786.38 ,y=2600.20,z=45.97},
+		textCoords = {x=1785.53 ,y=2600.20,z=46.94},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailA_key"
+	},
+
+	--1fdoubledoor
+
+	{
+		objName = 1645000677,
+		objCoords  = {x=1791.06 ,y=2595.10,z=45.97},
+		textCoords = {x=1785.53 ,y=2600.20,z=46.94},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailA_key"
+	},
+
+	{
+		objName = '262839150',
 		objCoords  = {x=1791.07 ,y=2593.05,z=45.8},
-		textCoords = {x=1791.07 ,y=2593.05,z=45.8},
+		textCoords = {x=1791.07 ,y=2593.05,z=46.8},
 		authorizedJobs = { 'jesus' },
 		locked = true,
 		distance = 2,
