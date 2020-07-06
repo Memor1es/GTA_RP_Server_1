@@ -484,6 +484,40 @@ Config.DoorList = {
 		KeyPass = "jaildoor_key"
 	},
 	
+	--front
+
+	{
+		objName = -1033001619,
+		objCoords  = {x=1819.12 ,y=2593.64,z=46.09},
+		textCoords = {x=1819.12 ,y=2593.64,z=46.41},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = -1033001619,
+		objCoords  = {x=1837.71 ,y=2595.15,z=46.09},
+		textCoords = {x=1837.71 ,y=2595.15,z=46.41},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = -1033001619,
+		objCoords  = {x=1827.72 ,y=2584.64,z=46.09},
+		textCoords = {x=1827.72 ,y=2584.64,z=46.41},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
 	
 		--[[nightclub2
 		
