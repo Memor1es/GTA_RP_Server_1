@@ -543,6 +543,7 @@ Config.DoorList = {
 		KeyPass = "jailB_key"
 	},
 
+	--bulidingB1f
 	{
 		objName = 262839150,
 		objCoords  = {x=1787.06 ,y=2621.03,z=46.3},
@@ -614,7 +615,166 @@ Config.DoorList = {
 		KeyPass = "jailB_key"
 	},
 
+	--bulidingB2f
 
+	{
+		objName = 1028191914,
+		objCoords  = {x=1787.71 ,y=2606.00,z=50.73},
+		textCoords = {x=1787.71 ,y=2606.74,z=50.73},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailB_key"
+	},
+
+	{
+		objName = 1028191914,
+		objCoords  = {x=1780.92 ,y=2601.89,z=50.73},
+		textCoords = {x=1780.12 ,y=2602.3,z=50.73},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailB_key"
+	},
+
+	{
+		objName = 1028191914,
+		objCoords  = {x=1778.32 ,y=2601.79,z=50.73},
+		textCoords = {x=1778.98 ,y=2602.27,z=50.73},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailB_key"
+	},
+
+	--heavy crime
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1767.34 ,y=2607.43,z=49.54},
+		textCoords = {x=1767.73 ,y=2607.43,z=51.54},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	{
+		objName = 430324891,
+		objCoords  = {x=1763.16 ,y=2600.22,z=49.54},
+		textCoords = {x=1763.71 ,y=2600.22,z=51.54},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jaildoor_key"
+	},
+
+	
+	{
+		objName = 1028191914,
+		objCoords  = {x=1764.96 ,y=2608.42,z=50.54},
+		textCoords = {x=1764.96 ,y=2607.42,z=51.54},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailmon_key"
+	},
+
+	{
+		objName = 871712474,
+		objCoords  = {x=1765.19 ,y=2597.699,z=50.54},
+		textCoords = {x=1765.32 ,y=2596.96,z=51.54},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailheavy_key"
+	},
+
+	
+	{
+		objName = 871712474,
+		objCoords  = {x=1765.19 ,y=2594.699,z=50.54},
+		textCoords = {x=1765.32 ,y=2593.96,z=51.54},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailheavy_key"
+	},
+
+	{
+		objName = 871712474,
+		objCoords  = {x=1765.19 ,y=2591.699,z=50.54},
+		textCoords = {x=1765.32 ,y=2590.96,z=51.54},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailheavy_key"
+	},
+
+	{
+		objName = 871712474,
+		objCoords  = {x=1765.19 ,y=2588.699,z=50.54},
+		textCoords = {x=1765.32 ,y=2587.96,z=51.54},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailheavy_key"
+	},
+
+	
+	{
+		objName = 871712474,
+		objCoords  = {x=1762.77 ,y=2596.51,z=50.54},
+		textCoords = {x=1762.77 ,y=2597.51,z=51.54},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailheavy_key"
+	},
+
+	{
+		objName = 871712474,
+		objCoords  = {x=1762.77 ,y=2593.51,z=50.54},
+		textCoords = {x=1762.77 ,y=2594.51,z=51.54},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailheavy_key"
+	},
+
+	{
+		objName = 871712474,
+		objCoords  = {x=1762.77 ,y=2590.51,z=50.54},
+		textCoords = {x=1762.77 ,y=2589.51,z=51.54},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailheavy_key"
+	},
+
+	{
+		objName = 871712474,
+		objCoords  = {x=1762.77 ,y=2587.51,z=50.54},
+		textCoords = {x=1762.77 ,y=2586.51,z=51.54},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailheavy_key"
+	},
 
 	
 		--[[nightclub2
