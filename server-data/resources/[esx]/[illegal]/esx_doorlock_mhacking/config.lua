@@ -417,7 +417,7 @@ Config.DoorList = {
 	{
 		objName = 1645000677,
 		objCoords  = {x=1791.06 ,y=2595.10,z=45.97},
-		textCoords = {x=1791.07 ,y=2594.20,z=46.94},
+		textCoords = {x=1791.07 ,y=2594.20,z=46.8},
 		authorizedJobs = { 'jesus' },
 		locked = true,
 		distance = 2,
