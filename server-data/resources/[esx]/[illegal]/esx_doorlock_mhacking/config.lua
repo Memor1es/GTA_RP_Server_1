@@ -518,6 +518,104 @@ Config.DoorList = {
 		size = 1,
 		KeyPass = "jaildoor_key"
 	},
+
+	--buildingB
+	--middoubledoor
+	{
+		objName = 262839150,
+		objCoords  = {x=1787.12 ,y=2609.73,z=46.3},
+		textCoords = {x=1785.12 ,y=2609.73,z=46.8},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailB_key"
+	},
+
+	{
+		objName = 1645000677,
+		objCoords  = {x=1787.12 ,y=2609.73,z=46.3},
+		textCoords = {x=1786.36 ,y=2609.73,z=46.8},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailB_key"
+	},
+
+	{
+		objName = 262839150,
+		objCoords  = {x=1787.06 ,y=2621.03,z=46.3},
+		textCoords = {x=1786.22 ,y=2621.03,z=46.3},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailB_key"
+	},
+
+	
+	{
+		objName = 262839150,
+		objCoords  = {x=1787.06 ,y=2621.03,z=46.3},
+		textCoords = {x=1786.22 ,y=2621.03,z=46.3},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailB_key"
+	},
+
+	
+	{
+		objName = 1028191914,
+		objCoords  = {x=1781.95 ,y=2613.57,z=46.15},
+		textCoords = {x=1781.5 ,y=2614.62,z=46.3},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailB_key"
+	},
+
+		
+	{
+		objName = 1028191914,
+		objCoords  = {x=1781.85 ,y=2619.26,z=46.15},
+		textCoords = {x=1781.9 ,y=2618.3,z=46.3},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailB_key"
+	},
+
+			
+	{
+		objName = 1028191914,
+		objCoords  = {x=1769.17 ,y=2613.57,z=46.15},
+		textCoords = {x=1769.17 ,y=2614.3,z=46.3},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailB_key"
+	},
+
+				
+	{
+		objName = 1028191914,
+		objCoords  = {x=1769.17 ,y=2619.26,z=46.15},
+		textCoords = {x=1769.17 ,y=2618.3,z=46.3},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailB_key"
+	},
+
+
+
 	
 		--[[nightclub2
 		
