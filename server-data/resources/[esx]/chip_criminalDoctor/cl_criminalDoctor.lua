@@ -42,7 +42,7 @@ Citizen.CreateThread(function()
   SetBlipAsShortRange(blip, true)
 
   BeginTextCommandSetBlipName('STRING')
-  AddTextComponentSubstringPlayerName("Underground Doctor")
+  AddTextComponentSubstringPlayerName("黑傑克")
   EndTextCommandSetBlipName(blip)
 end
 end)
@@ -77,13 +77,13 @@ Citizen.CreateThread(function()
       local isHurt = GetEntityHealth(ped) < 200
       for k,v in ipairs(Config.DoctorBed) do
           if (GetDistanceBetweenCoords(coords, v.x, v.y, v.z, true) < 2.0) then     
-              Draw3DText(v.x, v.y, v.z, "~b~[E]~s~ to get help [~g~$" .. Config.toPay .. "~s~]" )
+              Draw3DText(v.x, v.y, v.z, "~b~[E]~s~ 來接受治療 [~g~$" .. Config.toPay .. "~s~]" )
               if IsControlJustReleased(0, 38) and GetDistanceBetweenCoords(coords, v.x, v.y, v.z, true) < 3.0 and isHurt then 
                   local ped = PlayerPedId()
                   TriggerServerEvent("chip_cDoc:takeMoney")
               elseif IsControlJustReleased(0, 38) and not isHurt and CurrentBed ~= nil then
                 print("weg")
-                exports['mythic_notify']:DoHudText('error', 'You are not hurt!', { ['background-color'] = 'red', ['color'] = '#fff' })
+                exports['mythic_notify']:DoHudText('error', '你沒有受傷!', { ['background-color'] = 'red', ['color'] = '#fff' })
               end
           end
       end
@@ -148,7 +148,7 @@ AddEventHandler("chip_cDoc:getHelp", function()
   TriggerEvent("mythic_progressbar:client:progress", {
     name = "unique_action_name",
     duration = 20000,
-    label = "You are being treated...",
+    label = "你正在接受治療...",
     useWhileDead = false,
     canCancel = true,
     controlDisables = {
