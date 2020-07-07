@@ -482,14 +482,40 @@ Citizen.CreateThread(function()
 					-- Combine the delta values (Get the largest of the three)
 					local healthEngineCombinedDelta = math.max(healthEngineDeltaScaled, healthBodyDeltaScaled, healthPetrolTankDeltaScaled)
 
+					if healthEngineCombinedDelta ~= 0.0 then
+						print("first")
+						print(healthEngineCombinedDelta)
+					end
+
 					-- If huge damage, scale back a bit
+					--[[
 					if healthEngineCombinedDelta > (healthEngineCurrent - cfg.engineSafeGuard) then
 						healthEngineCombinedDelta = healthEngineCombinedDelta * 0.7
+					end
+					]]--
+					if healthEngineCombinedDelta >= 1000 then
+						healthEngineCombinedDelta = healthEngineCombinedDelta * 0.65
+					elseif healthEngineCombinedDelta >= 800 then
+						healthEngineCombinedDelta = healthEngineCombinedDelta * 0.7
+					elseif healthEngineCombinedDelta >= 600 then
+						healthEngineCombinedDelta = healthEngineCombinedDelta * 0.75
+					elseif healthEngineCombinedDelta >= 400 then
+						healthEngineCombinedDelta = math.sqrt(healthEngineCombinedDelta) * 17
+					end
+
+					if healthEngineCombinedDelta ~= 0.0 then
+						print("second")
+						print(healthEngineCombinedDelta)
 					end
 
 					-- If complete damage, but not catastrophic (ie. explosion territory) pull back a bit, to give a couple of seconds og engine runtime before dying
 					if healthEngineCombinedDelta > healthEngineCurrent then
 						healthEngineCombinedDelta = healthEngineCurrent - (cfg.cascadingFailureThreshold / 5)
+					end
+
+					if healthEngineCombinedDelta ~= 0.0 then
+						print("third")
+						print(healthEngineCombinedDelta)
 					end
 
 

@@ -359,7 +359,7 @@ ESX.RegisterCommand('revive', 'admin', function(xPlayer, args, showError)
 			args.playerId.triggerEvent('esx_ambulancejob:revive')
 		else
 			--TriggerClientEvent('chat:addMessage', source, { args = { '^1SYSTEM', 'Player not online.' } })
-			xPlayer.triggerEvent('chat:addMessage', source, { args = { '^1SYSTEM', 'Player not online.' } })
+			args.playerId.triggerEvent('chat:addMessage', { args = { '^1SYSTEM', 'Player not online.' } })
 		end
 	--end
 

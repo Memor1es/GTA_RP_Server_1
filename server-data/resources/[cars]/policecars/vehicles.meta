@@ -6,7 +6,7 @@
     <Item>
       <modelName>sp1</modelName>
       <txdName>sp1</txdName>
-      <handlingId>POLICE</handlingId>
+      <handlingId>POLICE3</handlingId>
       <gameName>sp1</gameName>
       <vehicleMakeName>SoundOff Pack CVPI</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -127,7 +127,7 @@
 	<Item>
       <modelName>sp2</modelName>
       <txdName>sp2</txdName>
-      <handlingId>POLICE</handlingId>
+      <handlingId>POLICE3</handlingId>
       <gameName>sp2</gameName>
       <vehicleMakeName>SoundOff Pack Slicktop CVPI</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -248,7 +248,7 @@
 	<Item>
       <modelName>sp3</modelName>
       <txdName>sp3</txdName>
-      <handlingId>POLICE2</handlingId>
+      <handlingId>POLICE3</handlingId>
       <gameName>sp3</gameName>
       <vehicleMakeName>SoundOff Pack FPIS</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -375,7 +375,7 @@
 	<Item>
       <modelName>sp4</modelName>
       <txdName>sp4</txdName>
-      <handlingId>POLICE2</handlingId>
+      <handlingId>POLICE3</handlingId>
       <gameName>sp4</gameName>
       <vehicleMakeName>SoundOff Pack Slicktop FPIS</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -502,7 +502,7 @@
 	<Item>
       <modelName>sp5</modelName>
       <txdName>sp5</txdName>
-      <handlingId>POLICE2</handlingId>
+      <handlingId>POLICE3</handlingId>
       <gameName>sp5</gameName>
       <vehicleMakeName>SoundOff Pack Impala</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -629,7 +629,7 @@
 	<Item>
       <modelName>sp6</modelName>
       <txdName>sp6</txdName>
-      <handlingId>POLICE2</handlingId>
+      <handlingId>POLICE3</handlingId>
       <gameName>sp6</gameName>
       <vehicleMakeName>SoundOff Pack Slicktop Impala</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -756,7 +756,7 @@
 	<Item>
       <modelName>sp7</modelName>
       <txdName>sp7</txdName>
-      <handlingId>POLICE2</handlingId>
+      <handlingId>POLICE3</handlingId>
       <gameName>sp7</gameName>
       <vehicleMakeName>SoundOff Pack Old Charger</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -883,7 +883,7 @@
 	<Item>
       <modelName>sp8</modelName>
       <txdName>sp8</txdName>
-      <handlingId>POLICE2</handlingId>
+      <handlingId>POLICE3</handlingId>
       <gameName>sp8</gameName>
       <vehicleMakeName>SoundOff Pack Slicktop Old Charger</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -1010,7 +1010,7 @@
 	<Item>
       <modelName>sp9</modelName>
       <txdName>sp9</txdName>
-      <handlingId>POLICE2</handlingId>
+      <handlingId>POLICE3</handlingId>
       <gameName>sp9</gameName>
       <vehicleMakeName>SoundOff Pack New Charger</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -1137,7 +1137,7 @@
 	<Item>
       <modelName>sp10</modelName>
       <txdName>sp10</txdName>
-      <handlingId>POLICE2</handlingId>
+      <handlingId>POLICE3</handlingId>
       <gameName>sp10</gameName>
       <vehicleMakeName>SoundOff Pack Slicktop New Charger</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -1264,7 +1264,7 @@
 	<Item>
       <modelName>sp11</modelName>
       <txdName>sp11</txdName>
-      <handlingId>BALLER3</handlingId>
+      <handlingId>TOROS</handlingId>
       <gameName>sp11</gameName>
       <vehicleMakeName>SoundOff Pack Old FPIU</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -1391,7 +1391,7 @@
 	<Item>
       <modelName>sp12</modelName>
       <txdName>sp12</txdName>
-      <handlingId>BALLER3</handlingId>
+      <handlingId>TOROS</handlingId>
       <gameName>sp12</gameName>
       <vehicleMakeName>SoundOff Pack Slicktop Old FPIU</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -1518,7 +1518,7 @@
 	<Item>
       <modelName>sp13</modelName>
       <txdName>sp13</txdName>
-      <handlingId>BALLER3</handlingId>
+      <handlingId>TOROS</handlingId>
       <gameName>sp13</gameName>
       <vehicleMakeName>SoundOff Pack New FPIU</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -1645,7 +1645,7 @@
 	<Item>
       <modelName>sp14</modelName>
       <txdName>sp14</txdName>
-      <handlingId>BALLER3</handlingId>
+      <handlingId>TOROS</handlingId>
       <gameName>sp14</gameName>
       <vehicleMakeName>SoundOff Pack Slicktop New FPIU</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -1772,7 +1772,7 @@
 	<Item>
       <modelName>sp15</modelName>
       <txdName>sp15</txdName>
-      <handlingId>BALLER3</handlingId>
+      <handlingId>TOROS</handlingId>
       <gameName>sp15</gameName>
       <vehicleMakeName>SoundOff Pack Super New FPIU</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
@@ -1899,7 +1899,7 @@
 	<Item>
       <modelName>sp16</modelName>
       <txdName>sp16</txdName>
-      <handlingId>BALLER3</handlingId>
+      <handlingId>TOROS</handlingId>
       <gameName>sp16</gameName>
       <vehicleMakeName>SoundOff Pack Slicktop Super New FPIU</vehicleMakeName>
       <expressionDictName>null</expressionDictName>

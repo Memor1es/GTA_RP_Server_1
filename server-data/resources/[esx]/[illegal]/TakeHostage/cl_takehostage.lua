@@ -26,6 +26,14 @@ local holdingHostageInProgress = false
 local takeHostageAnimNamePlaying = ""
 local takeHostageAnimDictPlaying = ""
 local takeHostageControlFlagPlaying = 0
+ESX = nil
+
+Citizen.CreateThread(function()
+	while ESX == nil do
+		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+		Citizen.Wait(0)
+	end
+end)
 
 RegisterCommand("takehostage",function()
 	takeHostage()
@@ -237,7 +245,8 @@ Citizen.CreateThread(function()
 			DisableControlAction(0,58,true) -- disable weapon
 			DisablePlayerFiring(GetPlayerPed(-1),true)
 			local playerCoords = GetEntityCoords(GetPlayerPed(-1))
-			DrawText3D(playerCoords.x,playerCoords.y,playerCoords.z,"按下 [G] 來釋放, [H] 來殺死")
+			ESX.ShowHelpNotification("按下 ~INPUT_THROW_GRENADE~ ~g~來釋放  ~s~~INPUT_VEH_HEADLIGHT~ ~r~來殺死")
+			-- DrawText3D(playerCoords.x,playerCoords.y,playerCoords.z,"按下 [G] 來釋放, [H] 來殺死")
 			if IsDisabledControlJustPressed(0,47) then --release	
 				holdingHostage = false
 				holdingHostageInProgress = false 

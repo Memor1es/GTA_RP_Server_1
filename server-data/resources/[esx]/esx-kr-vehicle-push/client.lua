@@ -61,7 +61,8 @@ Citizen.CreateThread(function()
         if Vehicle.Vehicle ~= nil then
  
                 if IsVehicleSeatFree(Vehicle.Vehicle, -1) and GetVehicleEngineHealth(Vehicle.Vehicle) <= Config.DamageNeeded then
-                    ESX.Game.Utils.DrawText3D({x = Vehicle.Coords.x, y = Vehicle.Coords.y, z = Vehicle.Coords.z}, '按下 [~g~SHIFT~w~] 以及 [~g~E~w~] 來推動車輛', 0.4)
+                    ESX.ShowHelpNotification("按下 ~INPUT_VEH_MOVE_UP_ONLY~ 及 ~INPUT_TALK~ ~g~來推動車輛")
+                    -- ESX.Game.Utils.DrawText3D({x = Vehicle.Coords.x, y = Vehicle.Coords.y, z = Vehicle.Coords.z}, '按下 [~g~SHIFT~w~] 以及 [~g~E~w~] 來推動車輛', 0.4)
                 end
      
 

@@ -17,6 +17,7 @@ files {
     'weaponsnspistol.meta',
     'weaponspecialcarbine.meta',
     'weaponvintagepistol.meta',
+    'weaponminismg.meta'
 }
 
 data_file 'WEAPONINFO_FILE_PATCH' 'weapons.meta'
@@ -34,3 +35,4 @@ data_file 'WEAPONINFO_FILE_PATCH' 'weaponrevolver.meta'
 data_file 'WEAPONINFO_FILE_PATCH' 'weaponsnspistol.meta'
 data_file 'WEAPONINFO_FILE_PATCH' 'weaponspecialcarbine.meta'
 data_file 'WEAPONINFO_FILE_PATCH' 'weaponvintagepistol.meta'
+data_file 'WEAPONINFO_FILE_PATCH' 'weaponminismg.meta'
