@@ -8,9 +8,9 @@ local TreDMe = false -- necesitas 3dme: https://github.com/Sheamle/3dme pon fals
 local debug = true -- log f8
 local duschar = { 
 	["Lägenhetsdusch1"] = { ["x"] = 1764.86, ["y"] = 2580.84, ["z"] = 45.8, ["h"] = 92.74},
-	["Lägenhetsdusch1"] = { ["x"] = 1764.86, ["y"] = 2582.93, ["z"] = 45.8, ["h"] = 92.74},
-	["Lägenhetsdusch1"] = { ["x"] = 1761.9, ["y"] = 2582.93, ["z"] = 45.8, ["h"] = 267.56},
-	["Lägenhetsdusch1"] = { ["x"] = 1761.9, ["y"] = 2580.84, ["z"] = 45.8, ["h"] = 267.56}
+	["Lägenhetsdusch2"] = { ["x"] = 1764.86, ["y"] = 2582.93, ["z"] = 45.8, ["h"] = 92.74},
+	["Lägenhetsdusch3"] = { ["x"] = 1761.9, ["y"] = 2582.93, ["z"] = 45.8, ["h"] = 267.56},
+	["Lägenhetsdusch4"] = { ["x"] = 1761.9, ["y"] = 2580.84, ["z"] = 45.8, ["h"] = 267.56}
 	
 	--	["Dusch1"] = { ["x"] = -1382.77, ["y"] = -1328.39, ["z"] = 3.3, ["h"] = 261.38}, --Ducha Publica
     --	["Dusch2"] = { ["x"] = -1243.76, ["y"] = -1537.76, ["z"] = 3.45, ["h"] = 260.36}, --Ducha Publica
