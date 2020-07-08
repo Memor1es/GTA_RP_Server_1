@@ -2037,7 +2037,7 @@ DP.PropEmotes = {
    {
        Prop = "prop_food_tray_02",
        PropBone = 28422,
-       PropPlacement = {0.025, 0.08, 0.255, -145.0, 290.0, 0.0},
+       PropPlacement = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
        EmoteLoop = true,
        EmoteMoving = true,
    }},
@@ -2045,7 +2045,7 @@ DP.PropEmotes = {
    {
        Prop = "prop_food_tray_03",
        PropBone = 28422,
-       PropPlacement = {0.025, 0.08, 0.255, -145.0, 290.0, 0.0},
+       PropPlacement = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
        EmoteLoop = true,
        EmoteMoving = true,
    }},
