@@ -138,7 +138,7 @@ Config.Workouts = {
     }, {
         x = 1769.82,
         y = 2590.17,
-        z = 46.21,
+        z = 44.21,
         h = 289.74,
         label = "Bench",
         workout = 6,
