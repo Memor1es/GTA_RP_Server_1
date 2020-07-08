@@ -1429,7 +1429,8 @@ Config.DoorList = {
 		authorizedJobs = { 'police', 'jesus' },
 		locked = true,
 		distance = 12,
-		size = 2
+		size = 2,
+		KeyPass = "jailcar_key"
 	},
 	{
 		objName = 'v_ilev_cbankvaulgate01',
@@ -1447,7 +1448,8 @@ Config.DoorList = {
 		authorizedJobs = { 'police', 'jesus' },
 		locked = true,
 		distance = 12,
-		size = 2
+		size = 2,
+		KeyPass = "jailcar_key"
 	},
 
 	{
@@ -1457,7 +1459,8 @@ Config.DoorList = {
 		authorizedJobs = { 'police', 'jesus' },
 		locked = true,
 		distance = 12,
-		size = 2
+		size = 2,
+		KeyPass = "jailcar_key"
 	},
 	{
 		objName = 'hei_prop_bh1_08_hdoor',
