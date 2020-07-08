@@ -89,24 +89,24 @@
 	clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 20% 50%, 0% 0%);
 }
 #varHealth > #boxSetHealth {
-	background: rgb(173, 68, 76);
+	background: rgb(59, 177, 116);
 }
 #varArmor > #boxSetArmour {
-	background: rgb(82, 156, 125);
+	background: rgb(66, 137, 255);
 }
 
 #varHunger > #boxSetHunger {
-	background: rgb(181, 150, 63);
+	background: rgb(210, 155, 67);
 	
 }
 
 #varThirst > #boxSetThirst {
-	background: rgb(45, 152, 166);
+	background: rgb(80, 125, 181);
 	
 }
 
 #varOxygen > #boxSetOxygen {
-	background: rgb(105, 111, 135);
+	background: rgb(76, 91, 117);
 }
 
 #varStamina > #boxSetStamina {
@@ -114,7 +114,7 @@
 }
 
 #varStress > #boxSetStress {
-	background: rgb(245, 9, 9);
+	background: rgb(192, 59, 59);
 	margin-left: -2%;
 }
 
