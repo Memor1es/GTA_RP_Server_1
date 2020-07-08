@@ -10,13 +10,27 @@ local Keys = {
     ["NENTER"] = 201, ["N4"] = 108, ["N5"] = 60, ["N6"] = 107, ["N+"] = 96, ["N-"] = 97, ["N7"] = 117, ["N8"] = 61, ["N9"] = 118
 }
 local listOn = false
+local PlayerData = {}
 ESX = nil
 Citizen.CreateThread(function()
     while ESX == nil do
         TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
         Citizen.Wait(0)
     end
+
+    while ESX.GetPlayerData().job == nil do
+		Citizen.Wait(10)
+	end
+
+	PlayerData = ESX.GetPlayerData()
 end)
+
+RegisterNetEvent('esx:setJob')
+AddEventHandler('esx:setJob', function(job)
+	PlayerData.job = job
+end)
+
+
 Citizen.CreateThread(function()
     listOn = false
     while true do
@@ -63,6 +77,7 @@ Citizen.CreateThread(function()
                     police = police_txt,
                     taxi = taxi,
                     mechanic = mechanic,
+                    my_job = PlayerData.job
                 })
                 end)
                 end)
