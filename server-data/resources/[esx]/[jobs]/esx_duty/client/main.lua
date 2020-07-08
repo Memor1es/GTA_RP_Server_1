@@ -98,6 +98,26 @@ Citizen.CreateThread(function ()
                     end
                   end
 
+                  if PlayerData.job.name == 'offpolice' or PlayerData.job.name =='police' and currentZone=='PoliceDutyMid' then
+                    SetTextComponentFormat('STRING')
+                    AddTextComponentString(CurrentActionMsg)
+                    DisplayHelpTextFromStringLabel(0, 0, 1, -1)
+
+                    if IsControlJustPressed(0, Keys['E']) then
+                        TriggerServerEvent('duty:onoff')
+                    end
+                  end
+
+                  if PlayerData.job.name == 'offpolice' or PlayerData.job.name =='police' and currentZone=='PoliceDutyNorth' then
+                    SetTextComponentFormat('STRING')
+                    AddTextComponentString(CurrentActionMsg)
+                    DisplayHelpTextFromStringLabel(0, 0, 1, -1)
+
+                    if IsControlJustPressed(0, Keys['E']) then
+                        TriggerServerEvent('duty:onoff')
+                    end
+                  end
+
                   if PlayerData.job.name == 'offtaxi' or PlayerData.job.name =='taxi' and currentZone=='TaxiDuty' then
                     SetTextComponentFormat('STRING')
                     AddTextComponentString(CurrentActionMsg)
@@ -141,6 +161,12 @@ Citizen.CreateThread(function ()
         DrawMarker(v.Type, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
         end
         if PlayerData.job.name == 'offpolice' or PlayerData.job.name =='police' and k=='PoliceDuty' then
+          DrawMarker(v.Type, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
+        end
+        if PlayerData.job.name == 'offpolice' or PlayerData.job.name =='police' and k=='PoliceDutyMid' then
+          DrawMarker(v.Type, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
+        end
+        if PlayerData.job.name == 'offpolice' or PlayerData.job.name =='police' and k=='PoliceDutyNorth' then
           DrawMarker(v.Type, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
         end
         if PlayerData.job.name == 'offtaxi' or PlayerData.job.name =='taxi' and k=='TaxiDuty' then
