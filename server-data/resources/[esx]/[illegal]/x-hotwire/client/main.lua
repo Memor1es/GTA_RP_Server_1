@@ -721,12 +721,10 @@ Citizen.CreateThread( function()
         Citizen.Wait(1)
         local robbing = false
         if GetVehiclePedIsTryingToEnter(GetPlayerPed(-1)) ~= nil and GetVehiclePedIsTryingToEnter(GetPlayerPed(-1)) ~= 0 then
-            local curveh = GetVehiclePedIsTryingToEnter(GetPlayerPed(-1))
-            if GetVehicleDoorLockStatus(curveh) == 1 then
-                robbing = true
-                local plate = GetVehicleNumberPlateText(curveh)
-                TrackVehicle(plate,curveh)
-            end
+          robbing = true
+          local curveh = GetVehiclePedIsTryingToEnter(GetPlayerPed(-1))
+          local plate = GetVehicleNumberPlateText(curveh)
+          TrackVehicle(plate,curveh)
         if trackedVehicles[plate].canTurnOver == false then
             local pedDriver = GetPedInVehicleSeat(curveh, -1)
             if pedDriver ~= 0 and (not IsPedAPlayer(pedDriver) or IsEntityDead(pedDriver)) then
@@ -874,7 +872,10 @@ Citizen.CreateThread(function()
         for k, v in pairs(trackedVehicles) do
             --if not v.canTurnOver or v.state == 0 then
             if not v.canTurnOver then
-                SetVehicleEngineOn(v.vehicle, false, false)
+                local pedDriver = GetPedInVehicleSeat(v.vehicle, -1)
+                if IsPedAPlayer(pedDriver) then
+                    SetVehicleEngineOn(v.vehicle, false, false)
+                end
             elseif v.state == 1 then
                 SetVehicleEngineOn(v.vehicle, true, false)
                 v.state = -1
