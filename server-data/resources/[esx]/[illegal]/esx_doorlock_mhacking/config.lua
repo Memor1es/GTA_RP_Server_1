@@ -986,7 +986,7 @@ Config.DoorList = {
 	},]]
 	
 
-	--[[{
+	{
 		objName = 'v_ilev_bl_doorsl_r2',
 		objCoords  = {x = 354.71, y = -596.59, z = 28.77},
 		textCoords = {x = 354.71, y = -596.59, z = 29.22},
@@ -996,7 +996,7 @@ Config.DoorList = {
 		size = 2,
 		KeyPass = "property4_key"
 	},
-
+--[[
 	{
 		objName = 'v_ilev_bl_doorsl_r2',
 		objCoords  = {x = 355.23, y = -595.36, z = 28.77},
