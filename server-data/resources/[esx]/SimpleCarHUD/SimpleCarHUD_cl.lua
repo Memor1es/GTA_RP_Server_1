@@ -122,6 +122,7 @@ Citizen.CreateThread(function()
                 end
 
                 -- When player in driver seat, handle cruise control
+                --[[
                 if (GetPedInVehicleSeat(vehicle, -1) == player) then
                     -- Check if cruise control button pressed, toggle state and set maximum speed appropriately
                     if IsControlJustReleased(0, cruiseInput) and (enableController or GetLastInputMethod(0)) then
@@ -134,7 +135,7 @@ Citizen.CreateThread(function()
                     -- Reset cruise control
                     cruiseIsOn = false
                 end
-
+                --]]
                 -- Check what units should be used for speed
                 if ShouldUseMetricMeasurements() then
                     -- Get vehicle speed in KPH and draw speedometer
