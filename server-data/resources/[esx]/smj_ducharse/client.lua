@@ -157,7 +157,7 @@ Citizen.CreateThread(function()
 			if GetDistanceBetweenCoords(coords, v["x"], v["y"], v["z"], true) < 100 then
 				DrawMarker(27, v["x"], v["y"], v["z"], 0.0, 0.0, 0.0, 0, 0.0, 0.0, 2.0, 2.0, 2.0, 0, 0, 0, 0, false, true, 2, false, false, false, false)
 				if GetDistanceBetweenCoords(coords, v["x"], v["y"], v["z"], true) < 1.5 then
-					DrawText3D(v["x"], v["y"], v["z"]+0.9, '[~r~E~s~] ~b~洗澡', 1.5)
+					DrawText3D(v["x"], v["y"], v["z"]+0.9, '[~r~E~s~] ~b~洗澡', 0.5)
 					if IsControlPressed(0, 38) then
 						isSmutsig = false
 						local hashSkin = GetHashKey("mp_m_freemode_01") 	
