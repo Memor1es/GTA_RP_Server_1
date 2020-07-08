@@ -2033,6 +2033,23 @@ DP.PropEmotes = {
        EmoteLoop = true,
        EmoteMoving = true,
    }},
+   ["tray1"] = {"anim@heists@box_carry@", "idle", "tray1 餐盤1", AnimationOptions =
+   {
+       Prop = "prop_food_tray_02",
+       PropBone = 28422,
+       PropPlacement = {0.025, 0.08, 0.255, -145.0, 290.0, 0.0},
+       EmoteLoop = true,
+       EmoteMoving = true,
+   }},
+   ["tray2"] = {"anim@heists@box_carry@", "idle", "tray2 餐盤2", AnimationOptions =
+   {
+       Prop = "prop_food_tray_03",
+       PropBone = 28422,
+       PropPlacement = {0.025, 0.08, 0.255, -145.0, 290.0, 0.0},
+       EmoteLoop = true,
+       EmoteMoving = true,
+   }},
+
    ["clean"] = {"timetable@floyd@clean_kitchen@base", "base", "Clean 擦玻璃", AnimationOptions =
    {
        Prop = "prop_sponge_01",
