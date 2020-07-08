@@ -1,11 +1,18 @@
 
 ================================================================
-======== FXServer starting - 2020/6/29 下午9:24:58
+======== FXServer starting - 2020/7/8 下午10:22:04
 ================================================================
 Creating script environments for _cfx_internal
+Found new resource ar_k9 in C:/GTA_RP_Server_1\server-data/resources//ar_k9
+Found new resource EasyAdmin in C:/GTA_RP_Server_1\server-data/resources//EasyAdmin
+Found new resource mdt in C:/GTA_RP_Server_1\server-data/resources//mdt
+Found new resource ObjectNameFromHash in C:/GTA_RP_Server_1\server-data/resources//ObjectNameFromHash
+Found new resource pun_idgun in C:/GTA_RP_Server_1\server-data/resources//pun_idgun
 Found new resource vMenu in C:/GTA_RP_Server_1\server-data/resources//vMenu
+Found new resource wk_wars2x in C:/GTA_RP_Server_1\server-data/resources//wk_wars2x
 Found new resource monitor in C:\GTA_RP_Server_1\server2524\citizen/system_resources//monitor
 Found new resource webadmin in C:\GTA_RP_Server_1\server2524\citizen/system_resources//webadmin
+Found new resource policecars in C:/GTA_RP_Server_1\server-data/resources//[cars]/policecars
 Found new resource esx_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_ability
 Found new resource esx_amb_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_amb_ability
 Found new resource esx_charselect in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_charselect
@@ -15,6 +22,7 @@ Found new resource esx_identity in C:/GTA_RP_Server_1\server-data/resources//[ch
 Found new resource esx_lock_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_lock_ability
 Found new resource esx_mech_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_mech_ability
 Found new resource pd-spawn in C:/GTA_RP_Server_1\server-data/resources//[char]/pd-spawn
+Found new resource ooc in C:/GTA_RP_Server_1\server-data/resources//[easy]/ooc
 Found new resource async in C:/GTA_RP_Server_1\server-data/resources//[essential]/async
 Found new resource es_extended in C:/GTA_RP_Server_1\server-data/resources//[essential]/es_extended
 Found new resource mysql-async in C:/GTA_RP_Server_1\server-data/resources//[essential]/mysql-async
@@ -28,10 +36,16 @@ Found new resource esx_garage in C:/GTA_RP_Server_1\server-data/resources//[esx]
 Found new resource esx_license in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_license
 Found new resource esx_lscustom in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_lscustom
 Found new resource esx_society in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_society
+Found new resource esx_speedcamera in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_speedcamera
+Found new resource heli in C:/GTA_RP_Server_1\server-data/resources//[esx]/heli
 Found new resource InteractSound in C:/GTA_RP_Server_1\server-data/resources//[esx]/InteractSound
 Found new resource InteractSoundS in C:/GTA_RP_Server_1\server-data/resources//[esx]/InteractSoundS
+Found new resource lux_vehcontrol in C:/GTA_RP_Server_1\server-data/resources//[esx]/lux_vehcontrol
 Found new resource new_banking in C:/GTA_RP_Server_1\server-data/resources//[esx]/new_banking
+Found new resource ocrp_postal_map in C:/GTA_RP_Server_1\server-data/resources//[esx]/ocrp_postal_map
+Found new resource Optimized3DME in C:/GTA_RP_Server_1\server-data/resources//[esx]/Optimized3DME
 Found new resource simpletp in C:/GTA_RP_Server_1\server-data/resources//[esx]/simpletp
+Found new resource SmartTrafficLights in C:/GTA_RP_Server_1\server-data/resources//[esx]/SmartTrafficLights
 Found new resource st-cctv in C:/GTA_RP_Server_1\server-data/resources//[esx]/st-cctv
 Found new resource vSync in C:/GTA_RP_Server_1\server-data/resources//[esx]/vSync
 Found new resource zffb_dice in C:/GTA_RP_Server_1\server-data/resources//[esx]/zffb_dice
@@ -56,17 +70,22 @@ Found new resource sessionmanager-rdr3 in C:/GTA_RP_Server_1\server-data/resourc
 Found new resource yarn in C:/GTA_RP_Server_1\server-data/resources//[system]/yarn
 Found new resource example-loadscreen in C:/GTA_RP_Server_1\server-data/resources//[test]/example-loadscreen
 Found new resource fivem in C:/GTA_RP_Server_1\server-data/resources//[test]/fivem
-Found new resource weaponchange in C:/GTA_RP_Server_1\server-data/resources//[weapon]/weaponchange
+Found new resource ChairBedSystem in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/ChairBedSystem
 Found new resource dpclothing in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/dpclothing
 Found new resource dpemotes in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/dpemotes
+Found new resource esx_ruskiarrest in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/esx_ruskiarrest
 Found new resource fingerpoint in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/fingerpoint
+Found new resource HideInTrunk in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/HideInTrunk
 Found new resource lkrp_notepad in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/lkrp_notepad
+Found new resource seatbelt in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/seatbelt
+Found new resource SeatShuffle in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/SeatShuffle
 Found new resource crafting in C:/GTA_RP_Server_1\server-data/resources//[esx]/[crafting]/crafting
 Found new resource esx_crafting in C:/GTA_RP_Server_1\server-data/resources//[esx]/[crafting]/esx_crafting
 Found new resource lockpick in C:/GTA_RP_Server_1\server-data/resources//[esx]/[crafting]/lockpick
 Found new resource reload-skillbar in C:/GTA_RP_Server_1\server-data/resources//[esx]/[crafting]/reload-skillbar
 Found new resource esx_autogang in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_autogang
 Found new resource esx_carthief in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_carthief
+Found new resource esx_doorlockv3 in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_doorlockv3
 Found new resource esx_doorlock_mhacking in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_doorlock_mhacking
 Found new resource esx_drugeffects in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_drugeffects
 Found new resource esx_drugs in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_drugs
@@ -91,6 +110,7 @@ Found new resource esx_inventoryhud in C:/GTA_RP_Server_1\server-data/resources/
 Found new resource prison_status_panel in C:/GTA_RP_Server_1\server-data/resources//[esx]/[inventory]/prison_status_panel
 Found new resource skeletalsystem in C:/GTA_RP_Server_1\server-data/resources//[esx]/[inventory]/skeletalsystem
 Found new resource esx_ambulancejob in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_ambulancejob
+Found new resource esx_duty in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_duty
 Found new resource esx_gym in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_gym
 Found new resource esx_joblisting in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_joblisting
 Found new resource esx_jobs in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_jobs
@@ -103,14 +123,18 @@ Found new resource esx-wanted in C:/GTA_RP_Server_1\server-data/resources//[esx]
 Found new resource rad_gsr in C:/GTA_RP_Server_1\server-data/resources//[esx]/[police]/rad_gsr
 Found new resource Tackle in C:/GTA_RP_Server_1\server-data/resources//[esx]/[police]/Tackle
 Found new resource esx_accessories in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_accessories
+Found new resource esx_barbershop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_barbershop
+Found new resource esx_clotheshop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_clotheshop
 Found new resource esx_foodtruck in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_foodtruck
 Found new resource esx_jimmybm in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_jimmybm
 Found new resource esx_newaccessories in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_newaccessories
 Found new resource esx_np_skinshop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_np_skinshop
 Found new resource esx_np_skinshop_v2 in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_np_skinshop_v2
 Found new resource esx_shops in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_shops
+Found new resource esx_tattooshop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_tattooshop
 Found new resource esx_vehicleshop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_vehicleshop
 Found new resource esx_weaponshop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_weaponshop
+Found new resource LegacyFuel in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/LegacyFuel
 Found new resource esx_skin in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/esx_skin
 Found new resource skinchanger in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/skinchanger
 Found new resource esx_basicneeds in C:/GTA_RP_Server_1\server-data/resources//[esx]/[status]/esx_basicneeds
@@ -121,29 +145,34 @@ Found new resource esx_addonaccount in C:/GTA_RP_Server_1\server-data/resources/
 Found new resource esx_addoninventory in C:/GTA_RP_Server_1\server-data/resources//[esx]/[storage]/esx_addoninventory
 Found new resource esx_datastore in C:/GTA_RP_Server_1\server-data/resources//[esx]/[storage]/esx_datastore
 Found new resource esx_kingofthehill in C:/GTA_RP_Server_1\server-data/resources//[esx]/[stronghold]/esx_kingofthehill
+Found new resource carcontrol in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/carcontrol
 Found new resource esx_menu_default in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/esx_menu_default
 Found new resource esx_menu_dialog in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/esx_menu_dialog
 Found new resource esx_menu_list in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/esx_menu_list
+Found new resource esx_scoreboard2 in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/esx_scoreboard2
 Found new resource esx_watch in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/esx_watch
 Found new resource mythic_notify in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/mythic_notify
 Found new resource mythic_progbar in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/mythic_progbar
 Found new resource mythic_progressbar in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/mythic_progressbar
+Found new resource NoReticle in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/NoReticle
 Found new resource pNotify in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/pNotify
 Found new resource progressBars in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/progressBars
 Found new resource showcoords in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/showcoords
+Found new resource SimpleCarHUD in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/SimpleCarHUD
 Found new resource st-hud in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/st-hud
+Found new resource st-hudv2 in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/st-hudv2
 Found new resource st-menu in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/st-menu
 Found new resource carremote in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/carremote
-Found new resource ddg151 in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/ddg151
 Found new resource garageshitz in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/garageshitz
-Found new resource HMS in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/HMS
-Found new resource oceanjet in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/oceanjet
+Found new resource RealisticVehicleFailure in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/RealisticVehicleFailure
 Found new resource whiteplate in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/whiteplate
 Found new resource ls-radio in C:/GTA_RP_Server_1\server-data/resources//[esx]/[voice]/ls-radio
 Found new resource tokovoip_script in C:/GTA_RP_Server_1\server-data/resources//[esx]/[voice]/tokovoip_script
 Found new resource CLEAR_NPC in C:/GTA_RP_Server_1\server-data/resources//[esx]/[weapon]/CLEAR_NPC
 Found new resource esx_guy293_holsterweapon in C:/GTA_RP_Server_1\server-data/resources//[esx]/[weapon]/esx_guy293_holsterweapon
 Found new resource SB-NoHead in C:/GTA_RP_Server_1\server-data/resources//[esx]/[weapon]/SB-NoHead
+Found new resource weaponchange in C:/GTA_RP_Server_1\server-data/resources//[esx]/[weapon]/weaponchange
+Found new resource weaponsfx in C:/GTA_RP_Server_1\server-data/resources//[esx]/[weapon]/weaponsfx
 Found new resource fivem-map-hipster in C:/GTA_RP_Server_1\server-data/resources//[gamemodes]/[maps]/fivem-map-hipster
 Found new resource fivem-map-skater in C:/GTA_RP_Server_1\server-data/resources//[gamemodes]/[maps]/fivem-map-skater
 Found new resource redm-map-one in C:/GTA_RP_Server_1\server-data/resources//[gamemodes]/[maps]/redm-map-one
@@ -152,6 +181,9 @@ Found new resource hospitalsandy in C:/GTA_RP_Server_1\server-data/resources//[m
 Found new resource PetClinic in C:/GTA_RP_Server_1\server-data/resources//[map]/[health]/PetClinic
 Found new resource smokey_hory in C:/GTA_RP_Server_1\server-data/resources//[map]/[health]/smokey_hory
 Found new resource paletopd in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/paletopd
+Found new resource phxlspd in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/phxlspd
+Found new resource policevw in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/policevw
+Found new resource police_garage in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/police_garage
 Found new resource sandysheriff in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/sandysheriff
 Found new resource sandysheriffsmall in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/sandysheriffsmall
 Found new resource int_prisonfull in C:/GTA_RP_Server_1\server-data/resources//[map]/[prison]/int_prisonfull
@@ -165,10 +197,15 @@ Found new resource vagos in C:/GTA_RP_Server_1\server-data/resources//[map]/[str
 Found new resource webpack in C:/GTA_RP_Server_1\server-data/resources//[system]/[builders]/webpack
 Found new resource utk_ornateheist in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/[UTK]/utk_ornateheist
 Found new resource utk_ornateprops in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/[UTK]/utk_ornateprops
+Found new resource utk_powerplant in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/[UTK]/utk_powerplant
 Found new resource character in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/[eup]/character
 Found new resource fashionA in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/[eup]/fashionA
 Found new resource NativeUI in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/[eup]/NativeUI
 Found new resource UniformsB in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/[eup]/UniformsB
+Found new resource ddg151 in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/[mods]/ddg151
+Found new resource HMS in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/[mods]/HMS
+Found new resource maserati in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/[mods]/maserati
+Found new resource oceanjet in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/[mods]/oceanjet
 Found new resource tpplage in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/[TeleportScriptbeach]/tpplage
 Creating script environments for sessionmanager
 Started resource sessionmanager
@@ -182,6 +219,7 @@ Creating script environments for monitor
 Started resource monitor
 Creating script environments for chat
 Started resource chat
+Stopping resource webadmin
 Creating script environments for mysql-async
 Started resource mysql-async
 Creating script environments for async
@@ -192,10 +230,10 @@ Creating script environments for esx_identity
 Started resource esx_identity
 Creating script environments for esx_charselect
 Started resource esx_charselect
+Creating script environments for ooc
+Started resource ooc
 Creating script environments for ls-radio
 Started resource ls-radio
-Creating script environments for tokovoip_script
-Started resource tokovoip_script
 Started resource esx_menu_default
 Started resource esx_menu_list
 Started resource esx_menu_dialog
@@ -208,9 +246,17 @@ Started resource showcoords
 Started resource pNotify
 Creating script environments for esx_watch
 Started resource esx_watch
+Creating script environments for InteractSound
+Started resource InteractSound
+Creating script environments for InteractSoundS
+Started resource InteractSoundS
+Creating script environments for carcontrol
+Instantiated instance of script server.server.
+Started resource carcontrol
+Creating script environments for esx_scoreboard2
+Started resource esx_scoreboard2
 Creating script environments for esx_status
 Started resource esx_status
-Started resource CARP-status
 Creating script environments for skeletalsystem
 Started resource skeletalsystem
 Creating script environments for esx_gift_tree
@@ -275,8 +321,8 @@ Creating script environments for cron
 Started resource cron
 Creating script environments for esx_gym
 Started resource esx_gym
-Creating script environments for esx_foodtruck
-Started resource esx_foodtruck
+Creating script environments for esx_duty
+Started resource esx_duty
 Creating script environments for esx_jimmybm
 Started resource esx_jimmybm
 Creating script environments for esx_shops
@@ -287,23 +333,42 @@ Creating script environments for esx_np_skinshop_v2
 Started resource esx_np_skinshop_v2
 Creating script environments for esx_newaccessories
 Started resource esx_newaccessories
+Creating script environments for LegacyFuel
+Started resource LegacyFuel
+Creating script environments for esx_tattooshop
+Started resource esx_tattooshop
+Creating script environments for esx_clotheshop
+Started resource esx_clotheshop
 Started resource st-menu
-Started resource st-hud
+Started resource st-hudv2
 Creating script environments for dpemotes
 Started resource dpemotes
 Started resource dpclothing
 Started resource fingerpoint
 Couldn't find resource lkrp_notepad532.
+Started resource HideInTrunk
+Started resource SeatShuffle
+Started resource seatbelt
+Creating script environments for esx_ruskiarrest
+Started resource esx_ruskiarrest
+Started resource policecars
 Creating script environments for garageshitz
 Started resource garageshitz
 Creating script environments for carremote
 Started resource carremote
 Creating script environments for whiteplate
 Started resource whiteplate
+Creating script environments for lux_vehcontrol
+Started resource lux_vehcontrol
+Creating script environments for heli
+Started resource heli
+Started resource SimpleCarHUD
 Creating script environments for vMenu
 Instantiated instance of script vMenuServer.BanManager.
 Instantiated instance of script vMenuServer.MainServer.
 Started resource vMenu
+Creating script environments for EasyAdmin
+Started resource EasyAdmin
 Creating script environments for vSync
 Started resource vSync
 Creating script environments for esx_society
@@ -321,15 +386,15 @@ Creating script environments for new_banking
 Started resource new_banking
 Started resource zffb_dice
 Started resource esx-kr-vehicle-push
-Creating script environments for InteractSound
-Started resource InteractSound
-Creating script environments for InteractSoundS
-Started resource InteractSoundS
 Creating script environments for esx_lscustom
 Started resource esx_lscustom
 Couldn't find resource esx_caraction.
 Creating script environments for simpletp
 Started resource simpletp
+Creating script environments for SmartTrafficLights
+Started resource SmartTrafficLights
+Creating script environments for esx_speedcamera
+Started resource esx_speedcamera
 Started resource CLEAR_NPC
 Started resource SB-NoHead
 Started resource esx_guy293_holsterweapon
@@ -378,6 +443,8 @@ Started resource esx_knatusrobberybank
 Creating script environments for utk_ornateheist
 Started resource utk_ornateheist
 Started resource utk_ornateprops
+Creating script environments for utk_powerplant
+Started resource utk_powerplant
 Creating script environments for crafting
 Started resource crafting
 Creating script environments for esx_crafting
@@ -401,10 +468,24 @@ Started resource PetClinic
 Started resource hospitalsandy
 Started resource sandysheriff
 Started resource paletopd
+Started resource police_garage
+Started resource policevw
+Started resource phxlspd
+Started resource weaponsfx
 Started resource weaponchange
+Started resource ocrp_postal_map
+Creating script environments for Optimized3DME
+Started resource Optimized3DME
+Creating script environments for wk_wars2x
+Started resource wk_wars2x
+Started resource ObjectNameFromHash
+Started resource pun_idgun
+Creating script environments for RealisticVehicleFailure
+Started resource RealisticVehicleFailure
 Started resource ddg151
 Started resource oceanjet
 Started resource HMS
+Started resource maserati
 Creating script environments for hardcap
 Started resource hardcap
 Creating script environments for rconlog
@@ -414,11 +495,26 @@ Could not open 96x96Logo.png for reading.
 Authenticating server license key...
 Server license key authentication succeeded. Welcome!
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+
+EasyAdmin: webadmin-lua is not installed on this Server, webadmin features unavailable
 [txAdminClientLUA] Threads and commands set up. All Ready.
 [es_extended] [INFO] ESX developed by ESX-Org has been initialized
 Authenticating with Nucleus...
-server thread hitch warning: timer interval of 2745 milliseconds
+server thread hitch warning: timer interval of 1196 milliseconds
+[carcontrol] Authorized.
 [mysql-async] Database server connection established.
+
+--------------------------------------------------------------------------
+
+EasyAdmin (EasyAdmin) is outdated.
+Newest Version: 5.212
+Your Version: 5.133
+Please update it from https://github.com/Bluethefurry/EasyAdmin
+
+Update Changelog:
+Fix Bans not working through GUI
+
+--------------------------------------------------------------------------
 
 dp Emotes (dpemotes) is up to date. (173)
         fff                          
@@ -428,229 +524,1585 @@ cc     ff     xx   ... rr     eeeee
  ccccc ff   xx  xx ... rr      eeeee 
                                      
 Authenticated with cfx.re Nucleus: https://5328765879-vq64le.users.cfx.re/
+ 
+  //
+  ||    __          __        _ _   _                _____   _____   ___ __   __
+  ||    \ \        / /       (_) | | |         /\   |  __ \ / ____| |__ \\ \ / /
+  ||     \ \  /\  / / __ __ _ _| |_| |__      /  \  | |__) | (___      ) |\ V / 
+  ||      \ \/  \/ / '__/ _` | | __| '_ \    / /\ \ |  _  / \___ \    / /  > <  
+  ||       \  /\  /| | | (_| | | |_| | | |  / ____ \| | \ \ ____) |  / /_ / . \ 
+  ||        \/  \/ |_|  \__,_|_|\__|_| |_| /_/    \_\_|  \_\_____/  |____/_/ \_\
+  ||
+  ||                             Created by WolfKnight
+  ||
+  ||    Current version: 1.2.3
+  ||    Latest recommended version: 1.2.4
+  ||
+  ||    Your Wraith ARS 2X version is outdated, visit the FiveM forum post to get the latest version.
+  \\
+
 Connecting: hoyuzi
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-server thread hitch warning: timer interval of 292 milliseconds
-[es_extended] [INFO] A player with name "Yuzi Ho" has connected to the server with assigned player id 1
-INFO: User [1] hoyuzi authenticated - [1] [1] hoyuzi@116.241.142.90:56279:56279
-Stopping resource tokovoip_script
-[txAdminClientLUA] Sending resources list to txAdmin.
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Stopping resource simpletp
-Creating script environments for simpletp
-Started resource simpletp
-Stopping resource simpletp
-Creating script environments for simpletp
-Started resource simpletp
-Stopping resource simpletp
-Creating script environments for simpletp
-Started resource simpletp
-Stopping resource simpletp
-Creating script environments for simpletp
-Started resource simpletp
-Stopping resource prison_status_panel
-Started resource prison_status_panel
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Check gym expirations
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Check gym expirations
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Check gym expirations
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved player "Yuzi Ho"
-[es_extended] [INFO] Saved 1 player(s)
-[es_extended] [INFO] Saved player "Yuzi Ho"
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Connecting: hoyuzi
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+server thread hitch warning: timer interval of 283 milliseconds
 [es_extended] [INFO] A player with name "Yuzi Ho" has connected to the server with assigned player id 2
-INFO: User [2] hoyuzi authenticated - [1] [2] hoyuzi@116.241.142.90:60088:60088
+INFO: User [2] hoyuzi authenticated - [1] [2] hoyuzi@116.241.142.90:65351:65351
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Connecting: kb11111
+Stopping resource esx_policejob
+Stopping resource esx_inventoryhud
+Creating script environments for esx_inventoryhud
+Started resource esx_inventoryhud
+server thread hitch warning: timer interval of 705 milliseconds
+Stopping resource esx_inventoryhud
+Creating script environments for esx_inventoryhud
+Started resource esx_inventoryhud
+server thread hitch warning: timer interval of 215 milliseconds
+Argument count mismatch (passed 0, wanted 1)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Kaba Han" has connected to the server with assigned player id 3
+[es_extended] [INFO] Saved player "Yuzi Ho"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved 1 player(s)
+Connecting: hoyuzi
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Yuzi Ho" has connected to the server with assigned player id 4
+INFO: User [4] hoyuzi authenticated - [1] [4] hoyuzi@116.241.142.90:65526:65526
+Stopping resource esx_inventoryhud
+Creating script environments for esx_inventoryhud
+Started resource esx_inventoryhud
+server thread hitch warning: timer interval of 476 milliseconds
+Stopping resource esx_inventoryhud
+Creating script environments for esx_inventoryhud
+Started resource esx_inventoryhud
+server thread hitch warning: timer interval of 516 milliseconds
+Stopping resource esx_inventoryhud
+Creating script environments for esx_inventoryhud
+Started resource esx_inventoryhud
+server thread hitch warning: timer interval of 212 milliseconds
+Stopping resource esx_inventoryhud
+Creating script environments for esx_inventoryhud
+Started resource esx_inventoryhud
+server thread hitch warning: timer interval of 450 milliseconds
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 2 player(s)
+Stopping resource esx_inventoryhud
+Creating script environments for esx_inventoryhud
+Started resource esx_inventoryhud
+server thread hitch warning: timer interval of 512 milliseconds
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Connecting: hoyuzi
+INFO: User [5] hoyuzi authenticated - [1] [5] hoyuzi@116.241.142.90:49310:49310
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Connecting: hoyuzi
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Yuzi Ho" has connected to the server with assigned player id 6
+INFO: User [6] hoyuzi authenticated - [1] [6] hoyuzi@116.241.142.90:49389:49389
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 2 player(s)
+Stopping resource esx_speedcamera
+Creating script environments for esx_speedcamera
+Started resource esx_speedcamera
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource esx_speedcamera
+Creating script environments for esx_speedcamera
+Started resource esx_speedcamera
+[ERROR] [MySQL] [esx_billing] An error happens on MySQL for query "INSERT INTO billing (identifier, sender, target_type, target, label, amount, time) VALUES ('bdb61aedf51af1f3d551aedb0a77c148a0b9e57b', 'bdb61aedf51af1f3d551aedb0a77c148a0b9e57b', 'society', 'society_police', '測速照相機 (90KM/H)，超速121 - 140公里', 5600, 1594220037)": ER_BAD_FIELD_ERROR: Unknown column 'time' in 'field list'
+[ERROR] [MySQL] [esx_billing] An error happens on MySQL for query "INSERT INTO billing (identifier, sender, target_type, target, label, amount, time) VALUES ('bdb61aedf51af1f3d551aedb0a77c148a0b9e57b', 'bdb61aedf51af1f3d551aedb0a77c148a0b9e57b', 'society', 'society_police', '危險駕駛', 4000, 1594220037)": ER_BAD_FIELD_ERROR: Unknown column 'time' in 'field list'
+[ERROR] [MySQL] [esx_billing] An error happens on MySQL for query "INSERT INTO billing (identifier, sender, target_type, target, label, amount, time) VALUES ('bdb61aedf51af1f3d551aedb0a77c148a0b9e57b', 'bdb61aedf51af1f3d551aedb0a77c148a0b9e57b', 'society', 'society_police', '測速照相機 (90KM/H)，超速21 - 40公里', 1600, 1594220088)": ER_BAD_FIELD_ERROR: Unknown column 'time' in 'field list'
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Check gym expirations
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 2 player(s)
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved 2 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 2 player(s)
+
+--------------------------------------------------------------------------
+
+EasyAdmin (EasyAdmin) is outdated.
+Newest Version: 5.212
+Your Version: 5.133
+Please update it from https://github.com/Bluethefurry/EasyAdmin
+
+Update Changelog:
+Fix Bans not working through GUI
+
+--------------------------------------------------------------------------
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved 2 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved 2 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 2 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+SCRIPT ERROR: citizen:/scripting/lua/MessagePack.lua:830: missing bytes
+SCRIPT ERROR: citizen:/scripting/lua/MessagePack.lua:830: missing bytes
+SCRIPT ERROR: citizen:/scripting/lua/MessagePack.lua:830: missing bytes
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Check gym expirations
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved 2 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Kaba Han"
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 [es_extended] [INFO] Saved player "Yuzi Ho"
 [es_extended] [INFO] Saved 1 player(s)
+Connecting: Nana
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Luo Lin" has connected to the server with assigned player id 7
+INFO: User [7] Nana authenticated - [2] [7] Nana@36.233.125.182:14847:14847
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 2 player(s)
+
+--------------------------------------------------------------------------
+
+EasyAdmin (EasyAdmin) is outdated.
+Newest Version: 5.212
+Your Version: 5.133
+Please update it from https://github.com/Bluethefurry/EasyAdmin
+
+Update Changelog:
+Fix Bans not working through GUI
+
+--------------------------------------------------------------------------
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 [es_extended] [INFO] Saved player "Yuzi Ho"
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Check gym expirations
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved 1 player(s)
+[txAdminClientLUA] Sending resources list to txAdmin.
+Stopping resource esx_duty
+Creating script environments for esx_duty
+Started resource esx_duty
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
+Hello1
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved 1 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Connecting: kb11111
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Kaba Han" has connected to the server with assigned player id 8
+take car
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved 2 player(s)
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Check gym expirations
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
+Connecting: simply_
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved 2 player(s)
+[es_extended] [INFO] A player with name "Youngin Ng" has connected to the server with assigned player id 9
+INFO: User [9] simply_ authenticated - [1] [9] simply_@223.25.73.48:59387:59387
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+Creating script environments for esx_policejob
+Started resource esx_policejob
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved 3 player(s)
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "4255213cc899ca517cf0813ccb97f63fe090a737"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "4255213cc899ca517cf0813ccb97f63fe090a737"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Connecting: hoyuzi
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Yuzi Ho" has connected to the server with assigned player id 10
+INFO: User [10] hoyuzi authenticated - [3] [10] hoyuzi@116.241.142.90:52160:52160
+Stopping resource SimpleCarHUD
+Started resource SimpleCarHUD
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Connecting: 麗山劉德華
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource esx_policejob
+Creating script environments for esx_policejob
+Started resource esx_policejob
+server thread hitch warning: timer interval of 196 milliseconds
+[es_extended] [INFO] A player with name "Test Aaa" has connected to the server with assigned player id 11
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "4255213cc899ca517cf0813ccb97f63fe090a737"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "4255213cc899ca517cf0813ccb97f63fe090a737"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved player "Test Aaa"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved 5 player(s)
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "4255213cc899ca517cf0813ccb97f63fe090a737"
+
+--------------------------------------------------------------------------
+
+EasyAdmin (EasyAdmin) is outdated.
+Newest Version: 5.212
+Your Version: 5.133
+Please update it from https://github.com/Bluethefurry/EasyAdmin
+
+Update Changelog:
+Fix Bans not working through GUI
+
+--------------------------------------------------------------------------
+Connecting: JK
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "4255213cc899ca517cf0813ccb97f63fe090a737"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "4255213cc899ca517cf0813ccb97f63fe090a737"
+[es_extended] [INFO] A player with name "Jk C" has connected to the server with assigned player id 12
+INFO: User [12] JK authenticated - [4] [12] JK@150.116.218.124:56931:56931
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+[es_extended] [WARNING] Ignoring invalid .setJob() usage for "94d5b23189212335713fa46303508583642add6f"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Jk C"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Connecting: jackcheng86
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+INFO: User [13] jackcheng86 authenticated - [4] [13] jackcheng86@150.116.218.124:57182:57182
+[es_extended] [INFO] A player with name "Jk C" has connected to the server with assigned player id 13
+got to srv cmg3_animations:sync
+got that fucking attach flag as: true
+triggering to target: 8
+got to srv cmg3_animations:sync
+got that fucking attach flag as: false
+triggering to target: 8
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+server thread hitch warning: timer interval of 182 milliseconds
+[es_extended] [INFO] Saved player "Test Aaa"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource simpletp
+Creating script environments for simpletp
+Started resource simpletp
+Stopping resource simpletp
+Creating script environments for simpletp
+Started resource simpletp
+server thread hitch warning: timer interval of 158 milliseconds
+Stopping resource simpletp
+Creating script environments for simpletp
+Started resource simpletp
+Stopping resource simpletp
+Creating script environments for simpletp
+Started resource simpletp
+server thread hitch warning: timer interval of 171 milliseconds
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved 5 player(s)
+Stopping resource simpletp
+Creating script environments for simpletp
+Started resource simpletp
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved 5 player(s)
+[es_extended] [INFO] Saved player "Jk C"
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 4 player(s)
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
+Connecting: jackcheng86
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+server thread hitch warning: timer interval of 167 milliseconds
+INFO: User [14] jackcheng86 authenticated - [4] [14] jackcheng86@150.116.218.124:57598:57598
+[es_extended] [INFO] A player with name "Jk C" has connected to the server with assigned player id 14
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource x-hotwire
+Creating script environments for x-hotwire
+Started resource x-hotwire
+Check gym expirations
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved 5 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+SCRIPT ERROR: @esx_datastore/server/main.lua:47: attempt to get length of a nil value (field '?')
+> handler (@esx_datastore/server/main.lua:69)
+> ref (@esx_np_skinshop_v2/server/main.lua:41)
+> TriggerServerCallback (@es_extended/server/functions.lua:160)
+> handler (@es_extended/server/common.lua:72)
+[es_extended] [INFO] Saved player "Jk C"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Connecting: jackcheng86
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Jk C" has connected to the server with assigned player id 15
+INFO: User [15] jackcheng86 authenticated - [4] [15] jackcheng86@150.116.218.124:57802:57802
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved 5 player(s)
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+Stopping resource x-hotwire
+Creating script environments for x-hotwire
+Started resource x-hotwire
+server thread hitch warning: timer interval of 160 milliseconds
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 5 player(s)
+
+--------------------------------------------------------------------------
+
+EasyAdmin (EasyAdmin) is outdated.
+Newest Version: 5.212
+Your Version: 5.133
+Please update it from https://github.com/Bluethefurry/EasyAdmin
+
+Update Changelog:
+Fix Bans not working through GUI
+
+--------------------------------------------------------------------------
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Kaba Han"
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved 4 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource dpemotes
+Creating script environments for dpemotes
+Started resource dpemotes
+server thread hitch warning: timer interval of 1237 milliseconds
+
+dp Emotes (dpemotes) is up to date. (173)
+Stopping resource dpemotes
+Creating script environments for dpemotes
+Started resource dpemotes
+
+dp Emotes (dpemotes) is up to date. (173)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved 4 player(s)
+Stopping resource dpemotes
+Creating script environments for dpemotes
+Started resource dpemotes
+
+dp Emotes (dpemotes) is up to date. (173)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Started resource mdt
+server thread hitch warning: timer interval of 155 milliseconds
+Stopping resource dpemotes
+Creating script environments for dpemotes
+Started resource dpemotes
+
+dp Emotes (dpemotes) is up to date. (173)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource st-menu
+Started resource st-menu
+server thread hitch warning: timer interval of 266 milliseconds
+Stopping resource dpemotes
+Creating script environments for dpemotes
+Started resource dpemotes
+
+dp Emotes (dpemotes) is up to date. (173)
+Stopping resource dpemotes
+Creating script environments for dpemotes
+Started resource dpemotes
+
+dp Emotes (dpemotes) is up to date. (173)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource dpemotes
+Creating script environments for dpemotes
+Started resource dpemotes
+
+dp Emotes (dpemotes) is up to date. (173)
+Stopping resource dpemotes
+Creating script environments for dpemotes
+Started resource dpemotes
+
+dp Emotes (dpemotes) is up to date. (173)
+Stopping resource dpemotes
+Creating script environments for dpemotes
+Started resource dpemotes
+
+dp Emotes (dpemotes) is up to date. (173)
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved 4 player(s)
+Stopping resource dpemotes
+Creating script environments for dpemotes
+Started resource dpemotes
+
+dp Emotes (dpemotes) is up to date. (173)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource dpemotes
+Creating script environments for dpemotes
+Started resource dpemotes
+
+dp Emotes (dpemotes) is up to date. (173)
+Stopping resource dpemotes
+Creating script environments for dpemotes
+Started resource dpemotes
+
+dp Emotes (dpemotes) is up to date. (173)
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Check gym expirations
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved 4 player(s)
+server thread hitch warning: timer interval of 154 milliseconds
+server thread hitch warning: timer interval of 152 milliseconds
+server thread hitch warning: timer interval of 152 milliseconds
+server thread hitch warning: timer interval of 156 milliseconds
+server thread hitch warning: timer interval of 156 milliseconds
+server thread hitch warning: timer interval of 154 milliseconds
+server thread hitch warning: timer interval of 173 milliseconds
+server thread hitch warning: timer interval of 157 milliseconds
+server thread hitch warning: timer interval of 166 milliseconds
+server thread hitch warning: timer interval of 193 milliseconds
+server thread hitch warning: timer interval of 153 milliseconds
+server thread hitch warning: timer interval of 166 milliseconds
+server thread hitch warning: timer interval of 194 milliseconds
+server thread hitch warning: timer interval of 161 milliseconds
+server thread hitch warning: timer interval of 156 milliseconds
+server thread hitch warning: timer interval of 152 milliseconds
+server thread hitch warning: timer interval of 185 milliseconds
+server thread hitch warning: timer interval of 168 milliseconds
+server thread hitch warning: timer interval of 162 milliseconds
+server thread hitch warning: timer interval of 170 milliseconds
+server thread hitch warning: timer interval of 166 milliseconds
+server thread hitch warning: timer interval of 172 milliseconds
+server thread hitch warning: timer interval of 175 milliseconds
+server thread hitch warning: timer interval of 152 milliseconds
+server thread hitch warning: timer interval of 196 milliseconds
+server thread hitch warning: timer interval of 181 milliseconds
+server thread hitch warning: timer interval of 156 milliseconds
+server thread hitch warning: timer interval of 172 milliseconds
+server thread hitch warning: timer interval of 156 milliseconds
+server thread hitch warning: timer interval of 206 milliseconds
+server thread hitch warning: timer interval of 168 milliseconds
+server thread hitch warning: timer interval of 188 milliseconds
+server thread hitch warning: timer interval of 152 milliseconds
+server thread hitch warning: timer interval of 165 milliseconds
+server thread hitch warning: timer interval of 169 milliseconds
+server thread hitch warning: timer interval of 154 milliseconds
+server thread hitch warning: timer interval of 199 milliseconds
+server thread hitch warning: timer interval of 166 milliseconds
+server thread hitch warning: timer interval of 155 milliseconds
+server thread hitch warning: timer interval of 166 milliseconds
+server thread hitch warning: timer interval of 170 milliseconds
+server thread hitch warning: timer interval of 174 milliseconds
+server thread hitch warning: timer interval of 168 milliseconds
+server thread hitch warning: timer interval of 163 milliseconds
+server thread hitch warning: timer interval of 157 milliseconds
+server thread hitch warning: timer interval of 177 milliseconds
+server thread hitch warning: timer interval of 183 milliseconds
+server thread hitch warning: timer interval of 152 milliseconds
+server thread hitch warning: timer interval of 190 milliseconds
+server thread hitch warning: timer interval of 207 milliseconds
+server thread hitch warning: timer interval of 168 milliseconds
+server thread hitch warning: timer interval of 154 milliseconds
+server thread hitch warning: timer interval of 181 milliseconds
+server thread hitch warning: timer interval of 161 milliseconds
+server thread hitch warning: timer interval of 169 milliseconds
+server thread hitch warning: timer interval of 155 milliseconds
+server thread hitch warning: timer interval of 218 milliseconds
+server thread hitch warning: timer interval of 191 milliseconds
+server thread hitch warning: timer interval of 166 milliseconds
+server thread hitch warning: timer interval of 159 milliseconds
+server thread hitch warning: timer interval of 166 milliseconds
+server thread hitch warning: timer interval of 175 milliseconds
+server thread hitch warning: timer interval of 153 milliseconds
+server thread hitch warning: timer interval of 151 milliseconds
+server thread hitch warning: timer interval of 210 milliseconds
+server thread hitch warning: timer interval of 201 milliseconds
+server thread hitch warning: timer interval of 165 milliseconds
+server thread hitch warning: timer interval of 152 milliseconds
+server thread hitch warning: timer interval of 167 milliseconds
+server thread hitch warning: timer interval of 165 milliseconds
+server thread hitch warning: timer interval of 191 milliseconds
+server thread hitch warning: timer interval of 189 milliseconds
+server thread hitch warning: timer interval of 154 milliseconds
+server thread hitch warning: timer interval of 174 milliseconds
+server thread hitch warning: timer interval of 154 milliseconds
+server thread hitch warning: timer interval of 190 milliseconds
+server thread hitch warning: timer interval of 159 milliseconds
+server thread hitch warning: timer interval of 162 milliseconds
+server thread hitch warning: timer interval of 153 milliseconds
+server thread hitch warning: timer interval of 154 milliseconds
+server thread hitch warning: timer interval of 217 milliseconds
+server thread hitch warning: timer interval of 177 milliseconds
+server thread hitch warning: timer interval of 170 milliseconds
+server thread hitch warning: timer interval of 165 milliseconds
+server thread hitch warning: timer interval of 167 milliseconds
+server thread hitch warning: timer interval of 159 milliseconds
+server thread hitch warning: timer interval of 152 milliseconds
+server thread hitch warning: timer interval of 170 milliseconds
+server thread hitch warning: timer interval of 156 milliseconds
+server thread hitch warning: timer interval of 156 milliseconds
+server thread hitch warning: timer interval of 175 milliseconds
+server thread hitch warning: timer interval of 189 milliseconds
+server thread hitch warning: timer interval of 151 milliseconds
+server thread hitch warning: timer interval of 159 milliseconds
+server thread hitch warning: timer interval of 157 milliseconds
+server thread hitch warning: timer interval of 164 milliseconds
+server thread hitch warning: timer interval of 221 milliseconds
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved 4 player(s)
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[txAdminClientLUA] Kicking all players with reason: 伺服器正在重啟 (localadmin)。
+[es_extended] [INFO] Saved player "Yuzi Ho"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Youngin Ng"
+
+================================================================
+======== FXServer starting - 2020/7/9 上午3:22:07
+================================================================
+Creating script environments for _cfx_internal
+Found new resource ar_k9 in C:/GTA_RP_Server_1\server-data/resources//ar_k9
+Found new resource EasyAdmin in C:/GTA_RP_Server_1\server-data/resources//EasyAdmin
+Found new resource mdt in C:/GTA_RP_Server_1\server-data/resources//mdt
+Found new resource ObjectNameFromHash in C:/GTA_RP_Server_1\server-data/resources//ObjectNameFromHash
+Found new resource pun_idgun in C:/GTA_RP_Server_1\server-data/resources//pun_idgun
+Found new resource vMenu in C:/GTA_RP_Server_1\server-data/resources//vMenu
+Found new resource wk_wars2x in C:/GTA_RP_Server_1\server-data/resources//wk_wars2x
+Found new resource monitor in C:\GTA_RP_Server_1\server2524\citizen/system_resources//monitor
+Found new resource webadmin in C:\GTA_RP_Server_1\server2524\citizen/system_resources//webadmin
+Found new resource policecars in C:/GTA_RP_Server_1\server-data/resources//[cars]/policecars
+Found new resource esx_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_ability
+Found new resource esx_amb_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_amb_ability
+Found new resource esx_charselect in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_charselect
+Found new resource esx_chef_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_chef_ability
+Found new resource esx_gun_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_gun_ability
+Found new resource esx_identity in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_identity
+Found new resource esx_lock_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_lock_ability
+Found new resource esx_mech_ability in C:/GTA_RP_Server_1\server-data/resources//[char]/esx_mech_ability
+Found new resource pd-spawn in C:/GTA_RP_Server_1\server-data/resources//[char]/pd-spawn
+Found new resource ooc in C:/GTA_RP_Server_1\server-data/resources//[easy]/ooc
+Found new resource async in C:/GTA_RP_Server_1\server-data/resources//[essential]/async
+Found new resource es_extended in C:/GTA_RP_Server_1\server-data/resources//[essential]/es_extended
+Found new resource mysql-async in C:/GTA_RP_Server_1\server-data/resources//[essential]/mysql-async
+Found new resource chip_criminalDoctor in C:/GTA_RP_Server_1\server-data/resources//[esx]/chip_criminalDoctor
+Found new resource cron in C:/GTA_RP_Server_1\server-data/resources//[esx]/cron
+Found new resource esx-ecobottles in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx-ecobottles
+Found new resource esx-kr-vehicle-push in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx-kr-vehicle-push
+Found new resource esx_billing in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_billing
+Found new resource esx_dmvschool in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_dmvschool
+Found new resource esx_garage in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_garage
+Found new resource esx_license in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_license
+Found new resource esx_lscustom in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_lscustom
+Found new resource esx_moneywash in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_moneywash
+Found new resource esx_society in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_society
+Found new resource esx_speedcamera in C:/GTA_RP_Server_1\server-data/resources//[esx]/esx_speedcamera
+Found new resource heli in C:/GTA_RP_Server_1\server-data/resources//[esx]/heli
+Found new resource InteractSound in C:/GTA_RP_Server_1\server-data/resources//[esx]/InteractSound
+Found new resource InteractSoundS in C:/GTA_RP_Server_1\server-data/resources//[esx]/InteractSoundS
+Found new resource lux_vehcontrol in C:/GTA_RP_Server_1\server-data/resources//[esx]/lux_vehcontrol
+Found new resource new_banking in C:/GTA_RP_Server_1\server-data/resources//[esx]/new_banking
+Found new resource ocrp_postal_map in C:/GTA_RP_Server_1\server-data/resources//[esx]/ocrp_postal_map
+Found new resource Optimized3DME in C:/GTA_RP_Server_1\server-data/resources//[esx]/Optimized3DME
+Found new resource simpletp in C:/GTA_RP_Server_1\server-data/resources//[esx]/simpletp
+Found new resource SmartTrafficLights in C:/GTA_RP_Server_1\server-data/resources//[esx]/SmartTrafficLights
+Found new resource smj_ducharse in C:/GTA_RP_Server_1\server-data/resources//[esx]/smj_ducharse
+Found new resource st-cctv in C:/GTA_RP_Server_1\server-data/resources//[esx]/st-cctv
+Found new resource vSync in C:/GTA_RP_Server_1\server-data/resources//[esx]/vSync
+Found new resource zffb_dice in C:/GTA_RP_Server_1\server-data/resources//[esx]/zffb_dice
+Found new resource basic-gamemode in C:/GTA_RP_Server_1\server-data/resources//[gamemodes]/basic-gamemode
+Found new resource chat in C:/GTA_RP_Server_1\server-data/resources//[gameplay]/chat
+Found new resource chat-theme-gtao in C:/GTA_RP_Server_1\server-data/resources//[gameplay]/chat-theme-gtao
+Found new resource playernames in C:/GTA_RP_Server_1\server-data/resources//[gameplay]/playernames
+Found new resource screenshot-basic in C:/GTA_RP_Server_1\server-data/resources//[local]/screenshot-basic
+Found new resource bob74_ipl in C:/GTA_RP_Server_1\server-data/resources//[map]/bob74_ipl
+Found new resource hackee-dispatch in C:/GTA_RP_Server_1\server-data/resources//[NPC]/hackee-dispatch
+Found new resource image-server in C:/GTA_RP_Server_1\server-data/resources//[phone]/image-server
+Resource loading for image-server failed:
+Could not open resource metadata file C:/GTA_RP_Server_1/server-data/resources//[phone]/image-server/__resource.lua.
+Found new resource mugshot in C:/GTA_RP_Server_1\server-data/resources//[phone]/mugshot
+Found new resource baseevents in C:/GTA_RP_Server_1\server-data/resources//[system]/baseevents
+Found new resource hardcap in C:/GTA_RP_Server_1\server-data/resources//[system]/hardcap
+Found new resource rconlog in C:/GTA_RP_Server_1\server-data/resources//[system]/rconlog
+Found new resource runcode in C:/GTA_RP_Server_1\server-data/resources//[system]/runcode
+Found new resource scoreboard in C:/GTA_RP_Server_1\server-data/resources//[system]/scoreboard
+Found new resource sessionmanager in C:/GTA_RP_Server_1\server-data/resources//[system]/sessionmanager
+Found new resource sessionmanager-rdr3 in C:/GTA_RP_Server_1\server-data/resources//[system]/sessionmanager-rdr3
+Found new resource yarn in C:/GTA_RP_Server_1\server-data/resources//[system]/yarn
+Found new resource example-loadscreen in C:/GTA_RP_Server_1\server-data/resources//[test]/example-loadscreen
+Found new resource fivem in C:/GTA_RP_Server_1\server-data/resources//[test]/fivem
+Found new resource ChairBedSystem in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/ChairBedSystem
+Found new resource dpclothing in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/dpclothing
+Found new resource dpemotes in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/dpemotes
+Found new resource esx_ruskiarrest in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/esx_ruskiarrest
+Found new resource fingerpoint in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/fingerpoint
+Found new resource HideInTrunk in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/HideInTrunk
+Found new resource lkrp_notepad in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/lkrp_notepad
+Found new resource seatbelt in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/seatbelt
+Found new resource SeatShuffle in C:/GTA_RP_Server_1\server-data/resources//[esx]/[animation]/SeatShuffle
+Found new resource crafting in C:/GTA_RP_Server_1\server-data/resources//[esx]/[crafting]/crafting
+Found new resource esx_crafting in C:/GTA_RP_Server_1\server-data/resources//[esx]/[crafting]/esx_crafting
+Found new resource lockpick in C:/GTA_RP_Server_1\server-data/resources//[esx]/[crafting]/lockpick
+Found new resource reload-skillbar in C:/GTA_RP_Server_1\server-data/resources//[esx]/[crafting]/reload-skillbar
+Found new resource esx_autogang in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_autogang
+Found new resource esx_carthief in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_carthief
+Found new resource esx_doorlockv3 in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_doorlockv3
+Found new resource esx_doorlock_mhacking in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_doorlock_mhacking
+Found new resource esx_drugeffects in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_drugeffects
+Found new resource esx_drugs in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_drugs
+Found new resource esx_GoldCurrency in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_GoldCurrency
+Found new resource esx_knatusblowtorch in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_knatusblowtorch
+Found new resource esx_knatusrobberybank in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_knatusrobberybank
+Found new resource esx_lootDeadbody in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_lootDeadbody
+Found new resource esx_merryweather in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_merryweather
+Found new resource esx_outlawalert in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_outlawalert
+Found new resource esx_planting in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_planting
+Found new resource esx_thief in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_thief
+Found new resource esx_vangelico_robbery in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/esx_vangelico_robbery
+Found new resource KBurglary in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/KBurglary
+Found new resource mhacking in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/mhacking
+Found new resource stasiek_selldrugs in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/stasiek_selldrugs
+Found new resource t1ger_drugs in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/t1ger_drugs
+Found new resource TakeHostage in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/TakeHostage
+Found new resource x-hotwire in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/x-hotwire
+Found new resource instance in C:/GTA_RP_Server_1\server-data/resources//[esx]/[instance]/instance
+Found new resource CARP-status in C:/GTA_RP_Server_1\server-data/resources//[esx]/[inventory]/CARP-status
+Found new resource esx_inventoryhud in C:/GTA_RP_Server_1\server-data/resources//[esx]/[inventory]/esx_inventoryhud
+Found new resource prison_status_panel in C:/GTA_RP_Server_1\server-data/resources//[esx]/[inventory]/prison_status_panel
+Found new resource skeletalsystem in C:/GTA_RP_Server_1\server-data/resources//[esx]/[inventory]/skeletalsystem
+Found new resource esx_ambulancejob in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_ambulancejob
+Found new resource esx_duty in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_duty
+Found new resource esx_gym in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_gym
+Found new resource esx_joblisting in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_joblisting
+Found new resource esx_jobs in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_jobs
+Found new resource esx_mechanicjob in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_mechanicjob
+Found new resource esx_mushroom in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_mushroom
+Found new resource esx_policejob in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_policejob
+Found new resource esx_trash in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/esx_trash
+Found new resource Hunter in C:/GTA_RP_Server_1\server-data/resources//[esx]/[jobs]/Hunter
+Found new resource esx-wanted in C:/GTA_RP_Server_1\server-data/resources//[esx]/[police]/esx-wanted
+Found new resource rad_gsr in C:/GTA_RP_Server_1\server-data/resources//[esx]/[police]/rad_gsr
+Found new resource Tackle in C:/GTA_RP_Server_1\server-data/resources//[esx]/[police]/Tackle
+Found new resource esx_accessories in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_accessories
+Found new resource esx_barbershop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_barbershop
+Found new resource esx_clotheshop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_clotheshop
+Found new resource esx_foodtruck in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_foodtruck
+Found new resource esx_jimmybm in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_jimmybm
+Found new resource esx_newaccessories in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_newaccessories
+Found new resource esx_np_skinshop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_np_skinshop
+Found new resource esx_np_skinshop_v2 in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_np_skinshop_v2
+Found new resource esx_shops in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_shops
+Found new resource esx_tattooshop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_tattooshop
+Found new resource esx_vehicleshop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_vehicleshop
+Found new resource esx_weaponshop in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/esx_weaponshop
+Found new resource LegacyFuel in C:/GTA_RP_Server_1\server-data/resources//[esx]/[shop]/LegacyFuel
+Found new resource esx_skin in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/esx_skin
+Found new resource skinchanger in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/skinchanger
+Found new resource esx_basicneeds in C:/GTA_RP_Server_1\server-data/resources//[esx]/[status]/esx_basicneeds
+Found new resource esx_gift_tree in C:/GTA_RP_Server_1\server-data/resources//[esx]/[status]/esx_gift_tree
+Found new resource esx_optionalneeds in C:/GTA_RP_Server_1\server-data/resources//[esx]/[status]/esx_optionalneeds
+Found new resource esx_status in C:/GTA_RP_Server_1\server-data/resources//[esx]/[status]/esx_status
+Found new resource esx_addonaccount in C:/GTA_RP_Server_1\server-data/resources//[esx]/[storage]/esx_addonaccount
+Found new resource esx_addoninventory in C:/GTA_RP_Server_1\server-data/resources//[esx]/[storage]/esx_addoninventory
+Found new resource esx_datastore in C:/GTA_RP_Server_1\server-data/resources//[esx]/[storage]/esx_datastore
+Found new resource esx_kingofthehill in C:/GTA_RP_Server_1\server-data/resources//[esx]/[stronghold]/esx_kingofthehill
+Found new resource carcontrol in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/carcontrol
+Found new resource esx_menu_default in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/esx_menu_default
+Found new resource esx_menu_dialog in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/esx_menu_dialog
+Found new resource esx_menu_list in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/esx_menu_list
+Found new resource esx_scoreboard2 in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/esx_scoreboard2
+Found new resource esx_watch in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/esx_watch
+Found new resource mythic_notify in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/mythic_notify
+Found new resource mythic_progbar in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/mythic_progbar
+Found new resource mythic_progressbar in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/mythic_progressbar
+Found new resource NoReticle in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/NoReticle
+Found new resource pNotify in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/pNotify
+Found new resource progressBars in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/progressBars
+Found new resource showcoords in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/showcoords
+Found new resource SimpleCarHUD in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/SimpleCarHUD
+Found new resource st-hud in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/st-hud
+Found new resource st-hudv2 in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/st-hudv2
+Found new resource st-menu in C:/GTA_RP_Server_1\server-data/resources//[esx]/[ui]/st-menu
+Found new resource carremote in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/carremote
+Found new resource garageshitz in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/garageshitz
+Found new resource RealisticVehicleFailure in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/RealisticVehicleFailure
+Found new resource whiteplate in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/whiteplate
+Found new resource ls-radio in C:/GTA_RP_Server_1\server-data/resources//[esx]/[voice]/ls-radio
+Found new resource tokovoip_script in C:/GTA_RP_Server_1\server-data/resources//[esx]/[voice]/tokovoip_script
+Found new resource CLEAR_NPC in C:/GTA_RP_Server_1\server-data/resources//[esx]/[weapon]/CLEAR_NPC
+Found new resource esx_guy293_holsterweapon in C:/GTA_RP_Server_1\server-data/resources//[esx]/[weapon]/esx_guy293_holsterweapon
+Found new resource SB-NoHead in C:/GTA_RP_Server_1\server-data/resources//[esx]/[weapon]/SB-NoHead
+Found new resource weaponchange in C:/GTA_RP_Server_1\server-data/resources//[esx]/[weapon]/weaponchange
+Found new resource weaponsfx in C:/GTA_RP_Server_1\server-data/resources//[esx]/[weapon]/weaponsfx
+Found new resource fivem-map-hipster in C:/GTA_RP_Server_1\server-data/resources//[gamemodes]/[maps]/fivem-map-hipster
+Found new resource fivem-map-skater in C:/GTA_RP_Server_1\server-data/resources//[gamemodes]/[maps]/fivem-map-skater
+Found new resource redm-map-one in C:/GTA_RP_Server_1\server-data/resources//[gamemodes]/[maps]/redm-map-one
+Found new resource dons_bm_middoc in C:/GTA_RP_Server_1\server-data/resources//[map]/[health]/dons_bm_middoc
+Found new resource hospitalsandy in C:/GTA_RP_Server_1\server-data/resources//[map]/[health]/hospitalsandy
+Found new resource PetClinic in C:/GTA_RP_Server_1\server-data/resources//[map]/[health]/PetClinic
+Found new resource smokey_hory in C:/GTA_RP_Server_1\server-data/resources//[map]/[health]/smokey_hory
+Found new resource paletopd in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/paletopd
+Found new resource phxlspd in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/phxlspd
+Found new resource policevw in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/policevw
+Found new resource police_garage in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/police_garage
+Found new resource sandysheriff in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/sandysheriff
+Found new resource sandysheriffsmall in C:/GTA_RP_Server_1\server-data/resources//[map]/[police]/sandysheriffsmall
+Found new resource int_prisonfull in C:/GTA_RP_Server_1\server-data/resources//[map]/[prison]/int_prisonfull
+Found new resource prisonprops in C:/GTA_RP_Server_1\server-data/resources//[map]/[prison]/prisonprops
+Found new resource biker in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/biker
+Found new resource bikerbarsandy in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/bikerbarsandy
+Found new resource buldingbeach in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/buldingbeach
+Found new resource grandehouse in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/grandehouse
+Found new resource petitmaison in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/petitmaison
+Found new resource vagos in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/vagos
+Found new resource webpack in C:/GTA_RP_Server_1\server-data/resources//[system]/[builders]/webpack
+Found new resource utk_ornateheist in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/[UTK]/utk_ornateheist
+Found new resource utk_ornateprops in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/[UTK]/utk_ornateprops
+Found new resource utk_powerplant in C:/GTA_RP_Server_1\server-data/resources//[esx]/[illegal]/[UTK]/utk_powerplant
+Found new resource character in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/[eup]/character
+Found new resource fashionA in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/[eup]/fashionA
+Found new resource NativeUI in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/[eup]/NativeUI
+Found new resource UniformsB in C:/GTA_RP_Server_1\server-data/resources//[esx]/[skin]/[eup]/UniformsB
+Found new resource ddg151 in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/[mods]/ddg151
+Found new resource HMS in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/[mods]/HMS
+Found new resource maserati in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/[mods]/maserati
+Found new resource oceanjet in C:/GTA_RP_Server_1\server-data/resources//[esx]/[vehicle]/[mods]/oceanjet
+Found new resource tpplage in C:/GTA_RP_Server_1\server-data/resources//[map]/[stronghold]/[TeleportScriptbeach]/tpplage
+Creating script environments for sessionmanager
+Started resource sessionmanager
+Creating script environments for webadmin
+Instantiated instance of script FxWebAdmin.BaseServer.
+Instantiated instance of script FxWebAdmin.HttpServer+HttpServerScript.
+Started resource webadmin
+Creating script environments for monitor
+[txAdminClientLUA] Version 2.4.2 starting...
+[txAdminClientJS] Logger started
+Started resource monitor
+Creating script environments for chat
+Started resource chat
+Stopping resource webadmin
+Creating script environments for mysql-async
+Started resource mysql-async
+Creating script environments for async
+Started resource async
+Creating script environments for es_extended
+Started resource es_extended
+Creating script environments for esx_identity
+Started resource esx_identity
+Creating script environments for esx_charselect
+Started resource esx_charselect
+Creating script environments for ooc
+Started resource ooc
+Creating script environments for ls-radio
+Started resource ls-radio
+Started resource esx_menu_default
+Started resource esx_menu_list
+Started resource esx_menu_dialog
+Started resource NativeUI
+Started resource mythic_notify
+Started resource mythic_progressbar
+Started resource progressBars
+Started resource mythic_progbar
+Started resource showcoords
+Started resource pNotify
+Creating script environments for esx_watch
+Started resource esx_watch
+Creating script environments for InteractSound
+Started resource InteractSound
+Creating script environments for InteractSoundS
+Started resource InteractSoundS
+Creating script environments for carcontrol
+Instantiated instance of script server.server.
+Started resource carcontrol
+Creating script environments for esx_scoreboard2
+Started resource esx_scoreboard2
+Creating script environments for esx_status
+Started resource esx_status
+Creating script environments for skeletalsystem
+Started resource skeletalsystem
+Creating script environments for esx_gift_tree
+Started resource esx_gift_tree
+Started resource prison_status_panel
+Creating script environments for esx_basicneeds
+Started resource esx_basicneeds
+Creating script environments for esx_optionalneeds
+Started resource esx_optionalneeds
+Creating script environments for esx_addonaccount
+Started resource esx_addonaccount
+Creating script environments for esx_addoninventory
+Started resource esx_addoninventory
+Creating script environments for esx_datastore
+Started resource esx_datastore
+Creating script environments for esx_inventoryhud
+Started resource esx_inventoryhud
+Creating script environments for esx_billing
+Started resource esx_billing
+Started resource skinchanger
+Creating script environments for esx_skin
+Started resource esx_skin
+Started resource character
+A client has tried to authenticate using Steam, but `steam_webApiKey` is unset. Please set steam_webApiKey to a Steam Web API key as registered on Valve's https://steamcommunity.com/dev/apikey web page. Steam identifier information will be unavailable otherwise.
+To suppress this message, `set steam_webApiKey "none"`.
+Started resource fashionA
+Creating script environments for UniformsB
+Started resource UniformsB
+Creating script environments for esx_ability
+Started resource esx_ability
+Creating script environments for esx_amb_ability
+Started resource esx_amb_ability
+Creating script environments for esx_chef_ability
+Started resource esx_chef_ability
+Creating script environments for esx_gun_ability
+Started resource esx_gun_ability
+Creating script environments for esx_lock_ability
+Started resource esx_lock_ability
+Creating script environments for esx_mech_ability
+Started resource esx_mech_ability
+Creating script environments for pd-spawn
+Started resource pd-spawn
+Creating script environments for esx_joblisting
+Started resource esx_joblisting
+Creating script environments for esx_jobs
+Started resource esx_jobs
+Creating script environments for esx_vehicleshop
+Started resource esx_vehicleshop
+Creating script environments for esx_ambulancejob
+Started resource esx_ambulancejob
+Creating script environments for esx_mechanicjob
+Started resource esx_mechanicjob
+Creating script environments for esx_policejob
+Started resource esx_policejob
+Creating script environments for rad_gsr
+Started resource rad_gsr
+Creating script environments for Tackle
+Started resource Tackle
+Creating script environments for esx_mushroom
+Started resource esx_mushroom
+Creating script environments for esx_trash
+Started resource esx_trash
+Creating script environments for cron
+Started resource cron
+Creating script environments for esx_gym
+Started resource esx_gym
+Creating script environments for esx_duty
+Started resource esx_duty
+Creating script environments for esx_jimmybm
+Started resource esx_jimmybm
+Creating script environments for esx_shops
+Started resource esx_shops
+Creating script environments for esx_weaponshop
+Started resource esx_weaponshop
+Creating script environments for esx_np_skinshop_v2
+Started resource esx_np_skinshop_v2
+Creating script environments for esx_newaccessories
+Started resource esx_newaccessories
+Creating script environments for LegacyFuel
+Started resource LegacyFuel
+Creating script environments for esx_tattooshop
+Started resource esx_tattooshop
+Creating script environments for esx_clotheshop
+Started resource esx_clotheshop
+Started resource st-menu
+Started resource st-hudv2
+Creating script environments for dpemotes
+Started resource dpemotes
+Started resource dpclothing
+Started resource fingerpoint
+Couldn't find resource lkrp_notepad532.
+Started resource HideInTrunk
+Started resource SeatShuffle
+Started resource seatbelt
+Creating script environments for esx_ruskiarrest
+Started resource esx_ruskiarrest
+Started resource policecars
+Creating script environments for garageshitz
+Started resource garageshitz
+Creating script environments for carremote
+Started resource carremote
+Creating script environments for whiteplate
+Started resource whiteplate
+Creating script environments for lux_vehcontrol
+Started resource lux_vehcontrol
+Creating script environments for heli
+Started resource heli
+Started resource SimpleCarHUD
+Creating script environments for vMenu
+Instantiated instance of script vMenuServer.BanManager.
+Instantiated instance of script vMenuServer.MainServer.
+Started resource vMenu
+Creating script environments for EasyAdmin
+Started resource EasyAdmin
+Creating script environments for vSync
+Started resource vSync
+Creating script environments for esx_society
+Started resource esx_society
+Creating script environments for esx-ecobottles
+Started resource esx-ecobottles
+Creating script environments for chip_criminalDoctor
+Started resource chip_criminalDoctor
+Creating script environments for esx_license
+Started resource esx_license
+Creating script environments for esx_dmvschool
+Started resource esx_dmvschool
+Started resource st-cctv
+Creating script environments for new_banking
+Started resource new_banking
+Started resource zffb_dice
+Started resource esx-kr-vehicle-push
+Creating script environments for esx_lscustom
+Started resource esx_lscustom
+Couldn't find resource esx_caraction.
+Creating script environments for simpletp
+Started resource simpletp
+Creating script environments for SmartTrafficLights
+Started resource SmartTrafficLights
+Creating script environments for esx_speedcamera
+Started resource esx_speedcamera
+Creating script environments for smj_ducharse
+Started resource smj_ducharse
+Started resource CLEAR_NPC
+Started resource SB-NoHead
+Started resource esx_guy293_holsterweapon
+Creating script environments for esx_kingofthehill
+Started resource esx_kingofthehill
+Creating script environments for hackee-dispatch
+Started resource hackee-dispatch
+Creating script environments for esx_autogang
+Started resource esx_autogang
+Creating script environments for esx_thief
+Started resource esx_thief
+Creating script environments for esx_carthief
+Started resource esx_carthief
+Creating script environments for KBurglary
+Started resource KBurglary
+Creating script environments for lockpick
+Started resource lockpick
+Started resource mhacking
+Creating script environments for t1ger_drugs
+Started resource t1ger_drugs
+Creating script environments for TakeHostage
+Started resource TakeHostage
+Creating script environments for x-hotwire
+Started resource x-hotwire
+Creating script environments for stasiek_selldrugs
+Started resource stasiek_selldrugs
+Creating script environments for esx_planting
+Started resource esx_planting
+Creating script environments for esx_merryweather
+Started resource esx_merryweather
+Creating script environments for esx_doorlock_mhacking
+Started resource esx_doorlock_mhacking
+Creating script environments for esx_vangelico_robbery
+Started resource esx_vangelico_robbery
+Creating script environments for esx_drugs
+Started resource esx_drugs
+Creating script environments for esx_drugeffects
+Started resource esx_drugeffects
+Started resource esx_lootDeadbody
+Creating script environments for esx_outlawalert
+Started resource esx_outlawalert
+Creating script environments for esx_knatusblowtorch
+Started resource esx_knatusblowtorch
+Creating script environments for esx_knatusrobberybank
+Started resource esx_knatusrobberybank
+Creating script environments for utk_ornateheist
+Started resource utk_ornateheist
+Started resource utk_ornateprops
+Creating script environments for utk_powerplant
+Started resource utk_powerplant
+Creating script environments for crafting
+Started resource crafting
+Creating script environments for esx_crafting
+Started resource esx_crafting
+Started resource reload-skillbar
+Creating script environments for instance
+Started resource instance
+Started resource biker
+Started resource bikerbarsandy
+Started resource grandehouse
+Started resource petitmaison
+Started resource vagos
+Started resource buldingbeach
+Started resource tpplage
+Creating script environments for int_prisonfull
+Started resource int_prisonfull
+Started resource prisonprops
+Started resource dons_bm_middoc
+Started resource smokey_hory
+Started resource PetClinic
+Started resource hospitalsandy
+Started resource sandysheriff
+Started resource paletopd
+Started resource police_garage
+Started resource policevw
+Started resource phxlspd
+Started resource weaponsfx
+Started resource weaponchange
+Started resource ocrp_postal_map
+Creating script environments for Optimized3DME
+Started resource Optimized3DME
+Creating script environments for wk_wars2x
+Started resource wk_wars2x
+Started resource ObjectNameFromHash
+Started resource pun_idgun
+Creating script environments for RealisticVehicleFailure
+Started resource RealisticVehicleFailure
+Started resource ddg151
+Started resource oceanjet
+Started resource HMS
+Started resource maserati
+Creating script environments for hardcap
+Started resource hardcap
+Creating script environments for rconlog
+Started resource rconlog
+Started resource bob74_ipl
+Could not open 96x96Logo.png for reading.
+Authenticating server license key...
+Server license key authentication succeeded. Welcome!
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
+
+EasyAdmin: webadmin-lua is not installed on this Server, webadmin features unavailable
+[txAdminClientLUA] Threads and commands set up. All Ready.
+[es_extended] [INFO] ESX developed by ESX-Org has been initialized
+Authenticating with Nucleus...
+server thread hitch warning: timer interval of 1287 milliseconds
+[carcontrol] Authorized.
+[mysql-async] Database server connection established.
+
+--------------------------------------------------------------------------
+
+EasyAdmin (EasyAdmin) is outdated.
+Newest Version: 5.212
+Your Version: 5.133
+Please update it from https://github.com/Bluethefurry/EasyAdmin
+
+Update Changelog:
+Fix Bans not working through GUI
+
+--------------------------------------------------------------------------
+
+dp Emotes (dpemotes) is up to date. (173)
+        fff                          
+  cccc ff   xx  xx     rr rr    eee  
+cc     ffff   xx       rrr  r ee   e 
+cc     ff     xx   ... rr     eeeee  
+ ccccc ff   xx  xx ... rr      eeeee 
+                                     
+Authenticated with cfx.re Nucleus: https://5328765879-vq64le.users.cfx.re/
+ 
+  //
+  ||    __          __        _ _   _                _____   _____   ___ __   __
+  ||    \ \        / /       (_) | | |         /\   |  __ \ / ____| |__ \\ \ / /
+  ||     \ \  /\  / / __ __ _ _| |_| |__      /  \  | |__) | (___      ) |\ V / 
+  ||      \ \/  \/ / '__/ _` | | __| '_ \    / /\ \ |  _  / \___ \    / /  > <  
+  ||       \  /\  /| | | (_| | | |_| | | |  / ____ \| | \ \ ____) |  / /_ / . \ 
+  ||        \/  \/ |_|  \__,_|_|\__|_| |_| /_/    \_\_|  \_\_____/  |____/_/ \_\
+  ||
+  ||                             Created by WolfKnight
+  ||
+  ||    Current version: 1.2.3
+  ||    Latest recommended version: 1.2.4
+  ||
+  ||    Your Wraith ARS 2X version is outdated, visit the FiveM forum post to get the latest version.
+  \\
+
+Connecting: jackcheng86
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+server thread hitch warning: timer interval of 272 milliseconds
+INFO: User [1] jackcheng86 authenticated - [1] [1] jackcheng86@150.116.218.124:58752:58752
+[es_extended] [INFO] A player with name "Jk C" has connected to the server with assigned player id 1
+Connecting: kb11111
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Kaba Han" has connected to the server with assigned player id 2
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved 2 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Kaba Han"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Connecting: kb11111
+Stopping resource smj_ducharse
+Creating script environments for smj_ducharse
+Started resource smj_ducharse
+Connecting: kb11111
+Stopping resource smj_ducharse
+Creating script environments for smj_ducharse
+Started resource smj_ducharse
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Kaba Han" has connected to the server with assigned player id 3
+Stopping resource smj_ducharse
+Creating script environments for smj_ducharse
+Started resource smj_ducharse
+Stopping resource smj_ducharse
+Creating script environments for smj_ducharse
+Started resource smj_ducharse
+Stopping resource smj_ducharse
+Creating script environments for smj_ducharse
+Started resource smj_ducharse
+Stopping resource smj_ducharse
+Creating script environments for smj_ducharse
+Started resource smj_ducharse
+Stopping resource smj_ducharse
+Creating script environments for smj_ducharse
+Started resource smj_ducharse
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved 2 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Kaba Han"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Connecting: kb11111
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Kaba Han" has connected to the server with assigned player id 4
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+SCRIPT ERROR: @esx_datastore/server/main.lua:47: attempt to get length of a nil value (field '?')
+> handler (@esx_datastore/server/main.lua:69)
+> handler (@esx_newaccessories/server/main.lua:18)
+SCRIPT ERROR: @esx_datastore/server/main.lua:47: attempt to get length of a nil value (field '?')
+> handler (@esx_datastore/server/main.lua:69)
+> handler (@esx_newaccessories/server/main.lua:18)
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved 2 player(s)
+SCRIPT ERROR: @esx_datastore/server/main.lua:47: attempt to get length of a nil value (field '?')
+> handler (@esx_datastore/server/main.lua:69)
+> ref (@esx_clotheshop/server/main.lua:41)
+> TriggerServerCallback (@es_extended/server/functions.lua:160)
+> handler (@es_extended/server/common.lua:72)
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "esx_property:getPlayerDressing" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+SCRIPT ERROR: @esx_datastore/server/main.lua:47: attempt to get length of a nil value (field '?')
+> handler (@esx_datastore/server/main.lua:69)
+> handler (@esx_newaccessories/server/main.lua:18)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Check gym expirations
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved 2 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource st-hudv2
+Started resource st-hudv2
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource st-hudv2
+Started resource st-hudv2
+Stopping resource st-hudv2
+Started resource st-hudv2
+Creating script environments for tokovoip_script
+Started resource tokovoip_script
+server thread hitch warning: timer interval of 187 milliseconds
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved 2 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Connecting: Nana
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Luo Lin" has connected to the server with assigned player id 5
+INFO: User [5] Nana authenticated - [2] [5] Nana@36.233.125.182:2960:2960
+Stopping resource tokovoip_script
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved 3 player(s)
+
+--------------------------------------------------------------------------
+
+EasyAdmin (EasyAdmin) is outdated.
+Newest Version: 5.212
+Your Version: 5.133
+Please update it from https://github.com/Bluethefurry/EasyAdmin
+
+Update Changelog:
+Fix Bans not working through GUI
+
+--------------------------------------------------------------------------
+Stopping resource st-hudv2
+Started resource st-hudv2
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved 3 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Luo Lin"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource st-hudv2
+Started resource st-hudv2
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource st-hudv2
+Started resource st-hudv2
+Stopping resource st-hudv2
+Started resource st-hudv2
+Stopping resource st-hudv2
+Started resource st-hudv2
+Stopping resource st-hudv2
+Started resource st-hudv2
+Stopping resource st-hudv2
+Started resource st-hudv2
+Stopping resource st-hudv2
+Started resource st-hudv2
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource st-hudv2
+Started resource st-hudv2
+Stopping resource st-hudv2
+Started resource st-hudv2
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved 2 player(s)
+Stopping resource st-hudv2
+Started resource st-hudv2
+Stopping resource st-hudv2
+Started resource st-hudv2
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource st-hudv2
+Started resource st-hudv2
+[ERROR] [MySQL] [esx_billing] An error happens on MySQL for query "INSERT INTO billing (identifier, sender, target_type, target, label, amount, time) VALUES ('bdb61aedf51af1f3d551aedb0a77c148a0b9e57b', 'bdb61aedf51af1f3d551aedb0a77c148a0b9e57b', 'society', 'society_police', '測速照相機 (90KM/H)，超速61 - 80公里', 3200, 1594241028)": ER_BAD_FIELD_ERROR: Unknown column 'time' in 'field list'
+[ERROR] [MySQL] [esx_billing] An error happens on MySQL for query "INSERT INTO billing (identifier, sender, target_type, target, label, amount, time) VALUES ('bdb61aedf51af1f3d551aedb0a77c148a0b9e57b', 'bdb61aedf51af1f3d551aedb0a77c148a0b9e57b', 'society', 'society_police', '危險駕駛', 4000, 1594241028)": ER_BAD_FIELD_ERROR: Unknown column 'time' in 'field list'
+Connecting: Nana
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Luo Lin" has connected to the server with assigned player id 6
+INFO: User [6] Nana authenticated - [2] [6] Nana@36.233.125.182:3294:3294
+Connecting: simply_
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Youngin Ng" has connected to the server with assigned player id 7
+INFO: User [7] simply_ authenticated - [3] [7] simply_@223.25.73.48:50877:50877
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved 4 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Check gym expirations
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
-[es_extended] [INFO] Saved 0 player(s)
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Kaba Han"
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved 4 player(s)
+[es_extended] [INFO] Saved player "Youngin Ng"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Connecting: simply_
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] A player with name "Youngin Ng" has connected to the server with assigned player id 8
+INFO: User [8] simply_ authenticated - [3] [8] simply_@223.25.73.48:51116:51116
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+[es_extended] [WARNING] Server callback "rgz_menu:getItemAmount" does not exist. Make sure that the server sided file really is loading, an error in that file might cause it to not load.
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Kaba Han"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved 3 player(s)
+[es_extended] [INFO] Saved player "Jk C"
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Connecting: jackcheng86
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+server thread hitch warning: timer interval of 163 milliseconds
+[es_extended] [INFO] A player with name "Jk C" has connected to the server with assigned player id 9
+INFO: User [9] jackcheng86 authenticated - [1] [9] jackcheng86@150.116.218.124:60508:60508
+Stopping resource Tackle
+Creating script environments for Tackle
+Started resource Tackle
+Stopping resource Tackle
+Creating script environments for Tackle
+Started resource Tackle
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+Stopping resource Tackle
+Creating script environments for Tackle
+Started resource Tackle
+[es_extended] [INFO] Saved player "Jk C"
+[es_extended] [INFO] Saved player "Luo Lin"
+[es_extended] [INFO] Saved player "Youngin Ng"
+[es_extended] [INFO] Saved 3 player(s)
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
+
+--------------------------------------------------------------------------
+
+EasyAdmin (EasyAdmin) is outdated.
+Newest Version: 5.212
+Your Version: 5.133
+Please update it from https://github.com/Bluethefurry/EasyAdmin
+
+Update Changelog:
+Fix Bans not working through GUI
+
+--------------------------------------------------------------------------
+Sending heartbeat to https://servers-ingress-live.fivem.net/ingress
 Sending heartbeat to https://servers-ingress-live.fivem.net/ingress

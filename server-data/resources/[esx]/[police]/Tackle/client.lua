@@ -1,5 +1,5 @@
 local TackleKey = 51 -- Change to a number which can be found here: https://wiki.fivem.net/wiki/Controls
-local TackleTime = 1500 -- In milliseconds
+local TackleTime = 3500 -- In milliseconds
 
 Citizen.CreateThread(function()
 	while true do
@@ -36,7 +36,7 @@ end)
 function GetPlayers()
     local Players = {}
 
-    for i = 0, 31 do
+    for i = 0, 255 do
         if NetworkIsPlayerActive(i) then
             table.insert(Players, i)
         end

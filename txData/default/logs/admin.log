@@ -479,3 +479,132 @@
 ================================================================
 ======== txAdmin starting - 2020/6/29 下午9:24:56
 ================================================================
+
+================================================================
+======== txAdmin starting - 2020/6/30 上午4:45:34
+================================================================
+[22:43:24][127.0.0.1][localadmin] RESTART SERVER
+[23:06:10][127.0.0.1][localadmin] stop roads
+[00:59:36][127.0.0.1][localadmin] RESTART SERVER
+[18:46:46][127.0.0.1][localadmin] RESTART SERVER
+[22:33:16][127.0.0.1][localadmin] RESTART SERVER
+[22:38:45][127.0.0.1][localadmin] restart st_meni
+[22:38:53][127.0.0.1][localadmin] restart st_menu
+[22:39:07][127.0.0.1][localadmin] restart st-menu
+[22:46:11][127.0.0.1][localadmin] stop tokovoip_script
+[22:48:18][127.0.0.1][localadmin] restart st-menu
+[20:41:21][127.0.0.1][localadmin] refresh
+[20:43:34][127.0.0.1][localadmin] start ocrp_postal_map
+[20:43:45][127.0.0.1][localadmin] start Optimized3DME
+[20:44:33][127.0.0.1][localadmin] refresh
+[21:01:25][127.0.0.1][localadmin] refresh
+[21:01:31][127.0.0.1][localadmin] start policecars
+[23:10:00][127.0.0.1][localadmin] stop "roads"
+[00:27:47][127.0.0.1][localadmin] RESTART SERVER
+[00:29:19][127.0.0.1][localadmin] ensure "utk_powerplant"
+[00:29:33][127.0.0.1][localadmin] stop "tokovoip_script"
+[00:36:26][127.0.0.1][localadmin] RESTART SERVER
+[00:38:42][127.0.0.1][localadmin] stop "tokovoip_script"
+[00:39:09][127.0.0.1][localadmin] start weaponsfx
+[00:40:06][127.0.0.1][localadmin] /giveitem 1 normal_c4  10
+[00:55:56][127.0.0.1][localadmin] refresh
+[00:57:34][127.0.0.1][localadmin] refresh
+[00:57:46][127.0.0.1][localadmin] refresh
+[00:57:52][127.0.0.1][localadmin] start screenshot-basic
+[00:59:22][127.0.0.1][localadmin] RESTART SERVER
+[01:00:48][127.0.0.1][localadmin] RESTART SERVER
+[01:01:24][127.0.0.1][localadmin] RESTART SERVER
+[01:03:39][127.0.0.1][localadmin] stop screenshot_shot
+[01:03:50][127.0.0.1][localadmin] stop screenshot_basic
+[01:03:55][127.0.0.1][localadmin] refresh
+[01:04:17][127.0.0.1][localadmin] RESTART SERVER
+[01:05:40][127.0.0.1][localadmin] RESTART SERVER
+[01:07:58][127.0.0.1][localadmin] stop screenshot-basic
+[02:07:03][127.0.0.1][localadmin] stop screenshot-basic
+[19:20:38][127.0.0.1][localadmin] RESTART SERVER
+
+================================================================
+======== txAdmin starting - 2020/7/4 下午7:27:57
+================================================================
+[19:54:29][127.0.0.1][localadmin] ensure "screenshot-basic"
+[19:56:06][127.0.0.1][localadmin] stop "screenshot-basic"
+[21:44:59][127.0.0.1][localadmin] restart Tackle
+[21:47:41][127.0.0.1][localadmin] stop screenshot=basic
+[21:47:50][127.0.0.1][localadmin] stop screenshot-basic
+[22:34:26][127.0.0.1][localadmin] stop screenshot-basic
+[22:34:31][127.0.0.1][localadmin] restart EasyAdmin
+[22:35:09][127.0.0.1][localadmin] restart EasyAdmin
+
+================================================================
+======== txAdmin starting - 2020/7/4 下午10:56:50
+================================================================
+[00:02:34][127.0.0.1][localadmin] RESTART SERVER
+[00:27:59][127.0.0.1][localadmin] start lux_vehcontrol
+[01:43:28][127.0.0.1][localadmin] RESTART SERVER
+[02:09:07][127.0.0.1][localadmin] RESTART SERVER
+[17:09:37][127.0.0.1][localadmin] stop SB-NoHead
+[17:09:56][127.0.0.1][localadmin] restart weaponchange
+[17:12:24][127.0.0.1][localadmin] RESTART SERVER
+[17:44:11][127.0.0.1][localadmin] restart weaponchange
+[17:56:41][127.0.0.1][localadmin] restart weaponchange
+[18:00:01][127.0.0.1][localadmin] restart weaponchange
+[18:39:28][127.0.0.1][localadmin] restart policecars
+
+================================================================
+======== txAdmin starting - 2020/7/5 下午6:41:27
+================================================================
+[18:46:15][127.0.0.1][localadmin] restart policecars
+[18:58:24][127.0.0.1][localadmin] restart policecars
+[19:51:45][127.0.0.1][localadmin] RESTART SERVER
+[00:09:46][127.0.0.1][localadmin] RESTART SERVER
+[09:48:25][127.0.0.1][localadmin] RESTART SERVER
+[09:51:46][127.0.0.1][localadmin] restart esx_doorlock_mhacking
+[09:52:24][127.0.0.1][localadmin] setjob 1 jesus 0
+
+================================================================
+======== txAdmin starting - 2020/7/6 上午11:56:43
+================================================================
+
+================================================================
+======== txAdmin starting - 2020/7/6 下午12:00:39
+================================================================
+[19:55:54][127.0.0.1][localadmin] restart st-hudv2
+[19:56:43][127.0.0.1][localadmin] restart SimpleCarHUD
+[19:58:24][127.0.0.1][localadmin] revive 9
+[20:00:16][127.0.0.1][localadmin] restart esx_ambulancejob
+[20:00:25][127.0.0.1][localadmin] revive 9
+[20:01:45][127.0.0.1][localadmin] restart esx_ambulance
+[20:01:54][127.0.0.1][localadmin] restart esx_ambulancejob
+[20:01:58][127.0.0.1][localadmin] revive 9
+[20:03:56][127.0.0.1][localadmin] restart st-hudv2
+[20:04:52][127.0.0.1][localadmin] restart st-hudv2
+[21:16:39][127.0.0.1][localadmin] restart mdt
+[21:27:38][127.0.0.1][localadmin] RESTART SERVER
+[22:03:29][127.0.0.1][localadmin] restart mdt
+[22:08:21][127.0.0.1][localadmin] RESTART SERVER
+
+================================================================
+======== txAdmin starting - 2020/7/8 下午8:53:52
+================================================================
+[20:59:51][127.0.0.1][localadmin] restart esx_policejob
+[21:21:27][127.0.0.1][localadmin] restart esx_scoreboard2
+[21:24:27][127.0.0.1][localadmin] restart esx_scoreboard2
+[21:29:57][127.0.0.1][localadmin] restart esx_scoreboard2
+[21:40:37][127.0.0.1][localadmin] restart esx_mechanicjob
+[21:41:29][127.0.0.1][localadmin] restart esx_mechanicjob
+[21:44:49][127.0.0.1][localadmin] restart RealisticVehicleFailure
+[21:47:19][127.0.0.1][localadmin] restart simpletp
+[21:53:14][127.0.0.1][localadmin] restart SimpleCarHUD
+
+================================================================
+======== txAdmin starting - 2020/7/8 下午10:20:20
+================================================================
+
+================================================================
+======== txAdmin starting - 2020/7/8 下午10:22:02
+================================================================
+[00:33:08][127.0.0.1][localadmin] restart esx_duty
+[01:21:20][127.0.0.1][localadmin] restart esx_policejob
+[01:59:43][127.0.0.1][localadmin] restart x-hotwire
+[02:16:09][127.0.0.1][localadmin] restart x-hotwire
+[03:22:05][127.0.0.1][localadmin] RESTART SERVER
