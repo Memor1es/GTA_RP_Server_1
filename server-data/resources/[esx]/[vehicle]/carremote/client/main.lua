@@ -448,7 +448,7 @@ Citizen.CreateThread(function()
 				end
 			end
 		end
-
+		--[[
 		if IsControlJustPressed(0, Config.HotkeyEngine) then
 			local ply = GetPlayerPed(-1)
 			if (IsPedInAnyVehicle(ply, true)) then
@@ -491,5 +491,6 @@ Citizen.CreateThread(function()
 				end
 			end
 		end
+		--]]
 	end
 end)
