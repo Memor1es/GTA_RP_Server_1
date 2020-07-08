@@ -3,7 +3,9 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 local onlinePlayers = GetNumPlayerIndices()
 
 ESX.RegisterServerCallback('w1ms_scoreboard:data', function(source, cb)
-	local identifier = GetPlayerIdentifiers(source)[1]
+	local xPlayer = ESX.GetPlayerFromId(source)
+	local identifier = xPlayer.identifier
+	--local identifier = GetPlayerIdentifiers(source)[1]
 	MySQL.Async.fetchAll('SELECT * FROM users WHERE identifier = @identifier', {
 		['@identifier'] = identifier
 	}, function(result)
@@ -106,7 +108,9 @@ function AddPlayerToScoreboard(xPlayer, update)
 end
 
 function getIdentity(source)
-	local identifier = GetPlayerIdentifiers(source)[1]
+	--local identifier = GetPlayerIdentifiers(source)[1]
+	local xPlayer = ESX.GetPlayerFromId(source)
+	local identifier = xPlayer.identifier
 	local result = MySQL.Sync.fetchAll("SELECT * FROM users WHERE identifier = @identifier", {['@identifier'] = identifier})
 	if result[1] ~= nil then
 		local identity = result[1]

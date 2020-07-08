@@ -77,7 +77,7 @@ Citizen.CreateThread(function()
                     police = police_txt,
                     taxi = taxi,
                     mechanic = mechanic,
-                    my_job = PlayerData.job
+                    my_job = PlayerData.job.grade_label
                 })
                 end)
                 end)
