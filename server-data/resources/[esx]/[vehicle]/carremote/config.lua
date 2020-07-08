@@ -1,7 +1,7 @@
 Config                    = {}
 
 Config.Locale             = 'en'
-Config.HotkeyUI           = 182   -- Main Hotkey For Opening UI / Locking Vehicles
+Config.HotkeyUI           = 182   -- Main Hotkey For Opening UI / Locking Vehicles --L
 Config.HotkeyEngine       = 289   -- Sencondary Hotkey For Turning Engine On/Off
 Config.SwitchDistance     = 3     -- How Close You Need To Be To Switch Connected Vehicles
 Config.MaxRemoteRange     = 30    -- Set max range that the remote will work.
