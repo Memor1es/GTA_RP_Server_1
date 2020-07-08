@@ -1,5 +1,5 @@
 -- SCREEN POSITION PARAMETERS
-local screenPosX = 0.165                    -- X coordinate (top left corner of HUD)
+local screenPosX = 0.175                    -- X coordinate (top left corner of HUD)
 local screenPosY = 0.882                    -- Y coordinate (top left corner of HUD)
 
 -- GENERAL PARAMETERS
@@ -58,7 +58,7 @@ Citizen.CreateThread(function()
 
     while true do
         -- Loop forever and update HUD every frame
-        Citizen.Wait(0)
+        Citizen.Wait(5)
 
         -- Get player PED, position and vehicle and save to locals
         local player = GetPlayerPed(-1)
