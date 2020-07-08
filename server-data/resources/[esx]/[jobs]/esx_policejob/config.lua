@@ -21,29 +21,6 @@ Config.Locale                     = 'tc'
 
 Config.LeaveKey                   = "H"
 
-local blip2 = AddBlipForCoord(vector3(-439.87, 6021.0, 31.49))
-
-SetBlipSprite (blip2, 60)
-SetBlipDisplay(blip2, 4)
-SetBlipScale  (blip2, 1.2)
-SetBlipColour (blip2, 4)
-SetBlipAsShortRange(blip2, true)
-
-BeginTextCommandSetBlipName('STRING')
-AddTextComponentString('警長辦公室')
-EndTextCommandSetBlipName(blip2)
-
-local blip3 = AddBlipForCoord(vector3(1858.22, 3679.0, 33.72))
-
-SetBlipSprite (blip3, 60)
-SetBlipDisplay(blip3, 4)
-SetBlipScale  (blip3, 1.2)
-SetBlipColour (blip3, 4)
-SetBlipAsShortRange(blip3, true)
-
-BeginTextCommandSetBlipName('STRING')
-AddTextComponentString('警長辦公室')
-EndTextCommandSetBlipName(blip3)
 
 Config.PoliceStations = {
 
