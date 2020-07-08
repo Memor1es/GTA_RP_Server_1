@@ -26,7 +26,7 @@ function AddMenuPed(menu)
 		submenuspawnpeds.SubMenu:AddItem(newitem)
 		--submenuspawnpeds.SubMenu.AddItem(female)
 	end
-	appearancemenu = NativeUI.CreateItem('微整形',"~y~歡迎來到鬼島醫美，父母無法給你的，我們給你")
+	appearancemenu = NativeUI.CreateItem('微整形',"~y~歡迎來到不治醫美，父母無法給你的，我們給你")
 	submenuspawnpeds.SubMenu:AddItem(appearancemenu)
 	random = NativeUI.CreateItem('Create Random Character',"Press Enter To Create Random Character")
 	menu:AddItem(random)
@@ -143,8 +143,8 @@ end
 ]]--
 --############## Menu #####################
 _menuPool = NativeUI.CreatePool()
-mainMenu = NativeUI.CreateMenu("鬼島海關", "~b~Create your character", Config.MenuX, Config.MenuY,nil,nil,nil,Config.MenuColor.r,Config.MenuColor.g,Config.MenuColor.b,Config.MenuColor.a)
-freemodePedMenu = NativeUI.CreateMenu("鬼島醫美", "~y~歡迎來到鬼島醫美，父母無法給你的，我們給你", Config.MenuX, Config.MenuY,nil,nil,nil,Config.MenuColor.r,Config.MenuColor.g,Config.MenuColor.b,Config.MenuColor.a)
+mainMenu = NativeUI.CreateMenu("不治海關", "~b~Create your character", Config.MenuX, Config.MenuY,nil,nil,nil,Config.MenuColor.r,Config.MenuColor.g,Config.MenuColor.b,Config.MenuColor.a)
+freemodePedMenu = NativeUI.CreateMenu("不治醫美", "~y~歡迎來到不治醫美，父母無法給你的，我們給你", Config.MenuX, Config.MenuY,nil,nil,nil,Config.MenuColor.r,Config.MenuColor.g,Config.MenuColor.b,Config.MenuColor.a)
 otherPedMenu = NativeUI.CreateMenu("角色自訂", "~b~Create your Ped", Config.MenuX, Config.MenuY,nil,nil,nil,Config.MenuColor.r,Config.MenuColor.g,Config.MenuColor.b,Config.MenuColor.a)
 _menuPool:Add(mainMenu)
 _menuPool:Add(freemodePedMenu)

@@ -118,6 +118,65 @@ Config.Workouts = {
         workout = 6,
         duration = 30
     }
+    --prison
+    , {
+        x = 1773.53,
+        y = 2596.74,
+        z = 45.8,
+        h = 82.64,
+        label = "Pull-Ups",
+        workout = 1,
+        duration = 30
+    }, {
+        x = 1773.66,
+        y = 2594.88,
+        z = 45.8,
+        h = 79.78,
+        label = "Pull-Ups",
+        workout = 1,
+        duration = 30
+    }, {
+        x = 1769.82,
+        y = 2590.17,
+        z = 46.21,
+        h = 289.74,
+        label = "Bench",
+        workout = 6,
+        duration = 30
+    },{
+        x = 1764.73,
+        y = 2592.67,
+        z = 45.8,
+        h = 191.82,
+        label = "Push-Ups",
+        workout = 5,
+        duration = 30
+    }, {
+        x = 1766.77,
+        y = 2590.18,
+        z = 45.8,
+        h = 117.37,
+        label = "Z-Bar (Biceps)",
+        workout = 2,
+        duration = 30
+    }, {
+        x = 1766.54,
+        y = 2595.34,
+        z = 45.8,
+        h = 199.43,
+        label = "Yoga",
+        workout = 4,
+        duration = 30
+    }, {
+        x = 1770.35,
+        y = 2593.36,
+        z = 45.8,
+        h = 353.34,
+        label = "Crunches",
+        workout = 3,
+        duration = 30
+    }
+
 }
 
 Config.Membership = {
