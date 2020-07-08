@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="da-DK">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+    $(function(){
+      $(document).keyup(function(e) {
+        if(e.keyCode == 27){
+          $("#wrap").css('display', 'none')
+          $.post('http://w1ms_scoreboard/quit', JSON.stringify({}));
+        }
+      });
+    });	
+  </script>
+</head>
+<body style="overflow: hidden;background: none;display: none;" id="wrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3" style="margin-top: 20%;background-color: rgb(46, 46, 46, 0.7);border-top-left-radius: 20px;">
+        <div class="row">
+         <div class="col-md-2" align="center" style="padding: 0;">
+           <img src="logo.png" style="width: 160px;height: 180px;position: absolute;margin-left: -90px;margin-top: -45px;">
+           <div style="width: 100%;background-color: rgb(85,85,85,0.9);color:#fff;padding: 5px;height: 90px;margin-top: 100px;">
+            <h5 align="center">ID</h5>
+            <h3 align="center"><b id="playerid"></b></h3>
+          </div>
+        </div>
+        <div class="col-md-10" align="center" style="color:#fff;padding-top: 10px;border-radius: 10px 10px 10px 0px;">
+         <div class="row">
+           <div class="col-md-12" align="left" style="">
+             <h3><b id="playername"></b></h3>
+           </div>
+           <div class="col-md-8"  align="left" style="">
+             <h4>📱  :  <b id="phone"></b></h4>
+             <h4>職位  :  <b id="job"></b></h4>
+             <h4>線上人數  : <b id="online"></b>/64</h4>
+             <h4>👮 <b id="police"></b> 👨‍⚕️ <b id="ems"></b> 👨‍🍳‍ <b id="taxi"></b> 🔧 <b id="mechanic"></b></h4>
+           </div>
+           <div class="col-md-4" style="background-color: rgb(85,85,85,0.9);height: 90px;width: 100px;margin-top: -65px;margin-left: 62px;">
+             <h5><b>Ping (ms)</b></h5>
+             <h3> <b id="ping"></b> </h3>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+<script>
+  $(function()
+  {
+   window.addEventListener('message', function(event)
+   {
+    var item = event.data;
+    var buf = $('#wrap');
+    $('#playerid').empty();
+    $('#playername').empty();
+    $('#phone').empty();
+    $('#job').empty();
+    $('#online').empty();
+    $('#ping').empty();
+    $('#ems').empty();
+    $('#police').empty();
+	$('#taxi').empty();
+	$('#mechanic').empty();
+    $('#playerid').append('<span>' + item.id + '</span>');
+    $('#playername').append('<span>' + item.name + '</span>');
+    $('#phone').append('<span>' + item.phone + '</span>');
+
+    $('#job').append('<span>' + item.job + '</span>');
+
+    $('#online').append('<span>' + item.online + '</span>');
+    $('#ems').append('<span>' + item.ems + '</span>');
+    $('#police').append('<span>' + item.police + '</span>');
+	$('#taxi').append('<span>' + item.taxi + '</span>');
+	$('#mechanic').append('<span>' + item.mechanic + '</span>');
+    if(item.ping <= 100){
+      $('#ping').append('<span style="color: green;">' + item.ping + '</span>');
+    }else if(item.ping > 100 && item.ping < 200){
+      $('#ping').append('<span style="color: orange;">' + item.ping + '</span>');
+    }else{
+      $('#ping').append('<span style="color: red;">' + item.ping + '</span>');
+    }
+    if (item.meta && item.meta == 'close')
+    {
+     $('#wrap').hide();
+     return;
+   }
+   $('#wrap').show();
+ }, false);
+ });
+ 
+
+ </script>
+</body>
+</html>
