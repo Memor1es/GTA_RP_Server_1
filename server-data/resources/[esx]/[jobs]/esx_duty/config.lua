@@ -34,14 +34,14 @@ Config.Zones = {
   },
 
   PoliceDutyMid = {
-    Pos   = { x = 1851.28, y = 3691.01, z = 34.27 },
+    Pos   = { x = 1851.28, y = 3691.01, z = 33.27 },
     Size  = { x = 2.0, y = 2.0, z = 1.0 },
     Color = { r = 0, g = 255, b = 0 },  
     Type  = 1,
   },
 
   PoliceDutyNorth = {
-    Pos   = { x = -449.39, y = 6010.55, z = 31.72 },
+    Pos   = { x = -449.39, y = 6010.55, z = 30.72 },
     Size  = { x = 2.0, y = 2.0, z = 1.0 },
     Color = { r = 0, g = 255, b = 0 },  
     Type  = 1,

@@ -1730,7 +1730,7 @@ Citizen.CreateThread(function()
 	BeginTextCommandSetBlipName('STRING')
 	AddTextComponentString('警長辦公室')
 	EndTextCommandSetBlipName(blip3)
-)
+end)
 
 Citizen.CreateThread(function()
     while (true) do
