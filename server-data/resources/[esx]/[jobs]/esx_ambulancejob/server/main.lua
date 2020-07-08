@@ -354,13 +354,13 @@ ESX.RegisterCommand('revive', 'admin', function(xPlayer, args, showError)
 	--if args[1] then
 		--local playerId = tonumber(args[1])
 		
-		if ESX.GetPlayerFromId(args.playerId) then
+		--if ESX.GetPlayerFromId(args.playerId) then
 			--TriggerClientEvent('esx_ambulancejob:revive', args.playerId)
 			args.playerId.triggerEvent('esx_ambulancejob:revive')
-		else
+		--else
 			--TriggerClientEvent('chat:addMessage', source, { args = { '^1SYSTEM', 'Player not online.' } })
-			args.playerId.triggerEvent('chat:addMessage', { args = { '^1SYSTEM', 'Player not online.' } })
-		end
+			--args.playerId.triggerEvent('chat:addMessage', { args = { '^1SYSTEM', 'Player not online.' } })
+		--end
 	--end
 
 end, true, {help = _U('revive_help'), validate = true, arguments = {
