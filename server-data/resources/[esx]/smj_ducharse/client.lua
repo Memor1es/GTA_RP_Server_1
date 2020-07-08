@@ -7,18 +7,23 @@ local isSmutsig = false
 local TreDMe = false -- necesitas 3dme: https://github.com/Sheamle/3dme pon false para que no salga nada encima de tu personaje
 local debug = true -- log f8
 local duschar = { 
-    	["Dusch1"] = { ["x"] = -1382.77, ["y"] = -1328.39, ["z"] = 3.3, ["h"] = 261.38}, --Ducha Publica
-    	["Dusch2"] = { ["x"] = -1243.76, ["y"] = -1537.76, ["z"] = 3.45, ["h"] = 260.36}, --Ducha Publica
-	["Lägenhetsdusch1"] = { ["x"] = 254.39, ["y"] = -1000.25, ["z"] = -99.78, ["h"] = 177.36}, --Ducha de apartamento 1
-	["Lägenhetsdusch1"] = { ["x"] = 1398.2, ["y"] = -602.5, ["z"] = -0.87, ["h"] = 329.18}, --Ducha de casa nikola
-	["Lägenhetsdusch1"] = { ["x"] = 336.5, ["y"] = -204.35, ["z"] = -56.25, ["h"] = 131.0}, --Ducha del motel
-	["Lägenhetsdusch1"] = { ["x"] = 155.18, ["y"] = -1000.09, ["z"] = -99.5, ["h"] = 131.0}, --Ducha del motel
-	["Lägenhetsdusch1"] = { ["x"] = 1005.31, ["y"] = -121.63, ["z"] = 74.18, ["h"] = 150.49}, --Ducha clubmotero
-	["Lägenhetsdusch1"] = { ["x"] = 155.02, ["y"] = -1000.35, ["z"] = -99.6, ["h"] = 121.93} --Ducha motel
+	["Dusch1"] = { ["x"] = 1764.86, ["y"] = 2580.84, ["z"] = 45.8, ["h"] = 92.74},
+	["Dusch1"] = { ["x"] = 1764.86, ["y"] = 2582.93, ["z"] = 45.8, ["h"] = 92.74},
+	["Dusch1"] = { ["x"] = 1761.9, ["y"] = 2582.93, ["z"] = 45.8, ["h"] = 267.56},
+	["Dusch1"] = { ["x"] = 1761.9., ["y"] = 2580.84, ["z"] = 45.8, ["h"] = 267.56},
+	
+	--	["Dusch1"] = { ["x"] = -1382.77, ["y"] = -1328.39, ["z"] = 3.3, ["h"] = 261.38}, --Ducha Publica
+    --	["Dusch2"] = { ["x"] = -1243.76, ["y"] = -1537.76, ["z"] = 3.45, ["h"] = 260.36}, --Ducha Publica
+	--["Lägenhetsdusch1"] = { ["x"] = 254.39, ["y"] = -1000.25, ["z"] = -99.78, ["h"] = 177.36}, --Ducha de apartamento 1
+	--["Lägenhetsdusch1"] = { ["x"] = 1398.2, ["y"] = -602.5, ["z"] = -0.87, ["h"] = 329.18}, --Ducha de casa nikola
+	--["Lägenhetsdusch1"] = { ["x"] = 336.5, ["y"] = -204.35, ["z"] = -56.25, ["h"] = 131.0}, --Ducha del motel
+	--["Lägenhetsdusch1"] = { ["x"] = 155.18, ["y"] = -1000.09, ["z"] = -99.5, ["h"] = 131.0}, --Ducha del motel
+	--["Lägenhetsdusch1"] = { ["x"] = 1005.31, ["y"] = -121.63, ["z"] = 74.18, ["h"] = 150.49}, --Ducha clubmotero
+	--["Lägenhetsdusch1"] = { ["x"] = 155.02, ["y"] = -1000.35, ["z"] = -99.6, ["h"] = 121.93} --Ducha motel
 } 
 local blips = { -- blips på mappen, för allmänna duschar
-    	{title="Ducha", colour=38, id=355, x = -1382.77, y = -1328.39, z = 4.0},
-	{title="Ducha", colour=38, id=355, x = -1243.76, y = -1537.76, z = 4.0}
+    --	{title="Ducha", colour=38, id=355, x = -1382.77, y = -1328.39, z = 4.0},
+	--{title="Ducha", colour=38, id=355, x = -1243.76, y = -1537.76, z = 4.0}
 }
 ----------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------- Status ----------------------------------------------------------
