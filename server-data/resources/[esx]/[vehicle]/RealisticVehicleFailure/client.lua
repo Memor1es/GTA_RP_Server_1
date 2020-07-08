@@ -630,7 +630,7 @@ Citizen.CreateThread(function()
 	end
 
 	while true do
-		Citizen.Wait(10)
+		Citizen.Wait(0)
 		
 		local playerCoords = GetEntityCoords(PlayerPedId())
 		local isInMarker, letSleep, currentZone = false, false
