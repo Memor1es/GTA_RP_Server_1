@@ -34,7 +34,7 @@ Config.Workouts = {
         y = -1564.13,
         z = 4.60,
         h = 0,
-        label = "Z-Bar (Biceps)",
+        label = "舉啞鈴",
         workout = 2,
         duration = 30
     }, {
@@ -42,7 +42,7 @@ Config.Workouts = {
         y = -1571.33,
         z = 4.60,
         h = 0,
-        label = "Crunches",
+        label = "仰臥起坐",
         workout = 3,
         duration = 30
     }, {
@@ -50,7 +50,7 @@ Config.Workouts = {
         y = -1561.32,
         z = 4.60,
         h = 0,
-        label = "Z-Bar (Biceps)",
+        label = "舉啞鈴",
         workout = 2,
         duration = 30
     }, {
@@ -58,7 +58,7 @@ Config.Workouts = {
         y = -1556.83,
         z = 4.60,
         h = 0,
-        label = "Yoga",
+        label = "瑜珈",
         workout = 4,
         duration = 30
     }, {
@@ -66,7 +66,7 @@ Config.Workouts = {
         y = -1571.43,
         z = 4.60,
         h = 30.12,
-        label = "Pull-Ups",
+        label = "引體向上",
         workout = 1,
         duration = 30
     }, {
@@ -74,7 +74,7 @@ Config.Workouts = {
         y = -1564.12,
         z = 4.60,
         h = 216.80,
-        label = "Pull-Ups",
+        label = "引體向上",
         workout = 1,
         duration = 30
     }, {
@@ -82,7 +82,7 @@ Config.Workouts = {
         y = -1570.19,
         z = 4.60,
         h = 0,
-        label = "Push-Ups",
+        label = "伏地挺身",
         workout = 5,
         duration = 30
     } --[[{
@@ -100,7 +100,7 @@ Config.Workouts = {
         y = 2596.74,
         z = 45.8,
         h = 82.64,
-        label = "Pull-Ups",
+        label = "引體向上",
         workout = 1,
         duration = 30
     }, {
@@ -108,7 +108,7 @@ Config.Workouts = {
         y = 2594.88,
         z = 45.8,
         h = 79.78,
-        label = "Pull-Ups",
+        label = "引體向上",
         workout = 1,
         duration = 30
     }, {
@@ -116,7 +116,7 @@ Config.Workouts = {
         y = 2592.67,
         z = 45.8,
         h = 191.82,
-        label = "Push-Ups",
+        label = "伏地挺身",
         workout = 5,
         duration = 30
     }, {
@@ -124,7 +124,7 @@ Config.Workouts = {
         y = 2590.18,
         z = 45.8,
         h = 117.37,
-        label = "Z-Bar (Biceps)",
+        label = "舉啞鈴",
         workout = 2,
         duration = 30
     }, {
@@ -132,7 +132,7 @@ Config.Workouts = {
         y = 2595.34,
         z = 45.8,
         h = 199.43,
-        label = "Yoga",
+        label = "瑜珈",
         workout = 4,
         duration = 30
     }, {
@@ -140,7 +140,7 @@ Config.Workouts = {
         y = 2593.36,
         z = 45.8,
         h = 353.34,
-        label = "Crunches",
+        label = "仰臥起坐",
         workout = 3,
         duration = 30
     },{
@@ -148,7 +148,7 @@ Config.Workouts = {
         y = 2591.18,
         z = 45.8,
         h = 190.19,
-        label = "Z-Bar (Biceps)",
+        label = "舉啞鈴",
         workout = 2,
         duration = 30
     }

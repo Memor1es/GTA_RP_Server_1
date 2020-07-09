@@ -97,11 +97,11 @@ Citizen.CreateThread(function()
                     SetTextComponentFormat("STRING")
                     if currentWorkout.run == false then
                         AddTextComponentString(
-                            string.format("Press ~INPUT_CONTEXT~ to ~g~%s",
+                            string.format("按下 ~INPUT_CONTEXT~ 來 ~g~%s",
                                           v.label))
                     else
                         AddTextComponentString(
-                            "Press ~INPUT_CONTEXT_SECONDARY~ to stop workout")
+                            "按下 ~INPUT_CONTEXT_SECONDARY~ 停止健身")
                     end
                     DisplayHelpTextFromStringLabel(0, 0, 1, -1)
 
@@ -111,7 +111,7 @@ Citizen.CreateThread(function()
                         --if ownsMembership == false then
                         --    ESX.ShowNotification("Please buy a gym membership")
                         if lastWorkTime ~= -1 then
-                            ESX.ShowNotification("You are resting...")
+                            ESX.ShowNotification("休息中...")
                         else
                             startWorkout(v.workout, v.duration * 1000,
                                          Config.WorkoutScenarios[v.workout][1],
