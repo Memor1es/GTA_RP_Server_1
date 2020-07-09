@@ -100,7 +100,12 @@ Citizen.CreateThread(function()
                     -- Toggle seatbelt status and play sound when enabled
                     seatbeltIsOn = not seatbeltIsOn
                     if seatbeltPlaySound then
-                        PlaySoundFrontend(-1, "Faster_Click", "RESPAWN_ONLINE_SOUNDSET", 1)
+                        --PlaySoundFrontend(-1, "Faster_Click", "RESPAWN_ONLINE_SOUNDSET", 1)
+                        if seatbeltIsOn then
+                            TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 2.0, 'seatbelt', 0.7)
+                        else
+                            TriggerServerEvent('InteractSound_SV:PlayWithinDistance', 2.0, 'seatbeltoff', 0.7)
+                        end
                     end
                 end
                 if not seatbeltIsOn then
