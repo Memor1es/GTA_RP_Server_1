@@ -213,7 +213,7 @@ Citizen.CreateThread(function()
 	TriggerEvent('instance:loaded')
 end)
 
--- Fix vehicles randomly spawning nearby the player inside an instance
+--[[ Fix vehicles randomly spawning nearby the player inside an instance
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0) -- must be run every frame
@@ -237,3 +237,4 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
+--
