@@ -40,13 +40,13 @@ Citizen.CreateThread(function()
 end)
 --]]
 
-RegisterNetEvent('esx_washdish:wash')
-AddEventHandler('esx_washdish:wash', function()
+RegisterNetEvent('esx_cleantable:clean')
+AddEventHandler('esx_cleantable:clean', function()
     --RemoveBlip(blipRobbery)
     TriggerEvent("mythic_progressbar:client:progress", {
         name = "sweeping",
         duration = Config.SweepTime * 1000,
-        label = "掃地中",
+        label = "擦桌子中",
         useWhileDead = false,
         canCancel = true,
         controlDisables = {
