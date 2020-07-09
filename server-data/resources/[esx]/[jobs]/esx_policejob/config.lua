@@ -51,7 +51,7 @@ Config.PoliceStations = {
 			vector3(1778.38, 2542.96, 45.8)
 		},
 
-		Vehicles = {
+		--[[Vehicles = {
 			{
 				Spawner = vector3(454.6, -1017.4, 28.4),
 				InsideShop = vector3(228.5, -993.5, -99.5),
@@ -117,7 +117,7 @@ Config.PoliceStations = {
 					{ coords = vector3(-475.3, 5988.35, 31.34), heading = 320.5, radius = 10.0 }
 				}
 			},
-		},
+		},]]
 
 		BossActions = {
 			vector3(448.4, -973.2, 30.6),
