@@ -40,17 +40,9 @@ Citizen.CreateThread(function()
 end)
 --]]
 
-RegisterNetEvent('esx_sweep:sweep')
-AddEventHandler('esx_sweep:sweep', function()
+RegisterNetEvent('esx_washdish:wash')
+AddEventHandler('esx_washdish:wash', function()
     --RemoveBlip(blipRobbery)
-    local vassoumodel = "prop_tool_broom"
-    local cSCoords = GetOffsetFromEntityInWorldCoords(GetPlayerPed(PlayerId()), 0.0, 0.0, -5.0)
-    local vassouspawn = CreateObject(GetHashKey(vassoumodel), cSCoords.x, cSCoords.y, cSCoords.z, 1, 1, 1)
-    local netid = ObjToNet(vassouspawn)
-
-    AttachEntityToEntity(vassouspawn,GetPlayerPed(PlayerId()),GetPedBoneIndex(GetPlayerPed(PlayerId()), 28422),-0.005,0.0,0.0,360.0,360.0,0.0,1,1,0,1,0,1)
-    
-
     TriggerEvent("mythic_progressbar:client:progress", {
         name = "sweeping",
         duration = Config.SweepTime * 1000,
@@ -64,15 +56,13 @@ AddEventHandler('esx_sweep:sweep', function()
             disableCombat = true,
         },
         animation = {
-            animDict = "amb@world_human_janitor@male@idle_a",
-            anim = "idle_a"
+            animDict = "timetable@floyd@clean_kitchen@base",
+            anim = "base"
         },
     }, function(status)
         if not status then
             --secondsRemaining = 0
             --print("販毒成功")
-            DetachEntity(NetToObj(netid), 1, 1)
-            DeleteEntity(NetToObj(netid))
         end
     end)
 end)
