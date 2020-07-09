@@ -88,6 +88,16 @@ AddEventHandler('esx:setMaxWeight', function(newMaxWeight) ESX.PlayerData.maxWei
 AddEventHandler('esx:onPlayerSpawn', function() isDead = false end)
 AddEventHandler('esx:onPlayerDeath', function() isDead = true end)
 
+RegisterNetEvent('esx:fixfemaleHP')
+AddEventHandler('esx:fixfemaleHP', function()
+	-- female 175 HP
+	local playerPed = PlayerPedId()
+	if GetPedMaxHealth(playerPed) ~= 200 then
+		SetPedMaxHealth(playerPed, 200)
+		SetEntityHealth(playerPed, GetEntityHealth(playerPed) + 25)
+	end
+end)
+
 AddEventHandler('skinchanger:modelLoaded', function()
 	while not ESX.PlayerLoaded do
 		Citizen.Wait(100)
