@@ -1,4 +1,4 @@
-Locales ['en'] = {
+Locales ['tc'] = {
   ['valid_purchase'] = '確認購買?',
   ['yes'] = '是 (<span style="color: green;">$%s</span>)',
   ['no'] = '否',
