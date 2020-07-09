@@ -31,7 +31,7 @@ function DrawText3Ds(x,y,z, text)
     local px,py,pz=table.unpack(GetGameplayCamCoords())
 
     SetTextScale(0.32, 0.32)
-    SetTextFont(1)
+    SetTextFont(4)
     SetTextProportional(1)
     SetTextColour(255, 255, 255, 255)
     SetTextEntry("STRING")
@@ -160,6 +160,24 @@ Citizen.CreateThread(function()
 					end
 				end
 			end
+
+			for k,v in pairs(Config.ExtraZones) do
+				for i = 1, #v.Pos, 1 do
+					local distance = Vdist(coords, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z)
+					
+					if (distance < 10.0) and insideMarker == false and pedInVeh then
+						DrawMarker(Config.PoliceExtraMarker, v.Pos[i].x, v.Pos[i].y, v.Pos[i].z-0.97, 0.0, 0.0, 0.0, 0.0, 0, 0.0, Config.PoliceExtraMarkerScale.x, Config.PoliceExtraMarkerScale.y, Config.PoliceExtraMarkerScale.z, Config.PoliceExtraMarkerColor.r,Config.PoliceExtraMarkerColor.g,Config.PoliceExtraMarkerColor.b,Config.PoliceExtraMarkerColor.a, false, true, 2, true, false, false, false)
+					end
+					if (distance < 2.5 ) and insideMarker == false and pedInVeh then
+						DrawText3Ds(v.Pos[i].x, v.Pos[i].y, v.Pos[i].z, Config.ExtraDraw3DText)
+						if IsControlJustPressed(0, Config.KeyToOpenExtraGarage) and GetVehicleClass(veh) == 18 then
+							OpenMainMenu()
+							insideMarker = true
+							Citizen.Wait(500)
+						end
+					end
+				end
+			end
 		end
 	end
 end)
@@ -174,7 +192,7 @@ PoliceGarage = function(type)
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), "esx_policeGarage_menu",
 		{
 			title    = Config.TitlePoliceGarage,
-			align    = "top-left",
+			align    = "center",
 			elements = elements
 		},
 	function(data, menu)
@@ -346,7 +364,161 @@ function policeClean()
 	end
 end
 
-RegisterCommand('livery', function(source, args) 
-	local Veh = GetVehiclePedIsIn(GetPlayerPed(-1)) 
-	local liveryID = tonumber(args[1]) SetVehicleLivery(Veh, liveryID) 
-end, false)
+-- Police Extra Menu:
+function OpenExtraMenu()
+	local elements = {}
+	local vehicle = GetVehiclePedIsIn(GetPlayerPed(-1), false)
+	for id=0, 12 do
+		if DoesExtraExist(vehicle, id) then
+			local state = IsVehicleExtraTurnedOn(vehicle, id) 
+
+			if state then
+				table.insert(elements, {
+					label = "Extra: "..id.." | "..('<span style="color:green;">%s</span>'):format("On"),
+					value = id,
+					state = not state
+				})
+			else
+				table.insert(elements, {
+					label = "Extra: "..id.." | "..('<span style="color:red;">%s</span>'):format("Off"),
+					value = id,
+					state = not state
+				})
+			end
+		end
+	end
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'extra_actions', {
+		title    = Config.TitlePoliceExtra,
+		align    = 'top-left',
+		elements = elements
+	}, function(data, menu)
+		SetVehicleExtra(vehicle, data.current.value, not data.current.state)
+		local newData = data.current
+		if data.current.state then
+			newData.label = "Extra: "..data.current.value.." | "..('<span style="color:green;">%s</span>'):format("On")
+		else
+			newData.label = "Extra: "..data.current.value.." | "..('<span style="color:red;">%s</span>'):format("Off")
+		end
+		newData.state = not data.current.state
+
+		menu.update({value = data.current.value}, newData)
+		menu.refresh()
+	end, function(data, menu)
+		menu.close()
+	end)
+end
+
+-- Police Livery Menu:
+function OpenLiveryMenu()
+	local elements = {}
+	
+	local vehicle = GetVehiclePedIsIn(GetPlayerPed(-1))
+	local liveryCount = GetVehicleLiveryCount(vehicle)
+			
+	for i = 1, liveryCount do
+		local state = GetVehicleLivery(vehicle) 
+		local text
+		
+		if state == i then
+			text = "Livery: "..i.." | "..('<span style="color:green;">%s</span>'):format("On")
+		else
+			text = "Livery: "..i.." | "..('<span style="color:red;">%s</span>'):format("Off")
+		end
+		
+		table.insert(elements, {
+			label = text,
+			value = i,
+			state = not state
+		}) 
+	end
+
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'livery_menu', {
+		title    = Config.TitlePoliceLivery,
+		align    = 'top-left',
+		elements = elements
+	}, function(data, menu)
+		SetVehicleLivery(vehicle, data.current.value, not data.current.state)
+		local newData = data.current
+		if data.current.state then
+			newData.label = "Livery: "..data.current.value.." | "..('<span style="color:green;">%s</span>'):format("On")
+		else
+			newData.label = "Livery: "..data.current.value.." | "..('<span style="color:red;">%s</span>'):format("Off")
+		end
+		newData.state = not data.current.state
+		menu.update({value = data.current.value}, newData)
+		menu.refresh()
+		menu.close()	
+	end, function(data, menu)
+		menu.close()		
+	end)
+end
+
+-- Police Extra Main Menu:
+function OpenMainMenu()
+	local elements = {
+		{label = Config.LabelPrimaryCol,value = 'primary'},
+		{label = Config.LabelSecondaryCol,value = 'secondary'},
+		{label = Config.LabelExtra,value = 'extra'},
+		{label = Config.LabelLivery,value = 'livery'}
+	}
+	ESX.UI.Menu.CloseAll()
+
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'color_menu', {
+		title    = Config.TitlePoliceExtra,
+		align    = 'top-left',
+		elements = elements
+	}, function(data, menu)
+		if data.current.value == 'extra' then
+			OpenExtraMenu()
+		elseif data.current.value == 'livery' then
+			OpenLiveryMenu()
+		elseif data.current.value == 'primary' then
+			OpenMainColorMenu('primary')
+		elseif data.current.value == 'secondary' then
+			OpenMainColorMenu('secondary')
+		end
+	end, function(data, menu)
+		menu.close()
+		insideMarker = false
+	end)
+end
+
+-- Police Color Main Menu:
+function OpenMainColorMenu(colortype)
+	local elements = {}
+	for k,v in pairs(Config.Colors) do
+		table.insert(elements, {
+			label = v.label,
+			value = v.value
+		})
+	end
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'main_color_menu', {
+		title    = Config.TitleColorType,
+		align    = 'top-left',
+		elements = elements
+	}, function(data, menu)
+		OpenColorMenu(data.current.type, data.current.value, colortype)
+	end, function(data, menu)
+		menu.close()
+	end)
+end
+
+-- Police Color Menu:
+function OpenColorMenu(type, value, colortype)
+	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'extra_actions', {
+		title    = Config.TitleValues,
+		align    = 'top-left',
+		elements = GetColors(value)
+	}, function(data, menu)
+		local vehicle = GetVehiclePedIsIn(GetPlayerPed(-1), false)
+		local pr,sec = GetVehicleColours(vehicle)
+		if colortype == 'primary' then
+			SetVehicleColours(vehicle, data.current.index, sec)
+		elseif colortype == 'secondary' then
+			SetVehicleColours(vehicle, pr, data.current.index)
+		end
+		
+	end, function(data, menu)
+		menu.close()
+	end)
+end
