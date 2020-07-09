@@ -301,7 +301,7 @@ function DrawText3D(x, y, z, text, scale)
     local pX, pY, pZ = table.unpack(GetGameplayCamCoords())
  
     SetTextScale(scale, scale)
-    SetTextFont(4)
+    SetTextFont(1)
     SetTextProportional(1)
     SetTextEntry("STRING")
     SetTextCentre(1)
