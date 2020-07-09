@@ -199,7 +199,7 @@ Citizen.CreateThread(function()
                 lastWorkTime = GetGameTimer()
 
                 ESX.ShowNotification(string.format(
-                                         "You need to rest ~r~%d seconds ~w~before doing another workout.",
+                                         "需要休息",
                                          Config.RestTime))
                 if Config.Ability then
                     local luck = math.random(1,100)
