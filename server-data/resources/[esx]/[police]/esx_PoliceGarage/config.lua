@@ -78,25 +78,25 @@ Config.EnableExtraGarageBlip = false
 Config.PoliceCarMarker = 27 												-- marker type
 Config.PoliceCarMarkerColor = { r = 50, g = 50, b = 204, a = 100 } 			-- rgba color of the marker
 Config.PoliceCarMarkerScale = { x = 1.5, y = 1.5, z = 1.0 }  				-- the scale for the marker on the x, y and z axis
-Config.CarDraw3DText = "[E] Pour Ouvrir Le Garage"			-- set your desired text here
+Config.CarDraw3DText = "[E] 打開車庫"			-- set your desired text here
 
 -- Police Heli Garage Marker Settings:
 Config.PoliceHeliMarker = 27 												-- marker type
 Config.PoliceHeliMarkerColor = { r = 50, g = 50, b = 204, a = 100 } 		-- rgba color of the marker
 Config.PoliceHeliMarkerScale = { x = 5.5, y = 5.5, z = 1.0 }  				-- the scale for the marker on the x, y and z axis
-Config.HeliDraw3DText = "[E] Pour Ouvrir Le Garage"		-- set your desired text here
+Config.HeliDraw3DText = "[E] 打開車庫"		-- set your desired text here
 
 -- Police Boat Garage Marker Settings:
 Config.PoliceBoatMarker = 27 												-- marker type
 Config.PoliceBoatMarkerColor = { r = 50, g = 50, b = 204, a = 100 } 		-- rgba color of the marker
 Config.PoliceBoatMarkerScale = { x = 3.0, y = 3.0, z = 1.0 }  				-- the scale for the marker on the x, y and z axis
-Config.BoatDraw3DText = "[E] Pour Ouvrir Le Garage"		-- set your desired text here
+Config.BoatDraw3DText = "[E] 打開車庫"		-- set your desired text here
 
 -- Police Extra Garage Marker Settings:
 Config.PoliceExtraMarker = 27 												-- marker type
 Config.PoliceExtraMarkerColor = { r = 50, g = 50, b = 204, a = 100 } 		-- rgba color of the marker
 Config.PoliceExtraMarkerScale = { x = 2.5, y = 2.5, z = 1.0 }  				-- the scale for the marker on the x, y and z axis
-Config.ExtraDraw3DText = "Press ~g~[E]~s~ for ~y~Police Extra Menu~s~"		-- set your desired text here
+Config.ExtraDraw3DText = "按下 ~g~[E]~s~ ~y~其他選單~s~"		-- set your desired text here
 
 -- Police Cars:
 Config.PoliceVehicles = {
@@ -132,20 +132,20 @@ Config.RepairCommand = 'paranda'
 Config.CleanCommand = 'puhasta'
 
 -- Menu Labels & Titles:
-Config.LabelStoreVeh = "Rentrer un Véhicule"
-Config.LabelGetVeh = "Prendre un Véhicule"
-Config.TitlePoliceGarage = "Police Garage"
+Config.LabelStoreVeh = "歸還車輛"
+Config.LabelGetVeh = "上車"
+Config.TitlePoliceGarage = "車庫"
 
 -- ESX.ShowNotifications:
-Config.VehicleParked = "ton véhicule est rangé!"
-Config.NoVehicleNearby = "tu n'as pas de véhicule!"
-Config.CarOutFromPolGar = "Vous avez sorti un ~b~Vehicule~s~ du ~y~Garage Police~s~!"
-Config.HeliOutFromPolGar = "Vous avez sorti un ~b~Helicopter~s~ du ~y~Garage helicopter Police~s~!"
-Config.BoatOutFromPolGar = "Vous avez sorti un ~b~Bateau~s~ du ~y~Garage bateau Police~s~!"
-Config.VehRepNotify = "Votre ~b~vehicule~s~ est en ~y~reparation~s~, S'il vous plaît, attendez!"
-Config.VehRepDoneNotify = "Votre ~b~vehicule~s~ est maintenant ~y~reparer~s~!"
-Config.VehCleanNotify = "Votre ~b~vehicule~s~ est bientot ~y~propre~s~, S'il vous plaît, attendez!"
-Config.VehCleanDoneNotify = "Votre ~b~vehicule~s~ est maintenant ~y~propre~s~!"
+Config.VehicleParked = "車輛已歸還!"
+Config.NoVehicleNearby = "沒有車在附近!"
+Config.CarOutFromPolGar = "拉出 ~b~車輛~s~~y~車庫~s~!"
+Config.HeliOutFromPolGar = "拉出 ~b~直升機~s~~y~停機坪~s~!"
+Config.BoatOutFromPolGar = "拉出 ~b~船~s~~y~船艙~s~!"
+Config.VehRepNotify = "~b~車輛~s~~y~維修中~s~, 請稍後!"
+Config.VehRepDoneNotify = "~b~車輛~s~~y~維修完成~s~!"
+Config.VehCleanNotify = "~b~車輛~s~~y~清洗中~s~, 請稍後!"
+Config.VehCleanDoneNotify = "~b~車輛~s~~y~清洗完成~s~!"
 
 -- ProgressBars text
 Config.Progress1 = "AUTO PARANDAMINE"
@@ -155,7 +155,7 @@ Config.Progress2 = "AUTO PUHASTAMINE"
 Config.RepairTime = 5					-- time to repair vehicle
 Config.CleanTime = 3.5					-- time to clean vehicle
 
-Config.VehicleLoadText = "Attendez que le véhicule apparaisse"			-- text on screen when vehicle model is being loaded
+Config.VehicleLoadText = "等待車輛"			-- text on screen when vehicle model is being loaded
 
 -- Distance from garage marker to the point where /fix and /clean shall work
 Config.Distance = 20

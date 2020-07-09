@@ -35,28 +35,28 @@ Config.KeyToOpenArmory = 38															-- default 38 is E
 Config.ArmoryMarker = 27 															-- marker type
 Config.ArmoryMarkerColor = { r = 50, g = 50, b = 204, a = 100 } 					-- rgba color of the marker
 Config.ArmoryMarkerScale = { x = 1.0, y = 1.0, z = 1.0 }  							-- the scale for the marker on the x, y and z axis
-Config.ArmoryDraw3DText = "Appuier sur ~g~[E]~s~ pour ~y~ Ouvrir L'armurie~s~"					-- set your desired text here
+Config.ArmoryDraw3DText = "按下打開軍械庫"					-- set your desired text here
 
 -- Police Kevlar Marker Settings:
 Config.KeyToOpenKevlar = 38															-- default 38 is E
 Config.KevlarMarker = 27 															-- marker type
 Config.KevlarMarkerColor = { r = 50, g = 50, b = 204, a = 100 } 					-- rgba color of the marker
 Config.KevlarMarkerScale = { x = 1.0, y = 1.0, z = 1.0 }  							-- the scale for the marker on the x, y and z axis
-Config.KevlarDraw3DText = "Appuier sur ~g~[E]~s~ pour ~y~ Mettre un Gilet~s~"					-- set your desired text here
+Config.KevlarDraw3DText = "穿上防彈背心"					-- set your desired text here
 
 -- Police Attachments Marker Settings:
 Config.KeyToOpenAttachments = 38													-- default 38 is E
 Config.AttachmentsMarker = 27 														-- marker type
 Config.AttachmentsMarkerColor = { r = 50, g = 50, b = 204, a = 100 } 				-- rgba color of the marker
 Config.AttachmentsMarkerScale = { x = 1.0, y = 1.0, z = 1.0 }   					-- the scale for the marker on the x, y and z axis
-Config.AttachmentsDraw3DText = "Appuier sur ~g~[E]~s~ pour ~y~Ouvrir Le Menu D\'accessoires~s~"		-- set your desired text here
+Config.AttachmentsDraw3DText = "按下打開配件商店"		-- set your desired text here
 
 -- Menu Element Labels:
 Config.WeaponStorage = "Armes"
 Config.RestockWeapon = "Deposer"
---Config.Vest1 = "Kevlar 1"					-- 25% armor
---Config.Vest2 = "Kevlar 2"					-- 50% armor
---Config.Vest3 = "Kevlar 3"					-- 75% armor
+Config.Vest1 = "Kevlar 1"					-- 25% armor
+Config.Vest2 = "Kevlar 2"					-- 50% armor
+Config.Vest3 = "Kevlar 3"					-- 75% armor
 Config.Vest4 = "Gilet Pare-Balle"					-- 100% armor
 Config.RemoveVest = "Enlever"			-- 0% armor
 
@@ -69,20 +69,20 @@ Config.ChooseWeaponTitle = "Choisis l'armes"
 Config.AttachmentTitle = "Accessoires"
 
 -- ESX Show Notifications_
-Config.ContactSuperVisor = "Vous avez déjà sorti cette arme, contactez un superviseur"
-Config.NoPoliceOnline = "Aucun officier de police n'est en ligne"
-Config.WeaponMustBeInHand = "Vous devez tenir l'arme dans votre main"
-Config.FlashlightEquipped = "Vous avez équipé une lampe de poche ~r~%s ~s~"
-Config.FlashlightRemove = "Vous avez retiré une lampe de poche for ~r~%s ~s~"
-Config.ScopeEquipped = "Vous avez équipé une portée pour ~r~%s ~s~"
-Config.ScopeRemove = "Vous avez supprimé une étendue pour ~r~%s ~s~"
-Config.SuppressorEquipped = "Vous avez équipé une lunette~s~ for ~r~%s ~s~"
-Config.SuppressorRemove = "Vous avez supprimé une étendue~s~ for ~r~%s ~s~"
+Config.ContactSuperVisor = "聯繫主管"
+Config.NoPoliceOnline = "沒有警察在上班"
+Config.WeaponMustBeInHand = "拿起武器"
+Config.FlashlightEquipped = "裝備手電筒~r~%s ~s~"
+Config.FlashlightRemove = "移除手電筒~r~%s ~s~"
+Config.ScopeEquipped = "裝備~r~%s ~s~"
+Config.ScopeRemove = "移除~r~%s ~s~"
+Config.SuppressorEquipped = "安裝~r~%s ~s~"
+Config.SuppressorRemove = "移除~r~%s ~s~"
 
 -- ProgressBar Text_
-Config.Progress1 = "Range l'armes"
-Config.Progress2 = "Enlève Le Gilet"
-Config.Progress3 = "Mets Le Gilet"
+Config.Progress1 = "收起武器"
+Config.Progress2 = "脫掉背心"
+Config.Progress3 = "穿上背心"
 
 -- ProgressBar Timer, in seconds:
 Config.RestockTimer = 2
