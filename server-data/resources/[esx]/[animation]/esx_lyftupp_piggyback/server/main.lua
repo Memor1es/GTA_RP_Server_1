@@ -65,6 +65,10 @@ end)
 RegisterServerEvent('esx_barbie_lyftupp:sync')
 AddEventHandler('esx_barbie_lyftupp:sync', function(target, animationLib, animation, animation2, distans, distans2, height,targetSrc,length,spin,controlFlagSrc,controlFlagTarget,animFlagTarget)
 	print("got to srv esx_barbie_lyftupp:sync")
+	if not targetSrc then
+		TriggerClientEvent('esx:showNotification', source, "附近沒有人")
+		return
+	end
 	TriggerClientEvent('esx_barbie_lyftupp:syncTarget', targetSrc, source, animationLib, animation2, distans, distans2, height, length,spin,controlFlagTarget,animFlagTarget)
 	print("triggering to target: " .. tostring(targetSrc))
 	TriggerClientEvent('esx_barbie_lyftupp:syncMe', source, animationLib, animation,length,controlFlagSrc,animFlagTarget)
@@ -73,6 +77,10 @@ end)
 RegisterServerEvent('cmg2_animations:sync')
 AddEventHandler('cmg2_animations:sync', function(target, animationLib,animationLib2, animation, animation2, distans, distans2, height,targetSrc,length,spin,controlFlagSrc,controlFlagTarget,animFlagTarget)
 	print("got to srv cmg2_animations:sync")
+	if not targetSrc then
+		TriggerClientEvent('esx:showNotification', source, "附近沒有人")
+		return
+	end
 	TriggerClientEvent('cmg2_animations:syncTarget', targetSrc, source, animationLib2, animation2, distans, distans2, height, length,spin,controlFlagTarget,animFlagTarget)
 	print("triggering to target: " .. tostring(targetSrc))
 	TriggerClientEvent('cmg2_animations:syncMe', source, animationLib, animation,length,controlFlagSrc,animFlagTarget)
