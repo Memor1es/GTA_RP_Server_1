@@ -22,7 +22,7 @@ function stringsplit(inputstr, sep)
     return t
 end
 
-ESX.RegisterCommand('ooc', 'admin', function(xPlayer, args, showError)
+ESX.RegisterCommand('ooc', 'user', function(xPlayer, args, showError)
     --args.playerId.triggerEvent('esx_ambulancejob:revive')	
     TriggerClientEvent('chatMessage', -1, "OOC | " .. xPlayer.name, { 128, 128, 128 }, args.message)
 
@@ -31,11 +31,20 @@ end, true, {help = "RP外發言(out of character)", validate = true, arguments =
 
 }})
 
-ESX.RegisterCommand('OOC', 'admin', function(xPlayer, args, showError)
+ESX.RegisterCommand('OOC', 'user', function(xPlayer, args, showError)
     --args.playerId.triggerEvent('esx_ambulancejob:revive')	
     TriggerClientEvent('chatMessage', -1, "OOC | " .. xPlayer.name, { 128, 128, 128 }, args.message)
 
 end, true, {help = "RP外發言(out of character)", validate = true, arguments = {
+    {name = 'message', help = "想要輸入的訊息", type = 'string'}
+
+}})
+
+ESX.RegisterCommand('adminooc', 'admin', function(xPlayer, args, showError)
+    --args.playerId.triggerEvent('esx_ambulancejob:revive')	
+    TriggerClientEvent('chatMessage', -1, "OOC | " .. xPlayer.name, { 128, 0, 0 }, args.message)
+
+end, true, {help = "政府官員發言", validate = true, arguments = {
     {name = 'message', help = "想要輸入的訊息", type = 'string'}
 
 }})
