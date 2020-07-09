@@ -192,7 +192,7 @@ PoliceGarage = function(type)
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), "esx_policeGarage_menu",
 		{
 			title    = Config.TitlePoliceGarage,
-			align    = "center",
+			align    = "top-left",
 			elements = elements
 		},
 	function(data, menu)
@@ -302,7 +302,7 @@ end
 
 -- Loading Text for Vehicles Function:
 function drawLoadingText(text, red, green, blue, alpha)
-	SetTextFont(4)
+	SetTextFont(1)
 	SetTextScale(0.0, 0.5)
 	SetTextColour(red, green, blue, alpha)
 	SetTextDropshadow(0, 0, 0, 0, 255)
