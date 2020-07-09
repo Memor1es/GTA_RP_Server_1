@@ -26,7 +26,7 @@ ESX.RegisterCommand('ooc', 'admin', function(xPlayer, args, showError)
     --args.playerId.triggerEvent('esx_ambulancejob:revive')	
     TriggerClientEvent('chatMessage', -1, "OOC | " .. xPlayer.name, { 128, 128, 128 }, args.message)
 
-end, true, {help = _U('revive_help'), validate = true, arguments = {
+end, true, {help = "RP外發言(out of character)", validate = true, arguments = {
     {name = 'message', help = "想要輸入的訊息", type = 'string'}
 
 }})
@@ -35,7 +35,7 @@ ESX.RegisterCommand('OOC', 'admin', function(xPlayer, args, showError)
     --args.playerId.triggerEvent('esx_ambulancejob:revive')	
     TriggerClientEvent('chatMessage', -1, "OOC | " .. xPlayer.name, { 128, 128, 128 }, args.message)
 
-end, true, {help = _U('revive_help'), validate = true, arguments = {
+end, true, {help = "RP外發言(out of character)", validate = true, arguments = {
     {name = 'message', help = "想要輸入的訊息", type = 'string'}
 
 }})
