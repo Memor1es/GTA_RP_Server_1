@@ -101,12 +101,16 @@ Config.ExtraDraw3DText = "Press ~g~[E]~s~ for ~y~Police Extra Menu~s~"		-- set y
 
 -- -- Police Cars:
 Config.PoliceVehicles = {
-	{ model = 'vchmp', label = 'Dodge Charger - Marked', price = 0 },
+	{ model = 'police', label = 'Cruiser'},
+	{ model = 'police2', label = 'Buffalo'},
+	{ model = 'police3', label = 'Interceptor'},
+	{ model = 'police4', label = 'Cruiser Unmarked'},
+	--[[{ model = 'vchmp', label = 'Dodge Charger - Marked', price = 0 },
 	{ model = 'police5', label = 'Chevrolet Tahoe - Marked', price = 0 },
 	{ model = 'vapup', label = 'Ford Mustang - APU', price = 0 },
 	{ model = '2015polstang', label = 'Police Mustang Test', price = 0 },
 	{ model = 'fbibufsc', label = 'Buffalo S/C - Unmarked', price = 0 },
-	{ model = 'policeinsurgent', label = 'SWAT Transport', price = 0 }
+	{ model = 'policeinsurgent', label = 'SWAT Transport', price = 0 }]]
 }
 
 -- Police Helicopters:
