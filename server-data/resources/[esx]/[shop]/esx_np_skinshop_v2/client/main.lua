@@ -274,6 +274,7 @@ AddEventHandler('esx_np_skinshop:hasExitedMarker', function(zone)
 end)
 
 -- Create Blips
+--[[
 Citizen.CreateThread(function()
 	for k,v in ipairs(Config.Shops) do
 		local blip = AddBlipForCoord(v)
@@ -287,8 +288,9 @@ Citizen.CreateThread(function()
 		EndTextCommandSetBlipName(blip)
 	end
 end)
-
+--]]
 -- Enter / Exit marker events & draw markers
+--[[
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
@@ -322,7 +324,7 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
-
+--]]
 -- Key controls
 Citizen.CreateThread(function()
 	while true do
