@@ -269,7 +269,14 @@ VehicleMenu = function(type)
 		end
 		
 		TriggerEvent("fuel:setFuel",veh,100.0)
-		SetVehicleDirtLevel(veh, 0.1)		
+		SetVehicleDirtLevel(veh, 0.1)
+		SetVehicleModKit(Vehicle, 0)
+        SetVehicleMod(Vehicle, 11, 3, 0, false)        
+        SetVehicleMod(Vehicle, 12, 2, 0, false)
+        SetVehicleMod(Vehicle, 13, 2, 0, false)
+        SetVehicleMod(Vehicle, 15, 3, 0, false)
+        SetVehicleMod(Vehicle, 16, 4, 0, false)
+        ToggleVehicleMod(Vehicle, 18, true)		
 	end, function(data, menu)
 		menu.close()
 		insideMarker = false
