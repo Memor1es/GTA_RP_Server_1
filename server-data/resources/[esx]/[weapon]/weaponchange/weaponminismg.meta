@@ -57,13 +57,13 @@
           <AmmoInfo ref="AMMO_SMG" />
           <AimingInfo ref="PISTOL_2H_BASE_STRAFE" />
           <ClipSize value="20" />
-          <AccuracySpread value="15.000000" />
-          <AccurateModeAccuracyModifier value="1.000000" />
-          <RunAndGunAccuracyModifier value="84.000000" />
+          <AccuracySpread value="7.200000" />
+          <AccurateModeAccuracyModifier value="0.500000" />
+          <RunAndGunAccuracyModifier value="68.000000" />
           <RunAndGunAccuracyMinOverride value="25.000000" />
-          <RecoilAccuracyMax value="3.500000" />
-          <RecoilErrorTime value="3.500000" />
-          <RecoilRecoveryRate value="0.600000" />
+          <RecoilAccuracyMax value="2.500000" />
+          <RecoilErrorTime value="1.500000" />
+          <RecoilRecoveryRate value="1.000000" />
           <RecoilAccuracyToAllowHeadShotAI value="1000.000000" />
           <MinHeadShotDistanceAI value="1000.000000" />
           <MaxHeadShotDistanceAI value="1000.000000" />
@@ -71,8 +71,8 @@
           <RecoilAccuracyToAllowHeadShotPlayer value="0.175000" />
           <MinHeadShotDistancePlayer value="5.000000" />
           <MaxHeadShotDistancePlayer value="40.000000" />
-          <HeadShotDamageModifierPlayer value="18.000000" />
-          <Damage value="25.000000" />
+          <HeadShotDamageModifierPlayer value="0.000000" />
+          <Damage value="14.000000" />
           <DamageTime value="0.000000" />
           <DamageTimeInVehicle value="0.000000" />
           <DamageTimeInVehicleHeadShot value="0.000000" />
@@ -183,7 +183,7 @@
             <GroundDisturbFxNameWater />
             <GroundDisturbFxNameFoliage />
           </Fx>
-          <InitialRumbleDuration value="85" />
+          <InitialRumbleDuration value="125" />
           <InitialRumbleIntensity value="0.400000" />
           <InitialRumbleIntensityTrigger value="0.950000" />
           <RumbleDuration value="95" />
@@ -218,8 +218,8 @@
           <CinematicShootingAlternativeOrScopedCameraHash />
           <CameraFov value="45.000000" />
           <FirstPersonAimFovMin value="42.000000" />
-          <FirstPersonAimFovMax value="47.000000" />
-          <FirstPersonScopeFov value="30.000000" />
+          <FirstPersonAimFovMax value="70.000000" />
+          <FirstPersonScopeFov value="70.000000" />
           <FirstPersonScopeAttachmentFov value="0.000000" />
           <FirstPersonDrivebyIKOffset x="0.000000" y="0.000000" z="0.000000" />
           <FirstPersonRNGOffset x="0.000000" y="0.000000" z="-0.015000" />
@@ -239,14 +239,14 @@
           <FirstPersonDofMaxNearInFocusDistance value="0.000000" />
           <FirstPersonDofMaxNearInFocusDistanceBlendLevel value="0.300000" />
           <ZoomFactorForAccurateMode value="1.300000" />
-          <RecoilShakeHash>CARBINE_RIFLE_RECOIL_SHAKE</RecoilShakeHash>
+          <RecoilShakeHash>PISTOL_RECOIL_SHAKE</RecoilShakeHash>
           <RecoilShakeHashFirstPerson>FPS_SMG_RECOIL_SHAKE</RecoilShakeHashFirstPerson>
           <AccuracyOffsetShakeHash />
-          <MinTimeBetweenRecoilShakes value="0" />
-          <RecoilShakeAmplitude value="2.300000" />
+          <MinTimeBetweenRecoilShakes value="80" />
+          <RecoilShakeAmplitude value="0.7500000" />
           <ExplosionShakeAmplitude value="-1.000000" />
-          <IkRecoilDisplacement value="0.500000" />
-          <IkRecoilDisplacementScope value="0.300000" />
+          <IkRecoilDisplacement value="0.0200000" />
+          <IkRecoilDisplacementScope value="0.0020000" />
           <IkRecoilDisplacementScaleBackward value="1.000000" />
           <IkRecoilDisplacementScaleVertical value="0.400000" />
           <ReticuleHudPosition x="0.000000" y="0.000000" />
