@@ -16,7 +16,7 @@ local Keys = {
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
-		if IsControlPressed(0, Keys["LEFTSHIFT"]) and IsControlJustPressed(0, Keys["E"]) then
+		if IsControlPressed(0, Keys["LEFTCTRL"]) and IsControlJustPressed(0, Keys["E"]) then
 			if IsPedInAnyVehicle(PlayerPedId()) then
 				TriggerEvent('chatMessage', 'Tackle', {255, 255, 255}, 'You cannot tackle someone in a vehicle')
 			else
