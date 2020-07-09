@@ -34,7 +34,7 @@ rootMenuConfig =  {
             return not fuck
         end,
         --subMenus = {"general:flipvehicle",  "general:checkoverself", "general:checktargetstates",  "general:keysgive",  "general:emotes",  "general:checkvehicle", "general:apartgivekey", "general:aparttakekey"  }
-        subMenus = {"general:flipvehicle",  "general:checkoverself", "general:emotes", "general:apartgivekey", "general:aparttakekey",  'prison_status_panel:open', 'dice:roll1'}
+        subMenus = {"general:flipvehicle",  "general:checkoverself", "general:emotes", "general:apartgivekey", "general:aparttakekey",  'prison_status_panel:open', 'dice:roll1','cmg2_animations:carry','esx_barbie_lyftupp:piggyback'}
     },
     {
         id = "amb-ability",
@@ -351,7 +351,17 @@ newSubMenus = {
         title = "動作",
         icon = "#general-emotes",
         functionName = "dp:RecieveMenu"
-    },    
+    },
+    ['cmg2_animations:carry'] = {
+        title = "背人",
+        icon = "#general-emotes",
+        functionName = "cmg2_animations:carry"
+    }, 
+    ['esx_barbie_lyftupp:piggyback'] = {
+        title = "扛人",
+        icon = "#general-emotes",
+        functionName = "esx_barbie_lyftupp:piggyback"
+    },     
     ['general:keysgive'] = {
         title = "給鑰匙",
         icon = "#general-keys-give",
