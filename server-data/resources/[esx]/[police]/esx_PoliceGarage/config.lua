@@ -101,11 +101,18 @@ Config.ExtraDraw3DText = "Press ~g~[E]~s~ for ~y~Police Extra Menu~s~"		-- set y
 
 -- -- Police Cars:
 Config.PoliceVehicles = {
-	{ model = 'police', label = 'Cruiser'},
+
+	{ model = 'sp1', label = 'Ford Crown Victoria Police Interceptor'},
+	{ model = 'sp3', label = 'Ford Taurus Police Interceptor Sedan'},
+	{ model = 'sp7', label = 'Dodge Charger Police Interceptor 2014'},
+	{ model = 'sp9', label = 'Dodge Charger Police Interceptor 2015'},
+	{ model = 'sp13', label = 'Ford Police Interceptor Utility (LSPD)'},
+	{ model = 'sp15', label = 'Ford Police Interceptor Utility (BCSO)'},
+	--[[{ model = 'police', label = 'Cruiser'},
 	{ model = 'police2', label = 'Buffalo'},
 	{ model = 'police3', label = 'Interceptor'},
 	{ model = 'police4', label = 'Cruiser Unmarked'},
-	--[[{ model = 'vchmp', label = 'Dodge Charger - Marked', price = 0 },
+	{ model = 'vchmp', label = 'Dodge Charger - Marked', price = 0 },
 	{ model = 'police5', label = 'Chevrolet Tahoe - Marked', price = 0 },
 	{ model = 'vapup', label = 'Ford Mustang - APU', price = 0 },
 	{ model = '2015polstang', label = 'Police Mustang Test', price = 0 },
