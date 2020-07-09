@@ -173,8 +173,9 @@ Citizen.CreateThread(function()
 								['tshirt_1'] = 15, ['tshirt_2'] = 0,
 								['torso_1'] = 15, ['torso_2'] = 0,
 								['arms'] = 15,
-								['pants_1'] = 61, ['pants_2'] = 5,
-								['shoes_1'] = 34, ['shoes_2'] = 0,
+								['pants_1'] = 21, ['pants_2'] = 0,
+								['shoes_1'] = 5, ['shoes_2'] = 0,
+								['mask_1'] = 0, ['helmet_1'] = -1,
 							}
 							TriggerEvent('skinchanger:loadClothes', skin, clothesSkin)
 
@@ -187,9 +188,10 @@ Citizen.CreateThread(function()
 								local clothesSkin = {
 								['tshirt_1'] = 15, ['tshirt_2'] = 0,
 								['torso_1'] = 15, ['torso_2'] = 0,
-								['arms'] = 15,
-								['pants_1'] = 15, ['pants_2'] = 0,
-								['shoes_1'] = 35, ['shoes_2'] = 0,
+								['arms'] = 8,
+								['pants_1'] = 56, ['pants_2'] = 1,
+								['shoes_1'] = 5, ['shoes_2'] = 0,
+								['mask_1'] = 0, ['helmet_1'] = -1,
 							}
 							TriggerEvent('skinchanger:loadClothes', skin, clothesSkin)
 
