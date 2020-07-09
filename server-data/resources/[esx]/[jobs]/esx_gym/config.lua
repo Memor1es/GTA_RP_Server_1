@@ -85,7 +85,7 @@ Config.Workouts = {
         label = "Push-Ups",
         workout = 5,
         duration = 30
-    }, {
+    } --[[{
         x = -1197.10,
         y = -1567.59,
         z = 4.60,
@@ -93,31 +93,7 @@ Config.Workouts = {
         label = "Bench",
         workout = 6,
         duration = 30
-    }, {
-        x = -1200.63,
-        y = -1575.83,
-        z = 4.60,
-        h = 220.96,
-        label = "Bench",
-        workout = 6,
-        duration = 30
-    }, {
-        x = -1206.49,
-        y = -1561.59,
-        z = 4.60,
-        h = 214.50,
-        label = "Bench",
-        workout = 6,
-        duration = 30
-    }, {
-        x = -1201.44,
-        y = -1562.77,
-        z = 4.60,
-        h = 120.78,
-        label = "Bench",
-        workout = 6,
-        duration = 30
-    }
+    }]]
     --prison
     , {
         x = 1773.53,
@@ -136,14 +112,6 @@ Config.Workouts = {
         workout = 1,
         duration = 30
     }, {
-        x = 1769.82,
-        y = 2590.17,
-        z = 45.21,
-        h = 289.74,
-        label = "Bench",
-        workout = 6,
-        duration = 30
-    },{
         x = 1764.73,
         y = 2592.67,
         z = 45.8,
@@ -174,6 +142,14 @@ Config.Workouts = {
         h = 353.34,
         label = "Crunches",
         workout = 3,
+        duration = 30
+    },{
+        x = 1770.46,
+        y = 2591.18,
+        z = 45.8,
+        h = 190.19,
+        label = "Z-Bar (Biceps)",
+        workout = 2,
         duration = 30
     }
 
