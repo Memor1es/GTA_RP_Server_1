@@ -5,7 +5,7 @@
 Locales['en'] = {
   -- Black
   ['black'] = 'Noir',
- --[[ ['graphite'] = 'Graphite',
+  ['graphite'] = 'Graphite',
   ['black_metallic'] = 'noir Metalique',
   ['caststeel'] = 'Acier moulé',
   ['black_anth'] = 'Noir anthracite',
@@ -180,4 +180,4 @@ Locales['en'] = {
   ['puregold'] = 'pure Gold',
   ['brushedgold'] = 'brushed Gold',
   ['lightgold'] = 'light Gold',
-}--]]
+}
