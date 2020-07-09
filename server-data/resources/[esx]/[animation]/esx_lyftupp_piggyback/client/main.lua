@@ -643,6 +643,81 @@ Citizen.CreateThread(function()
 	end
 end)
 
+RegisterNetEvent('esx_barbie_lyftupp:piggyback')
+AddEventHandler('esx_barbie_lyftupp:piggyback', function()
+	if not piggyBackInProgress then
+		piggyBackInProgress = true
+		--IsLiftup = true
+		local player = PlayerPedId()	
+		lib = 'anim@arena@celeb@flat@paired@no_props@'
+		anim1 = 'piggyback_c_player_a'
+		anim2 = 'piggyback_c_player_b'
+		distans = -0.07
+		distans2 = 0.0
+		height = 0.45
+		spin = 0.0		
+		length = 100000
+		controlFlagMe = 49
+		controlFlagTarget = 33
+		animFlagTarget = 1
+		local closestPlayer = GetClosestPlayer(3)
+		target = GetPlayerServerId(closestPlayer)
+		if closestPlayer ~= nil then
+			print("triggering esx_barbie_lyftupp:sync")
+			TriggerServerEvent('esx_barbie_lyftupp:sync', closestPlayer, lib, anim1, anim2, distans, distans2, height,target,length,spin,controlFlagMe,controlFlagTarget,animFlagTarget)
+			--IsLiftup = true
+		else
+			print("[CMG Anim] No player nearby")
+
+		end
+
+	else
+		piggyBackInProgress = false
+		IsLiftup = false
+		ClearPedSecondaryTask(GetPlayerPed(-1))
+		DetachEntity(GetPlayerPed(-1), true, false)
+		local closestPlayer = GetClosestPlayer(3)
+		target = GetPlayerServerId(closestPlayer)
+		TriggerServerEvent("esx_barbie_lyftupp:stop",target)
+	end
+end)
+
+RegisterNetEvent('cmg2_animations:carry')
+AddEventHandler('cmg2_animations:carry', function()
+	if not carryingBackInProgress then
+		carryingBackInProgress = true
+		--IsLiftup = true
+		local player = PlayerPedId()	
+		lib = 'missfinale_c2mcs_1'
+		anim1 = 'fin_c2_mcs_1_camman'
+		lib2 = 'nm'
+		anim2 = 'firemans_carry'
+		distans = 0.15
+		distans2 = 0.27
+		height = 0.63
+		spin = 0.0		
+		length = 100000
+		controlFlagMe = 49
+		controlFlagTarget = 33
+		animFlagTarget = 1
+		local closestPlayer = GetClosestPlayer(3)
+		target = GetPlayerServerId(closestPlayer)
+		if closestPlayer ~= nil then
+			print("triggering cmg2_animations:sync")
+			TriggerServerEvent('cmg2_animations:sync', closestPlayer, lib,lib2, anim1, anim2, distans, distans2, height,target,length,spin,controlFlagMe,controlFlagTarget,animFlagTarget)
+		else
+			print("[CMG Anim] No player nearby")
+		end
+	else
+		carryingBackInProgress = false
+		--IsLiftup = false
+		ClearPedSecondaryTask(GetPlayerPed(-1))
+		DetachEntity(GetPlayerPed(-1), true, false)
+		local closestPlayer = GetClosestPlayer(3)
+		target = GetPlayerServerId(closestPlayer)
+		TriggerServerEvent("cmg2_animations:stop",target)
+	end
+end)
 
 RegisterCommand("piggyback",function(source, args)
 	if not piggyBackInProgress then
