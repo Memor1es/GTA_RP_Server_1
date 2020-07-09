@@ -79,25 +79,25 @@ Config.EnableExtraGarageBlip = true
 Config.PoliceCarMarker = 27 												-- marker type
 Config.PoliceCarMarkerColor = { r = 50, g = 50, b = 204, a = 100 } 			-- rgba color of the marker
 Config.PoliceCarMarkerScale = { x = 1.5, y = 1.5, z = 1.0 }  				-- the scale for the marker on the x, y and z axis
-Config.CarDraw3DText = "Press ~g~[E]~s~ for ~y~Police Garage~s~"			-- set your desired text here
+Config.CarDraw3DText = "按下 ~g~[E]~s~ 取出 ~y~車輛~s~"			-- set your desired text here
 
 -- Police Heli Garage Marker Settings:
 Config.PoliceHeliMarker = 27 												-- marker type
 Config.PoliceHeliMarkerColor = { r = 50, g = 50, b = 204, a = 100 } 		-- rgba color of the marker
 Config.PoliceHeliMarkerScale = { x = 5.5, y = 5.5, z = 1.0 }  				-- the scale for the marker on the x, y and z axis
-Config.HeliDraw3DText = "Press ~g~[E]~s~ for ~y~Police Heli Garage~s~"		-- set your desired text here
+Config.HeliDraw3DText = "按下 ~g~[E]~s~ 取出 ~y~直升機~s~"		-- set your desired text here
 
 -- Police Boat Garage Marker Settings:
 Config.PoliceBoatMarker = 27 												-- marker type
 Config.PoliceBoatMarkerColor = { r = 50, g = 50, b = 204, a = 100 } 		-- rgba color of the marker
 Config.PoliceBoatMarkerScale = { x = 3.0, y = 3.0, z = 1.0 }  				-- the scale for the marker on the x, y and z axis
-Config.BoatDraw3DText = "Press ~g~[E]~s~ for ~y~Police Boat Garage~s~"		-- set your desired text here
+Config.BoatDraw3DText = "按下 ~g~[E]~s~ 取出 ~y~船隻~s~"		-- set your desired text here
 
 -- Police Extra Garage Marker Settings:
 Config.PoliceExtraMarker = 27 												-- marker type
 Config.PoliceExtraMarkerColor = { r = 50, g = 50, b = 204, a = 100 } 		-- rgba color of the marker
 Config.PoliceExtraMarkerScale = { x = 2.5, y = 2.5, z = 1.0 }  				-- the scale for the marker on the x, y and z axis
-Config.ExtraDraw3DText = "Press ~g~[E]~s~ for ~y~Police Extra Menu~s~"		-- set your desired text here
+Config.ExtraDraw3DText = "按下 ~g~[E]~s~  ~y~改車~s~"		-- set your desired text here
 
 -- -- Police Cars:
 Config.PoliceVehicles = {
@@ -122,12 +122,12 @@ Config.PoliceVehicles = {
 
 -- Police Helicopters:
 Config.PoliceHelicopters = {
-	{ model = 'polmav2', label = 'Police Maverick', livery = 0, price = 0 }
+	--{ model = 'polmav2', label = 'Police Maverick', livery = 0, price = 0 }
 }
 
 -- Police Boats:
 Config.PoliceBoats = {
-	{ model = 'predator', label = 'Police Predator', livery = 0, price = 0 }
+	--{ model = 'predator', label = 'Police Predator', livery = 0, price = 0 }
 }
 
 -- Commands:
@@ -135,38 +135,38 @@ Config.RepairCommand = 'fix'
 Config.CleanCommand = 'clean'
 
 -- Menu Labels & Titles:
-Config.LabelStoreVeh = "Store Vehicle"
-Config.LabelGetVeh = "Get Vehicle"
-Config.LabelPrimaryCol = "Primary"
-Config.LabelSecondaryCol = "Secondary"
-Config.LabelExtra = "Extra"
-Config.LabelLivery = "Livery"
-Config.TitlePoliceGarage = "Police Garage"
-Config.TitlePoliceExtra = "Extra"
-Config.TitlePoliceLivery = "Livery"
-Config.TitleColorType = "Color Type"
-Config.TitleValues = "Value"
+Config.LabelStoreVeh = "儲存車輛"
+Config.LabelGetVeh = "取出車輛"
+Config.LabelPrimaryCol = "主要色"
+Config.LabelSecondaryCol = "次要色"
+Config.LabelExtra = "配件"
+Config.LabelLivery = "塗裝"
+Config.TitlePoliceGarage = "警局停車場"
+Config.TitlePoliceExtra = "配件"
+Config.TitlePoliceLivery = "塗裝"
+Config.TitleColorType = "顏色"
+Config.TitleValues = "值"
 
 -- ESX.ShowNotifications:
-Config.VehicleParked = "~b~Vehicle~s~ was parked!"
-Config.NoVehicleNearby = "No ~b~Vehicle~s~ nearby!"
-Config.CarOutFromPolGar = "You took out a ~b~Vehicle~s~ from ~y~Police Garage~s~!"
-Config.HeliOutFromPolGar = "You took out a ~b~Helicopter~s~ from ~y~Police Heli Garage~s~!"
-Config.BoatOutFromPolGar = "You took out a ~b~Boat~s~ from ~y~Police Boat Garage~s~!"
-Config.VehRepNotify = "Your ~b~vehicle~s~ is being ~y~repaired~s~, please wait!"
-Config.VehRepDoneNotify = "Your ~b~vehicle~s~ has been ~y~repaired~s~!"
-Config.VehCleanNotify = "Your ~b~vehicle~s~ is being ~y~cleaned~s~, please wait!"
-Config.VehCleanDoneNotify = "Your ~b~vehicle~s~ has been ~y~cleaned~s~!"
+Config.VehicleParked = "~b~車輛~s~ 停妥!"
+Config.NoVehicleNearby = "沒有 ~b~車輛~s~ 在旁邊!"
+Config.CarOutFromPolGar = "~y~從車庫~s~ 取出 ~b~車輛~s~!"
+Config.HeliOutFromPolGar = "~y~從停機坪~s~ 取出 ~b~直升機~s~!"
+Config.BoatOutFromPolGar = "~y~從船屋~s~ 取出 ~b~船隻~s~!"
+Config.VehRepNotify = "~b~車輛~s~ ~y~修理中~s~, 請稍後!"
+Config.VehRepDoneNotify = "~b~車輛~s~ ~y~修理完成~s~!"
+Config.VehCleanNotify = "~b~車輛~s~ ~y~清理中~s~, 請稍後!"
+Config.VehCleanDoneNotify = "~b~車輛~s~ ~y~清理完成~s~!"
 
 -- ProgressBars text
-Config.Progress1 = "REPAIRING VEHICLE"
-Config.Progress2 = "CLEANING VEHICLE"
+Config.Progress1 = "修理車輛中"
+Config.Progress2 = "清理車輛中"
 
 -- ProgressBar Timers, in seconds:
 Config.RepairTime = 5					-- time to repair vehicle
 Config.CleanTime = 3.5					-- time to clean vehicle
 
-Config.VehicleLoadText = "Wait for vehicle to spawn"			-- text on screen when vehicle model is being loaded
+Config.VehicleLoadText = "車輛運送中請稍後"			-- text on screen when vehicle model is being loaded
 
 -- Distance from garage marker to the point where /fix and /clean shall work
 Config.Distance = 20
