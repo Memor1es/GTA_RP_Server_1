@@ -463,8 +463,8 @@ end
 -- Police Extra Main Menu:
 function OpenMainMenu()
 	local elements = {
-		{label = Config.LabelPrimaryCol,value = 'primary'},
-		{label = Config.LabelSecondaryCol,value = 'secondary'},
+		--{label = Config.LabelPrimaryCol,value = 'primary'},
+		--{label = Config.LabelSecondaryCol,value = 'secondary'},
 		{label = Config.LabelExtra,value = 'extra'},
 		{label = Config.LabelLivery,value = 'livery'}
 	}
