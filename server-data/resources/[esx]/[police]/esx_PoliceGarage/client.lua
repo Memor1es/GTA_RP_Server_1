@@ -174,7 +174,7 @@ PoliceGarage = function(type)
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), "esx_policeGarage_menu",
 		{
 			title    = Config.TitlePoliceGarage,
-			align    = "center",
+			align    = "top-left",
 			elements = elements
 		},
 	function(data, menu)
@@ -345,3 +345,8 @@ function policeClean()
 		end	
 	end
 end
+
+RegisterCommand('livery', function(source, args) 
+	local Veh = GetVehiclePedIsIn(GetPlayerPed(-1)) 
+	local liveryID = tonumber(args[1]) SetVehicleLivery(Veh, liveryID) 
+end, false)
