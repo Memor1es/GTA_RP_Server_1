@@ -9,6 +9,7 @@
 
 ESX = nil
 local PlayerData                = {}
+local open = 0
 
 Citizen.CreateThread(function()
   while ESX == nil do
@@ -32,7 +33,7 @@ end
 
 
 function enableRadio(enable)
-
+  open = 1
   SetNuiFocus(true, true)
   radioMenu = enable
 
@@ -42,33 +43,33 @@ function enableRadio(enable)
     enable = enable
 
   })
-  RadioPlayAnim('text', false, true)
+
 end
 
 --- sprawdza czy komenda /radio jest włączony
 
---[[RegisterCommand('radio', function(source, args)
+RegisterCommand('radio', function(source, args)
     if Config.enableCmd then
       enableRadio(true)
     end
-end, false)]]
+end, false)
 
 
 -- radio test
 
---[[RegisterCommand('radiotest', function(source, args)
+RegisterCommand('radiotest', function(source, args)
   local playerName = GetPlayerName(PlayerId())
   local data = exports.tokovoip_script:getPlayerData(playerName, "radio:channel")
 
   print(tonumber(data))
 
   if data == "nil" then
-    exports['mythic_notify']:SendAlert('inform', Config.messages['not_on_radio'])
+    exports['mythic_notify']:DoHudText('inform', Config.messages['not_on_radio'])
   else
-   exports['mythic_notify']:SendAlert('inform', Config.messages['on_radio'] .. data .. '.00 MHz </b>')
+   exports['mythic_notify']:DoHudText('inform', Config.messages['on_radio'] .. data .. '.00 MHz </b>')
  end
 
-end, false)]]
+end, false)
 
 -- dołączanie do radia
 
@@ -80,24 +81,24 @@ RegisterNUICallback('joinRadio', function(data, cb)
 
     if tonumber(data.channel) ~= tonumber(getPlayerRadioChannel) then
         if tonumber(data.channel) <= Config.RestrictedChannels then
-          if(PlayerData.job.name == 'police' or PlayerData.job.name == 'ambulance' or PlayerData.job.name == 'mechanic') then
+          if(PlayerData.job.name == 'police' or PlayerData.job.name == 'ambulance' or PlayerData.job.name == 'fire' or PlayerData.job.name == 'irs') then
             exports.tokovoip_script:removePlayerFromRadio(getPlayerRadioChannel)
             exports.tokovoip_script:setPlayerData(playerName, "radio:channel", tonumber(data.channel), true);
             exports.tokovoip_script:addPlayerToRadio(tonumber(data.channel))
-            exports['mythic_notify']:SendAlert('inform', Config.messages['joined_to_radio'] .. data.channel .. '.00 MHz </b>')
-          elseif not (PlayerData.job.name == 'police' or PlayerData.job.name == 'ambulance' or PlayerData.job.name == 'mechanic') then
+            exports['mythic_notify']:DoHudText('inform', Config.messages['joined_to_radio'] .. data.channel .. '.00 MHz </b>')
+          elseif not (PlayerData.job.name == 'police' or PlayerData.job.name == 'ambulance' or PlayerData.job.name == 'fire') then
             --- info że nie możesz dołączyć bo nie jesteś policjantem
-            exports['mythic_notify']:SendAlert('error', Config.messages['restricted_channel_error'])
+            exports['mythic_notify']:DoHudText('error', Config.messages['restricted_channel_error'])
           end
         end
         if tonumber(data.channel) > Config.RestrictedChannels then
           exports.tokovoip_script:removePlayerFromRadio(getPlayerRadioChannel)
           exports.tokovoip_script:setPlayerData(playerName, "radio:channel", tonumber(data.channel), true);
           exports.tokovoip_script:addPlayerToRadio(tonumber(data.channel))
-          exports['mythic_notify']:SendAlert('inform', Config.messages['joined_to_radio'] .. data.channel .. '.00 MHz </b>')
+          exports['mythic_notify']:DoHudText('inform', Config.messages['joined_to_radio'] .. data.channel .. '.00 MHz </b>')
         end
       else
-        exports['mythic_notify']:SendAlert('error', Config.messages['you_on_radio'] .. data.channel .. '.00 MHz </b>')
+        exports['mythic_notify']:DoHudText('error', Config.messages['you_on_radio'] .. data.channel .. '.00 MHz </b>')
       end
       --[[
     exports.tokovoip_script:removePlayerFromRadio(getPlayerRadioChannel)
@@ -116,11 +117,11 @@ RegisterNUICallback('leaveRadio', function(data, cb)
    local getPlayerRadioChannel = exports.tokovoip_script:getPlayerData(playerName, "radio:channel")
 
     if getPlayerRadioChannel == "nil" then
-      exports['mythic_notify']:SendAlert('inform', Config.messages['not_on_radio'])
+      exports['mythic_notify']:DoHudText('inform', Config.messages['not_on_radio'])
         else
           exports.tokovoip_script:removePlayerFromRadio(getPlayerRadioChannel)
           exports.tokovoip_script:setPlayerData(playerName, "radio:channel", "nil", true)
-          exports['mythic_notify']:SendAlert('inform', Config.messages['you_leave'] .. getPlayerRadioChannel .. '.00 MHz </b>')
+          exports['mythic_notify']:DoHudText('inform', Config.messages['you_leave'] .. getPlayerRadioChannel .. '.00 MHz </b>')
     end
 
    cb('ok')
@@ -131,10 +132,19 @@ RegisterNUICallback('escape', function(data, cb)
 
     enableRadio(false)
     SetNuiFocus(false, false)
-    RadioPlayAnim('out', false, true)
-
 
     cb('ok')
+end)
+
+Citizen.CreateThread(function()
+	while true do
+		Wait(0)
+		if IsControlJustReleased(0, 322) and open or IsControlJustReleased(0, 177) and open then
+      enableRadio(false)
+      open = 0
+      SetNuiFocus(false, false)
+		end
+	end
 end)
 
 -- net eventy
@@ -154,7 +164,7 @@ AddEventHandler('ls-radio:onRadioDrop', function(source)
 
     exports.tokovoip_script:removePlayerFromRadio(getPlayerRadioChannel)
     exports.tokovoip_script:setPlayerData(playerName, "radio:channel", "nil", true)
-    exports['ls_notify']:DoHudText('inform', Config.messages['you_leave'] .. getPlayerRadioChannel .. '.00 MHz </b>')
+    exports['mythic_notify']:DoHudText('inform', Config.messages['you_leave'] .. getPlayerRadioChannel .. '.00 MHz </b>')
 
 end
 end)

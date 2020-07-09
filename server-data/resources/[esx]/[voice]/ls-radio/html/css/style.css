@@ -33,9 +33,9 @@ body {
 
 #onoff {
   position: absolute;
-  top: 20%;
-  right: 40;
-  padding: 35px 35px;
+  top: 32%;
+  right: 0;
+  padding: 40px 40px;
   opacity: .0;
 }
 
@@ -47,9 +47,10 @@ body {
 
 .ekran {
   position: absolute;
-  padding: 50px 55px;
-  top: 49%;
-  left: 28.5%;
+  background-color: #c4dfd3;
+  padding: 95px 100px;
+  top: 71%;
+  left: 22.5%;
 }
 
 .channel {
@@ -63,10 +64,10 @@ body {
 }
 
 .channel input {
-  text-align: left;
-  border-bottom: 1px solid black;
-  background-color: transparent;
-  padding: 10px 15px;
-  font-size: 10px;
-  top: 50px;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: #c4dfd3;
+  padding: 25px 30px;
+  font-size: 34px;
 }
