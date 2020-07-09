@@ -358,7 +358,7 @@ Citizen.CreateThread(function()
     SetBlipColour(blip, 1)
 
 		BeginTextCommandSetBlipName("STRING")
-		AddTextComponentString('Merryweather Heist')
+		AddTextComponentString('軍火任務')
 		EndTextCommandSetBlipName(blip)
 	end
 end)
