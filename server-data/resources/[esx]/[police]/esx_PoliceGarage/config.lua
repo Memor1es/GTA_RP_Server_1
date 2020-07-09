@@ -4,7 +4,7 @@
 
 Config = {}
 
-Config.Locale = 'fr'
+Config.Locale = 'en'
 
 Config.KeyToOpenCarGarage = 38			-- default 38 is E
 Config.KeyToOpenHeliGarage = 38			-- default 38 is E
@@ -38,6 +38,25 @@ Config.BoatZones = {
 		Pos = {
 			{x = 1538.69,  y = 3901.5, z = 30.35},
 			{x = 2000.42,  y = 4500, z = 33.437}
+		}
+	}
+}
+
+Config.BoatZones = {
+	PoliceBoatGarage = {
+		Pos = {
+			{x = 1538.69,  y = 3901.5, z = 30.35},
+			{x = 2000.42,  y = 4500, z = 33.437}
+		}
+	}
+}
+
+-- Police Extra Menu Positions:
+Config.ExtraZones = {
+	ExtraPositions = {
+		Pos = {
+			{x = 454.7,  y = -1024.32, z = 28.49},
+			{x = 467.6,  y = 2530.54, z = 33.437}
 		}
 	}
 }
@@ -164,12 +183,3 @@ Config.DrawDistance      = 100.0
 Config.TriggerDistance 	 = 3.0
 Config.Marker 			 = {Type = 27, r = 0, g = 127, b = 22}
 
--- Police Extra Menu Positions:
-Config.ExtraZones = {
-	ExtraPositions = {
-		Pos = {
-			{x = 454.7,  y = -1024.32, z = 28.49},
-			{x = 467.6,  y = 2530.54, z = 33.437}
-		}
-	}
-}
