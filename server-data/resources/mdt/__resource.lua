@@ -26,5 +26,5 @@ files {
     "nui/bootstrap.min.css",
     "nui/html/opencad.html"
 }
-
+server_script "server.lua"
 client_script "client.lua"
