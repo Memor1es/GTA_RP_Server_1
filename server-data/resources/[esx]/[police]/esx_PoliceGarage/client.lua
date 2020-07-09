@@ -31,7 +31,7 @@ function DrawText3Ds(x,y,z, text)
     local px,py,pz=table.unpack(GetGameplayCamCoords())
 
     SetTextScale(0.32, 0.32)
-    SetTextFont(4)
+    SetTextFont(1)
     SetTextProportional(1)
     SetTextColour(255, 255, 255, 255)
     SetTextEntry("STRING")
