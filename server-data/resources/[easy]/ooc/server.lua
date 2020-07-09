@@ -1,7 +1,7 @@
 ESX = nil
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-
+--[[
 AddEventHandler('chatMessage', function(source, name, msg)
 	sm = stringsplit(msg, " ");
 	if sm[1] == "/ooc" then
@@ -9,7 +9,7 @@ AddEventHandler('chatMessage', function(source, name, msg)
 		TriggerClientEvent('chatMessage', -1, "OOC | " .. name, { 128, 128, 128 }, string.sub(msg,5))
 	end
 end)
-
+--]]
 function stringsplit(inputstr, sep)
     if sep == nil then
         sep = "%s"

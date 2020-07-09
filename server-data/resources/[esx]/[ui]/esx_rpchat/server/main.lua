@@ -23,7 +23,7 @@ function getIdentity(source)
 		return nil
 	end
 end
-
+--[[
  AddEventHandler('chatMessage', function(source, name, message)
       if string.sub(message, 1, string.len("/")) ~= "/" then
           local name = getIdentity(source)
@@ -31,7 +31,7 @@ end
       end
       CancelEvent()
   end)
-  
+  --]]
   -- TriggerEvent('es:addCommand', 'me', function(source, args, user)
   --    local name = getIdentity(source)
   --    TriggerClientEvent("sendProximityMessageMe", -1, source, name.firstname, table.concat(args, " "))
@@ -42,13 +42,14 @@ end
   --- TriggerEvent('es:addCommand', 'me', function(source, args, user)
   ---    local name = getIdentity(source)
   ---    TriggerClientEvent("sendProximityMessageMe", -1, source, name.firstname, table.concat(args, " "))
-  -- end) 
+  -- end)
+--[[]
 TriggerEvent('es:addCommand', 'me', function(source, args, user)
     local name = getIdentity(source)
     table.remove(args, 2)
     TriggerClientEvent('esx-qalle-chat:me', -1, source, name.firstname, table.concat(args, " "))
 end)
-
+--]]
 RegisterCommand('me', function(source, args, rawCommand)
     local name = getIdentity(source)
     table.remove(args, 2)
@@ -108,7 +109,7 @@ function getIdentity(source)
 		return nil
 	end
 end
-
+--[[
 RegisterCommand('ooc', function(source, args, rawCommand)
     local playerName = GetPlayerName(source)
     local message = rawCommand:sub(5)
@@ -124,7 +125,7 @@ RegisterCommand('ooc', function(source, args, rawCommand)
         })
     end
 end, false)
-
+--]]
 
 function stringsplit(inputstr, sep)
 	if sep == nil then
