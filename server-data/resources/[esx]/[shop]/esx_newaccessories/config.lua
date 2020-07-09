@@ -1,10 +1,10 @@
 Config = {}
 
-Config.Locale = 'es'
+Config.Locale = 'tc'
 
 Config.Price = 20000
 
-Config.EnableControls = true
+Config.EnableControls = false
 
 Config.DrawDistance = 100.0
 Config.Size   = {x = 1.5, y = 1.5, z = 1.0}
