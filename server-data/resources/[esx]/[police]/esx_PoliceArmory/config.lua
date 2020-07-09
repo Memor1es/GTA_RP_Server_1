@@ -4,7 +4,7 @@ Config = {}
 Config.ArmoryZones = {
 	PoliceArmory = {
 		Pos = {
-			{x = 0.0,  y = 0.0, z = 0.0},
+			{x = 454.45,  y = -979.99, z = 30.69},
 			{x = 0.0,  y = 0.0, z = 0.0}
 		}
 	}
@@ -52,26 +52,26 @@ Config.AttachmentsMarkerScale = { x = 1.0, y = 1.0, z = 1.0 }   					-- the scal
 Config.AttachmentsDraw3DText = "按下打開配件商店"		-- set your desired text here
 
 -- Menu Element Labels:
-Config.WeaponStorage = "Armes"
-Config.RestockWeapon = "Deposer"
+Config.WeaponStorage = "武器"
+Config.RestockWeapon = "存放"
 Config.Vest1 = "Kevlar 1"					-- 25% armor
 Config.Vest2 = "Kevlar 2"					-- 50% armor
 Config.Vest3 = "Kevlar 3"					-- 75% armor
-Config.Vest4 = "Gilet Pare-Balle"					-- 100% armor
-Config.RemoveVest = "Enlever"			-- 0% armor
+Config.Vest4 = "穿上防彈衣"					-- 100% armor
+Config.RemoveVest = "脫下防彈衣"			-- 0% armor
 
 -- Menu Title Labels_
-Config.PoliceArmoryTitle = "Armes"
-Config.WeaponStorageTitle = "Armes"
-Config.RestockWeaponTitle = "Deposer"
-Config.PoliceKevlarTitle = "Gilet"
-Config.ChooseWeaponTitle = "Choisis l'armes"
-Config.AttachmentTitle = "Accessoires"
+Config.PoliceArmoryTitle = "武器"
+Config.WeaponStorageTitle = "武器"
+Config.RestockWeaponTitle = "存放"
+Config.PoliceKevlarTitle = "背心"
+Config.ChooseWeaponTitle = "武器"
+Config.AttachmentTitle = "配件"
 
 -- ESX Show Notifications_
 Config.ContactSuperVisor = "聯繫主管"
 Config.NoPoliceOnline = "沒有警察在上班"
-Config.WeaponMustBeInHand = "拿起武器"
+Config.WeaponMustBeInHand = "請拿出武器"
 Config.FlashlightEquipped = "裝備手電筒~r~%s ~s~"
 Config.FlashlightRemove = "移除手電筒~r~%s ~s~"
 Config.ScopeEquipped = "裝備~r~%s ~s~"
