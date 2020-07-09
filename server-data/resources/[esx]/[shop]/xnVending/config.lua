@@ -39,12 +39,12 @@ Config.Machines = {
 		prop = {`prop_candy_pqs`, `v_ret_ml_chips3`},
 		price = {30, 40}
 	},
-	--[[[`weed_vending`] = {
+	[`weed_vending`] = {
 		item = {"marijuana"},
-		name = {"Weed"},
+		name = {"大麻煙"},
 		prop = {`prop_weed_bottle`},
 		price = {100}
-	}]]--
+	}
 }
 
 -----------------------------------------------------------------------------------------
