@@ -48,7 +48,7 @@ AddEventHandler('esx_sweep:sweep', function()
         duration = Config.SweepTime * 1000,
         label = "掃地中",
         useWhileDead = false,
-        canCancel = false,
+        canCancel = true,
         controlDisables = {
             disableMovement = true,
             disableCarMovement = true,
