@@ -15,7 +15,7 @@ Config.objects = {
 	locations = {
 		--[1] = {object="v_med_bed2", verticalOffsetX=0.0, verticalOffsetY=0.0, verticalOffsetZ=-1.4, direction=0.0, bed=true},
 		[1] = {position = vector3(1768.3,2587.18,45.27), verticalOffsetX=0.0, verticalOffsetY=0.0, verticalOffsetZ=-1.4, direction=0.0, bed=true},
-		[2] = {position = vector3(1780.35,2581.52,45.8), verticalOffsetX=0.0, verticalOffsetY=0.0, verticalOffsetZ=-3.0, direction=0.0, bed=false},
+		[2] = {position = vector3(1780.35,2581.52,45.8), verticalOffsetX=0.0, verticalOffsetY=0.0, verticalOffsetZ=-2.7, direction=0.0, bed=false},
 	}
 }
 
