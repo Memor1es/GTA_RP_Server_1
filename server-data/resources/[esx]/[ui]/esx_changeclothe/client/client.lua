@@ -38,7 +38,7 @@ Citizen.CreateThread(function()
 
 					if distance < Config.MarkerSize.x then
                         --isInMarker, currentStation, currentPart, currentPartNum = true, k, 'Cloakroom', i
-                        ESX.ShowHelpNotification("按下 ~INPUT_CONTEXT~ 來改變 ~y~衣服~s~")
+                        ESX.ShowHelpNotification("按下 ~INPUT_CONTEXT~ 來更換 ~y~衣服~s~")
 
                         if IsControlJustReleased(0, 38) and PlayerData.job and PlayerData.job.name ~= 'police' then
                             OpenCloakroomMenu()

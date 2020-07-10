@@ -115,7 +115,7 @@ function skeletalsystem:DamageCheck()
   local prevHealth = (self.plyHealth or GetEntityHealth(plyPed))
   self.plyHealth = GetEntityHealth(plyPed)
   if self.plyHealth < prevHealth then    
-    ESX.ShowNotification('You are injured! Check your damage by typing /openSkelly')
+    ESX.ShowNotification('你受傷了')
     local bone,bType = self:CheckBone()
     if bone and bType then
       self:DamageBone(bone,bType)

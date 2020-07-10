@@ -38,10 +38,10 @@ function OpenActionMenuInteraction(target)
 
 	local elements = {}
 
-	table.insert(elements, {label = ('อุ้ม'), value = 'drag'})
-	table.insert(elements, {label = ('ขี่หลัง'), value = 'piggyback'})
-	table.insert(elements, {label = ('แบก'), value = 'carry'})
-	table.insert(elements, {label = ('จับเป็นตัวประกัน'), value = 'takehostage'})
+	table.insert(elements, {label = ('拖拽'), value = 'drag'})
+	table.insert(elements, {label = ('背'), value = 'piggyback'})
+	table.insert(elements, {label = ('抱'), value = 'carry'})
+	table.insert(elements, {label = ('挾持人質'), value = 'takehostage'})
 	ESX.UI.Menu.CloseAll()
 
 	ESX.UI.Menu.Open(
@@ -58,7 +58,7 @@ function OpenActionMenuInteraction(target)
 		
 			if data.current.value == 'drag' then			
 				TriggerServerEvent('esx_barbie_lyftupp:checkRope')
-				ESX.ShowNotification('You are lifting this person up...')
+				ESX.ShowNotification('你正在抱起這個人...')
 				TriggerServerEvent('esx_barbie_lyftupp:lyfteruppn', GetPlayerServerId(player))
 				Citizen.Wait(1000)
 				if hasRope == true then
@@ -79,7 +79,7 @@ function OpenActionMenuInteraction(target)
 						TaskPlayAnim(GetPlayerPed(-1), dict, "idle", 8.0, 8.0, -1, 50, 0, false, false, false)
 						isCarry = true
 					else
-						ESX.ShowNotification("No one is nearby...")
+						ESX.ShowNotification("沒人在附近...")
 					end
 				else
 					--ESX.ShowNotification("Du har inget rep att använda...")
@@ -795,7 +795,7 @@ end)
 
 RegisterCommand("drag",function(source, args)
 	--TriggerServerEvent('esx_barbie_lyftupp:checkRope')
-	ESX.ShowNotification('You are lifting this person up...')
+	ESX.ShowNotification('你正在抱起這個人...')
 	TriggerServerEvent('esx_barbie_lyftupp:lyfteruppn', GetPlayerServerId(player))
 	Citizen.Wait(1000)
 	--if hasRope == true then
@@ -816,7 +816,7 @@ RegisterCommand("drag",function(source, args)
 			TaskPlayAnim(GetPlayerPed(-1), dict, "idle", 8.0, 8.0, -1, 50, 0, false, false, false)
 			isCarry = true
 		else
-			ESX.ShowNotification("No one is nearby...")
+			ESX.ShowNotification("沒人在附近...")
 		end
 	--else
 		--ESX.ShowNotification("Du har inget rep att använda...")

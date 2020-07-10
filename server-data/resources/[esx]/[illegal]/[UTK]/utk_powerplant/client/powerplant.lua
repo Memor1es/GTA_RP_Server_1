@@ -87,21 +87,21 @@ UTK = {
         }]]
     },
     texts = {
-        blackout = "BLACKOUT!",
+        blackout = "停電!",
         loud = {
-            start = "[~g~E~w~] Start ~r~LOUD~w~ Power Plant hit",
-            bomb = "[~g~E~w~] Plant C4 Explosives for main generator",
-            backup = "[~g~E~w~] Plant C4 Explosives for backup generator",
-            time = "200 seconds to blackout!",
-            planted = "C4 planted"
+            start = "[~g~E~w~] 開始 ~r~大聲~w~ 癱瘓發電廠",
+            bomb = "[~g~E~w~] 在主要發電機放置C4",
+            backup = "[~g~E~w~] 在後備發電機放置C4",
+            time = "200秒至停電!",
+            planted = "已放置C4"
         },
         silent = {
-            start = "[~g~E~w~] Start ~r~SILENT~w~ Power Plant hit",
-            hack = "[~g~E~w~] Start hacking",
-            plant = "[~g~E~w~] Plant C4 charge",
-            time = "50 seconds to blackout!",
-            caught = "You have seen!",
-            hacked = "Hack successful"
+            start = "[~g~E~w~] 開始 ~r~暗地~w~ 癱瘓發電廠",
+            hack = "[~g~E~w~] 開始駭入",
+            plant = "[~g~E~w~] 放置C4",
+            time = "50秒至停電!",
+            caught = "你被發現了!",
+            hacked = "成功駭入"
         },
         --[[prison = {
             bomb = "[~g~E~w~] Plant C4 to power generator"
@@ -324,7 +324,7 @@ function UTK:HandleInfo(...)
                                             TriggerServerEvent("utk_pb:removeItem", "normal_c4")
                                             self:PlantBomb()
                                         elseif not cb then
-                                            exports['mythic_notify']:SendAlert("error", "You don't have C4 charge.")
+                                            exports['mythic_notify']:SendAlert("error", "你沒有C4")
                                         end
                                     end, "normal_c4")
                                 end
@@ -344,7 +344,7 @@ function UTK:HandleInfo(...)
                                             TriggerServerEvent("utk_pb:removeItem", "normal_c4")
                                             self:PlantBomb()
                                         elseif not cb then
-                                            exports['mythic_notify']:SendAlert("error", "You don't have C4 charge.")
+                                            exports['mythic_notify']:SendAlert("error", "你沒有C4")
                                         end
                                     end, "normal_c4")
                                 end
@@ -364,7 +364,7 @@ function UTK:HandleInfo(...)
                                             TriggerServerEvent("utk_pb:removeItem", "normal_c4")
                                             self:PlantBomb()
                                         elseif not cb then
-                                            exports['mythic_notify']:SendAlert("error", "You don't have C4 charge.")
+                                            exports['mythic_notify']:SendAlert("error", "你沒有C4")
                                         end
                                     end, "normal_c4")
                                 end
@@ -384,7 +384,7 @@ function UTK:HandleInfo(...)
                                             TriggerServerEvent("utk_pb:removeItem", "normal_c4")
                                             self:PlantBomb()
                                         elseif not cb then
-                                            exports['mythic_notify']:SendAlert("error", "You don't have C4 charge.")
+                                            exports['mythic_notify']:SendAlert("error", "你沒有C4")
                                         end
                                     end, "normal_c4")
                                 end
@@ -404,7 +404,7 @@ function UTK:HandleInfo(...)
                                             TriggerServerEvent("utk_pb:removeItem", "normal_c4")
                                             self:PlantBomb()
                                         elseif not cb then
-                                            exports['mythic_notify']:SendAlert("error", "You don't have C4 charge.")
+                                            exports['mythic_notify']:SendAlert("error", "你沒有C4")
                                         end
                                     end, "normal_c4")
                                 end
@@ -424,7 +424,7 @@ function UTK:HandleInfo(...)
                                             TriggerServerEvent("utk_pb:removeItem", "normal_c4")
                                             self:PlantBomb()
                                         elseif not cb then
-                                            exports['mythic_notify']:SendAlert("error", "You don't have C4 charge.")
+                                            exports['mythic_notify']:SendAlert("error", "你沒有C4")
                                         end
                                     end, "normal_c4")
                                 end
@@ -454,7 +454,7 @@ function UTK:HandleInfo(...)
                                             self.currenthack = 1
                                             self:Hack()
                                         elseif not cb then
-                                            exports['mythic_notify']:SendAlert("error", "You don't have hacker laptop.")
+                                            exports['mythic_notify']:SendAlert("error", "你沒有駭客筆電")
                                         end
                                     end, "laptop_h")
                                 end
@@ -472,7 +472,7 @@ function UTK:HandleInfo(...)
                                             self.currenthack = 2
                                             self:Hack()
                                         elseif not cb then
-                                            exports['mythic_notify']:SendAlert("error", "You don't have hacker laptop.")
+                                            exports['mythic_notify']:SendAlert("error", "你沒有駭客筆電")
                                         end
                                     end, "laptop_h")
                                 end
@@ -490,7 +490,7 @@ function UTK:HandleInfo(...)
                                             self.currenthack = 3
                                             self:Hack()
                                         elseif not cb then
-                                            exports['mythic_notify']:SendAlert("error", "You don't have hacker laptop.")
+                                            exports['mythic_notify']:SendAlert("error", "你沒有駭客筆電")
                                         end
                                     end, "laptop_h")
                                 end
@@ -508,7 +508,7 @@ function UTK:HandleInfo(...)
                                             self.currenthack = 4
                                             self:Hack()
                                         elseif not cb then
-                                            exports['mythic_notify']:SendAlert("error", "You don't have hacker laptop.")
+                                            exports['mythic_notify']:SendAlert("error", "你沒有駭客筆電")
                                         end
                                     end, "laptop_h")
                                 end
@@ -527,7 +527,7 @@ function UTK:HandleInfo(...)
                                             TriggerServerEvent("utk_pb:removeItem", "mini_c4")
                                             self:Hack()
                                         elseif not cb then
-                                            exports['mythic_notify']:SendAlert("error", "You don't have mini C4.")
+                                            exports['mythic_notify']:SendAlert("error", "你沒有迷你C4")
                                         end
                                     end, "mini_c4")
                                 end
@@ -546,7 +546,7 @@ function UTK:HandleInfo(...)
                                             TriggerServerEvent("utk_pb:removeItem", "mini_c4")
                                             self:Hack()
                                         elseif not cb then
-                                            exports['mythic_notify']:SendAlert("error", "You don't have mini C4.")
+                                            exports['mythic_notify']:SendAlert("error", "你沒有迷你C4")
                                         end
                                     end, "mini_c4")
                                 end
@@ -1284,7 +1284,7 @@ end)
 AddEventHandler("utk_pb:power", function(status)
     SetArtificialLightsState(status)
     if not status then
-        exports['mythic_notify']:SendAlert("success", "Power is back on!")
+        exports['mythic_notify']:SendAlert("success", "成功恢復電源")
     elseif status then
         UTK.info.locked = true
     end
@@ -1653,21 +1653,21 @@ UTKreset = {
         }]]
     },
     texts = {
-        blackout = "BLACKOUT!",
+        blackout = "停電!",
         loud = {
-            start = "[~g~E~w~] Start ~r~LOUD~w~ Power Plant hit",
-            bomb = "[~g~E~w~] Plant C4 Explosives for main generator",
-            backup = "[~g~E~w~] Plant C4 Explosives for backup generator",
-            time = "200 seconds to blackout!",
-            planted = "C4 planted"
+            start = "[~g~E~w~] 開始 ~r~大聲~w~ 癱瘓發電廠",
+            bomb = "[~g~E~w~] 在主要發電機放置C4",
+            backup = "[~g~E~w~] 在後備發電機放置C4",
+            time = "200秒至停電!",
+            planted = "已放置C4"
         },
         silent = {
-            start = "[~g~E~w~] Start ~r~SILENT~w~ Power Plant hit",
-            hack = "[~g~E~w~] Start hacking",
-            plant = "[~g~E~w~] Plant C4 charge",
-            time = "50 seconds to blackout!",
-            caught = "You have seen!",
-            hacked = "Hack successful"
+            start = "[~g~E~w~] 開始 ~r~暗地~w~ 癱瘓發電廠",
+            hack = "[~g~E~w~] 開始駭入",
+            plant = "[~g~E~w~] 放置C4",
+            time = "50秒至停電!",
+            caught = "你被發現了!",
+            hacked = "成功駭入"
         },
         --[[prison = {
             bomb = "[~g~E~w~] Plant C4 to power generator"

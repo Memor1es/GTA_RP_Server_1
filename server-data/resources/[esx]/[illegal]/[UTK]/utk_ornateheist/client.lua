@@ -85,8 +85,8 @@ UTK = {
     },
     alarmblip,
     text = { -- Texts
-        loudstart = "[~r~E~w~] 開始 ~g~LOUD~w~ 銀行搶劫",
-        silentstart = "[~r~E~w~] Start ~g~SILENT~w~ 銀行搶劫",
+        loudstart = "[~r~E~w~] 開始 ~g~直接~w~ 銀行搶劫",
+        silentstart = "[~r~E~w~] Start ~g~潛行~w~ 銀行搶劫",
         usecard = "[~r~E~w~] 使用 ID 卡",
         usethermal = "[~r~E~w~] 使用鋁熱炸藥",
         usehack = "[~r~E~w~] 駭入保全系統",

@@ -48,7 +48,7 @@ Citizen.CreateThread(function()
 		SetBlipColour (blip, 5)
 		SetBlipAsShortRange(blip, true)
 		BeginTextCommandSetBlipName("STRING")
-		AddTextComponentString("Gold Smeltery")
+		AddTextComponentString("金條溶化處理廠")
 		EndTextCommandSetBlipName(blip)
 	  end
 	end
@@ -65,7 +65,7 @@ Citizen.CreateThread(function()
 		SetBlipColour (blip, 5)
 		SetBlipAsShortRange(blip, true)
 		BeginTextCommandSetBlipName("STRING")
-		AddTextComponentString("Gold Exchange")
+		AddTextComponentString("金條交易")
 		EndTextCommandSetBlipName(blip)
 	  end
 	end
@@ -84,7 +84,7 @@ Citizen.CreateThread(function()
 				Citizen.Wait(500)
 			end	
 			if distance <= 1.5 and meltingGold == false then
-				DrawText3Ds(v.x, v.y, pos.z, "Press ~g~[E]~s~ for ~y~Gold Melting~s~")
+				DrawText3Ds(v.x, v.y, pos.z, "按下 ~g~[E]~s~ 來 ~y~溶化金條~s~")
 				if IsControlJustPressed(0, 38) then
 					TriggerServerEvent("esx_goldCurrency:goldMelting")
 					meltingGold = true
@@ -107,7 +107,7 @@ Citizen.CreateThread(function()
 				Citizen.Wait(500)
 			end	
 			if distance <= 0.6 then
-				DrawText3Ds(v.x, v.y, pos.z, "Press ~g~[E]~s~ for ~y~Gold Exchange~s~")
+				DrawText3Ds(v.x, v.y, pos.z, "按下 ~g~[E]~s~ 來 ~y~交易金條~s~")
 				if IsControlJustPressed(0, 38) then
 					TriggerServerEvent("esx_goldCurrency:goldExchange")
 					exchangingGold = true
@@ -128,7 +128,7 @@ AddEventHandler("GoldWatchToGoldBar", function()
     converting = true
 	
 	TaskStartScenarioInPlace(PlayerPedId(), "PROP_HUMAN_BUM_BIN", 0, true)
-	exports['progressBars']:startUI((Config.SmelteryTime * 1000), "GOLD WATCH > GOLD BAR")
+	exports['progressBars']:startUI((Config.SmelteryTime * 1000), "金手錶 > 金條")
 	Citizen.Wait((Config.SmelteryTime * 1000))
 	ClearPedTasks(PlayerPedId())
 	FreezeEntityPosition(GetPlayerPed(-1), false)
@@ -147,12 +147,12 @@ AddEventHandler("GoldBarToCash", function()
     converting = true
 	
 	--TaskStartScenarioInPlace(PlayerPedId(), "PROP_HUMAN_BUM_BIN", 0, true)
-	exports['progressBars']:startUI((Config.ExchangeTime * 1000), "EXCHANGING GOLD BARS")
+	exports['progressBars']:startUI((Config.ExchangeTime * 1000), "交易金條中")
 	Citizen.Wait((Config.ExchangeTime * 1000))
 	--ClearPedTasks(PlayerPedId())
 	FreezeEntityPosition(GetPlayerPed(-1), false)
     
 	exchangingGold = false
 	converting = false
-	ESX.ShowNotification("You received ~r~$35.000~s~ Dirty Cash")
+	ESX.ShowNotification("你獲取了 ~r~$35.000~s~ 黑錢")
 end)

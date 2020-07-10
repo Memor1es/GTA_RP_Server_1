@@ -15,7 +15,7 @@ end
 RegisterServerEvent('esx_kingofthehill:checkOwners')
 AddEventHandler('esx_kingofthehill:checkOwners', function(zone) 
     local _source = source
-    local text = 'Current owners: ^2'
+    local text = '目前擁有者: ^2'
     MySQL.Async.fetchAll('SELECT * FROM payroll WHERE zone = @zone',{
         ['@zone'] = zone
     }, function(result)
@@ -24,7 +24,7 @@ AddEventHandler('esx_kingofthehill:checkOwners', function(zone)
         else
             text = text .. 'None'
         end 
-        TriggerClientEvent("chatMessage", _source, "^5 Payroll: ^4", {0,0,0}, string.format(text))  
+        TriggerClientEvent("chatMessage", _source, "^5 名單: ^4", {0,0,0}, string.format(text))  
     end)
 end)
 
@@ -33,7 +33,7 @@ RegisterServerEvent('esx_kingofthehill:resetPayroll')
 AddEventHandler('esx_kingofthehill:resetPayroll', function() 
     local _source = source
     MySQL.Async.execute('DELETE FROM payroll', {})
-    TriggerClientEvent('esx:showNotification', source, '~g~Payroll has been cleared')
+    TriggerClientEvent('esx:showNotification', source, '~g~已清除名單')
     TriggerClientEvent('esx_kingofthehill:resetPayroll', -1)
 end)
 
@@ -73,7 +73,7 @@ AddEventHandler('esx_kingofthehill:capture', function(zone)
                     for k,v in pairs(result) do 
                         local xPlayer = ESX.GetPlayerFromIdentifier(v.identifier)
                         if xPlayer ~= nil then
-                            TriggerClientEvent("chatMessage", xPlayer.source, "^5 Payroll: ^4", {0,0,0}, string.format('Another group is taking control of Payroll'))
+                            TriggerClientEvent("chatMessage", xPlayer.source, "^5 名單: ^4", {0,0,0}, string.format('其他團體正在控制名單'))
                         end                
                     end
                 end   
@@ -86,7 +86,7 @@ end)
 -- On capture success send code to all capturers and delete all old owners from DB
 RegisterServerEvent('esx_kingofthehill:confirmCapture')
 AddEventHandler('esx_kingofthehill:confirmCapture', function(code,zone)    
-    TriggerClientEvent("chatMessage", source, "^5 Payroll: ^0", {0,0,0}, string.format('You have captured the area. To get on the payroll use ^2 /payroll ' .. code))
+    TriggerClientEvent("chatMessage", source, "^5 Payroll: ^0", {0,0,0}, string.format('你已經占領地區了, 請輸入 ^2 /payroll 來加入名單' .. code))
     TriggerClientEvent('esx_kingofthehill:setCooldown', -1, Config.CoolDownSetting,zone)
     MySQL.Async.execute('DELETE FROM payroll WHERE zone = @zone', {
         ['@zone'] = zone
@@ -107,9 +107,9 @@ AddEventHandler('esx_kingofthehill:addToPayroll', function(player,zone)
             })
             xPlayer.addInventoryItem('reptag', Config.PayoutCount)
             TriggerClientEvent('esx_kingofthehill:confirmCapture', -1, player,zone)
-            TriggerClientEvent('esx:showNotification', xPlayer.source, '~g~You\'ve been added to the payroll')
+            TriggerClientEvent('esx:showNotification', xPlayer.source, '~g~你已經加入到名單裡了')
         else
-            TriggerClientEvent('esx:showNotification', xPlayer.source, '~r~There are already ' .. Config.RequiredCapturersMax .. ' people using the code')
+            TriggerClientEvent('esx:showNotification', xPlayer.source, '~r~已經有' .. Config.RequiredCapturersMax .. '個人在使用代碼')
         end   
     end)
     

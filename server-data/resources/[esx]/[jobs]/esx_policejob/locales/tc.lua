@@ -38,7 +38,7 @@ Locales['tc'] = {
   ['garage_title'] = '車輛操作',
   ['garage_stored'] = '存取',
   ['garage_notstored'] = '不在車庫',
-  ['garage_storing'] = '我們意圖存入車輛， 請確保沒有其他玩家在附近.',
+  ['garage_storing'] = '我們意圖存入車輛， 請確保沒有其他市民在附近.',
   ['garage_has_stored'] = '車輛已經存入車庫',
   ['garage_has_notstored'] = '附近沒有找到已經擁有的車輛',
   ['garage_notavailable'] = '你的車子沒有存在車庫中。',
@@ -92,7 +92,7 @@ Locales['tc'] = {
   ['license_revoke'] = '歸還駕照',
   ['license_revoked'] = '你的 ~b~%s~s~ 已經被 ~y~歸還~s~!',
   ['licence_you_revoked'] = '你歸還一個 ~b~%s~s~ ，這是屬於 ~y~%s~s~ 的',
-  ['no_players_nearby'] = '附近沒有任何玩家!',
+  ['no_players_nearby'] = '附近沒有任何市民!',
   ['being_searched'] = '你正在被 ~b~Police~s~ ~y~搜查~s~ ',
   -- Vehicle interaction
   ['vehicle_info'] = '車輛資訊',

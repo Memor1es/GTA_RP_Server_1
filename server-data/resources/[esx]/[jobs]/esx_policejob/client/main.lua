@@ -2163,7 +2163,7 @@ AddEventHandler('esx_policejob:cuffcheck', function(useItem)
     if distance ~= -1 and distance <= 3.0 then
         TriggerServerEvent('esx_policejob:cuffing', GetPlayerServerId(player), useItem)
     else
-        ESX.ShowNotification('~r~附近沒有玩家')
+        ESX.ShowNotification('~r~附近沒有市民')
 	end
 end)
 
@@ -2204,7 +2204,7 @@ AddEventHandler('esx_policejob:uncuffcheck', function(useItem)
         --TriggerServerEvent('esx_policejob:cuffing', GetPlayerServerId(player))
         TriggerServerEvent('esx_policejob:unlocking', GetPlayerServerId(player), useItem)
     else
-        ESX.ShowNotification('~r~附近沒有玩家')
+        ESX.ShowNotification('~r~附近沒有市民')
 	end
 end)
 

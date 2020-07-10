@@ -92,7 +92,7 @@ AddEventHandler("esx_goldCurrency:startMission",function(spot)
 		num = math.random(1,#Config.MissionPosition)
 	end
 	if numy == 100 then
-		ESX.ShowNotification("No ~y~jobs~s~ available at the moment, please ~b~try again~s~ later!")
+		ESX.ShowNotification("目前沒有 ~y~工作~s~ , 請稍後 ~b~再試~s~")
 	else
 		CurrentMission = num
 		TriggerEvent("esx_goldCurrency:startTheEvent",num)
@@ -268,7 +268,7 @@ AddEventHandler('esx_goldCurrency:startTheEvent', function(num)
 			local coords = GetEntityCoords(GetPlayerPed(-1))
 			
             if (GetDistanceBetweenCoords(coords, loc.Location.x, loc.Location.y, loc.Location.z, true) > 60) and DeliveryInProgress == false then
-				DrawMissionText("Follow the ~y~location~s~ on your map")
+				DrawMissionText("請移動至地圖 ~y~標記位置~s~")
 			end
 			
 			if (GetDistanceBetweenCoords(coords, loc.Location.x, loc.Location.y, loc.Location.z, true) < 150) and not JobVanSpawned then
@@ -325,7 +325,7 @@ AddEventHandler('esx_goldCurrency:startTheEvent', function(num)
             end
 			
 			if DeliveryInProgress == false and (GetDistanceBetweenCoords(coords, loc.Location.x, loc.Location.y, loc.Location.z, true) < 60) and (GetDistanceBetweenCoords(coords, loc.Location.x, loc.Location.y, loc.Location.z, true) > 10) then
-				DrawMissionText("~r~Kill~s~ the goons that guard the ~y~Van~s~")
+				DrawMissionText("~r~殺掉~s~ 保護 ~y~貨車~s~ 的小混混")
 			end
 			
 			if (GetDistanceBetweenCoords(coords, loc.Location.x, loc.Location.y, loc.Location.z, true) < 40) and (not JobPlayer and JobVanSpawned) then
@@ -382,7 +382,7 @@ AddEventHandler('esx_goldCurrency:startTheEvent', function(num)
 			end
 						
 			if DeliveryInProgress == true and isVehicleLockPicked == true then
-				DrawMissionText("Deliver the ~y~van~s~ to the new ~s~destination~s~ on your map!")
+				DrawMissionText("移送 ~y~貨車~s~ 到地圖上的 ~s~指定目的地~s~")
 			end
 			
 			if DeliveryInProgress == true then
@@ -398,7 +398,7 @@ AddEventHandler('esx_goldCurrency:startTheEvent', function(num)
 						DrawMarker(Config.DeliveryMarkerType, v.x, v.y, v.z-0.97, 0.0, 0.0, 0.0, 180.0, 0.0, 0.0, Config.DeliveryMarkerScale.x, Config.DeliveryMarkerScale.y, Config.DeliveryMarkerScale.z, Config.DeliveryMarkerColor.r, Config.DeliveryMarkerColor.g, Config.DeliveryMarkerColor.b, Config.DeliveryMarkerColor.a, false, true, 2, false, false, false, false)
 					end
 					if(GetDistanceBetweenCoords(coords, v.x, v.y, v.z, true) < 2.0) and vanIsDelivered == false then
-						DrawText3Ds(v.x, v.y, v.z, "Press ~g~[E]~s~ to ~y~Delivery~s~")
+						DrawText3Ds(v.x, v.y, v.z, "按下 ~g~[E]~s~ 來 ~y~交貨~s~")
 						if IsControlJustPressed(0, 38) then 
 							RemoveBlip(DeliveryBlip)
 							vanIsDelivered = true
@@ -440,7 +440,7 @@ AddEventHandler('esx_goldCurrency:startTheEvent', function(num)
 				if Config.EnableCustomNotification == true then
 					TriggerEvent("esx_goldCurrency:missionFailDeath")
 				else
-					ESX.ShowNotification("~r~Mission Failed:~s~ You died")
+					ESX.ShowNotification("~r~任務失敗:~s~ 你暈倒了")
 				end	
 								
 				Config.MissionPosition[num].InUse = false
@@ -497,14 +497,14 @@ function LockpickVanDoor()
 	FreezeEntityPosition(playerPed, true)
 	TaskPlayAnim(playerPed, 'anim@amb@clubhouse@tutorial@bkr_tut_ig3@', "machinic_loop_mechandplayer", 3.0, -8, -1, 63, 0, 0, 0, 0 )
 	
-	exports['progressBars']:startUI(7500, "LOCKPICKING VAN")
+	exports['progressBars']:startUI(7500, "正在解鎖貨車")
 	Citizen.Wait(7500)
 	
 	ClearPedTasks(playerPed)
 	FreezeEntityPosition(playerPed, false)
 	isVehicleLockPicked = true
 	SetVehicleDoorsLockedForAllPlayers(JobVan, false)
-	ESX.ShowNotification("You ~g~successfully~s~ ~r~lockpicked~s~ the ~y~Van~s~")
+	ESX.ShowNotification("你 ~g~成功~s~ ~r~解鎖~s~ ~y~貨車~s~")
 end
 
 -- Function for job blip in progress:
@@ -512,7 +512,7 @@ function CreateMissionBlip(location)
 	local blip = AddBlipForCoord(location.x,location.y,location.z)
 	SetBlipSprite(blip, 1)
 	SetBlipColour(blip, 5)
-	AddTextEntry('MYBLIP', "GoldJob Mission")
+	AddTextEntry('MYBLIP', "金條任務")
 	BeginTextCommandSetBlipName('MYBLIP')
 	AddTextComponentSubstringPlayerName(name)
 	EndTextCommandSetBlipName(blip)

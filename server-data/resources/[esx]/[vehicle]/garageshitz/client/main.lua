@@ -112,7 +112,7 @@ Citizen.CreateThread(function()
 						if dstCheck <= markerSize - 0.1 then
 							local usable, displayText = not DoesCamExist(cachedData["cam"]), GetDisplayText(action, garage)
 
-							ESX.ShowHelpNotification(usable and displayText or "Select the vehicle.")
+							ESX.ShowHelpNotification(usable and displayText or "選擇車輛")
 
 							if usable then
 								if IsControlJustPressed(0, 38) then
@@ -150,7 +150,7 @@ function OpenMenuGarage(PointType)
 	
 	local elements = {}
 
-		table.insert(elements, {label = 'Return Owned Cars'.." ($"..Config.ImpoundPrice..")", value = 'return_owned_cars'})
+		table.insert(elements, {label = '歸還車輛'.." ($"..Config.ImpoundPrice..")", value = 'return_owned_cars'})
 
 	
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'garage_menu', {
@@ -210,7 +210,7 @@ function ReturnOwnedCarsMenu()
 					TriggerServerEvent('garage:payCar')
 					SpawnPoundedVehicle(data.current.value, data.current.value.plate)
 				else
-					ESX.ShowNotification('Card Refused! Ensure you have enough money in the bank')
+					ESX.ShowNotification('銀行卡被拒絕, 請確保您的銀行存款足夠')
 				end
 			end)
 		end, function(data, menu)

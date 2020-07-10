@@ -24,5 +24,5 @@ Locales['tc'] = {
   ['driving_test_complete'] = '完成駕訓班',
   ['driving_too_fast'] = '~r~你開得太快了,~s~ 現在限速: ~y~%s~s~ km/h!',
   ['errors'] = '錯誤: ~r~ %s~s~ / %s ',
-  ['you_damaged_veh'] = '你傷害了駕駛工具',
+  ['you_damaged_veh'] = '你損壞了駕駛工具',
 }

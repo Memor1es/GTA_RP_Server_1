@@ -10,7 +10,7 @@ AddEventHandler('esx_outlawalert:carJackInProgress', function(targetCoords)
 		playerGender = _U('female')
 	end
 
-	TriggerClientEvent('esx_outlawalert:outlawNotify', -1, "偷車發生中")
+	TriggerClientEvent('esx_outlawalert:outlawNotify', -1, "10-60 偷車發生中")
 	TriggerClientEvent('esx_outlawalert:carJackInProgress', -1, targetCoords)
 end)
 
@@ -22,7 +22,7 @@ AddEventHandler('esx_outlawalert:burglaryInProgress', function(targetCoords)
 		playerGender = _U('female')
 	end
 
-	TriggerClientEvent('esx_outlawalert:outlawNotify', -1, "搶劫民宅發生中")
+	TriggerClientEvent('esx_outlawalert:outlawNotify', -1, "10-90H 搶劫民宅發生中")
 	--TriggerClientEvent('esx_outlawalert:burglaryInProgress', -1, targetCoords)
 	TriggerClientEvent('esx_outlawalert:carJackInProgress', -1, targetCoords)
 end)
@@ -47,7 +47,7 @@ AddEventHandler('esx_outlawalert:gunshotInProgress', function(targetCoords, stre
 		playerGender = _U('female')
 	end
 
-	TriggerClientEvent('esx_outlawalert:outlawGunShotNotify', -1, "開槍警報觸發", targetCoords)
+	TriggerClientEvent('esx_outlawalert:outlawGunShotNotify', -1, "10-71 開槍警報觸發", targetCoords)
 	TriggerClientEvent('esx_outlawalert:gunshotInProgress', -1, targetCoords)
 end)
 

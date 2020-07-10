@@ -16,7 +16,7 @@ Locales['tc'] = {
   ['garage_title'] = '車子操作',
   ['garage_stored'] = '存放',
   ['garage_notstored'] = '不在車庫',
-  ['garage_storing'] = '我們意圖存入車輛， 請確保沒有玩家在附近。',
+  ['garage_storing'] = '我們意圖存入車輛， 請確保沒有市民在附近。',
   ['garage_has_stored'] = '車子已經被存入車庫。',
   ['garage_has_notstored'] = '附近找不到已擁有的車輛。',
   ['garage_notavailable'] = '你的車子沒有存放至車庫。',
@@ -39,13 +39,13 @@ Locales['tc'] = {
   ['revive_inprogress'] = '復活進行中!',
   ['revive_complete'] = '你已經急救 ~y~%s~s~',
   ['revive_complete_award'] = '你已經急救 ~y~%s~s~ ，然後賺了 ~g~$%s~s~!',
-  ['revive_fail_offline'] = '這位玩家不在線上',
+  ['revive_fail_offline'] = '這位市民不在線上',
   ['heal_inprogress'] = '你在治療中!',
   ['heal_complete'] = '你已經治療 ~y~%s~s~',
-  ['no_players'] = '附近沒有玩家',
+  ['no_players'] = '附近沒有市民',
   ['no_vehicles'] = '附近沒有車輛',
-  ['player_not_unconscious'] = '這位玩家還有意識!',
-  ['player_not_conscious'] = '這位玩家沒有意識!',
+  ['player_not_unconscious'] = '這位市民還有意識!',
+  ['player_not_conscious'] = '這位市民沒有意識!',
   -- Boss Menu
   ['boss_actions'] = '老闆操作',
   -- Misc
@@ -78,7 +78,7 @@ Locales['tc'] = {
   -- F6 Menu
   ['ems_menu'] = 'EMS 選單',
   ['ems_menu_title'] = '救護車 - EMS 選單',
-  ['ems_menu_revive'] = '復活玩家',
+  ['ems_menu_revive'] = '復活市民',
   ['ems_menu_putincar'] = '放入車輛',
   ['ems_menu_small'] = '治療小傷口',
   ['ems_menu_big'] = '治療嚴重傷口',
@@ -96,7 +96,7 @@ Locales['tc'] = {
   ['combatlog_message'] = '你已經被強制重生，因為你上次死亡時離開了伺服器',
   ['check_prompt'] = '\n按住 [~b~F~s~] 來查看狀態!!',
   -- Revive
-  ['revive_help'] = '復活一位玩家',
+  ['revive_help'] = '復活一位市民',
   -- Item
   ['used_medikit'] = '你已經使用了 ~y~1x~s~ 醫護包',
   ['used_bandage'] = '你已經使用了 ~y~1x~s~ 繃帶',
@@ -105,7 +105,7 @@ Locales['tc'] = {
   ['healed'] = '你已經被治療。',
   -- Blips
   ['blip_hospital'] = '醫院',
-  ['blip_dead'] = '沒有意識的玩家',
+  ['blip_dead'] = '沒有意識的市民',
 
   ['billing'] = '帳單',
   ['invoice_amount'] = '帳單金額',

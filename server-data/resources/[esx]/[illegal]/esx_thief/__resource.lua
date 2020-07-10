@@ -11,7 +11,6 @@ client_scripts {
   'locales/sv.lua',
   'locales/pl.lua',
   'locales/tc.lua',
-  'handsup.lua',
   'config.lua',
   'client/main.lua'
 }

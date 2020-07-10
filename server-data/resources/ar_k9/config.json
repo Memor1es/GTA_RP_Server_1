@@ -30,16 +30,16 @@
         "searchPlayer":"player"
       },
       
-      "alreadySearching":"~y~K9: ~w~Already searching something",
-      "noVehicleFound":"~y~K9: ~w~No vehicle found!",
-      "noPlayerFound":"~y~K9: ~w~No player found!",
-      "dogDetects":"~y~K9: ~w~Detects ~r~something...",
-      "dogDoesntDetect":"~y~K9: ~w~Detects ~y~nothing...",
+      "alreadySearching":"~y~K9: ~w~已經正在搜尋",
+      "noVehicleFound":"~y~K9: ~w~沒有車輛!",
+      "noPlayerFound":"~y~K9: ~w~沒有市民!",
+      "dogDetects":"~y~K9: ~w~探測到 ~r~一些東西...",
+      "dogDoesntDetect":"~y~K9: ~w~沒探測到 ~y~東西...",
 
-      "commandSearchHelp":"~y~Specify~w~: ~y~player~w~/~y~vehicle",
-      "invalidDogName":"You have not entered a valid dog name try: [~y~rott~w~,~y~husky~w~,~y~retriever~w~,~y~shepherd~w~]",
-      "dogNameNotFound":"Dog name not found",
-      "commandEnterHelp":"~y~K9: ~w~You must be in a vehicle."
+      "commandSearchHelp":"~y~指定~w~: ~y~市民~w~/~y~車輛",
+      "invalidDogName":"你輸入了錯誤的名字,請嘗試: [~y~rott~w~,~y~husky~w~,~y~retriever~w~,~y~shepherd~w~]",
+      "dogNameNotFound":"無效的名字",
+      "commandEnterHelp":"~y~K9: ~w~你必須在車輛裡."
     },
     "illegalItems": [
       "weed20g",
