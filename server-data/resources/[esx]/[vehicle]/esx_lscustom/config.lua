@@ -1,6 +1,6 @@
 Config                   = {}
 Config.DrawDistance      = 100.0
-Config.Locale            = 'en'
+Config.Locale            = 'tc'
 Config.IsMechanicJobOnly = false
 
 Config.Zones = {
@@ -523,7 +523,7 @@ Config.Menus = {
 		modArchCover		= _U('arch_cover'),
 		modAerials			= _U('aerials'),
 		modTrimB			= _U('wings'),
-		modTank				= _U('fuel_tank'),
+		--modTank				= _U('fuel_tank'),
 		modWindows			= _U('windows'),
 		modLivery			= _U('stickers')
 	},
