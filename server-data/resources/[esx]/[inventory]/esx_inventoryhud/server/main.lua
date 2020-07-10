@@ -612,7 +612,8 @@ AddEventHandler("esx_inventoryhud:changeFastItem",function(slot,weapon)
 		'SELECT * FROM user_fastItems WHERE identifier = @identifier AND weapon=@weapon',
 		{
 			['@identifier'] = xPlayer.identifier,
-			['@weapon'] = weapon
+			--['@weapon'] = weapon
+			['@slot'] = slot
 		},
 		function(result)
 			if result[1] == nil then
