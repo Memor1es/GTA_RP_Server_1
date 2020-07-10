@@ -175,7 +175,7 @@ function OnPlayerDeath()
 	local coords = GetEntityCoords(GetPlayerPed(-1))
 	NetworkResurrectLocalPlayer(coords.x, coords.y, coords.z, 0, true, false)
 	ClearPedBloodDamage(GetPlayerPed(-1))
-	SetEntityHealth(GetPlayerPed(-1), 100)
+	SetEntityHealth(GetPlayerPed(-1), 200)
 	SetPlayerInvincible(GetPlayerPed(-1), true)
 	SetPedDiesInWater(GetPlayerPed(-1), false)	
 	if IsEntityInWater(GetPlayerPed(-1)) then
