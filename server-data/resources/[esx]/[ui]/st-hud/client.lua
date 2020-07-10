@@ -67,6 +67,8 @@ Citizen.CreateThread(function()
                 end)
             end)
         end)
+        print(hunger)
+        print(thirst)
         Citizen.Wait(800)
     end
 end)
@@ -89,6 +91,7 @@ Citizen.CreateThread(function()
             armour = armor,
             oxygen = oxy,
         })
+        print(oxy)
         Citizen.Wait(800)
     end
 end)
