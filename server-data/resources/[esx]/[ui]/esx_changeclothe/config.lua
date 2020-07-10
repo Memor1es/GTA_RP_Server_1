@@ -9,9 +9,13 @@ Config.EnableCustomPeds           = false
 
 Config.place                      = {
 
-    Cloakrooms = {
-        vector3(1835.28, 2584.66, 45.95)
-    },
+	Prison ={
+
+		Cloakrooms = {
+			vector3(1835.28, 2584.66, 45.95)
+		},
+
+	},
 }
 
 Config.Uniforms = {
