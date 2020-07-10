@@ -82,6 +82,8 @@ Citizen.CreateThread(function()
                 end)
             end)
         end)
+        print(thirst)
+        print(hunger)
         Citizen.Wait(800)
     end
 end)
@@ -106,6 +108,7 @@ Citizen.CreateThread(function()
             state = tokovoipstate,
             talking = isTalking,
         })
+        print(oxygen)
         Citizen.Wait(200)
     end
 end)
