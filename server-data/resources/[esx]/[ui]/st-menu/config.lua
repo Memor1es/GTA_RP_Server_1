@@ -34,7 +34,7 @@ rootMenuConfig =  {
             return not fuck
         end,
         --subMenus = {"general:flipvehicle",  "general:checkoverself", "general:checktargetstates",  "general:keysgive",  "general:emotes",  "general:checkvehicle", "general:apartgivekey", "general:aparttakekey"  }
-        subMenus = {"general:flipvehicle",  "general:checkoverself", "general:emotes", "general:apartgivekey", "general:aparttakekey",  'prison_status_panel:open', 'dice:roll1','cmg2_animations:carry','esx_barbie_lyftupp:piggyback'}
+        subMenus = {"general:flipvehicle",  "general:checkoverself", "general:emotes", "general:apartgivekey", "general:aparttakekey",  'prison_status_panel:open', 'dice:roll1','cmg2_animations:carry','esx_barbie_lyftupp:piggyback', "police:putinvehicle","police:takeoutvehicle"}
     },
     {
         id = "amb-ability",
