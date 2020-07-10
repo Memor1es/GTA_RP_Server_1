@@ -77,6 +77,16 @@ Config.Shops = {
         }
     },
 
+    jailShop = {
+        Locations = {
+			{x = 1779.81,   y = 2589.78,  z = 45.8},
+        },
+        Items = {
+            {name = 'water'},
+            {name = 'jail_food'},
+        }
+    },
+
     RobsLiquor = {
 		Locations = {
 			{x = 1135.808,  y = -982.281,  z = 45.415},
