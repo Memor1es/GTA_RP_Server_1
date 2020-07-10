@@ -5,17 +5,23 @@ Config.MarkerType                 = 1
 Config.MarkerSize                 = { x = 1.5, y = 1.5, z = 0.5 }
 Config.MarkerColor                = { r = 50, g = 50, b = 204 }
 
+Config.Locale                     = 'tc'
+
 Config.EnableCustomPeds           = false
 
 Config.place                      = {
 
-    Cloakrooms = {
-        vector3(1835.28, 2584.66, 45.95)
-    },
+	Prison ={
+
+		Cloakrooms = {
+			vector3(1835.28, 2584.66, 45.95)
+		},
+
+	},
 }
 
 Config.Uniforms = {
-	prison_clothe = {
+	prison_wear = {
 		male = {
 			tshirt_1 = 59,  tshirt_2 = 1,
 			torso_1 = 55,   torso_2 = 0,

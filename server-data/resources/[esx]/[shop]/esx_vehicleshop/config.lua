@@ -12,7 +12,8 @@ Config.LicenseEnable = false -- require people to own drivers license when buyin
 -- The maximum plate length is 8 chars (including spaces & symbols), don't go past it!
 Config.PlateLetters  = 3
 Config.PlateNumbers  = 3
-Config.PlateUseSpace = true
+Config.PlateNumbers1  = 2
+Config.PlateUseSpace = false
 
 Config.Zones = {
 

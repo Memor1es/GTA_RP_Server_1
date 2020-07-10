@@ -32,6 +32,13 @@ end, true, {help = "設置幸運", validate = true, arguments = {
 }
 })
 
+ESX.RegisterCommand('setdirty', 'admin', function(xPlayer, args, showError)
+	xPlayer.triggerEvent('esx_gift_tree:setdirty',args.value)
+end, true, {help = "設置髒污", validate = true, arguments = {
+    {name = 'value', help = "數值", type = 'number'}
+}
+})
+
 ESX.RegisterUsableItem('book', function(source)
 	local xPlayer = ESX.GetPlayerFromId(source)
 	xPlayer.triggerEvent('esx_status:add','int',1)

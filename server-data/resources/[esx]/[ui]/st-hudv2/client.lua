@@ -79,12 +79,11 @@ Citizen.CreateThread(function()
                         state = tokovoipstate,
                         talking = isTalking,
                     })
-                    print(thirst.getPercent())
                 end)
             end)
         end)
         
-        Citizen.Wait(10)
+        Citizen.Wait(800)
     end
 end)
 
@@ -108,7 +107,6 @@ Citizen.CreateThread(function()
             state = tokovoipstate,
             talking = isTalking,
         })
-        print(GetPlayerUnderwaterTimeRemaining(PlayerId()))
         Citizen.Wait(200)
     end
 end)
