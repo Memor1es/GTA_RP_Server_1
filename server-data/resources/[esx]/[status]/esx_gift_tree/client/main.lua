@@ -145,6 +145,13 @@ AddEventHandler('esx_gift_tree:setluk', function(value)
 
 end)
 
+RegisterNetEvent('esx_gift_tree:setdirty')
+AddEventHandler('esx_gift_tree:setdirty', function(value)
+	-- restore hunger & thirst
+	TriggerEvent('esx_status:set', 'dirty', value)
+
+end)
+
 RegisterNetEvent('esx_gift_tree:randomluk')
 AddEventHandler('esx_gift_tree:randomluk', function(floor, ceil)
   -- restore hunger & thirst

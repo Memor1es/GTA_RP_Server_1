@@ -21,7 +21,7 @@ Config.place                      = {
 }
 
 Config.Uniforms = {
-	prison_clothe = {
+	prison_wear = {
 		male = {
 			tshirt_1 = 59,  tshirt_2 = 1,
 			torso_1 = 55,   torso_2 = 0,
