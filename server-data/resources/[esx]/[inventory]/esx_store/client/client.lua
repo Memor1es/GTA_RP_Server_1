@@ -9,7 +9,7 @@ Citizen.CreateThread(function()
 end)
 
 --put in 
-function OpenPlayerInventoryMenu(property, owner)
+function OpenPlayerInventoryMenu(owner)
 	ESX.TriggerServerCallback('esx_property:getPlayerInventory', function(inventory)
 		local elements = {}
 
@@ -45,7 +45,7 @@ function OpenPlayerInventoryMenu(property, owner)
 		end
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'player_inventory', {
-			title    = property.label .. ' - ' .. _U('inventory'),
+			title    = "證物" .. ' - ' .. "背包",
 			align    = 'top-left',
 			elements = elements
 		}, function(data, menu)
@@ -55,7 +55,7 @@ function OpenPlayerInventoryMenu(property, owner)
 				TriggerServerEvent('esx_store:putItem', owner, data.current.type, data.current.value, data.current.ammo)
 
 				ESX.SetTimeout(300, function()
-					OpenPlayerInventoryMenu(property, owner)
+					OpenPlayerInventoryMenu(owner)
 				end)
 			else
 				ESX.UI.Menu.Open('dialog', GetCurrentResourceName(), 'put_item_count', {
@@ -70,7 +70,7 @@ function OpenPlayerInventoryMenu(property, owner)
 
 						TriggerServerEvent('esx_store:putItem', owner, data.current.type, data.current.value, tonumber(data2.value))
 						ESX.SetTimeout(300, function()
-							OpenPlayerInventoryMenu(property, owner)
+							OpenPlayerInventoryMenu(owner)
 						end)
 					end
 				end, function(data2, menu2)
@@ -85,7 +85,7 @@ end
 
 --take out
 
-function OpenRoomInventoryMenu(property, owner)
+function OpenRoomInventoryMenu(owner)
 	ESX.TriggerServerCallback('esx_property:getPropertyInventory', function(inventory)
 		local elements = {}
 
@@ -120,8 +120,8 @@ function OpenRoomInventoryMenu(property, owner)
 			})
 		end
 
-		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'room_inventory', {
-			title    = property.label .. ' - ' .. _U('inventory'),
+		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'store_inventory', {
+			title    = "證物" .. ' - ' .. "背包",
 			align    = 'top-left',
 			elements = elements
 		}, function(data, menu)
@@ -131,7 +131,7 @@ function OpenRoomInventoryMenu(property, owner)
 
 				TriggerServerEvent('esx_store:getItem', owner, data.current.type, data.current.value, data.current.index)
 				ESX.SetTimeout(300, function()
-					OpenRoomInventoryMenu(property, owner)
+					OpenRoomInventoryMenu(owner)
 				end)
 			else
 				ESX.UI.Menu.Open('dialog', GetCurrentResourceName(), 'get_item_count', {
@@ -146,7 +146,7 @@ function OpenRoomInventoryMenu(property, owner)
 
 						TriggerServerEvent('esx_store:getItem', owner, data.current.type, data.current.value, quantity)
 						ESX.SetTimeout(300, function()
-							OpenRoomInventoryMenu(property, owner)
+							OpenRoomInventoryMenu(owner)
 						end)
 					end
 				end, function(data2,menu)
@@ -159,3 +159,12 @@ function OpenRoomInventoryMenu(property, owner)
 	end, owner)
 end
 
+RegisterNetEvent('esx_store:putin')
+AddEventHandler('esx_store:putin', function(ownerid)
+	OpenPlayerInventoryMenu(ownerid)
+end)
+
+RegisterNetEvent('esx_store:takeout')
+AddEventHandler('esx_store:takeout', function(ownerid)
+	OpenRoomInventoryMenu(ownerid)
+end)

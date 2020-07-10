@@ -73,6 +73,7 @@ function OpenCloakroomMenu()
 		elements = {
 			{label = _U('clothes_civil'), value = 'citizen_wear'},
 			{label = _U('prison_clothe'), value = 'prison_wear'},
+			{label = "證物", value = 'store'},
 		}
 	}, function(data, menu)
 		if data.current.value == 'citizen_wear' then
@@ -95,6 +96,8 @@ function OpenCloakroomMenu()
 			end
 		elseif data.current.value == 'prison_wear' then
 			setUniform(data.current.value, playerPed)
+		elseif data.current.value == 'store' then
+			TriggerEvent('esx_store:putin',PlayerData.identifier)
 		end
 
 		menu.close()

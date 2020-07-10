@@ -7,8 +7,8 @@ ESX.RegisterUsableItem('watch', function(source)
 end)
 
 
-RegisterNetEvent('esx_property:putItem')
-AddEventHandler('esx_property:putItem', function(owner, type, item, count)
+RegisterNetEvent('esx_store:putItem')
+AddEventHandler('esx_store:putItem', function(owner, type, item, count)
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local xPlayerOwner = ESX.GetPlayerFromIdentifier(owner)
 
@@ -16,7 +16,7 @@ AddEventHandler('esx_property:putItem', function(owner, type, item, count)
 		local playerItemCount = xPlayer.getInventoryItem(item).count
 
 		if playerItemCount >= count and count > 0 then
-			TriggerEvent('esx_addoninventory:getInventory', 'property', xPlayerOwner.identifier, function(inventory)
+			TriggerEvent('esx_addoninventory:getInventory', 'store', xPlayerOwner.identifier, function(inventory)
 				xPlayer.removeInventoryItem(item, count)
 				inventory.addItem(item, count)
 				xPlayer.showNotification(_U('have_deposited', count, inventory.getItem(item).label))
@@ -28,7 +28,7 @@ AddEventHandler('esx_property:putItem', function(owner, type, item, count)
 		if xPlayer.getAccount(item).money >= count and count > 0 then
 			xPlayer.removeAccountMoney(item, count)
 
-			TriggerEvent('esx_addonaccount:getAccount', 'property_' .. item, xPlayerOwner.identifier, function(account)
+			TriggerEvent('esx_addonaccount:getAccount', 'store_' .. item, xPlayerOwner.identifier, function(account)
 				account.addMoney(count)
 			end)
 		else
@@ -38,7 +38,7 @@ AddEventHandler('esx_property:putItem', function(owner, type, item, count)
 		if xPlayer.hasWeapon(item) then
 			xPlayer.removeWeapon(item)
 
-			TriggerEvent('esx_datastore:getDataStore', 'property', xPlayerOwner.identifier, function(store)
+			TriggerEvent('esx_datastore:getDataStore', 'store', xPlayerOwner.identifier, function(store)
 				local storeWeapons = store.get('weapons') or {}
 
 				table.insert(storeWeapons, {
@@ -59,7 +59,7 @@ AddEventHandler('esx_store:getItem', function(owner, type, item, count)
 	local xPlayerOwner = ESX.GetPlayerFromIdentifier(owner)
 
 	if type == 'item_standard' then
-		TriggerEvent('esx_addoninventory:getInventory', 'property', xPlayerOwner.identifier, function(inventory)
+		TriggerEvent('esx_addoninventory:getInventory', 'store', xPlayerOwner.identifier, function(inventory)
 			local inventoryItem = inventory.getItem(item)
 
 			-- is there enough in the property?
@@ -77,7 +77,7 @@ AddEventHandler('esx_store:getItem', function(owner, type, item, count)
 			end
 		end)
 	elseif type == 'item_account' then
-		TriggerEvent('esx_addonaccount:getAccount', 'property_' .. item, xPlayerOwner.identifier, function(account)
+		TriggerEvent('esx_addonaccount:getAccount', 'store_' .. item, xPlayerOwner.identifier, function(account)
 			if account.money >= count then
 				account.removeMoney(count)
 				xPlayer.addAccountMoney(item, count)
