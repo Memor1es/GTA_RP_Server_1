@@ -494,7 +494,7 @@ Config.DoorList = {
 		locked = true,
 		distance = 2,
 		size = 1,
-		KeyPass = "jaildoor_key"
+		KeyPass = "jailfront_key"
 	},
 
 	{
@@ -505,7 +505,7 @@ Config.DoorList = {
 		locked = true,
 		distance = 2,
 		size = 1,
-		KeyPass = "jaildoor_key"
+		KeyPass = "jailfront_key"
 	},
 
 	{
@@ -516,7 +516,40 @@ Config.DoorList = {
 		locked = true,
 		distance = 2,
 		size = 1,
-		KeyPass = "jaildoor_key"
+		KeyPass = "jailfront_key"
+	},
+
+	{
+		objName = -1033001619,
+		objCoords  = {x=1837.69 ,y=2584.24,z=46.09},
+		textCoords = {x=1837.69 ,y=2584.24,z=46.09},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailfront_key"
+	},
+
+	{
+		objName = -1033001619,
+		objCoords  = {x=1826.466 ,y=2585.271,z=46.09},
+		textCoords = {x=1826.466 ,y=2585.271,z=46.09},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailfront_key"
+	},
+
+	{
+		objName = -1033001619,
+		objCoords  = {x=1827.36 ,y=2587.54,z=46.09},
+		textCoords = {x=1827.36 ,y=2587.54,z=46.09},
+		authorizedJobs = { 'jesus' },
+		locked = true,
+		distance = 2,
+		size = 1,
+		KeyPass = "jailfront_key"
 	},
 
 	--buildingB
