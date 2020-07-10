@@ -160,7 +160,6 @@ end)
   end)
   
 function OnPlayerDeath()
-	local sec = 1000
 	isDead = true
 	ESX.UI.Menu.CloseAll()
 	TriggerServerEvent('esx_ambulancejob:setDeathStatus', true)
@@ -175,7 +174,7 @@ function OnPlayerDeath()
 	local coords = GetEntityCoords(GetPlayerPed(-1))
 	NetworkResurrectLocalPlayer(coords.x, coords.y, coords.z, 0, true, false)
 	ClearPedBloodDamage(GetPlayerPed(-1))
-	SetEntityHealth(GetPlayerPed(-1), 200)
+	SetEntityHealth(GetPlayerPed(-1), 125)
 	SetPlayerInvincible(GetPlayerPed(-1), true)
 	SetPedDiesInWater(GetPlayerPed(-1), false)	
 	if IsEntityInWater(GetPlayerPed(-1)) then

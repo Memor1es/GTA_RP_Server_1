@@ -13,7 +13,7 @@ Config.Locale                     = 'tc'
 local second = 1000
 local minute = 60 * second
 
-Config.EarlyRespawnTimer          = 10 * minute  -- Time til respawn is available
+Config.EarlyRespawnTimer          = 1 * minute  -- Time til respawn is available
 Config.BleedoutTimer              = 30 * minute -- Time til the player bleeds out
 
 Config.ReviveDuration			  = 5 * 1000
