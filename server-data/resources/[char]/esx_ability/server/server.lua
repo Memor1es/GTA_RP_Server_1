@@ -119,7 +119,7 @@ ESX.RegisterCommand('setability', 'admin', function(xPlayer, args, showError)
 		showError("天賦不存在")
 	end
 end, true, {help = "設置天賦", validate = true, arguments = {
-	{name = 'playerId', help = "玩家ID", type = 'player'},
+	{name = 'playerId', help = "市民ID", type = 'player'},
 	{name = 'ability', help = "天賦", type = 'string'}
 }})
 

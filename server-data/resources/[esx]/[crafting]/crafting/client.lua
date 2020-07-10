@@ -26,7 +26,7 @@ function crafting:Respond(...)
 end
 
 function crafting:Update(...)
-  local interactText = "Press [~r~E~s~] to use the crafting bench."
+  local interactText = "按下 [~r~E~s~]來使用工具台"
   local lastCheck = 0
   local lastPos = false
   while true do
@@ -200,7 +200,7 @@ function crafting:PostData(data)
       if self.LearnOnCraft and not self.Learned[data] then 
         learn = true
         self.Learned[data] = true
-        ESX.ShowNotification("You learned the recipe for: "..itemName) 
+        ESX.ShowNotification("你成功學習"..itemName.."的製作方法") 
       end
       TriggerServerEvent('crafting:TryCraft',data,itemName,learn)
     end
@@ -213,7 +213,7 @@ function crafting:PlaceTable(...)
   local pos = (pPos + forward)
   local heading = GetEntityHeading(plyPed)
   local location = vector4(pos.x,pos.y,pos.z-1.0,heading - 90.0)
-  ESX.ShowNotification("You placed a Crafting Bench. Loading...")
+  ESX.ShowNotification("你放置了一個工作台")
   TriggerServerEvent('crafting:TablePlaced',location)
 end
 
@@ -223,9 +223,9 @@ end
 
 function crafting:CraftRespond(response,label,items)
   if response then
-    ESX.ShowNotification("You crafted: "..label)
+    ESX.ShowNotification("你已製作: "..label)
   else
-    ESX.ShowNotification("You failed to craft: "..label)
+    ESX.ShowNotification("你製作失敗: "..label)
     for k,v in pairs(items) do
       ESX.ShowNotification(v)
     end

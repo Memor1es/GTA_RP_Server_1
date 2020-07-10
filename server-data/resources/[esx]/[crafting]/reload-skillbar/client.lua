@@ -57,13 +57,13 @@ function FactorFunction(pos)
         end
         if factor == 0.5 and calm then
             calm = false
-            TriggerEvent("notification","You are frustrated", 2)
+            TriggerEvent("notification","你感到煩躁", 2)
         end
         TriggerEvent("factor:restore")        
     else
         if factor > 1.0 or factor == 0.9 then
             if not calm then
-                TriggerEvent("notification","You are calm again",1)
+                TriggerEvent("notification","你又平靜了",1)
                 calm = true
             end            
             factor = 1.0
@@ -139,10 +139,10 @@ RegisterCommand('testtaskbar', function()
     --local finished = exports["reload-skillbar"]:taskBar(4000,math.random(5,15))
     local finished = taskBar(4000,math.random(5,15))
     if finished ~= 100 then
-        TriggerEvent('notification', 'You\'re trash at this...', 2)
+        TriggerEvent('notification', '你好爛...', 2)
         --TriggerEvent('notification', 'Failed', 2)
     else
-        TriggerEvent('notification', 'Finished, now here\'s a cookie! xD',1)
+        TriggerEvent('notification', '你好棒棒哦, 要討拍嗎?',1)
         -- Do what you want them to do here...
         --HotWireCar()
     end
@@ -156,16 +156,16 @@ RegisterCommand('testtaskbar2', function()
     --local finished = exports["reload-skillbar"]:taskBar(4000,math.random(5,15))
     local finished = taskBar(4000,math.random(5,15))
     if finished ~= 100 then
-        TriggerEvent('notification', 'You\'re trash at this...', 2)
+        TriggerEvent('notification', '你好爛...', 2)
         --TriggerEvent('notification', 'Failed', 2)
     else
         --local finished2 = exports["reload-skillbar"]:taskBar(6000,math.random(5,15))
         local finished2 = taskBar(2500,math.random(5,15))
         if finished2 ~= 100 then
-            TriggerEvent('notification', 'You\'re trash at this...', 2)
+            TriggerEvent('notification', '你好爛...', 2)
             --TriggerEvent('notification', 'Failed', 2)
         else
-            TriggerEvent('notification', 'Finished, now here\'s a cookie! xD',1)
+            TriggerEvent('notification', '你好棒棒哦, 要討拍嗎?',1)
             -- Do what you want them to do here...
             --HotWireCar()
         end
@@ -178,22 +178,22 @@ RegisterCommand('testtaskbar3', function()
     --local finished = exports["reload-skillbar"]:taskBar(4000,math.random(5,15))
     local finished = taskBar(4000,math.random(5,15))
     if finished ~= 100 then
-        TriggerEvent('notification', 'You\'re trash at this...', 2)
+        TriggerEvent('notification', '你好爛...', 2)
         --TriggerEvent('notification', 'Failed', 2)
     else
         --local finished2 = exports["reload-skillbar"]:taskBar(6000,math.random(5,15))
         local finished2 = taskBar(3000,math.random(5,15))
         if finished2 ~= 100 then
-            TriggerEvent('notification', 'You\'re trash at this...', 2)
+            TriggerEvent('notification', '你好爛...', 2)
             --TriggerEvent('notification', 'Failed', 2)
         else
             --local finished3 = exports["reload-skillbar"]:taskBar(6000,math.random(5,15))
             local finished3 = taskBar(2000,math.random(5,15))
             if finished3 ~= 100 then
-                TriggerEvent('notification', 'You\'re trash at this...', 2)
+                TriggerEvent('notification', '你好爛...', 2)
                 --TriggerEvent('notification', 'Failed', 2)
             else
-                TriggerEvent('notification', 'Finished, now here\'s a cookie! xD',1)
+                TriggerEvent('notification', '你好棒棒哦, 要討拍嗎?',1)
                 -- Do what you want them to do here...
                 --HotWireCar()
             end
@@ -226,7 +226,7 @@ RegisterNetEvent('reload:game1')
 AddEventHandler('reload:game1', function(num)
     local finished = taskBar(4000,math.random(5,15))
     if finished ~= 100 then
-        TriggerEvent('notification', 'You\'re trash at this...', 2)
+        TriggerEvent('notification', '你好爛...', 2)
         TriggerEvent('notification', '感覺到手藝下降了一點...', 2)
         TriggerEvent("esx_status:remove",'agi',1)
         --TriggerEvent('notification', 'Failed', 2)
@@ -234,7 +234,7 @@ AddEventHandler('reload:game1', function(num)
         --local finished2 = exports["reload-skillbar"]:taskBar(6000,math.random(5,15))
         local finished2 = taskBar(3000,math.random(5,15))
         if finished2 ~= 100 then
-            TriggerEvent('notification', 'You\'re trash at this...', 2)
+            TriggerEvent('notification', '你好爛...', 2)
             TriggerEvent('notification', '感覺到手藝下降了一點...', 2)
             TriggerEvent("esx_status:remove",'agi',1)
             --TriggerEvent('notification', 'Failed', 2)
@@ -249,7 +249,7 @@ AddEventHandler('reload:game1', function(num)
             else
                 TriggerEvent('notification', '感覺到手藝下降了一點...', 2)
                 TriggerEvent("esx_status:remove",'agi',2)
-                --TriggerEvent('notification', 'Finished, now here\'s a cookie! xD',1)
+                --TriggerEvent('notification', '你好棒棒哦, 要討拍嗎?',1)
                 -- Do what you want them to do here...
                 --HotWireCar()
             end

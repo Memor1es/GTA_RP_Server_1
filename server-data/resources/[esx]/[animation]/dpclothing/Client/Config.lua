@@ -4,7 +4,7 @@ Config = {
 	Debug = false,						-- Enables logging and on screen display of what your character is wearing.
 	GUI = {
 		Position = {x = 0.65, y = 0.5},	-- 0.5 is the middle!
-		AllowInCars = false,			-- Allow the GUI in cars?
+		AllowInCars = true,			-- Allow the GUI in cars?
 		AllowWhenRagdolled = false,			-- Allow the GUI when ragdolled?
 		Enabled = true, 				-- You can turn the gui off here, the base commands will still work.
 		Key = GetKey("Y"), 				-- Change the GUI key here.

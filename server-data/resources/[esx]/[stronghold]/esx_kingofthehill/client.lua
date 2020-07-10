@@ -85,52 +85,52 @@ RegisterCommand("payroll", function(source, args, rawCommand)
         isCapturing[Config.ZoneList[i]] = table.contains(Config[Config.ZoneList[i]].capturers, PlayerData.identifier)
     end
     if args[1] == nil then
-        ESX.ShowNotification('Missing command, try ~r~/payroll start')
+        ESX.ShowNotification('無效指令, 嘗試~r~/payroll start')
     elseif tostring(args[1]) == 'check' then
         if isCapturing[now_zone] then
-            ESX.ShowNotification('You are in the capturing group')
+            ESX.ShowNotification('你是占領者')
         elseif isCapturedBySelf[now_zone] then
-            ESX.ShowNotification('You are on the payroll')
+            ESX.ShowNotification('你有在名單上')
         else
-            ESX.ShowNotification('You are not in a capture group, and you aren\'t on the payroll')
+            ESX.ShowNotification('你不是占領者')
         end
     elseif tostring(args[1]) == 'start' then        
         if Config.BlockEmergencyServices and (ESX.GetPlayerData().job.name == 'police' or ESX.GetPlayerData().job.name == 'ambulance') then
-            ESX.ShowNotification('Emergency services are not allowed to Capture') 
+            ESX.ShowNotification('公家機構無法佔領') 
         elseif Config[now_zone].captureCount >= Config.RequiredCapturersMin and isCapturing and Config.CoolDown == 0 then 
             if Config[now_zone].captureInProgress then
-                ESX.ShowNotification('Already being captured') 
+                ESX.ShowNotification('已經正在佔領') 
             else
                 TriggerServerEvent('esx_kingofthehill:capture')  
             end                                
         elseif Config.CoolDown > 0 then
-            ESX.ShowNotification('Recently captured. You need to wait ~r~' .. Config.CoolDown / 1000 .. ' ~w~seconds')
+            ESX.ShowNotification('最近才被佔領. 你需要等上 ~r~' .. Config.CoolDown / 1000 .. ' ~w~秒')
         else
-            ESX.ShowNotification('~r~You need at least ' .. Config.RequiredCapturersMin .. ' in your group')
+            ESX.ShowNotification('~r~你必須要有' .. Config.RequiredCapturersMin .. '位才能開始')
         end
     elseif tostring(args[1]) == 'join' then
         if Config[now_zone].captureCount >= Config.RequiredCapturersMax then
-            ESX.ShowNotification( '~r~There are already ' .. Config.RequiredCapturersMax .. ' people in the group')
+            ESX.ShowNotification( '~r~這裡已經有 ' .. Config.RequiredCapturersMax .. ' 位在團體裡了')
         else
             if isCapturing[now_zone] then
-                ESX.ShowNotification('You are already in the group') 
+                ESX.ShowNotification('你已經在團體裡了') 
             elseif isCapturedBySelf[now_zone] then
-                ESX.ShowNotification('You are already on payroll') 
+                ESX.ShowNotification('你已經在名單上') 
             else
                 if Config.BlockEmergencyServices and (ESX.GetPlayerData().job.name == 'police' or ESX.GetPlayerData().job.name == 'ambulance') then
-                    ESX.ShowNotification('Emergency services are not allowed to Capture') 
+                    ESX.ShowNotification('公家機構無法佔領') 
                 else
                     TriggerServerEvent('esx_kingofthehill:addCapturer', PlayerData.identifier)
-                    ESX.ShowNotification('~g~Joined the Capture group')
+                    ESX.ShowNotification('~g~已加入佔領團體')
                 end
             end                        
         end 
     elseif tostring(args[1]) == 'leave' then
         if isCapturing then
             TriggerServerEvent('esx_kingofthehill:removeCapturer', PlayerData.identifier)
-            ESX.ShowNotification('~r~Left the Capture group')
+            ESX.ShowNotification('~r~已離開佔領團體')
         else
-            ESX.ShowNotification('You\'re not in the Capture group')
+            ESX.ShowNotification('你不在佔領團體裡')
         end
     elseif tostring(args[1]) == 'clear' then
         if ESX.GetPlayerData().job.name == 'mafia' then
@@ -141,7 +141,7 @@ RegisterCommand("payroll", function(source, args, rawCommand)
             end
             TriggerServerEvent('esx_kingofthehill:resetPayroll',args[2])
         else           
-            ESX.ShowNotification('~r~Unauthorized')
+            ESX.ShowNotification('~r~未授權')
         end
     elseif tostring(args[1]) == 'owners' then
         local flag = table.contains(Config.ZoneList, tostring(args[2]))
@@ -162,11 +162,11 @@ RegisterCommand("payroll", function(source, args, rawCommand)
                 if valid then
                     TriggerServerEvent('esx_kingofthehill:addToPayroll', PlayerData.identifier,tostring(args[2]))
                 else
-                    ESX.ShowNotification('~r~Invalid Code')
+                    ESX.ShowNotification('~r~不合理的代碼')
                 end
             end, tostring(args[1]), tostring(args[2]))            
         else
-            ESX.ShowNotification('You are already on the Payroll')
+            ESX.ShowNotification('你已經在名單上')
         end   
     end    
 end)
@@ -199,7 +199,7 @@ AddEventHandler('esx_kingofthehill:capture', function(code,zone)
             Config[zone].captureInProgress = true
             TriggerEvent('esx_kingofthehill:updateBlip', Config[zone].capturers,zone) 
             -- Send a message to Police at start of capture
-            TriggerServerEvent('esx_phone:send', 'police', 'There seems to be a turf war breaking out in Grove Street. It\'s not safe to enter the area', false, {
+            TriggerServerEvent('esx_phone:send', 'police', '看來在葛羅夫街發生了地盤爭奪戰. 目前該區域無法安全進入', false, {
                 x = Config[zone].pos.x,
                 y = Config[zone].pos.y,
                 z = Config[zone].pos.z
@@ -216,7 +216,7 @@ AddEventHandler('esx_kingofthehill:capture', function(code,zone)
             Config[zone].captureCount = #Config[zone].capturers
             TriggerEvent('esx_kingofthehill:updateBlip', Config[zone].capturers,zone)
             -- Send a message to Police at end of capture
-            TriggerServerEvent('esx_phone:send', 'police', 'It looks like things have calmed down in Grove Street. The area should be safe to enter.', false, {
+            TriggerServerEvent('esx_phone:send', 'police', '現在看起來葛羅夫街好像平靜下來了. 應該是可以安全進入該區域了', false, {
                 x = Config[zone].pos.x,
                 y = Config[zone].pos.y,
                 z = Config[zone].pos.z
@@ -224,7 +224,7 @@ AddEventHandler('esx_kingofthehill:capture', function(code,zone)
         else   --沒有占領者在線
             for k,v in pairs(Config[zone].capturers) do  
                 if PlayerData.identifier == v then
-                    ESX.ShowNotification('~r~None of the owners are around to defend')              
+                    ESX.ShowNotification('~r~沒有占領者可以來防守...')              
                 end
             end        
         end    
@@ -263,51 +263,51 @@ Citizen.CreateThread(function()
                 now_zone = Config.ZoneList[i]        
                 if not isCapturedBySelf[Config.ZoneList[i]] then    
                     if Config[Config.ZoneList[i]].showPercentage and Config[Config.ZoneList[i]].captureInProgress then
-                        DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, 'Capture in progress ~g~' .. perc .. '%', 0.4)                                                                                                                                                           
+                        DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, '正在佔領中 ~g~' .. perc .. '%', 0.4)                                                                                                                                                           
                     else
                         --DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, "~g~/payroll join~w~ to join. ~g~/payroll leave ~w~to leave. ~g~/payroll start ~w~to start - [" .. Config[Config.ZoneList[i]].captureCount .. "/".. Config.RequiredCapturersMax .. "]", 0.4)
-                        DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, "~g~[E] ~w~ to join. ~g~[F] ~w~to leave. ~g~[G] ~w~to start - [" .. Config[Config.ZoneList[i]].captureCount .. "/".. Config.RequiredCapturersMax .. "]", 0.4)       
+                        DrawText3D(Config[Config.ZoneList[i]].pos.x, Config[Config.ZoneList[i]].pos.y, Config[Config.ZoneList[i]].pos.z, "~g~[E] ~w~ 來加入. ~g~[F] ~w~來離開. ~g~[G] ~w~來開始 - [" .. Config[Config.ZoneList[i]].captureCount .. "/".. Config.RequiredCapturersMax .. "]", 0.4)       
                         if IsControlJustPressed(0, Keys['E']) then
                             if Config[Config.ZoneList[i]].captureCount >= Config.RequiredCapturersMax then
-                                ESX.ShowNotification( '~r~There are already ' .. Config.RequiredCapturersMax .. ' people in the group')
+                                ESX.ShowNotification( '~r~已經有 ' .. Config.RequiredCapturersMax .. '位在團體了')
                             else
                                 if isCapturing[Config.ZoneList[i]] then
-                                    ESX.ShowNotification('You are already in the group') 
+                                    ESX.ShowNotification('你已經在團體裡了') 
                                 elseif isCapturedBySelf[Config.ZoneList[i]] then
-                                    ESX.ShowNotification('You are already on payroll')
+                                    ESX.ShowNotification('你已經在名單上')
                                 elseif Config.CheckJob then
                                     if table.contains(Config.JobList,ESX.GetPlayerData().job.name) then
                                         ESX.ShowNotification("你的職業不允許佔領地盤")
                                     end
                                 else
                                     if Config.BlockEmergencyServices and (ESX.GetPlayerData().job.name == 'police' or ESX.GetPlayerData().job.name == 'ambulance') then
-                                        ESX.ShowNotification('Emergency services are not allowed to Capture') 
+                                        ESX.ShowNotification('公家機構無法佔領') 
                                     else
                                         TriggerServerEvent('esx_kingofthehill:addCapturer', PlayerData.identifier,Config.ZoneList[i])
-                                        ESX.ShowNotification('~g~Joined the Capture group')
+                                        ESX.ShowNotification('~g~已加入佔領團體')
                                     end
                                 end                        
                             end 
                         elseif IsControlJustPressed(0, Keys['F']) then
                             if isCapturing then
                                 TriggerServerEvent('esx_kingofthehill:removeCapturer', PlayerData.identifier,Config.ZoneList[i])
-                                ESX.ShowNotification('~r~Left the Capture group')
+                                ESX.ShowNotification('~r~已離開佔領團體')
                             else
-                                ESX.ShowNotification('You\'re not in the Capture group')
+                                ESX.ShowNotification('你不在佔領團體裡')
                             end
                         elseif IsControlJustPressed(0, Keys['G']) then
                             if Config.BlockEmergencyServices and (ESX.GetPlayerData().job.name == 'police' or ESX.GetPlayerData().job.name == 'ambulance') then
-                                ESX.ShowNotification('Emergency services are not allowed to Capture') 
+                                ESX.ShowNotification('公家機構無法佔領') 
                             elseif Config[Config.ZoneList[i]].captureCount >= Config.RequiredCapturersMin and isCapturing and Config.CoolDown == 0 then 
                                 if Config[Config.ZoneList[i]].captureInProgress then
-                                    ESX.ShowNotification('Already being captured') 
+                                    ESX.ShowNotification('已經正在佔領中') 
                                 else
                                     TriggerServerEvent('esx_kingofthehill:capture',Config.ZoneList[i])  
                                 end                                
                             elseif Config.CoolDown > 0 then
-                                ESX.ShowNotification('Recently captured. You need to wait ~r~' .. Config.CoolDown / 1000 .. ' ~w~seconds')
+                                ESX.ShowNotification('最近被佔領, 請等待 ~r~' .. Config.CoolDown / 1000 .. ' ~w~秒')
                             else
-                                ESX.ShowNotification('~r~You need at least ' .. Config.RequiredCapturersMin .. ' in your group')
+                                ESX.ShowNotification('~r~你需要至少 ' .. Config.RequiredCapturersMin .. ' 位在團體裡')
                             end
                         end           
                     end    
@@ -361,14 +361,14 @@ Citizen.CreateThread(function()
                         Config[Config.ZoneList[i]].capturers[index] = nil
                         Config[Config.ZoneList[i]].captureCount = #Config[Config.ZoneList[i]].capturers
                         Cancelled = true                    
-                        ESX.ShowNotification('~r~You are no longer Capturing because you left the area')
+                        ESX.ShowNotification('~r~你因為離開該區域而停止占領了')
                         TriggerServerEvent('esx_kingofthehill:updateBlip', Config[Config.ZoneList[i]].capturers,ZoneList[i])
                     end
                     if IsEntityDead(playerPed) then  
                         Config[Config.ZoneList[i]].capturers[index] = nil   
                         Config[Config.ZoneList[i]].captureCount = #Config[Config.ZoneList[i]].capturers                                                      
                         TriggerServerEvent('esx_kingofthehill:updateBlip', Config[Config.ZoneList[i]].capturers,ZoneList[i])
-                        ESX.ShowNotification('~r~You are no longer Capturing')
+                        ESX.ShowNotification('~r~你停止占領了')
                     end
                 end                
             end

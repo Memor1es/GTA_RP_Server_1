@@ -44,12 +44,12 @@ Citizen.CreateThread(function()
         if Config.waterClean and hasShot then
             ped = PlayerPedId()
             if IsEntityInWater(ped) then
-				exports['mythic_notify']:SendAlert('inform', 'You begin cleaning off the Gunshot Residue... stay in the water', 5000)
+				exports['mythic_notify']:SendAlert('inform', '你正在清洗槍擊殘留物, 待在水裡', 5000)
 				Wait(100)
 				TriggerEvent("mythic_progbar:client:progress", {
         			name = "washing_gsr",
         			duration = Config.waterCleanTime,
-        			label = "Washing Off GSR",
+        			label = "正在清洗槍擊殘留物",
         			useWhileDead = false,
         			canCancel = true,
         			controlDisables = {
@@ -63,9 +63,9 @@ Citizen.CreateThread(function()
             			if IsEntityInWater(ped) then
                     		hasShot = false
                     		TriggerServerEvent('GSR:Remove')
-							exports['mythic_notify']:SendAlert('success', 'You washed off all the Gunshot Residue in the water', 5000)
+							exports['mythic_notify']:SendAlert('success', '你成功在水裡清洗了槍擊殘留物', 5000)
                 		else
-							exports['mythic_notify']:SendAlert('error', 'You left the water too early and did not wash off the gunshot residue.', 5000)
+							exports['mythic_notify']:SendAlert('error', '你太早離開水裡了', 5000)
                 		end
         			end
     			end)

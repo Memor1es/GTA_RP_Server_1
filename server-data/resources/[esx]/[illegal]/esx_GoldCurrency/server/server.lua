@@ -78,7 +78,7 @@ ESX.RegisterServerCallback("esx_goldCurrency:getGoldJobCoolDown",function(source
 	if not CheckGoldJobTimer(GetPlayerIdentifier(source)) then
 		cb(false)
 	else
-		TriggerClientEvent("esx:showNotification",source,string.format("Another ~y~job~s~ is ~g~available~s~ for you in: ~b~%s~s~ minutes",GetGoldJobTimer(GetPlayerIdentifier(source))))
+		TriggerClientEvent("esx:showNotification",source,string.format("下一個 ~y~工作~s~ 將會在 ~b~%s~s~ 分鐘 ~g~準備好~s~",GetGoldJobTimer(GetPlayerIdentifier(source))))
 		cb(true)
 	end
 end)
@@ -99,7 +99,7 @@ ESX.RegisterServerCallback("esx_goldCurrency:getPayment",function(source,cb)
 	moneyCash = xPlayer.getMoney()
 	if Config.UseBlackMoneyAsMissionCost == true then
 		if blackMoney <= Config.MissionCost then
-			TriggerClientEvent('esx:showNotification', source, "You do ~b~not have enough~s~ ~r~dirty money~s~ to pay ~r~fees~s~ for a ~y~job~s~")
+			TriggerClientEvent('esx:showNotification', source, "你 ~b~沒有足夠~s~ 的 ~r~黑錢~s~ 來 ~r~支付~s~ 此 ~y~工作~s~")
 			cb(false)
 		else
 			xPlayer.removeAccountMoney('black_money', Config.MissionCost)
@@ -108,7 +108,7 @@ ESX.RegisterServerCallback("esx_goldCurrency:getPayment",function(source,cb)
 		end
 	else
 		if moneyCash <= Config.MissionCost then
-			TriggerClientEvent('esx:showNotification', source, "You do ~b~not have enough~s~ ~g~money~s~ to pay ~r~fees~s~ for a ~y~job~s~")
+			TriggerClientEvent('esx:showNotification', source, "你 ~b~沒有足夠~s~ 的 ~r~現金~s~ 來 ~r~支付~s~ 此 ~y~工作~s~")
 			cb(false)
 		else
 			xPlayer.removeMoney(Config.MissionCost)
@@ -134,7 +134,7 @@ ESX.RegisterServerCallback("esx_goldCurrency:getMissionavailability",function(so
 		cb(true)
 	else
 		cb(false)
-		TriggerClientEvent('esx:showNotification', source, "There is ~r~not~s~ enough ~b~police~s~ in the ~y~city~s~")
+		TriggerClientEvent('esx:showNotification', source, "鎮內 ~r~沒有~s~ 足夠的 ~b~警察~s~")
 	end
 end)
 
@@ -164,14 +164,14 @@ AddEventHandler('esx_goldCurrency:reward', function()
 		if Config.EnableCustomNotification == true then
 			TriggerClientEvent("esx_goldCurrency:missionComplete", source,itemAmount1,item1,itemAmount2,item2)
 		else
-			TriggerClientEvent('esx:showNotification', source, "~g~Mission Complete:~s~ You received ~b~"..itemAmount1.."x~s~ ~y~"..item1.."~s~ and "..itemAmount2.."x~s~ ~y~"..item2.."~s~")
+			TriggerClientEvent('esx:showNotification', source, "~g~任務成功:~s~ 你獲得 ~b~"..itemAmount1.."x~s~ ~y~"..item1.."~s~ 和 "..itemAmount2.."x~s~ ~y~"..item2.."~s~")
 		end
 	else
 		xPlayer.addInventoryItem(Config.ItemName1,itemAmount1)
 		if Config.EnableCustomNotification == true then
 			TriggerClientEvent("esx_goldCurrency:missionComplete", source,itemAmount1,item1)
 		else
-			TriggerClientEvent('esx:showNotification', source, "~g~Mission Complete:~s~ You received ~b~"..itemAmount1.."x~s~ ~y~"..item1.."~s~")
+			TriggerClientEvent('esx:showNotification', source, "~g~任務成功:~s~ 你獲得 ~b~"..itemAmount1.."x~s~ ~y~"..item1.."~s~")
 		end
 	end
 	
@@ -179,7 +179,7 @@ end)
 
 RegisterServerEvent('esx_goldCurrency:GoldJobInProgress')
 AddEventHandler('esx_goldCurrency:GoldJobInProgress', function(targetCoords, streetName)
-	TriggerClientEvent('esx_goldCurrency:outlawNotify', -1,string.format("^3 Shots fired ^0 at ^5%s^0 and ongoing grand theft auto",streetName))
+	TriggerClientEvent('esx_goldCurrency:outlawNotify', -1,string.format("^3 開槍警報 ^0 地點: ^5%s^0 以及偷車警報",streetName))
 	TriggerClientEvent('esx_goldCurrency:GoldJobInProgress', -1, targetCoords)
 end)
 
@@ -206,13 +206,13 @@ AddEventHandler('esx_goldCurrency:goldMelting', function()
 			
 				xPlayer.addInventoryItem("goldbar",1)
 			else
-				TriggerClientEvent("esx:showNotification",source,string.format("You are ~b~already engaged~s~ in a ~y~process~s~!",GetTimeForMelting(GetPlayerIdentifier(source))))
+				TriggerClientEvent("esx:showNotification",source,string.format("你已經 ~b~正在~s~ ~y~處理~s~中!",GetTimeForMelting(GetPlayerIdentifier(source))))
 			end
 		else
-			TriggerClientEvent("esx:showNotification",source,"You ~r~do not have~s~ enough ~b~empty space~s~ for more ~y~Gold Bars~s~")
+			TriggerClientEvent("esx:showNotification",source,"你 ~r~你沒有~s~ 足夠的 ~b~空間~s~ 來裝下更多的 ~y~金條~s~")
 		end
 	else
-		TriggerClientEvent("esx:showNotification",source,"You need ~r~at least~s~ 100x ~y~Gold Watches~s~")
+		TriggerClientEvent("esx:showNotification",source,"你需要 ~r~至少~s~ 100個 ~y~金手錶~s~")
 	end
 end)
 
@@ -233,10 +233,10 @@ AddEventHandler('esx_goldCurrency:goldExchange', function()
 			
 			xPlayer.addAccountMoney('black_money', 35000)
 		else
-			TriggerClientEvent("esx:showNotification",source,"You need ~r~at least~s~ 70x ~y~Gold Bars~s~")
+			TriggerClientEvent("esx:showNotification",source,"你需要 ~r~至少~s~ 70個 ~y~金條~s~")
 		end
 	else
-		TriggerClientEvent("esx:showNotification",source,string.format("You can ~y~exchange gold~s~ again in: ~b~%s minutes~s~",GetTimeForExchange(GetPlayerIdentifier(source))))
+		TriggerClientEvent("esx:showNotification",source,string.format("你可以在~b~%s 分鐘後~s~ ~y~交易金條~s~",GetTimeForExchange(GetPlayerIdentifier(source))))
 	end
 end)
 

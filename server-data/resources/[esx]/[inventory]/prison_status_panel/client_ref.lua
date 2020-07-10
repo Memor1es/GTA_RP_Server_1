@@ -72,7 +72,7 @@ Citizen.CreateThread(function()
                 str = str,
                 agi = agi,
                 int = int,
-                luk = luk
+                luk = luk,
                 canlearn = canlearn
             });
         else

@@ -106,7 +106,7 @@ ESX.RegisterCommand('heal', 'admin', function(xPlayer, args, showError)
 	--end
 
 end, true, {help = "幫復", validate = true, arguments = {
-    {name = 'playerId', help = "玩家ID", type = 'player'}
+    {name = 'playerId', help = "市民ID", type = 'player'}
 
 }})
 

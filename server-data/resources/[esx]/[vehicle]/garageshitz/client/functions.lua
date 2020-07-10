@@ -172,7 +172,7 @@ VehicleAction = function(vehicleEntity, action)
     end
 
     if action == "change_lock_state" then
-        if dstCheck >= Config.RangeCheck then return ESX.ShowNotification("You are too far from the vehicle to check.") end
+        if dstCheck >= Config.RangeCheck then return ESX.ShowNotification("你距離你的車輛太遠") end
 
         PlayAnimation(PlayerPedId(), "anim@mp_player_intmenu@key_fob@", "fob_click", {
             ["speed"] = 8.0,
@@ -216,7 +216,7 @@ VehicleAction = function(vehicleEntity, action)
 
         ESX.ShowNotification(GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(vehicleEntity))) .. " with plate - " .. GetVehicleNumberPlateText(vehicleEntity) .. " is now " .. (vehicleLockState == 1 and "LOCKED" or "UNLOCKED"))
     elseif action == "change_door_state" then
-        if dstCheck >= Config.RangeCheck then return ESX.ShowNotification("You are too far from the vehicle to check.") end
+        if dstCheck >= Config.RangeCheck then return ESX.ShowNotification("你距離你的車輛太遠") end
 
         ChooseDoor(vehicleEntity, function(doorChosen)
             if doorChosen then
@@ -228,7 +228,7 @@ VehicleAction = function(vehicleEntity, action)
             end
         end)
     elseif action == "change_engine_state" then
-        if dstCheck >= Config.RangeCheck then return ESX.ShowNotification("You are too far from the vehicle to check.") end
+        if dstCheck >= Config.RangeCheck then return ESX.ShowNotification("你距離你的車輛太遠") end
 
         if GetIsVehicleEngineRunning(vehicleEntity) then
             SetVehicleEngineOn(vehicleEntity, false, false)

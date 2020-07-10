@@ -21,7 +21,7 @@ AddEventHandler("chip_cDoc:takeMoney", function()
         TriggerClientEvent('mythic_notify:client:SendAlert', source, 
         { 
             type = 'error', 
-            text = 'You dont have enough money', 
+            text = '你沒有足夠的現金', 
             style = { ['background-color'] = '#ffffff', ['color'] = '#000000' } 
         })
     end
