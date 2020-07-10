@@ -52,7 +52,7 @@ Config.CarGarageSprite = 357
 Config.CarGarageDisplay = 4
 Config.CarGarageScale = 0.65
 Config.CarGarageColour = 38
-Config.CarGarageName = "Police Car Garage"
+Config.CarGarageName = "警察車庫"
 Config.EnableCarGarageBlip = true
 
 -- Police Heli Garage Blip Settings:
@@ -60,7 +60,7 @@ Config.HeliGarageSprite = 43
 Config.HeliGarageDisplay = 4
 Config.HeliGarageScale = 0.65
 Config.HeliGarageColour = 38
-Config.HeliGarageName = "Police Heli Garage"
+Config.HeliGarageName = "警察停機坪"
 Config.EnableHeliGarageBlip = true
 
 -- Police Boat Garage Blip Settings:
@@ -68,7 +68,7 @@ Config.BoatGarageSprite = 427
 Config.BoatGarageDisplay = 4
 Config.BoatGarageScale = 0.65
 Config.BoatGarageColour = 38
-Config.BoatGarageName = "Police Boat Garage"
+Config.BoatGarageName = "警察船屋"
 Config.EnableBoatGarageBlip = true
 
 -- Police Extra Menu Blip Settings:
@@ -76,7 +76,7 @@ Config.ExtraGarageSprite = 566
 Config.ExtraGarageDisplay = 4
 Config.ExtraGarageScale = 0.65
 Config.ExtraGarageColour = 38
-Config.ExtraGarageName = "Police Extras"
+Config.ExtraGarageName = "警察車子配件"
 Config.EnableExtraGarageBlip = true
 
 -- Police Car Garage Marker Settings:

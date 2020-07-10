@@ -10,6 +10,12 @@ Citizen.CreateThread(function()
 		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 		Citizen.Wait(0)
 	end
+
+	while ESX.GetPlayerData().job == nil do
+		Citizen.Wait(10)
+	end
+
+	PlayerData = ESX.GetPlayerData()
 end)
 
 RegisterNetEvent('esx:playerLoaded')
@@ -72,27 +78,15 @@ function OpenLSMenu(elems, menuName, menuTitle, parent)
 
 					if isRimMod then
 						price = math.floor(vehiclePrice * data.current.price / 100)
-						if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
-							price = price / 2
-						end
 						TriggerServerEvent('esx_lscustom:buyMod', price)
 					elseif v.modType == 11 or v.modType == 12 or v.modType == 13 or v.modType == 15 or v.modType == 16 then
 						price = math.floor(vehiclePrice * v.price[data.current.modNum + 1] / 100)
-						if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
-							price = price / 2
-						end
 						TriggerServerEvent('esx_lscustom:buyMod', price)
 					elseif v.modType == 17 then
 						price = math.floor(vehiclePrice * v.price[1] / 100)
-						if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
-							price = price / 2
-						end
 						TriggerServerEvent('esx_lscustom:buyMod', price)
 					else
 						price = math.floor(vehiclePrice * v.price / 100)
-						if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
-							price = price / 2
-						end
 						TriggerServerEvent('esx_lscustom:buyMod', price)
 					end
 				end
@@ -249,9 +243,6 @@ function GetAction(data)
 				elseif v.modType == 'neonColor' or v.modType == 'tyreSmokeColor' then -- NEON & SMOKE COLOR
 					local neons = GetNeons()
 					price = math.floor(vehiclePrice * v.price / 100)
-					if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
-						price = price / 2
-					end
 					for i=1, #neons, 1 do
 						table.insert(elements, {
 							label = '<span style="color:rgb(' .. neons[i].r .. ',' .. neons[i].g .. ',' .. neons[i].b .. ');">' .. neons[i].label .. ' - <span style="color:green;">$' .. price .. '</span>',
@@ -264,9 +255,6 @@ function GetAction(data)
 					for j = 1, #colors, 1 do
 						local _label = ''
 						price = math.floor(vehiclePrice * v.price / 100)
-						if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
-							price = price / 2
-						end
 						_label = colors[j].label .. ' - <span style="color:green;">$' .. price .. ' </span>'
 						table.insert(elements, {label = _label, modType = k, modNum = colors[j].index})
 					end
@@ -277,9 +265,6 @@ function GetAction(data)
 							_label = GetWindowName(j) .. ' - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 						else
 							price = math.floor(vehiclePrice * v.price / 100)
-							if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
-								price = price / 2
-							end
 							_label = GetWindowName(j) .. ' - <span style="color:green;">$' .. price .. ' </span>'
 						end
 						table.insert(elements, {label = _label, modType = k, modNum = j})
@@ -299,9 +284,6 @@ function GetAction(data)
 								_label = GetLabelText(modName) .. ' - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 							else
 								price = math.floor(vehiclePrice * v.price / 100)
-								if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
-									price = price / 2
-								end
 								_label = GetLabelText(modName) .. ' - <span style="color:green;">$' .. price .. ' </span>'
 							end
 							table.insert(elements, {label = _label, modType = 'modFrontWheels', modNum = j, wheelType = v.wheelType, price = v.price})
@@ -315,9 +297,6 @@ function GetAction(data)
 							_label = _U('level', j+1) .. ' - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 						else
 							price = math.floor(vehiclePrice * v.price[j+1] / 100)
-							if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
-								price = price / 2
-							end
 							_label = _U('level', j+1) .. ' - <span style="color:green;">$' .. price .. ' </span>'
 						end
 						table.insert(elements, {label = _label, modType = k, modNum = j})
@@ -343,9 +322,6 @@ function GetAction(data)
 								_label = GetLabelText(modName) .. ' - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 							else
 								price = math.floor(vehiclePrice * v.price / 100)
-								if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
-									price = price / 2
-								end
 								_label = GetLabelText(modName) .. ' - <span style="color:green;">$' .. price .. ' </span>'
 							end
 							table.insert(elements, {label = _label, modType = k, modNum = j})
@@ -385,38 +361,33 @@ function GetAction(data)
 end
 
 -- Blips
-if Config.ShowBlip then
-	Citizen.CreateThread(function()
-		for k,v in pairs(Config.Zones) do
-			local blip = AddBlipForCoord(v.Pos.x, v.Pos.y, v.Pos.z)
+Citizen.CreateThread(function()
+	for k,v in pairs(Config.Zones) do
+		local blip = AddBlipForCoord(v.Pos.x, v.Pos.y, v.Pos.z)
 
-			SetBlipSprite(blip, 72)
-			SetBlipScale(blip, 0.8)
-			SetBlipAsShortRange(blip, true)
+		SetBlipSprite(blip, 72)
+		SetBlipScale(blip, 0.8)
+		SetBlipAsShortRange(blip, true)
 
-			BeginTextCommandSetBlipName('STRING')
-			AddTextComponentSubstringPlayerName(v.Name)
-			EndTextCommandSetBlipName(blip)
-		end
-	end)
-end
+		BeginTextCommandSetBlipName('STRING')
+		AddTextComponentSubstringPlayerName(v.Name)
+		EndTextCommandSetBlipName(blip)
+	end
+end)
+
 -- Activate menu when player is inside marker
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
 		local playerPed = PlayerPedId()
 
-		local coords = GetEntityCoords(PlayerPedId())
-		local currentZone, zone, lastZone
+		if IsPedInAnyVehicle(playerPed, false) then
+			local coords = GetEntityCoords(PlayerPedId())
+			local currentZone, zone, lastZone
 
-		if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
-			for k,v in pairs(Config.Zones) do
-				local distance = GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true)
-				
-				if distance < Config.DrawDistance then
-					DrawMarker(v.Marker, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, nil, nil, false)
-
-					if distance < Config.CustomDistance and not lsMenuIsShowed then
+			if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
+				for k,v in pairs(Config.Zones) do
+					if GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < v.Size.x and not lsMenuIsShowed then
 						isInLSMarker  = true
 						ESX.ShowHelpNotification(v.Hint)
 						break
@@ -425,38 +396,29 @@ Citizen.CreateThread(function()
 					end
 				end
 			end
-		end
 
-		if IsControlJustReleased(0, 38) and not lsMenuIsShowed and isInLSMarker then
-			if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
-				if IsPedInAnyVehicle(playerPed, false) then
+			if IsControlJustReleased(0, 38) and not lsMenuIsShowed and isInLSMarker then
+				if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
+					lsMenuIsShowed = true
+
 					local vehicle = GetVehiclePedIsIn(playerPed, false)
-					local EngineHealth = GetVehicleEngineHealth(vehicle)
-					local BodyHealth = GetVehicleBodyHealth(vehicle)
+					FreezeEntityPosition(vehicle, true)
 
-					if EngineHealth > 900.0 and BodyHealth > 900.0 then
-					
-						FreezeEntityPosition(vehicle, true)
-						lsMenuIsShowed = true
-						myCar = ESX.Game.GetVehicleProperties(vehicle)
+					myCar = ESX.Game.GetVehicleProperties(vehicle)
 
-						ESX.UI.Menu.CloseAll()
-						GetAction({value = 'main'})
-					else
-						ESX.ShowNotification("~r~你必須先修理你的車子！")
-					end
-				else
-					ESX.ShowNotification("~r~你必須要在車輛上才能進行載具個人化！")
+					ESX.UI.Menu.CloseAll()
+					GetAction({value = 'main'})
 				end
 			end
-		end
 
-		if isInLSMarker and not hasAlreadyEnteredMarker then
-			hasAlreadyEnteredMarker = true
-		end
+			if isInLSMarker and not hasAlreadyEnteredMarker then
+				hasAlreadyEnteredMarker = true
+			end
 
-		if not isInLSMarker and hasAlreadyEnteredMarker then
-			hasAlreadyEnteredMarker = false
+			if not isInLSMarker and hasAlreadyEnteredMarker then
+				hasAlreadyEnteredMarker = false
+			end
+
 		end
 	end
 end)
