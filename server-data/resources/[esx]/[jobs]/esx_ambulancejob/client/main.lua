@@ -166,7 +166,7 @@ function OnPlayerDeath()
 	TriggerServerEvent('esx_ambulancejob:setDeathStatus', true)
   
 	StartDeathTimer()
-	StartDistressSignal()
+	--StartDistressSignal()
   
 	--StartScreenEffect('DeathFailOut', 0, false)
 	StartScreenEffect('SwitchSceneNeutral', 0, false)
