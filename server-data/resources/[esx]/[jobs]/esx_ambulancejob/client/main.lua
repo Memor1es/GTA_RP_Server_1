@@ -14,6 +14,71 @@ local Keys = {
 
   isDead = false
   ESX = nil
+
+  local DeadanimGroup = {
+	{label = 'lying_dead_player0a', type = 'animloop', data = {lib = 'missfinale_c1@', anim = 'lying_dead_player0'}},
+	{label = 'lying_dead_player0b', type = 'animloop', data = {lib = 'missprologueig_6', anim = 'lying_dead_player0'}},				
+	{label = 'lying_idle_crew2', type = 'animloop', data = {lib = 'missheist_agency3amcs_4b', anim = 'lying_idle_crew2'}},
+	{label = 'lying_dead_brad', type = 'animloop', data = {lib = 'missprologueig_6', anim = 'lying_dead_brad'}},
+	{label = 'dead_a', type = 'animloop', data = {lib = 'dead', anim = 'dead_a'}},
+	{label = 'dead_b', type = 'animloop', data = {lib = 'dead', anim = 'dead_b'}},
+	{label = 'dead_c', type = 'animloop', data = {lib = 'dead', anim = 'dead_c'}},
+	{label = 'dead_d', type = 'animloop', data = {lib = 'dead', anim = 'dead_d'}},
+	{label = 'dead_e', type = 'animloop', data = {lib = 'dead', anim = 'dead_e'}},
+	{label = 'dead_f', type = 'animloop', data = {lib = 'dead', anim = 'dead_f'}},
+	{label = 'dead_g', type = 'animloop', data = {lib = 'dead', anim = 'dead_g'}},
+	{label = 'dead_h', type = 'animloop', data = {lib = 'dead', anim = 'dead_h'}},
+	{label = 'dead_c', type = 'animloop', data = {lib = 'missfbi5ig_12', anim = 'dead_c'}},
+	{label = 'trevor_dead_idle_pt', type = 'animloop', data = {lib = 'missfinale_a_ig_2', anim = 'trevor_dead_idle_pt'}},
+	{label = 'crew_dead_crew2', type = 'animloop', data = {lib = 'missheist_agency3amcs_4b', anim = 'crew_dead_crew2'}},
+	{label = 'dead_idle', type = 'animloop', data = {lib = 'misslamar1dead_body', anim = 'dead_idle'}},
+	{label = 'lying_dead_brad', type = 'animloop', data = {lib = 'missprologueig_6', anim = 'lying_dead_brad'}},
+	{label = 'dead_black_ops', type = 'animloop', data = {lib = 'misssolomon_5@end', anim = 'dead_black_ops'}},
+	{label = 'dead_ped', type = 'animloop', data = {lib = 'random@crash_rescue@dead_ped', anim = 'dead_ped'}},
+	
+}
+local DeadanimGroupCheck = { -- with swim list
+	{label = 'lying_dead_player0a', type = 'animloop', data = {lib = 'missfinale_c1@', anim = 'lying_dead_player0'}},
+	{label = 'lying_dead_player0b', type = 'animloop', data = {lib = 'missprologueig_6', anim = 'lying_dead_player0'}},				
+	{label = 'lying_idle_crew2', type = 'animloop', data = {lib = 'missheist_agency3amcs_4b', anim = 'lying_idle_crew2'}},
+	{label = 'lying_dead_brad', type = 'animloop', data = {lib = 'missprologueig_6', anim = 'lying_dead_brad'}},
+	{label = 'dead_a', type = 'animloop', data = {lib = 'dead', anim = 'dead_a'}},
+	{label = 'dead_b', type = 'animloop', data = {lib = 'dead', anim = 'dead_b'}},
+	{label = 'dead_c', type = 'animloop', data = {lib = 'dead', anim = 'dead_c'}},
+	{label = 'dead_d', type = 'animloop', data = {lib = 'dead', anim = 'dead_d'}},
+	{label = 'dead_e', type = 'animloop', data = {lib = 'dead', anim = 'dead_e'}},
+	{label = 'dead_f', type = 'animloop', data = {lib = 'dead', anim = 'dead_f'}},
+	{label = 'dead_g', type = 'animloop', data = {lib = 'dead', anim = 'dead_g'}},
+	{label = 'dead_h', type = 'animloop', data = {lib = 'dead', anim = 'dead_h'}},
+	{label = 'dead_c', type = 'animloop', data = {lib = 'missfbi5ig_12', anim = 'dead_c'}},
+	{label = 'trevor_dead_idle_pt', type = 'animloop', data = {lib = 'missfinale_a_ig_2', anim = 'trevor_dead_idle_pt'}},
+	{label = 'crew_dead_crew2', type = 'animloop', data = {lib = 'missheist_agency3amcs_4b', anim = 'crew_dead_crew2'}},
+	{label = 'dead_idle', type = 'animloop', data = {lib = 'misslamar1dead_body', anim = 'dead_idle'}},
+	{label = 'lying_dead_brad', type = 'animloop', data = {lib = 'missprologueig_6', anim = 'lying_dead_brad'}},
+	{label = 'dead_black_ops', type = 'animloop', data = {lib = 'misssolomon_5@end', anim = 'dead_black_ops'}},
+	{label = 'dead_ped', type = 'animloop', data = {lib = 'random@crash_rescue@dead_ped', anim = 'dead_ped'}},
+	{label = 'idle', type = 'animloop', data = {lib = 'swimming@base', anim = 'idle'}},
+}
+RegisterNetEvent('esx_ambulancejob:DeadAnimation')
+AddEventHandler('esx_ambulancejob:DeadAnimation', function()	
+	
+	local rand = math.random(1, #DeadanimGroup)
+	if not HasAnimDictLoaded(DeadanimGroup[rand].data.lib) then
+		RequestAnimDict(DeadanimGroup[rand].data.lib)
+	end
+	--print(DeadanimGroup[rand].label)
+	TaskPlayAnim(GetPlayerPed(-1), DeadanimGroup[rand].data.lib, DeadanimGroup[rand].data.anim, 8.0, -8.0, -1, 9, 0, false, false, false)		
+end)
+
+RegisterNetEvent('esx_ambulancejob:DeadAnimationSwim')
+AddEventHandler('esx_ambulancejob:DeadAnimationSwim', function()	
+	
+	if not HasAnimDictLoaded('swimming@base') then
+		RequestAnimDict('swimming@base')
+	end
+	--print(DeadanimGroup[rand].label)
+	TaskPlayAnim(GetPlayerPed(-1), 'swimming@base', 'idle', 8.0, -8.0, -1, 9, 0, false, false, false)		
+end)
   
   Citizen.CreateThread(function()
 	  while ESX == nil do
@@ -85,6 +150,7 @@ local Keys = {
 		  if isDead then
 			  DisableAllControlActions(0)
 			  EnableControlAction(0, 47, true)
+			  EnableControlAction(0, 57, true)
 			  EnableControlAction(0, 245, true)
 			  EnableControlAction(0, 38, true)
 		  else
@@ -93,15 +159,29 @@ local Keys = {
 	  end
   end)
   
-  function OnPlayerDeath()
-	  isDead = true
-	  ESX.UI.Menu.CloseAll()
-	  TriggerServerEvent('esx_ambulancejob:setDeathStatus', true)
+function OnPlayerDeath()
+	local sec = 1000
+	isDead = true
+	ESX.UI.Menu.CloseAll()
+	TriggerServerEvent('esx_ambulancejob:setDeathStatus', true)
   
-	  StartDeathTimer()
-	  StartDistressSignal()
+	StartDeathTimer()
+	StartDistressSignal()
   
-	  StartScreenEffect('DeathFailOut', 0, false)
+	--StartScreenEffect('DeathFailOut', 0, false)
+	StartScreenEffect('SwitchSceneNeutral', 0, false)
+	Citizen.Wait(8000)
+	local coords = GetEntityCoords(GetPlayerPed(-1))
+	NetworkResurrectLocalPlayer(coords.x, coords.y, coords.z, 0, true, false)
+	ClearPedBloodDamage(GetPlayerPed(-1))
+	SetEntityHealth(GetPlayerPed(-1), 100)
+	SetPlayerInvincible(GetPlayerPed(-1), true)
+	SetPedDiesInWater(GetPlayerPed(-1), false)	
+	if IsEntityInWater(GetPlayerPed(-1)) then
+		TriggerEvent('esx_ambulancejob:DeadAnimationSwim')	
+	else
+		TriggerEvent('esx_ambulancejob:DeadAnimation')	
+	end
   end
   
   RegisterNetEvent('esx_ambulancejob:useItem')
