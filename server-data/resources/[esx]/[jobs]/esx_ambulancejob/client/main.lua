@@ -389,8 +389,9 @@ function OnPlayerDeath()
   
 			  ESX.SetPlayerData('loadout', {})
 			  RespawnPed(PlayerPedId(), formattedCoords, Config.RespawnPoint.heading)
-  
-			  StopScreenEffect('DeathFailOut')
+			  
+			  StopScreenEffect('SwitchSceneNeutral')
+			  --StopScreenEffect('DeathFailOut')
 			  DoScreenFadeIn(800)
 		  end)
 	  end)
@@ -441,8 +442,8 @@ function OnPlayerDeath()
 	  }
   
 	  RespawnPed(playerPed, formattedCoords, 0.0)
-  
-	  StopScreenEffect('DeathFailOut')
+	  StopScreenEffect('SwitchSceneNeutral')
+	  --StopScreenEffect('DeathFailOut')
 	  DoScreenFadeIn(800)
   end)
   
