@@ -132,3 +132,9 @@ AddEventHandler("menu:menuexit", function()
     showMenu = false
     SetNuiFocus(false, false)
 end)
+
+RegisterCommand('closeui', function(source, args, rawCommand)
+    
+    TriggerEvent("menu:menuexit")
+    
+  end)
