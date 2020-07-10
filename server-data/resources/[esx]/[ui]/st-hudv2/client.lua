@@ -108,6 +108,7 @@ Citizen.CreateThread(function()
             state = tokovoipstate,
             talking = isTalking,
         })
+        print(GetPlayerUnderwaterTimeRemaining(PlayerId()))
         Citizen.Wait(200)
     end
 end)
