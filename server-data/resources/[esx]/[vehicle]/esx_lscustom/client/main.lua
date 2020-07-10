@@ -76,24 +76,28 @@ function OpenLSMenu(elems, menuName, menuTitle, parent)
 							price = price / 2
 						end
 						TriggerServerEvent('esx_lscustom:buyMod', price)
+						priint(price)
 					elseif v.modType == 11 or v.modType == 12 or v.modType == 13 or v.modType == 15 or v.modType == 16 then
 						price = math.floor(vehiclePrice * v.price[data.current.modNum + 1] / 100)
 						if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
 							price = price / 2
 						end
 						TriggerServerEvent('esx_lscustom:buyMod', price)
+						priint(price)
 					elseif v.modType == 17 then
 						price = math.floor(vehiclePrice * v.price[1] / 100)
 						if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
 							price = price / 2
 						end
 						TriggerServerEvent('esx_lscustom:buyMod', price)
+						priint(price)
 					else
 						price = math.floor(vehiclePrice * v.price / 100)
 						if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
 							price = price / 2
 						end
 						TriggerServerEvent('esx_lscustom:buyMod', price)
+						priint(price)
 					end
 				end
 
