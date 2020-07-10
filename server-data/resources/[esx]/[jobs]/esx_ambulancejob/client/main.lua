@@ -170,7 +170,7 @@ function OnPlayerDeath()
   
 	--StartScreenEffect('DeathFailOut', 0, false)
 	StartScreenEffect('SwitchSceneNeutral', 0, false)
-	Citizen.Wait(8000)
+	Citizen.Wait(10)
 	local coords = GetEntityCoords(GetPlayerPed(-1))
 	NetworkResurrectLocalPlayer(coords.x, coords.y, coords.z, 0, true, false)
 	ClearPedBloodDamage(GetPlayerPed(-1))
