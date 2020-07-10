@@ -205,10 +205,10 @@ Locales['tc'] = {
   ['turbo'] = '渦輪增壓',
   ['no_turbo'] = '預設',
 -- Cosmetics
-  ['cosmetics'] = '基本套件',
+  ['cosmetics'] = '高級套件',
   ['cosmeticsinfo'] = '改裝項目',
   -- Body Parts
-  ['bodyparts'] = '空力套件',
+  ['bodyparts'] = '基本套件',
   ['bodypartsinfo'] = '空力套件',
   ['leftfender'] = '左擋泥板',
   ['rightfender'] = '右擋泥板',

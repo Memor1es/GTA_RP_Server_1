@@ -465,7 +465,8 @@ Config.Menus = {
 		label		= 'LS CUSTOMS',
 		parent		= nil,
 		upgrades	= _U('upgrades'),
-		cosmetics	= _U('cosmetics')
+		cosmetics	= _U('cosmetics'),
+		bodyparts			= _U('bodyparts')
 	},
 	upgrades = {
 		label			= _U('upgrades'),
@@ -516,7 +517,6 @@ Config.Menus = {
 	cosmetics = {
 		label				= _U('cosmetics'),
 		parent				= 'main',
-		bodyparts			= _U('bodyparts'),
 		windowTint			= _U('windowtint'),
 		modHorns			= _U('horns'),
 		neonColor			= _U('neons'),
