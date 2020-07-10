@@ -69,7 +69,7 @@ Citizen.CreateThread(function()
         end)
         print(hunger)
         print(thirst)
-        Citizen.Wait(800)
+        Citizen.Wait(10)
     end
 end)
 
@@ -92,6 +92,6 @@ Citizen.CreateThread(function()
             oxygen = oxy,
         })
         print(oxy)
-        Citizen.Wait(800)
+        Citizen.Wait(10)
     end
 end)
