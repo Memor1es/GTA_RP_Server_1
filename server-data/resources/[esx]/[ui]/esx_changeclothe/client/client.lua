@@ -1,4 +1,5 @@
 ESX = nil
+local PlayerData = {}
 
 Citizen.CreateThread(function()
     while ESX == nil do
@@ -16,7 +17,7 @@ end)
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
-
+		
 		if PlayerData.job and PlayerData.job.name ~= 'police' then
 
 			local playerPed = PlayerPedId()
