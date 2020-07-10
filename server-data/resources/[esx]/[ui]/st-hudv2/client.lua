@@ -79,10 +79,11 @@ Citizen.CreateThread(function()
                         state = tokovoipstate,
                         talking = isTalking,
                     })
+                    print(thirst.getPercent())
                 end)
             end)
         end)
-        print(thirst.getPercent())
+        
         Citizen.Wait(800)
     end
 end)
