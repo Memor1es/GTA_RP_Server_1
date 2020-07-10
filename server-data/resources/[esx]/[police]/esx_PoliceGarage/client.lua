@@ -257,6 +257,7 @@ VehicleMenu = function(type)
 		local plate = exports['esx_vehicleshop']:GeneratePlate()
 		VehicleLoadTimer(data.current.model)
 		local veh = CreateVehicle(data.current.model,pos.x,pos.y,pos.z,GetEntityHeading(playerPed),true,false)
+		TriggerEvent('disc-hotwire:forceTurnOver',veh)
 		SetPedIntoVehicle(GetPlayerPed(-1),veh,-1)
 		SetVehicleNumberPlateText(veh,plate)
 		
