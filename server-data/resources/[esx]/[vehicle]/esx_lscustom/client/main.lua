@@ -76,24 +76,28 @@ function OpenLSMenu(elems, menuName, menuTitle, parent)
 							price = price / 2
 						end
 						TriggerServerEvent('esx_lscustom:buyMod', price)
+						priint(price)
 					elseif v.modType == 11 or v.modType == 12 or v.modType == 13 or v.modType == 15 or v.modType == 16 then
 						price = math.floor(vehiclePrice * v.price[data.current.modNum + 1] / 100)
 						if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
 							price = price / 2
 						end
 						TriggerServerEvent('esx_lscustom:buyMod', price)
+						priint(price)
 					elseif v.modType == 17 then
 						price = math.floor(vehiclePrice * v.price[1] / 100)
 						if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
 							price = price / 2
 						end
 						TriggerServerEvent('esx_lscustom:buyMod', price)
+						priint(price)
 					else
 						price = math.floor(vehiclePrice * v.price / 100)
 						if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
 							price = price / 2
 						end
 						TriggerServerEvent('esx_lscustom:buyMod', price)
+						priint(price)
 					end
 				end
 
@@ -222,7 +226,7 @@ function GetAction(data)
 							_label = GetHornName(j) .. ' - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 						else
 							price = math.floor(vehiclePrice * v.price / 100)
-							_label = GetHornName(j) .. ' - <span style="color:green;">$' .. price .. ' </span>'
+							_label = GetHornName(j) .. ' - <span style="color:green;">$' .. price*10 .. ' </span>'
 						end
 						table.insert(elements, {label = _label, modType = k, modNum = j})
 					end
@@ -233,7 +237,7 @@ function GetAction(data)
 							_label = GetPlatesName(j) .. ' - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 						else
 							price = math.floor(vehiclePrice * v.price / 100)
-							_label = GetPlatesName(j) .. ' - <span style="color:green;">$' .. price .. ' </span>'
+							_label = GetPlatesName(j) .. ' - <span style="color:green;">$' .. price*10 .. ' </span>'
 						end
 						table.insert(elements, {label = _label, modType = k, modNum = j})
 					end
@@ -243,7 +247,7 @@ function GetAction(data)
 						_label = _U('neon') .. ' - <span style="color:cornflowerblue;">'.. _U('installed') ..'</span>'
 					else
 						price = math.floor(vehiclePrice * v.price / 100)
-						_label = _U('neon') .. ' - <span style="color:green;">$' .. price .. ' </span>'
+						_label = _U('neon') .. ' - <span style="color:green;">$' .. price*10 .. ' </span>'
 					end
 					table.insert(elements, {label = _label, modType = k, modNum = true})
 				elseif v.modType == 'neonColor' or v.modType == 'tyreSmokeColor' then -- NEON & SMOKE COLOR
@@ -254,7 +258,7 @@ function GetAction(data)
 					end
 					for i=1, #neons, 1 do
 						table.insert(elements, {
-							label = '<span style="color:rgb(' .. neons[i].r .. ',' .. neons[i].g .. ',' .. neons[i].b .. ');">' .. neons[i].label .. ' - <span style="color:green;">$' .. price .. '</span>',
+							label = '<span style="color:rgb(' .. neons[i].r .. ',' .. neons[i].g .. ',' .. neons[i].b .. ');">' .. neons[i].label .. ' - <span style="color:green;">$' .. price*10 .. '</span>',
 							modType = k,
 							modNum = { neons[i].r, neons[i].g, neons[i].b }
 						})
@@ -267,7 +271,7 @@ function GetAction(data)
 						if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
 							price = price / 2
 						end
-						_label = colors[j].label .. ' - <span style="color:green;">$' .. price .. ' </span>'
+						_label = colors[j].label .. ' - <span style="color:green;">$' .. price*10 .. ' </span>'
 						table.insert(elements, {label = _label, modType = k, modNum = colors[j].index})
 					end
 				elseif v.modType == 'windowTint' then -- WINDOWS TINT
@@ -280,7 +284,7 @@ function GetAction(data)
 							if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
 								price = price / 2
 							end
-							_label = GetWindowName(j) .. ' - <span style="color:green;">$' .. price .. ' </span>'
+							_label = GetWindowName(j) .. ' - <span style="color:green;">$' .. price*10 .. ' </span>'
 						end
 						table.insert(elements, {label = _label, modType = k, modNum = j})
 					end
@@ -302,7 +306,7 @@ function GetAction(data)
 								if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
 									price = price / 2
 								end
-								_label = GetLabelText(modName) .. ' - <span style="color:green;">$' .. price .. ' </span>'
+								_label = GetLabelText(modName) .. ' - <span style="color:green;">$' .. price*10 .. ' </span>'
 							end
 							table.insert(elements, {label = _label, modType = 'modFrontWheels', modNum = j, wheelType = v.wheelType, price = v.price})
 						end
@@ -318,7 +322,7 @@ function GetAction(data)
 							if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
 								price = price / 2
 							end
-							_label = _U('level', j+1) .. ' - <span style="color:green;">$' .. price .. ' </span>'
+							_label = _U('level', j+1) .. ' - <span style="color:green;">$' .. price*10 .. ' </span>'
 						end
 						table.insert(elements, {label = _label, modType = k, modNum = j})
 						if j == modCount-1 then
@@ -346,7 +350,7 @@ function GetAction(data)
 								if (PlayerData.job and PlayerData.job.name == 'mechanic') or not Config.IsMechanicJobOnly then
 									price = price / 2
 								end
-								_label = GetLabelText(modName) .. ' - <span style="color:green;">$' .. price .. ' </span>'
+								_label = GetLabelText(modName) .. ' - <span style="color:green;">$' .. price*10 .. ' </span>'
 							end
 							table.insert(elements, {label = _label, modType = k, modNum = j})
 						end
