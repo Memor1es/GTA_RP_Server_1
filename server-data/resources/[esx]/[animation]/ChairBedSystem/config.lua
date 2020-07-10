@@ -14,7 +14,7 @@ Config.objects = {
 	BedSitAnimation = {anim='WORLD_HUMAN_PICNIC'},
 	locations = {
 		--[1] = {object="v_med_bed2", verticalOffsetX=0.0, verticalOffsetY=0.0, verticalOffsetZ=-1.4, direction=0.0, bed=true},
-		[1] = {position = vector3(1,2,3), verticalOffsetX=0.0, verticalOffsetY=0.0, verticalOffsetZ=-1.4, direction=0.0, bed=false},
+		[1] = {position = vector3(1768.51,2586.4,45.8), verticalOffsetX=0.0, verticalOffsetY=0.0, verticalOffsetZ=-1.4, direction=0.0, bed=false},
 	}
 }
 
