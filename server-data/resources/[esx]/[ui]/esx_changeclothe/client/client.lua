@@ -98,8 +98,8 @@ function OpenCloakroomMenu()
 		elseif data.current.value == 'prison_wear' then
 			setUniform(data.current.value, playerPed)
 		elseif data.current.value == 'store' then
-			--TriggerEvent('esx_store:putin',PlayerData.identifier)
-			TriggerEvent('esx_inventoryhud:openStoreInventory')
+			TriggerEvent('esx_store:putin',PlayerData.identifier)
+			--TriggerEvent('esx_inventoryhud:openStoreInventory')
 		end
 
 		menu.close()
