@@ -48,19 +48,19 @@ function toggleLock(vehicle)
         if lockStatus == 1 then
             SetVehicleDoorsLocked(veh, 2)
             SetVehicleDoorsLockedForAllPlayers(veh, true)
-            exports['mythic_notify']:DoHudText('inform', 'Vehicle Locked')
+            exports['mythic_notify']:DoHudText('inform', '車輛已上鎖')
             playLockAnim()
             hasToggledLock()
         elseif lockStatus == 2 then
             SetVehicleDoorsLocked(veh, 1)
             SetVehicleDoorsLockedForAllPlayers(veh, false)
-            exports['mythic_notify']:DoHudText('inform', 'Vehicle Unlocked')
+            exports['mythic_notify']:DoHudText('inform', '車輛已解鎖')
             playLockAnim(veh)
             hasToggledLock()
         else
             SetVehicleDoorsLocked(veh, 2)
             SetVehicleDoorsLockedForAllPlayers(veh, true)
-            exports['mythic_notify']:DoHudText('inform', 'Vehicle Locked')
+            exports['mythic_notify']:DoHudText('inform', '車輛已上鎖')
             playLockAnim()
             hasToggledLock()
         end
@@ -126,36 +126,36 @@ Citizen.CreateThread(function()
                 if not hasKeys(plate) and not isHotwiring and not isSearching then
                     local pos = GetEntityCoords(ped)
                     if hasBeenSearched(plate) then
-                        DrawText3Ds(pos.x, pos.y, pos.z + 0.2, 'Press ~y~[H] ~w~to hotwire')
+                        DrawText3Ds(pos.x, pos.y, pos.z + 0.2, '按下 ~y~[H] ~w~來破換電路')
                     else
-                        DrawText3Ds(pos.x, pos.y, pos.z + 0.2, 'Press ~y~[H] ~w~to hotwire or ~g~[G] ~w~to search')
+                        DrawText3Ds(pos.x, pos.y, pos.z + 0.2, '按下 ~y~[H] ~w~來破換電路或 ~g~[G] ~w~來找鑰匙')
                     end
                     SetVehicleEngineOn(veh, false, true, true)
                     -- Searching
                     if IsControlJustReleased(0, 47) and not isSearching and not hasBeenSearched(plate) then -- G
                         if hasBeenSearched(plate) then
                             isSearching = true
-                            exports['progressBars']:startUI(5000, "Searching Vehicle")
+                            exports['progressBars']:startUI(5000, "尋找鑰匙中")
                             Citizen.Wait(5000)
                             isSearching = false
-                            exports['mythic_notify']:DoHudText('error', 'You search the vehicle and find nothing')
+                            exports['mythic_notify']:DoHudText('error', '沒找到任何東西')
                         else
                             local rnd = math.random(1, 8)
                             if rnd == 4 then
                                 isSearching = true
-                                exports['progressBars']:startUI(6000, "Searching Vehicle")
+                                exports['progressBars']:startUI(6000, "尋找鑰匙中")
                                 Citizen.Wait(6000)
                                 isSearching = false
-                                exports['mythic_notify']:DoHudText('inform', "You found the keys for plate [" .. plate .. ']')
+                                exports['mythic_notify']:DoHudText('inform', "你找到這個車牌 [" .. plate .. '] 的鑰匙')
                                 table.insert(vehicles, plate)
                                 TriggerServerEvent('onyx:updateSearchedVehTable', plate)
                                 table.insert(searchedVehicles, plate)
                             else
                                 isSearching = true
-                                exports['progressBars']:startUI(6000, "Searching Vehicle")
+                                exports['progressBars']:startUI(6000, "尋找鑰匙中")
                                 Citizen.Wait(6000)
                                 isSearching = false
-                                exports['mythic_notify']:DoHudText('error', 'You search the vehicle and find nothing')
+                                exports['mythic_notify']:DoHudText('error', '沒找到任何東西')
 
                                 -- Update veh table so other players cant search the same vehicle
                                 TriggerServerEvent('onyx:updateSearchedVehTable', plate)
@@ -215,15 +215,15 @@ AddEventHandler('onyx:beginHotwire', function(plate)
         end
     end
 
-    exports['progressBars']:startUI(time, "Hotwiring [Stage 1]")
+    exports['progressBars']:startUI(time, "換煞車皮 [Stage 1]")
     TaskPlayAnim(PlayerPedId(), "veh@std@ds@base", "hotwire", 8.0, 8.0, -1, 1, 0.3, true, true, true)
     Citizen.Wait(time)
     Wait(1000)
-    exports['progressBars']:startUI(time, "Hotwiring [Stage 2]")
+    exports['progressBars']:startUI(time, "先拆坐墊 [Stage 2]")
     TaskPlayAnim(PlayerPedId(), "veh@std@ds@base", "hotwire", 8.0, 8.0, -1, 1, 0.6, true, true, true)
     Citizen.Wait(time)
     Wait(1000)
-    exports['progressBars']:startUI(time, "Hotwiring [Stage 3]")
+    exports['progressBars']:startUI(time, "找找8萬1 [Stage 3]")
     TaskPlayAnim(PlayerPedId(), "veh@std@ds@base", "hotwire", 8.0, 8.0, -1, 1, 0.4, true, true, true)
     Citizen.Wait(time)
     Wait(1000)
@@ -287,18 +287,18 @@ Citizen.CreateThread(function()
             local pos = GetEntityCoords(ped)
             local entPos = GetEntityCoords(prevPed)
             if GetDistanceBetweenCoords(pos.x, pos.y, pos.z, entPos.x, entPos.y, entPos.z, false) < 3.5 then
-                DrawText3Ds(entPos.x, entPos.y, entPos.z, 'Press ~y~[E]~w~ to rob')
+                DrawText3Ds(entPos.x, entPos.y, entPos.z, '按下 ~y~[E]~w~ 來搶')
                 if IsControlJustReleased(0, 38) then
                     local rand = math.random(1, 10)
                     if rand == 1 then
                         Wait(400)
-                        exports['mythic_notify']:DoHudText('inform', 'They do not hand over the keys')
+                        exports['mythic_notify']:DoHudText('inform', '他們不交出鑰匙')
                     else
                         local plate = GetVehicleNumberPlateText(prevCar)
-                        exports['progressBars']:startUI(3600, "Taking Keys")
+                        exports['progressBars']:startUI(3600, "搶奪鑰匙中")
                         Wait(3600)
                         givePlayerKeys(plate)
-                        exports['mythic_notify']:DoHudText('inform', 'You rob the keys')
+                        exports['mythic_notify']:DoHudText('inform', '你拿到了鑰匙')
                     end
                     SetBlockingOfNonTemporaryEvents(prevPed, false)
                     canRob = false
@@ -380,7 +380,7 @@ function DrawText3Ds(x, y, z, text)
 	local px,py,pz=table.unpack(GetGameplayCamCoords())
 	
 	SetTextScale(0.3, 0.3)
-	SetTextFont(6)
+	SetTextFont(1)
 	SetTextProportional(1)
 	SetTextColour(255, 255, 255, 160)
 	SetTextEntry("STRING")
