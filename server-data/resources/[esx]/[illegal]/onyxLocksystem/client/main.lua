@@ -406,6 +406,8 @@ Citizen.CreateThread(function()
         local dist = GetDistanceBetweenCoords(pos.x, pos.y, pos.z, entPos.x, entPos.y, entPos.z, true)
 
         if foundEnt and prevPed ~= aimingEnt and IsPedInAnyVehicle(aimingEnt, false) and IsPedArmed(PlayerPedId(), 7) and dist < 20.0 and not IsPedInAnyVehicle(PlayerPedId()) then
+            print("near car")
+            
             if not IsPedAPlayer(aimingEnt) then
                 prevPed = aimingEnt
                 Wait(math.random(300, 700))
