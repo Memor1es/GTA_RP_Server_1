@@ -149,23 +149,69 @@ Citizen.CreateThread(function()
                             local rnd = math.random(1, 8)
                             if rnd == 4 then
                                 isSearching = true
-                                exports['progressBars']:startUI(6000, "尋找鑰匙中")
-                                Citizen.Wait(6000)
-                                isSearching = false
-                                exports['mythic_notify']:DoHudText('inform', "你找到這個車牌 [" .. plate .. '] 的鑰匙')
-                                table.insert(vehicles, plate)
-                                TriggerServerEvent('onyx:updateSearchedVehTable', plate)
-                                table.insert(searchedVehicles, plate)
+
+                                TriggerEvent("mythic_progressbar:client:progress", {
+                                    name = "thief_car1",
+                                    duration = time,
+                                    label = "尋找鑰匙中...",
+                                    useWhileDead = 6000,
+                                    canCancel = true,
+                                    controlDisables = {
+                                        disableMovement = true,
+                                        disableCarMovement = true,
+                                        disableMouse = false,
+                                        disableCombat = true,
+                                    },
+                                    animation = {
+                                        animDict = "amb@prop_human_bum_bin@base",
+                                        anim = "base",
+                                    },
+                                    prop = {
+                                        model = "prop_paper_bag_small",
+                                    }
+                                }, function(status)
+                                    if not status then
+                                        -- Do Something If Event Wasn't Cancelled
+                                        exports['mythic_notify']:DoHudText('inform', "你找到這個車牌 [" .. plate .. '] 的鑰匙')
+                                        table.insert(vehicles, plate)
+                                        TriggerServerEvent('onyx:updateSearchedVehTable', plate)
+                                        table.insert(searchedVehicles, plate)
+                                    end
+                                    isSearching = false
+                                end)
                             else
                                 isSearching = true
-                                exports['progressBars']:startUI(6000, "尋找鑰匙中")
-                                Citizen.Wait(6000)
-                                isSearching = false
-                                exports['mythic_notify']:DoHudText('error', '沒找到任何東西')
 
-                                -- Update veh table so other players cant search the same vehicle
-                                TriggerServerEvent('onyx:updateSearchedVehTable', plate)
-                                table.insert(searchedVehicles, plate)
+                                TriggerEvent("mythic_progressbar:client:progress", {
+                                    name = "thief_car1",
+                                    duration = time,
+                                    label = "尋找鑰匙中...",
+                                    useWhileDead = 6000,
+                                    canCancel = true,
+                                    controlDisables = {
+                                        disableMovement = true,
+                                        disableCarMovement = true,
+                                        disableMouse = false,
+                                        disableCombat = true,
+                                    },
+                                    animation = {
+                                        animDict = "amb@prop_human_bum_bin@base",
+                                        anim = "base",
+                                    },
+                                    prop = {
+                                        model = "prop_paper_bag_small",
+                                    }
+                                }, function(status)
+                                    if not status then
+                                        -- Do Something If Event Wasn't Cancelled
+                                        exports['mythic_notify']:DoHudText('error', '沒找到任何東西')
+
+                                        -- Update veh table so other players cant search the same vehicle
+                                        TriggerServerEvent('onyx:updateSearchedVehTable', plate)
+                                        table.insert(searchedVehicles, plate)
+                                    end
+                                    isSearching = false
+                                end)
                             end
                         end
                     end
