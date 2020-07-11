@@ -7,10 +7,10 @@ Config.RangeCheck = 25.0 -- this is the change you will be able to control the v
 
 Config.Impound = true --Enable/Disable impound feature
 Config.ImpoundPrice = 2000 --Price it will cost player to recover vehicle
-Config.ImpoundName = "Impound" --Name to show on blip
+Config.ImpoundName = "拖吊場" --Name to show on blip
 Config.RebootRestore = false --send all cars back to the garage on restart of the resource?
 Config.ImpoundAutoBan = true --Autoban player if exploit is discovered? (Trying to put car in garage via lua executor) Requires EasyAdmin
-Config.AutoBanMessage = "You have been banned for exploiting the the impound system DeadlyEmu#0001" -- Ban message to show
+Config.AutoBanMessage = "車輛已被扣押" -- Ban message to show
 
 Config.LockGarage = true --True restrict garage(store in one cnat take it out the other) False can take all cars out of all garages
 
@@ -178,8 +178,8 @@ Config.Garages = {
 }
 
 Config.Labels = {
-    ["menu"] = "Press ~INPUT_CONTEXT~ to open the garage. %s.",
-    ["vehicle"] = "'%s'ı to store press ~INPUT_CONTEXT~"
+    ["menu"] = "按下 ~INPUT_CONTEXT~ 進入車庫 %s.",
+    ["vehicle"] = "按下 ~INPUT_CONTEXT~ 來停車"
 }
 
 Config.Trim = function(value)
