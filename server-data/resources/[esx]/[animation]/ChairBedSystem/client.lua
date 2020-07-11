@@ -20,18 +20,26 @@ CreateThread(function()
         if (InUse == false) and (canSleep == true) then
             plyCoords = GetEntityCoords(PlayerPedId(), 0)
             for k, v in pairs(Config.objects.locations) do
-                --local oObject = GetClosestObjectOfType(plyCoords.x, plyCoords.y, plyCoords.z, 1.0, GetHashKey(v.object), 0, 0, 0)
-                local oObject = k
+                if (v.coords) == true then
+                  local oObject = GetClosestObjectOfType(plyCoords.x, plyCoords.y, plyCoords.z, 1.0, GetHashKey(v.object), 0, 0, 0)
+                else then
+                  local oObject = k
+                end
                 if (oObject ~= 0) then
-                    --local oObjectCoords = GetEntityCoords(oObject)
-                    local oObjectCoords = v.position
+                    if (v.coords)  == true then
+                        local oObjectCoords = GetEntityCoords(oObject)
+                    else then
+                        local oObjectCoords = v.position
+                    end
                     local ObjectDistance = #(vector3(oObjectCoords) - plyCoords)
                     if (ObjectDistance < 2) then
                         if (oObject ~= currObject) then
                             currObject = oObject
-                            --local oObjectExists = DoesEntityExist(oObject)
+                            if (v.coords)  == true then
+                                local oObjectExists = DoesEntityExist(oObject)
+                            end
                             ObjectAr = {
-                                fObject = k,
+                                fObject = oObject,
                                 fObjectCoords = oObjectCoords,
                                 fObjectcX = v.verticalOffsetX,
                                 fObjectcY = v.verticalOffsetY,
@@ -147,7 +155,7 @@ AddEventHandler('ChairBedSystem:Client:Animation', function(v, objectcoords)
     local dir = v.fObjectDir
     local isBed = v.fObjectIsBed
     local objectcoords = v.fObjectCoords
-    local fObjecttrue = v.fObjectCoords
+    local fObjecttrue = v.fObjecttrue
     
     local ped = PlayerPedId()
     PlyLastPos = GetEntityCoords(ped)
