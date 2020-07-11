@@ -154,7 +154,7 @@ Citizen.CreateThread(function()
                             local rnd = math.random(1, 8)
                             isSearching = true
                             if rnd == 4 then
-                                local time4 = 6000
+                                local time4 = 60000
                                 print("here 4")
                                 TriggerEvent("mythic_progressbar:client:progress", {
                                     name = "find_key_1",
