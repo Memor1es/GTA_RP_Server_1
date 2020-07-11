@@ -300,13 +300,13 @@ function Halteres()
   SetEntityCoords(playerPed, Config.Coords.Halteres.x,Config.Coords.Halteres.y,Config.Coords.Halteres.z-0.95)
   FreezeEntityPosition(playerPed, true)
   TaskStartScenarioInPlace(playerPed, "world_human_muscle_free_weights", 0, true)
-  TriggerEvent("mythic_progbar:client:progress", {name = "kol_calis", duration = Config.Halterestemps * 1000, label = "工作時鍛煉.."})
+  TriggerEvent("mythic_progbar:client:progress", {name = "kol_calis", duration = Config.Halterestemps * 1000, label = "舉啞鈴.."})
   Citizen.Wait(Config.Halterestemps * 1000)
   if Config.removedrinkonspor then
     TriggerServerEvent('eff:onspor', _source)
   end
   onspor = false
-  exports['mythic_notify']:SendAlert('inform', 'Votre soif a augmenté', 5000)
+  exports['mythic_notify']:SendAlert('inform', '口渴了', 5000)
   FreezeEntityPosition(playerPed, false)
   ClearPedTasksImmediately(playerPed)
 end
