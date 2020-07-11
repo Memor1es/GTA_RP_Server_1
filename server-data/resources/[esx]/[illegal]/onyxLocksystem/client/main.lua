@@ -203,9 +203,12 @@ AddEventHandler('onyx:beginHotwire', function(plate)
 
     while not HasAnimDictLoaded("veh@std@ds@base") do
         Citizen.Wait(100)
-	end
-    local time = 12500 -- in ms
-
+    end
+    
+    local time = (1000 * 3.5)
+    local time2 = (1000 * 3.5)
+    local time3 = math.random((2500 * 3.5),(4000 * 3.5))
+    
     local vehPlate = plate
     isHotwiring = true
 
