@@ -86,8 +86,9 @@ end
 --take out
 
 function OpenRoomInventoryMenu(owner)
-	ESX.TriggerServerCallback('esx_property:getPropertyInventory', function(inventory)
-		local elements = {}
+	ESX.TriggerServerCallback('esx_property:getStoreInventory', function(inventory)
+        TriggerEvent('esx_inventoryhud:openStoreInventory',inventory)
+        --[[local elements = {}
 
 		if inventory.blackMoney > 0 then
 			table.insert(elements, {
@@ -155,7 +156,7 @@ function OpenRoomInventoryMenu(owner)
 			end
 		end, function(data, menu)
 			menu.close()
-		end)
+		end)--]]
 	end, owner)
 end
 

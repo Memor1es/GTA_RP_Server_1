@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Modified for the public release of Dispatch of Variety's
+	 Special Detective Vehicle by Stryfaar, et al.
+	 DO NOT COPY OR REDISTRIBUTE WITHOUT PERMISSION OF THE MAKERS! -->
+<CVehicleModelInfoVariation>
+	<variationData>
+
+		<Item>
+			<modelName>dvdt3</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array">
+						<Item value="0" />
+						<Item value="0" />
+						<Item value="10" />
+						<Item value="156" />
+						<Item value="0" />
+						<Item value="0" />
+					</indices>
+					<liveries />
+				</Item>
+				<Item>
+					<indices content="char_array">
+						<Item value="1" />
+						<Item value="1" />
+						<Item value="7" />
+						<Item value="156" />
+						<Item value="0" />
+						<Item value="0" />
+					</indices>
+					<liveries />
+				</Item>
+				<Item>
+					<indices content="char_array">
+						<Item value="2" />
+						<Item value="2" />
+						<Item value="5" />
+						<Item value="156" />
+						<Item value="0" />
+						<Item value="0" />
+					</indices>
+					<liveries />
+				</Item>
+				<Item>
+					<indices content="char_array">
+						<Item value="3" />
+						<Item value="3" />
+						<Item value="24" />
+						<Item value="156" />
+						<Item value="0" />
+						<Item value="0" />
+					</indices>
+					<liveries />
+				</Item>
+				<Item>
+					<indices content="char_array">
+						<Item value="6" />
+						<Item value="6" />
+						<Item value="111" />
+						<Item value="156" />
+						<Item value="0" />
+						<Item value="0" />
+					</indices>
+					<liveries />
+				</Item>
+				<Item>
+					<indices content="char_array">
+						<Item value="111" />
+						<Item value="111" />
+						<Item value="0" />
+						<Item value="156" />
+						<Item value="0" />
+						<Item value="0" />
+					</indices>
+					<liveries />
+				</Item>
+				<Item>
+					<indices content="char_array">
+						<Item value="4" />
+						<Item value="4" />
+						<Item value="111" />
+						<Item value="156" />
+						<Item value="0" />
+						<Item value="0" />
+					</indices>
+					<liveries />
+				</Item>
+				<Item>
+					<indices content="char_array">
+						<Item value="69" />
+						<Item value="69" />
+						<Item value="67" />
+						<Item value="156" />
+						<Item value="0" />
+						<Item value="0" />
+					</indices>
+					<liveries />
+				</Item>
+				<Item>
+					<indices content="char_array">
+						<Item value="34" />
+						<Item value="34" />
+						<Item value="33" />
+						<Item value="156" />
+						<Item value="0" />
+						<Item value="0" />
+					</indices>
+					<liveries />
+				</Item>
+				<Item>
+					<indices content="char_array">
+						<Item value="31" />
+						<Item value="31" />
+						<Item value="32" />
+						<Item value="156" />
+						<Item value="0" />
+						<Item value="0" />
+					</indices>
+					<liveries />
+				</Item>
+				<Item>
+					<indices content="char_array">
+						<Item value="67" />
+						<Item value="67" />
+						<Item value="111" />
+						<Item value="156" />
+						<Item value="0" />
+						<Item value="0" />
+					</indices>
+					<liveries />
+				</Item>
+				<Item>
+					<indices content="char_array">
+						<Item value="37" />
+						<Item value="37" />
+						<Item value="38" />
+						<Item value="156" />
+						<Item value="0" />
+						<Item value="0" />
+					</indices>
+					<liveries />
+				</Item>
+				<Item>
+					<indices content="char_array">
+						<Item value="93" />
+						<Item value="93" />
+						<Item value="107" />
+						<Item value="156" />
+						<Item value="0" />
+						<Item value="0" />
+					</indices>
+					<liveries />
+				</Item>
+			</colors>
+			<kits>
+				<Item>0_default_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges />
+			<plateProbabilities>
+				<Probabilities>
+					<Item>
+						<Name>Standard White</Name>
+						<Value value="50"/>
+					</Item>
+					<Item>
+						<Name>Police guv plate</Name>
+						<Value value="50"/>
+					</Item>
+				</Probabilities>
+			</plateProbabilities>
+			<lightSettings value="113" />
+			<sirenSettings value="915" />
+		</Item>
+
+	</variationData>
+</CVehicleModelInfoVariation>
