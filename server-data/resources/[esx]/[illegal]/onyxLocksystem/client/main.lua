@@ -254,19 +254,84 @@ AddEventHandler('onyx:beginHotwire', function(plate)
     while complete == false and cancel == false do
         Citizen.Wait(50)
     end
+
     
-    exports['progressBars']:startUI(time, "先拆坐墊 [Stage 2]")
-    TaskPlayAnim(PlayerPedId(), "veh@std@ds@base", "hotwire", 8.0, 8.0, -1, 1, 0.6, true, true, true)
-    Citizen.Wait(time)
-    Wait(1000)
-    exports['progressBars']:startUI(time, "找找8萬1 [Stage 3]")
-    TaskPlayAnim(PlayerPedId(), "veh@std@ds@base", "hotwire", 8.0, 8.0, -1, 1, 0.4, true, true, true)
-    Citizen.Wait(time)
-    Wait(1000)
-    table.insert(vehicles, vehPlate)
-    StopAnimTask(PlayerPedId(), 'veh@std@ds@base', 'hotwire', 1.0)
-    isHotwiring = false
-    SetVehicleEngineOn(veh, true, true, false)
+
+    if complete == true then
+        complete = false
+        TriggerEvent("mythic_progressbar:client:progress", {
+            name = "thief_car2",
+            duration = time2,
+            label = "再換煞車皮...",
+            useWhileDead = false,
+            canCancel = true,
+            controlDisables = {
+                disableMovement = true,
+                disableCarMovement = true,
+                disableMouse = false,
+                disableCombat = true,
+            },
+            animation = {
+                animDict = "veh@std@ds@base",
+                anim = "hotwire",
+            },
+            prop = {
+                model = "prop_paper_bag_small",
+            }
+        }, function(status)
+            if not status then
+                -- Do Something If Event Wasn't Cancelled
+                complete = true
+            else
+                cancel = true
+            end
+        end)
+    end
+
+    while complete == false and cancel == false do
+        Citizen.Wait(50)
+    end
+
+    if complete == true then
+        complete = false
+        TriggerEvent("mythic_progressbar:client:progress", {
+            name = "thief_car2",
+            duration = time3,
+            label = "然後看看有沒有八萬一...",
+            useWhileDead = false,
+            canCancel = true,
+            controlDisables = {
+                disableMovement = true,
+                disableCarMovement = true,
+                disableMouse = false,
+                disableCombat = true,
+            },
+            animation = {
+                animDict = "veh@std@ds@base",
+                anim = "hotwire",
+            },
+            prop = {
+                model = "prop_paper_bag_small",
+            }
+        }, function(status)
+            if not status then
+                -- Do Something If Event Wasn't Cancelled
+                complete = true
+            else
+                cancel = true
+            end
+        end)
+    end
+
+    while complete == false and cancel == false do
+        Citizen.Wait(50)
+    end
+
+    if complete == true then
+        table.insert(vehicles, vehPlate)
+        isHotwiring = false
+        SetVehicleEngineOn(veh, true, true, false)
+    end
 end)
 
 local isRobbing = false
