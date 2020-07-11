@@ -168,7 +168,7 @@ Citizen.CreateThread(function()
                         TriggerServerEvent('onyx:reqHotwiring', plate)
                     end
                 else
-                    SetVehicleEngineOn(veh, true, true, false)
+                    --SetVehicleEngineOn(veh, true, true, false)
                 end
             end
         end

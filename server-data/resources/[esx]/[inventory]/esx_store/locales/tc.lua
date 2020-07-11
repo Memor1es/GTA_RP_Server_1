@@ -42,5 +42,5 @@ Locales['tc'] = {
   ['paid_rent'] = '你 ~g~花費了~s~ 租金: ~g~$%s~s~',
   ['paid_rent_evicted'] = '你被 ~o~趕出房子~s~ 從 ~y~%s~s~ ，因為你負擔不起租金 ~g~$%s~s~',
   ['not_enough_in_property'] = '房產中的 ~r~那個物品~s~ 不足!',
-  ['player_cannot_hold'] = '你的房產中 ~r~沒有~s~ 足夠的 ~y~空間~s~ !',
+  ['player_cannot_hold'] = '你的背包中 ~r~沒有~s~ 足夠的 ~y~空間~s~ !',
 }
