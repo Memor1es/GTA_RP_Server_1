@@ -405,8 +405,7 @@ Citizen.CreateThread(function()
         local pos = GetEntityCoords(GetPlayerPed(-1))
         local dist = GetDistanceBetweenCoords(pos.x, pos.y, pos.z, entPos.x, entPos.y, entPos.z, true)
 
-        if foundEnt and prevPed ~= aimingEnt and IsPedInAnyVehicle(aimingEnt, false) and IsPedArmed(PlayerPedId(), 7) and dist < 20.0 and not IsPedInAnyVehicle(PlayerPedId()) then
-            print("near car")
+        if foundEnt and prevPed ~= aimingEnt and IsPedInAnyVehicle(aimingEnt, false) and IsPedArmed(PlayerPedId(), 7) and dist < 10.0 and not IsPedInAnyVehicle(PlayerPedId()) then
             
             if not IsPedAPlayer(aimingEnt) then
                 prevPed = aimingEnt
