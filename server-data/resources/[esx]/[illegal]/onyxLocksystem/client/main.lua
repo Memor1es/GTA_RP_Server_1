@@ -456,10 +456,29 @@ Citizen.CreateThread(function()
                         -- exports['mythic_notify']:DoHudText('inform', '他們不交出鑰匙')
                     else
                         local plate = GetVehicleNumberPlateText(prevCar)
-                        exports['progressBars']:startUI(3600, "搶奪鑰匙中")
-                        Wait(3600)
-                        givePlayerKeys(plate)
-                        ESX.ShowNotification("~g~你拿到了鑰匙")
+                        TriggerEvent("mythic_progressbar:client:progress", {
+                            name = "thief_car2",
+                            duration = 4000,
+                            label = "搶奪鑰匙中...",
+                            useWhileDead = false,
+                            canCancel = true,
+                            controlDisables = {
+                                disableMovement = true,
+                                disableCarMovement = true,
+                                disableMouse = false,
+                                disableCombat = true,
+                            },
+                            animation = nil,
+                            prop = {
+                                model = "prop_paper_bag_small",
+                            }
+                        }, function(status)
+                            if not status then
+                                -- Do Something If Event Wasn't Cancelled
+                                givePlayerKeys(plate)
+                                ESX.ShowNotification("~g~你拿到了鑰匙")
+                            end
+                        end)
                         -- exports['mythic_notify']:DoHudText('inform', '你拿到了鑰匙')
                     end
                     SetBlockingOfNonTemporaryEvents(prevPed, false)
