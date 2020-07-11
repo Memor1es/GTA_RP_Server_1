@@ -295,6 +295,7 @@ function skeletalsystem:DamageEffects()
     tick = tick + 1
     local plyPed = GetPlayerPed(-1)
     local plyId = PlayerId()
+    local fuck = exports["esx_ambulancejob"]:GetDeath()
 
     if self.BoneCats["Head"] > 0 and not self.UsingStress then
       SetTimecycleModifier('BarryFadeOut')
@@ -306,17 +307,18 @@ function skeletalsystem:DamageEffects()
         self.HeadInjury = false 
       end
     end
-
-    if self.BoneCats["Body"] > 0 then
-      if tick % (1000 / (self.BoneCats["Body"] / 10)) == 1 then
-        local plyHealth = GetEntityHealth(plyPed)
-        SetPlayerHealthRechargeMultiplier(plyId, 0.0)
-        if plyHealth > 0 then ApplyDamageToPed(plyPed, self.BoneCats["Body"], false) end
-        self.DamagedBody = true
+    if not fuck then
+      if self.BoneCats["Body"] > 0 then
+        if tick % (1000 / (self.BoneCats["Body"] / 10)) == 1 then
+          local plyHealth = GetEntityHealth(plyPed)
+          SetPlayerHealthRechargeMultiplier(plyId, 0.0)
+          if plyHealth > 0 then ApplyDamageToPed(plyPed, self.BoneCats["Body"], false) end
+          self.DamagedBody = true
+        end
+      elseif self.DamagedBody then
+        SetPlayerHealthRechargeMultiplier(plyId, 1.0)
+        self.DamagedBody = false
       end
-    elseif self.DamagedBody then
-      SetPlayerHealthRechargeMultiplier(plyId, 1.0)
-      self.DamagedBody = false
     end
 
     if self.BoneCats["RightArm"] > 0 or self.BoneCats["LeftArm"] > 0 then 
