@@ -56,7 +56,7 @@ CreateThread(function()
             plyCoords = GetEntityCoords(ply, 0)
             ObjectCoords = ObjectAr.ObjectCoords
             local ObjectDistance = #(vector3(ObjectAr.fObjectCoords) - plyCoords)
-            if (ObjectDistance < 1.8 and not InUse) then
+            if (ObjectDistance < 1.0 and not InUse) then
                 if (ObjectAr.fObjectIsBed) == true then
                     
                     --[[ ARROW RIGHT ]]
