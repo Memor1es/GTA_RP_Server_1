@@ -695,7 +695,7 @@ Citizen.CreateThread(function()
         if not trackedVehicles[plate].canTurnOver then
           local vehPos = GetWorldPositionOfEntityBone(veh, GetEntityBoneIndexByName(veh, "bonnet"))
             if hassearched[plate] == false or hassearched[plate] == nil then
-                ESX.ShowHelpNotification("按下 ~INPUT_VEH_HEADLIGHT~ ~r~來破壞車輛\n~s~按下 ~INPUT_HUD_SPECIAL~ ~y~來尋找鑰匙")
+                ESX.ShowHelpNotification("按下 ~INPUT_VEH_HEADLIGHT~ ~r~來破壞車輛\n~s~按下 ~INPUT_DETONATE~ ~y~來尋找鑰匙")
                 -- DrawText3Ds(vehPos.x, vehPos.y, vehPos.z, "按下 [H] 來破壞車輛 / [Z] 來尋找鑰匙")
             elseif hassearched[plate] == true then 
                 ESX.ShowHelpNotification("按下 ~INPUT_VEH_HEADLIGHT~ ~r~來破壞車輛")
