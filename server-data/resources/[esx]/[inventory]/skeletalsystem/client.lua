@@ -348,11 +348,9 @@ end
 function skeletalsystem:UseItem(categories,medic)  
   if not medic then  
     local playerPed = GetPlayerPed(-1)
-    print("first")
     TaskStartScenarioInPlace(playerPed, 'CODE_HUMAN_MEDIC_TEND_TO_DEAD', -1, true)
     exports['progressBars']:startUI(10000, "正在加固")
     Wait(10000)
-    print("second")
     TaskStartScenarioInPlace(playerPed, 'CODE_HUMAN_MEDIC_TEND_TO_DEAD', -1, false)
     Wait(3000)
     ClearPedTasksImmediately(playerPed)
