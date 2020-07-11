@@ -153,7 +153,7 @@ Citizen.CreateThread(function()
                             isSearching = false
                             exports['mythic_notify']:DoHudText('error', '沒找到任何東西')
                         else
-                            local rnd = math.random(1, 3)
+                            local rnd = math.random(1, 6)
                             local time_for_find_key = 6000
                             isSearching = true
                             if rnd == 1 then
@@ -416,7 +416,7 @@ Citizen.CreateThread(function()
                 end
                 local rand = math.random(1, 10)
 
-                if rand > 4 then
+                if rand > 6 then
                     prevCar = GetVehiclePedIsIn(aimingEnt, false)
                     TaskLeaveVehicle(aimingEnt, prevCar)
                     SetVehicleEngineOn(prevCar, false, false, false)
@@ -446,18 +446,21 @@ Citizen.CreateThread(function()
             local pos = GetEntityCoords(ped)
             local entPos = GetEntityCoords(prevPed)
             if GetDistanceBetweenCoords(pos.x, pos.y, pos.z, entPos.x, entPos.y, entPos.z, false) < 3.5 then
-                DrawText3Ds(entPos.x, entPos.y, entPos.z, '按下 ~y~[E]~w~ 來搶')
+                -- DrawText3Ds(entPos.x, entPos.y, entPos.z, '按下 ~y~[E]~w~ 來搶')
+                ESX.ShowHelpNotification("按下 ~INPUT_CONTEXT~ ~r~來搶鑰匙")
                 if IsControlJustReleased(0, 38) then
                     local rand = math.random(1, 10)
-                    if rand == 1 then
+                    if rand <= 4 then
                         Wait(400)
-                        exports['mythic_notify']:DoHudText('inform', '他們不交出鑰匙')
+                        ESX.ShowNotification("~r~他們不交出鑰匙")
+                        -- exports['mythic_notify']:DoHudText('inform', '他們不交出鑰匙')
                     else
                         local plate = GetVehicleNumberPlateText(prevCar)
                         exports['progressBars']:startUI(3600, "搶奪鑰匙中")
                         Wait(3600)
                         givePlayerKeys(plate)
-                        exports['mythic_notify']:DoHudText('inform', '你拿到了鑰匙')
+                        ESX.ShowNotification("~g~你拿到了鑰匙")
+                        -- exports['mythic_notify']:DoHudText('inform', '你拿到了鑰匙')
                     end
                     SetBlockingOfNonTemporaryEvents(prevPed, false)
                     canRob = false
