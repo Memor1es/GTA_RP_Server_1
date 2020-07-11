@@ -15,7 +15,14 @@ Config.objects = {
 	locations = {
 		--[1] = {object="v_med_bed2", verticalOffsetX=0.0, verticalOffsetY=0.0, verticalOffsetZ=-1.4, direction=0.0, bed=true},
 		[1] = {position = vector3(1768.3,2587.18,45.27), verticalOffsetX=0.0, verticalOffsetY=0.0, verticalOffsetZ=-1.4, direction=0.0, bed=true},
-		[2] = {position = vector3(1780.35,2581.52,45.8), verticalOffsetX=-0.6, verticalOffsetY=0.4, verticalOffsetZ= 0.5, direction=0.0, bed=false},
+		[2] = {position = vector3(1780.35,2581.52,45.8), verticalOffsetX=-0.4, verticalOffsetY=0.1, verticalOffsetZ= 0.5, direction=34.23, bed=false},
+		[2] = {position = vector3(1776.49,2577.65,45.8), verticalOffsetX=-0.4, verticalOffsetY=0.1, verticalOffsetZ= 0.5, direction=34.23, bed=false},
+		[2] = {position = vector3(1776.48,2581.69,45.8), verticalOffsetX=-0.4, verticalOffsetY=0.1, verticalOffsetZ= 0.5, direction=34.23, bed=false},
+		[2] = {position = vector3(1776.38,2585.19,45.8), verticalOffsetX=-0.4, verticalOffsetY=0.1, verticalOffsetZ= 0.5, direction=34.23, bed=false},
+		[2] = {position = vector3(1780.26,2585.25,45.8), verticalOffsetX=-0.4, verticalOffsetY=0.1, verticalOffsetZ= 0.5, direction=34.23, bed=false},
+		[2] = {position = vector3(1783.89,2585.31,45.8), verticalOffsetX=-0.4, verticalOffsetY=0.1, verticalOffsetZ= 0.5, direction=34.23, bed=false},
+		[2] = {position = vector3(1783.83,2581.6,45.8), verticalOffsetX=-0.4, verticalOffsetY=0.1, verticalOffsetZ= 0.5, direction=34.23, bed=false},
+		[2] = {position = vector3(1783.94,2577.57,45.8), verticalOffsetX=-0.4, verticalOffsetY=0.1, verticalOffsetZ= 0.5, direction=34.23, bed=false},
 	}
 }
 
