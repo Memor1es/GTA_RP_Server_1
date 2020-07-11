@@ -139,6 +139,11 @@ Citizen.CreateThread(function()
                     SetVehicleEngineOn(veh, false, true, true)
                     -- Searching
                     if IsControlJustReleased(0, 47) and not isSearching and not hasBeenSearched(plate) then -- G
+                        RequestAnimDict("amb@prop_human_bum_bin@base")
+                        while not HasAnimDictLoaded("amb@prop_human_bum_bin@base") do
+                            Citizen.Wait(100)
+                        end
+                        
                         if hasBeenSearched(plate) then
                             isSearching = true
                             exports['progressBars']:startUI(5000, "尋找鑰匙中")
