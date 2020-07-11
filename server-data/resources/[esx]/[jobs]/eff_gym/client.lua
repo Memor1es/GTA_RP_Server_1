@@ -19,9 +19,9 @@ Citizen.CreateThread(function()
 		local dstCheck = GetDistanceBetweenCoords(pedCoords, Config.Coords.Halteres.x,Config.Coords.Halteres.y, Config.Coords.Halteres.z, true)
 		if dstCheck <= 5.0 then
 			sleepThread = 5
-			local text = "Halteres"
+			local text = "啞鈴"
 			if dstCheck <= 0.65 then
-				text = "Travaillez les Halteres, Appuyez sur la touche[~g~E~s~] "
+				text = "舉啞鈴, 按下鍵 [~g~E~s~] "
 				if IsControlJustPressed(0, 38) then
 					if not onspor then
             Halteres()
@@ -47,9 +47,9 @@ Citizen.CreateThread(function()
 		local dstCheck = GetDistanceBetweenCoords(pedCoords, Config.Coords.Halteres2.x,Config.Coords.Halteres2.y, Config.Coords.Halteres2.z, true)
 		if dstCheck <= 5.0 then
 			sleepThread = 5
-			local text = "Halteres"
+			local text = "啞鈴"
 			if dstCheck <= 0.65 then
-				text = "Travaillez les Halteres, Appuyez sur la touche[~g~E~s~] "
+				text = "舉啞鈴, 按下鍵 [~g~E~s~] "
 				if IsControlJustPressed(0, 38) then
 					if not onspor then
             Halteres2()
@@ -75,9 +75,9 @@ Citizen.CreateThread(function()
 		local dstCheck = GetDistanceBetweenCoords(pedCoords, Config.Coords.Tractions.x, Config.Coords.Tractions.y, Config.Coords.Tractions.z, true)
 		if dstCheck <= 5.0 then
 			sleepThread = 5
-			local text = "Tractions"
+			local text = "引體向上"
 			if dstCheck <= 0.65 then
-				text = "Travaillez les Tractions , Appuyez sur la touche[~g~E~s~]"
+				text = "做引體向上, 按下鍵 [~g~E~s~]"
 				if IsControlJustPressed(0, 38) then
 					if not onspor then
             Tractions()
@@ -103,9 +103,9 @@ Citizen.CreateThread(function()
 		local dstCheck = GetDistanceBetweenCoords(pedCoords, Config.Coords.Tractions2.x, Config.Coords.Tractions2.y, Config.Coords.Tractions2.z, true)
 		if dstCheck <= 5.0 then
 			sleepThread = 5
-			local text = "Tractions"
+			local text = "引體向上"
 			if dstCheck <= 0.65 then
-				text = "Travaillez les Tractions , Appuyez sur la touche[~g~E~s~]"
+				text = "做引體向上, 按下鍵 [~g~E~s~]"
 				if IsControlJustPressed(0, 38) then
 					if not onspor then
             Tractions2()
@@ -131,9 +131,9 @@ Citizen.CreateThread(function()
 		local dstCheck = GetDistanceBetweenCoords(pedCoords, Config.Coords.YogaYap.x, Config.Coords.YogaYap.y, Config.Coords.YogaYap.z, true)
 		if dstCheck <= 5.0 then
 			sleepThread = 5
-			local text = "Yoga"
+			local text = "瑜珈"
 			if dstCheck <= 0.65 then
-				text = "Faire du yoga, Appuyez sur la touche[~g~E~s~]"
+				text = "做瑜珈, 按下鍵 [~g~E~s~]"
 				if IsControlJustPressed(0, 38) then
 					if not onspor then
             yogayap()
@@ -159,9 +159,9 @@ Citizen.CreateThread(function()
 		local dstCheck = GetDistanceBetweenCoords(pedCoords, Config.Coords.Abdos.x, Config.Coords.Abdos.y, Config.Coords.Abdos.z, true)
 		if dstCheck <= 5.0 then
 			sleepThread = 5
-			local text = "Abdos"
+			local text = "腹肌"
 			if dstCheck <= 0.65 then
-				text = "Travaillez les abdos , Appuyez sur la touche [~g~E~s~] "
+				text = "練腹肌, 按下鍵 [~g~E~s~] "
 				if IsControlJustPressed(0, 38) then
 					if not onspor then
             Abdos()
@@ -187,9 +187,9 @@ Citizen.CreateThread(function()
 		local dstCheck = GetDistanceBetweenCoords(pedCoords, Config.Coords.Abdos2.x, Config.Coords.Abdos2.y, Config.Coords.Abdos2.z, true)
 		if dstCheck <= 5.0 then
 			sleepThread = 5
-			local text = "Abdos"
+			local text = "腹肌"
 			if dstCheck <= 0.65 then
-				text = "Travaillez les abdos , Appuyez sur la touche [~g~E~s~] "
+				text = "練腹肌, 按下鍵 [~g~E~s~] "
 				if IsControlJustPressed(0, 38) then
 					if not onspor then
             Abdos2()
@@ -215,9 +215,9 @@ Citizen.CreateThread(function()
 		local dstCheck = GetDistanceBetweenCoords(pedCoords, Config.Coords.Pompes.x, Config.Coords.Pompes.y, Config.Coords.Pompes.z, true)
 		if dstCheck <= 5.0 then
 			sleepThread = 5
-			local text = "Pompes"
+			local text = "仰臥起坐"
 			if dstCheck <= 0.65 then
-				text = "Pour faire des Pompes, Appuyez sur la touche[~g~E~s~]"
+				text = "做仰臥起坐，按下鍵 [~g~E~s~]"
 				if IsControlJustPressed(0, 38) then
 					if not onspor then
             Pompes()
@@ -243,9 +243,9 @@ Citizen.CreateThread(function()
 		local dstCheck = GetDistanceBetweenCoords(pedCoords, Config.Coords.Pompes2.x, Config.Coords.Pompes2.y, Config.Coords.Pompes2.z, true)
 		if dstCheck <= 5.0 then
 			sleepThread = 5
-			local text = "Pompes"
+			local text = "仰臥起坐"
 			if dstCheck <= 0.65 then
-				text = "Pour faire des Pompes, Appuyez sur la touche[~g~E~s~]"
+				text = "做仰臥起坐，按下鍵 [~g~E~s~]"
 				if IsControlJustPressed(0, 38) then
 					if not onspor then
             Pompes2()
@@ -271,9 +271,9 @@ Citizen.CreateThread(function()
 		local dstCheck = GetDistanceBetweenCoords(pedCoords, Config.Coords.Eau.x, Config.Coords.Eau.y, Config.Coords.Eau.z, true)
 		if dstCheck <= 5.0 then
 			sleepThread = 5
-			local text = "Machine à eau"
+			local text = "飲水機"
 			if dstCheck <= 0.65 then
-				text = "Pour obtenir de l'eau, Appuyez sur la touche [~g~E~s~]"
+				text = "使用飲水機，按下鍵 [~g~E~s~]"
 				if IsControlJustPressed(0, 38) then
 					if not onspor then
             		Eau()
@@ -300,7 +300,7 @@ function Halteres()
   SetEntityCoords(playerPed, Config.Coords.Halteres.x,Config.Coords.Halteres.y,Config.Coords.Halteres.z-0.95)
   FreezeEntityPosition(playerPed, true)
   TaskStartScenarioInPlace(playerPed, "world_human_muscle_free_weights", 0, true)
-  TriggerEvent("mythic_progbar:client:progress", {name = "kol_calis", duration = Config.Halterestemps * 1000, label = "Halteres que vous travaillez.."})
+  TriggerEvent("mythic_progbar:client:progress", {name = "kol_calis", duration = Config.Halterestemps * 1000, label = "工作時鍛煉.."})
   Citizen.Wait(Config.Halterestemps * 1000)
   if Config.removedrinkonspor then
     TriggerServerEvent('eff:onspor', _source)
@@ -319,13 +319,13 @@ function Halteres2()
   SetEntityCoords(playerPed, Config.Coords.Halteres2.x,Config.Coords.Halteres2.y,Config.Coords.Halteres2.z-0.95)
   FreezeEntityPosition(playerPed, true)
   TaskStartScenarioInPlace(playerPed, "world_human_muscle_free_weights", 0, true)
-  TriggerEvent("mythic_progbar:client:progress", {name = "kol_calis", duration = Config.Halteres2temps * 1000, label = "Halteres que vous travaillez.."})
+  TriggerEvent("mythic_progbar:client:progress", {name = "kol_calis", duration = Config.Halteres2temps * 1000, label = "舉啞鈴.."})
   Citizen.Wait(Config.Halteres2temps * 1000)
   if Config.removedrinkonspor then
     TriggerServerEvent('eff:onspor', _source)
   end
   onspor = false
-  exports['mythic_notify']:SendAlert('inform', 'Votre soif a augmenté', 5000)
+  exports['mythic_notify']:SendAlert('inform', '口渴了', 5000)
   FreezeEntityPosition(playerPed, false)
   ClearPedTasksImmediately(playerPed)
 end
@@ -338,13 +338,13 @@ function Tractions()
   SetEntityCoords(playerPed, Config.Coords.Tractions.x,Config.Coords.Tractions.y,Config.Coords.Tractions.z-1.05)
   FreezeEntityPosition(playerPed, true)
   TaskStartScenarioInPlace(playerPed, "prop_human_muscle_chin_ups", 0, true)
-  TriggerEvent("mythic_progbar:client:progress", {name = "barfiks_cek", duration = Config.Tractionstemps * 1000, label = "Vous faies des Tractions.."})
+  TriggerEvent("mythic_progbar:client:progress", {name = "barfiks_cek", duration = Config.Tractionstemps * 1000, label = "做引體向上.."})
   Citizen.Wait(Config.Tractionstemps * 1000)
   if Config.removedrinkonspor then
     TriggerServerEvent('eff:onspor', _source)
   end
   onspor = false
-  exports['mythic_notify']:SendAlert('inform', 'Votre soif a augmenté..', 5000)
+  exports['mythic_notify']:SendAlert('inform', '口渴了..', 5000)
   FreezeEntityPosition(playerPed, false)
 	ClearPedTasksImmediately(playerPed)
 end
@@ -357,13 +357,13 @@ function Tractions2()
   SetEntityCoords(playerPed, Config.Coords.Tractions2.x,Config.Coords.Tractions2.y,Config.Coords.Tractions2.z-1.05)
   FreezeEntityPosition(playerPed, true)
   TaskStartScenarioInPlace(playerPed, "prop_human_muscle_chin_ups", 0, true)
-  TriggerEvent("mythic_progbar:client:progress", {name = "barfiks_cek", duration = Config.Tractions2temps * 1000, label = "Vous faies des Tractions.."})
+  TriggerEvent("mythic_progbar:client:progress", {name = "barfiks_cek", duration = Config.Tractions2temps * 1000, label = "做引體向上.."})
   Citizen.Wait(Config.Tractions2temps * 1000)
   if Config.removedrinkonspor then
     TriggerServerEvent('eff:onspor', _source)
   end
   onspor = false
-  exports['mythic_notify']:SendAlert('inform', 'Votre soif a augmenté..', 5000)
+  exports['mythic_notify']:SendAlert('inform', '口渴了..', 5000)
   FreezeEntityPosition(playerPed, false)
 	ClearPedTasksImmediately(playerPed)
 end
@@ -376,7 +376,7 @@ function yogayap()
   SetEntityCoords(playerPed, Config.Coords.YogaYap.x,Config.Coords.YogaYap.y,Config.Coords.YogaYap.z-0.95)
   FreezeEntityPosition(playerPed, true)
   TaskStartScenarioInPlace(playerPed, "world_human_yoga", 0, true)
-  TriggerEvent("mythic_progbar:client:progress", {name = "yoga_c", duration = Config.yogasuresi * 1000, label = "Tu fais du yoga.."})
+  TriggerEvent("mythic_progbar:client:progress", {name = "yoga_c", duration = Config.yogasuresi * 1000, label = "做瑜珈.."})
   Citizen.Wait(Config.yogasuresi * 1000)
   if Config.removestressonyoga then
     TriggerServerEvent('eff:onyoga', _source)
@@ -385,7 +385,7 @@ function yogayap()
     TriggerServerEvent('eff:onspor', _source)
   end
   onspor = false
-  exports['mythic_notify']:SendAlert('inform', 'Votre soif a augmenté et votre stress a diminué.', 5000)
+  exports['mythic_notify']:SendAlert('inform', '口渴了，壓力減輕了..', 5000)
   FreezeEntityPosition(playerPed, false)
   ClearPedTasksImmediately(playerPed)
 end
@@ -396,13 +396,13 @@ function Abdos()
   onspor = true
   FreezeEntityPosition(playerPed, true)
 	TaskStartScenarioInPlace(playerPed, "world_human_sit_ups", 0, true)
-	TriggerEvent("mythic_progbar:client:progress", {name = "mekik_cek", duration = Config.abdostemps * 1000, label = "Vous faites des Abdos.."})
+	TriggerEvent("mythic_progbar:client:progress", {name = "mekik_cek", duration = Config.abdostemps * 1000, label = "練腹肌.."})
   Citizen.Wait(Config.abdostemps * 1000)
   if Config.removedrinkonspor then
     TriggerServerEvent('eff:onspor', _source)
   end
   onspor = false
-  exports['mythic_notify']:SendAlert('inform', 'Votre soif a augmenté..', 5000)
+  exports['mythic_notify']:SendAlert('inform', '口渴了..', 5000)
   FreezeEntityPosition(playerPed, false)
 	ClearPedTasksImmediately(playerPed)
 end
@@ -413,13 +413,13 @@ function Abdos2()
   onspor = true
   FreezeEntityPosition(playerPed, true)
 	TaskStartScenarioInPlace(playerPed, "world_human_sit_ups", 0, true)
-	TriggerEvent("mythic_progbar:client:progress", {name = "mekik_cek", duration = Config.abdos2temps * 1000, label = "Vous faites des Abdos.."})
+	TriggerEvent("mythic_progbar:client:progress", {name = "mekik_cek", duration = Config.abdos2temps * 1000, label = "練腹肌.."})
   Citizen.Wait(Config.abdos2temps * 1000)
   if Config.removedrinkonspor then
     TriggerServerEvent('eff:onspor', _source)
   end
   onspor = false
-  exports['mythic_notify']:SendAlert('inform', 'Votre soif a augmenté..', 5000)
+  exports['mythic_notify']:SendAlert('inform', '口渴了..', 5000)
   FreezeEntityPosition(playerPed, false)
 	ClearPedTasksImmediately(playerPed)
 end
@@ -432,12 +432,12 @@ function Pompes()
   SetEntityCoords(playerPed, Config.Coords.Pompes.x,Config.Coords.Pompes.y,Config.Coords.Pompes.z-0.95)
   FreezeEntityPosition(playerPed, true)
   TaskStartScenarioInPlace(playerPed, "world_human_push_ups", 0, true)
-  TriggerEvent("mythic_progbar:client:progress", {name = "sinav_cek", duration = Config.Pompestemps * 1000, label = "Faire des Pompess.."})
+  TriggerEvent("mythic_progbar:client:progress", {name = "sinav_cek", duration = Config.Pompestemps * 1000, label = "做仰臥起坐.."})
   Citizen.Wait(Config.Pompestemps * 1000)
   if Config.removedrinkonspor then
     TriggerServerEvent('eff:onspor', _source)
   end
-  exports['mythic_notify']:SendAlert('inform', 'Votre soif a augmenté..', 5000)
+  exports['mythic_notify']:SendAlert('inform', '口渴了..', 5000)
   onspor = false
   ClearPedTasksImmediately(playerPed)
   FreezeEntityPosition(playerPed, false)
@@ -451,12 +451,12 @@ function Pompes2()
   SetEntityCoords(playerPed, Config.Coords.Pompes2.x,Config.Coords.Pompes2.y,Config.Coords.Pompes2.z-0.95)
   FreezeEntityPosition(playerPed, true)
   TaskStartScenarioInPlace(playerPed, "world_human_push_ups", 0, true)
-  TriggerEvent("mythic_progbar:client:progress", {name = "sinav_cek", duration = Config.Pompes2temps * 1000, label = "Faire des Pompess.."})
+  TriggerEvent("mythic_progbar:client:progress", {name = "sinav_cek", duration = Config.Pompes2temps * 1000, label = "做仰臥起坐.."})
   Citizen.Wait(Config.Pompes2temps * 1000)
   if Config.removedrinkonspor then
     TriggerServerEvent('eff:onspor', _source)
   end
-  exports['mythic_notify']:SendAlert('inform', 'Votre soif a augmenté..', 5000)
+  exports['mythic_notify']:SendAlert('inform', '口渴了..', 5000)
   onspor = false
   ClearPedTasksImmediately(playerPed)
   FreezeEntityPosition(playerPed, false)
@@ -474,7 +474,7 @@ function Eau()
 		Citizen.Wait(1)
     end
     TaskPlayAnim(playerPed, dict, 'machinic_loop_mechandplayer', 8.0, -8.0, 5000, 1, 0, false, false, false)
-    TriggerEvent("mythic_progbar:client:progress", {name = "su_al", duration = Config.eautemps * 1000, label = "Vous prenez de l'eau.."})
+    TriggerEvent("mythic_progbar:client:progress", {name = "su_al", duration = Config.eautemps * 1000, label = "拿取水.."})
     Citizen.Wait(Config.eautemps * 1000)
     TriggerServerEvent('eff:eau', _source)
     ClearPedTasksImmediately(playerPed)

@@ -739,7 +739,7 @@ ESX.Game.Utils.DrawText3D = function(coords, text, size, font)
 	local distance = #(coords - camCoords)
 
 	if not size then size = 1 end
-	if not font then font = 0 end
+	if not font then font = 1 end
 
 	local scale = (size / distance) * 2
 	local fov = (1 / GetGameplayCamFov()) * 100
