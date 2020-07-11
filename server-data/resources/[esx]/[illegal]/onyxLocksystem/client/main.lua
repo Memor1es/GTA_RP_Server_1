@@ -153,7 +153,7 @@ Citizen.CreateThread(function()
                             isSearching = false
                             exports['mythic_notify']:DoHudText('error', '沒找到任何東西')
                         else
-                            local rnd = math.random(1, 6)
+                            local rnd = math.random(1, 5)
                             local time_for_find_key = 6000
                             isSearching = true
                             if rnd == 1 then
@@ -405,7 +405,8 @@ Citizen.CreateThread(function()
         local pos = GetEntityCoords(GetPlayerPed(-1))
         local dist = GetDistanceBetweenCoords(pos.x, pos.y, pos.z, entPos.x, entPos.y, entPos.z, true)
 
-        if foundEnt and prevPed ~= aimingEnt and IsPedInAnyVehicle(aimingEnt, false) and IsPedArmed(PlayerPedId(), 7) and dist < 20.0 and not IsPedInAnyVehicle(PlayerPedId()) then
+        if foundEnt and prevPed ~= aimingEnt and IsPedInAnyVehicle(aimingEnt, false) and IsPedArmed(PlayerPedId(), 7) and dist < 10.0 and not IsPedInAnyVehicle(PlayerPedId()) then
+            
             if not IsPedAPlayer(aimingEnt) then
                 prevPed = aimingEnt
                 Wait(math.random(300, 700))
@@ -416,7 +417,7 @@ Citizen.CreateThread(function()
                 end
                 local rand = math.random(1, 10)
 
-                if rand > 6 then
+                if rand > 7 then
                     prevCar = GetVehiclePedIsIn(aimingEnt, false)
                     TaskLeaveVehicle(aimingEnt, prevCar)
                     SetVehicleEngineOn(prevCar, false, false, false)
@@ -450,7 +451,7 @@ Citizen.CreateThread(function()
                 ESX.ShowHelpNotification("按下 ~INPUT_CONTEXT~ ~r~來搶鑰匙")
                 if IsControlJustReleased(0, 38) then
                     local rand = math.random(1, 10)
-                    if rand <= 4 then
+                    if rand <= 5 then
                         Wait(400)
                         ESX.ShowNotification("~r~他們不交出鑰匙")
                         -- exports['mythic_notify']:DoHudText('inform', '他們不交出鑰匙')
