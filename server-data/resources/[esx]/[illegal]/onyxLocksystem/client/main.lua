@@ -158,9 +158,9 @@ Citizen.CreateThread(function()
                                 print("here 4")
                                 TriggerEvent("mythic_progressbar:client:progress", {
                                     name = "find_key_1",
-                                    duration = time,
+                                    duration = 6000,
                                     label = "尋找鑰匙中...",
-                                    useWhileDead = time4,
+                                    useWhileDead = false,
                                     canCancel = true,
                                     controlDisables = {
                                         disableMovement = true,
@@ -189,9 +189,9 @@ Citizen.CreateThread(function()
                                 print("here other")
                                 TriggerEvent("mythic_progressbar:client:progress", {
                                     name = "find_key_1",
-                                    duration = time,
+                                    duration = 6000,
                                     label = "尋找鑰匙中...",
-                                    useWhileDead = time4,
+                                    useWhileDead = false,
                                     canCancel = true,
                                     controlDisables = {
                                         disableMovement = true,
