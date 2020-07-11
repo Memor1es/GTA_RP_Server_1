@@ -215,10 +215,40 @@ AddEventHandler('onyx:beginHotwire', function(plate)
         end
     end
 
-    exports['progressBars']:startUI(time, "換煞車皮 [Stage 1]")
-    TaskPlayAnim(PlayerPedId(), "veh@std@ds@base", "hotwire", 8.0, 8.0, -1, 1, 0.3, true, true, true)
-    Citizen.Wait(time)
-    Wait(1000)
+    local cancel = false
+    local complete = false
+    TriggerEvent("mythic_progressbar:client:progress", {
+        name = "thief_car1",
+        duration = time,
+        label = "先拆坐墊...",
+        useWhileDead = false,
+        canCancel = true,
+        controlDisables = {
+            disableMovement = true,
+            disableCarMovement = true,
+            disableMouse = false,
+            disableCombat = true,
+        },
+        animation = {
+            animDict = "veh@std@ds@base",
+            anim = "hotwire",
+        },
+        prop = {
+            model = "prop_paper_bag_small",
+        }
+    }, function(status)
+        if not status then
+            -- Do Something If Event Wasn't Cancelled
+            complete = true
+        else
+            cancel = true
+        end
+    end)
+
+    while complete == false and cancel == false do
+        Citizen.Wait(50)
+    end
+    
     exports['progressBars']:startUI(time, "先拆坐墊 [Stage 2]")
     TaskPlayAnim(PlayerPedId(), "veh@std@ds@base", "hotwire", 8.0, 8.0, -1, 1, 0.6, true, true, true)
     Citizen.Wait(time)
