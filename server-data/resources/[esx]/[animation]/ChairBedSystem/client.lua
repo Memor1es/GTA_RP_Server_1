@@ -95,7 +95,6 @@ CreateThread(function()
                     if IsControlJustPressed(0, Config.objects.ButtonToLayOnBed) then
                         TriggerServerEvent('ChairBedSystem:Server:Enter', ObjectAr, ObjectAr.fObjectCoords)
                     end
-                elseif
                 else
                     DisplayHelpText(Config.Text.SitOnChair, 1)
                     if IsControlJustPressed(0, Config.objects.ButtonToSitOnChair) then
