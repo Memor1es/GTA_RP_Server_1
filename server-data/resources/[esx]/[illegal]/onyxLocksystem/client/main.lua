@@ -151,7 +151,7 @@ Citizen.CreateThread(function()
                                 isSearching = true
 
                                 TriggerEvent("mythic_progressbar:client:progress", {
-                                    name = "thief_car1",
+                                    name = "find_key_1",
                                     duration = time,
                                     label = "尋找鑰匙中...",
                                     useWhileDead = 6000,
@@ -183,7 +183,7 @@ Citizen.CreateThread(function()
                                 isSearching = true
 
                                 TriggerEvent("mythic_progressbar:client:progress", {
-                                    name = "thief_car1",
+                                    name = "find_key_1",
                                     duration = time,
                                     label = "尋找鑰匙中...",
                                     useWhileDead = 6000,
