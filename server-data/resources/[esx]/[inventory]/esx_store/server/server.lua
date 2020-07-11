@@ -99,7 +99,7 @@ AddEventHandler('esx_store:getItem', function(owner, type, item, count)
 				end
 			end
 		end)--]]
-		TriggerEvent('esx_datastore:getDataStore', 'property', xPlayerOwner.identifier, function(store)
+		TriggerEvent('esx_datastore:getDataStore', 'store', xPlayerOwner.identifier, function(store)
 			local storeWeapons = store.get('weapons') or {}
 			local weaponName   = nil
 			local ammo         = nil
@@ -119,3 +119,4 @@ AddEventHandler('esx_store:getItem', function(owner, type, item, count)
 		end)
 	end
 end)
+

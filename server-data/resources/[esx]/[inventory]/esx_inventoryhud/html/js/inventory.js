@@ -376,6 +376,11 @@ $(document).ready(function () {
                 $.post("http://esx_inventoryhud/TakeFromFast", JSON.stringify({
                     item: itemData
                 }));
+            } else if (type === "store" && itemInventory === "second") {
+                disableInventory(500);
+                $.post("http://esx_inventoryhud/TakeFromStore", JSON.stringify({
+                    item: itemData
+                }));
             }
         }
     });
@@ -415,6 +420,12 @@ $(document).ready(function () {
             } else if (type === "player" && itemInventory === "main") {
                 disableInventory(500);
                 $.post("http://esx_inventoryhud/PutIntoPlayer", JSON.stringify({
+                    item: itemData,
+                    number: parseInt($("#count").val())
+                }));
+            } else if (type === "store" && itemInventory === "main") {
+                disableInventory(500);
+                $.post("http://esx_inventoryhud/PutIntoStore", JSON.stringify({
                     item: itemData,
                     number: parseInt($("#count").val())
                 }));
