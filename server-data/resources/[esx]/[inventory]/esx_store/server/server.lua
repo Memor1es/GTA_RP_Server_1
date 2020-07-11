@@ -120,3 +120,27 @@ AddEventHandler('esx_store:getItem', function(owner, type, item, count)
 	end
 end)
 
+ESX.RegisterServerCallback('esx_store:getStoreInventory', function(source, cb, owner)
+	local xPlayer    = ESX.GetPlayerFromIdentifier(owner)
+	local blackMoney = 0
+	local items      = {}
+	local weapons    = {}
+
+	TriggerEvent('esx_addonaccount:getAccount', 'store_black_money', xPlayer.identifier, function(account)
+		blackMoney = account.money
+	end)
+
+	TriggerEvent('esx_addoninventory:getInventory', 'store', xPlayer.identifier, function(inventory)
+		items = inventory.items
+	end)
+
+	TriggerEvent('esx_datastore:getDataStore', 'store', xPlayer.identifier, function(store)
+		weapons = store.get('weapons') or {}
+	end)
+
+	cb({
+		blackMoney = blackMoney,
+		items      = items,
+		weapons    = weapons
+	})
+end)
