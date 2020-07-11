@@ -255,8 +255,6 @@ AddEventHandler('onyx:beginHotwire', function(plate)
         Citizen.Wait(50)
     end
 
-    
-
     if complete == true then
         complete = false
         TriggerEvent("mythic_progressbar:client:progress", {
