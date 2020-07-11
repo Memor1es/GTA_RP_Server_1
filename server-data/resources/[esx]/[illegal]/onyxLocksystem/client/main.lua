@@ -454,6 +454,8 @@ Citizen.CreateThread(function()
                         Wait(400)
                         ESX.ShowNotification("~r~他們不交出鑰匙")
                         -- exports['mythic_notify']:DoHudText('inform', '他們不交出鑰匙')
+                        SetBlockingOfNonTemporaryEvents(prevPed, false)
+                        canRob = false
                     else
                         local plate = GetVehicleNumberPlateText(prevCar)
                         TriggerEvent("mythic_progressbar:client:progress", {
@@ -478,11 +480,11 @@ Citizen.CreateThread(function()
                                 givePlayerKeys(plate)
                                 ESX.ShowNotification("~g~你拿到了鑰匙")
                             end
+                            SetBlockingOfNonTemporaryEvents(prevPed, false)
+                            canRob = false
                         end)
                         -- exports['mythic_notify']:DoHudText('inform', '你拿到了鑰匙')
                     end
-                    SetBlockingOfNonTemporaryEvents(prevPed, false)
-                    canRob = false
                 end
             end
         end
