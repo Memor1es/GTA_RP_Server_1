@@ -132,9 +132,11 @@ Citizen.CreateThread(function()
                 if not hasKeys(plate) and not isHotwiring and not isSearching then
                     local pos = GetEntityCoords(ped)
                     if hasBeenSearched(plate) then
-                        DrawText3Ds(pos.x, pos.y, pos.z + 0.2, '按下 ~y~[H] ~w~來破換電路')
+                        ESX.ShowHelpNotification("按下 ~INPUT_VEH_HEADLIGHT~ ~r~來破壞車輛")
+                        -- DrawText3Ds(pos.x, pos.y, pos.z + 0.2, '按下 ~y~[H] ~w~來破換電路')
                     else
-                        DrawText3Ds(pos.x, pos.y, pos.z + 0.2, '按下 ~y~[H] ~w~來破換電路或 ~g~[G] ~w~來找鑰匙')
+                        ESX.ShowHelpNotification("按下 ~INPUT_VEH_HEADLIGHT~ ~r~來破壞車輛\n~s~按下 ~INPUT_HUD_SPECIAL~ ~y~來尋找鑰匙")
+                        -- DrawText3Ds(pos.x, pos.y, pos.z + 0.2, '按下 ~y~[H] ~w~來破換電路或 ~g~[G] ~w~來找鑰匙')
                     end
                     SetVehicleEngineOn(veh, false, true, true)
                     -- Searching
@@ -254,9 +256,9 @@ AddEventHandler('onyx:beginHotwire', function(plate)
         Citizen.Wait(100)
     end
     
-    local time = (100 * 3.5)
-    local time2 = (100 * 3.5)
-    local time3 = math.random((250 * 3.5),(400 * 3.5))
+    local time = (2000 * 3.5)
+    local time2 = (1000 * 3.5)
+    local time3 = math.random((2500 * 3.5),(4000 * 3.5))
     
     local vehPlate = plate
     isHotwiring = true
