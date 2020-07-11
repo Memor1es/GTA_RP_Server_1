@@ -65,6 +65,7 @@ AddEventHandler('esx_store:getItem', function(owner, type, item, count)
 			-- is there enough in the property?
 			if count > 0 and inventoryItem.count >= count then
 				-- can the player carry the said amount of x item?
+				
 				if xPlayer.canCarryItem(item, count) then
 					inventory.removeItem(item, count)
 					xPlayer.addInventoryItem(item, count)
@@ -126,6 +127,9 @@ ESX.RegisterServerCallback('esx_store:getStoreInventory', function(source, cb, o
 	local items      = {}
 	local weapons    = {}
 
+	TriggerEvent('esx_addonaccount:getAccount', 'store_black_money', xPlayer.identifier, function(account)
+		blackMoney = account.money
+	end)
 
 	TriggerEvent('esx_addoninventory:getInventory', 'store', xPlayer.identifier, function(inventory)
 		items = inventory.items

@@ -17,8 +17,8 @@ AddEventHandler('onyx:reqHotwiring', function(plate)
 
     if xPlayer.getInventoryItem('lockpick').count > 0 then
         TriggerClientEvent('onyx:beginHotwire', source, plate)
-        local rnd = math.random(1, 25)
-        if rnd == 20 then
+        local rnd = math.random(1, 2)
+        if rnd == 1 then
             xPlayer.removeInventoryItem('lockpick', 1)
             TriggerClientEvent('mythic_notify:client:SendAlert', source, {type = 'error', text = 'Your lockpick has broken'})
         end

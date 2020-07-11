@@ -139,6 +139,7 @@ RegisterNUICallback(
             if isPlayerSafe then
                 TriggerServerEvent("playersafes:GetItem", ESX.GetPlayerData().identifier, data.item.type, data.item.name, tonumber(data.number), isPlayerSafe.safeid)
             else
+                print("數量:" .. data.number)
                 TriggerServerEvent("esx_store:getItem", ESX.GetPlayerData().identifier, data.item.type, data.item.name, tonumber(data.number))
             end
         end
