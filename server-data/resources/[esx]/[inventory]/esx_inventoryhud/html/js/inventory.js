@@ -387,7 +387,8 @@ $(document).ready(function () {
             } else if (type === "store" && itemInventory === "second") {
                 disableInventory(500);
                 $.post("http://esx_inventoryhud/TakeFromStore", JSON.stringify({
-                    item: itemData
+                    item: itemData,
+                    number: parseInt($("#count").val())
                 }));
             }
         }
