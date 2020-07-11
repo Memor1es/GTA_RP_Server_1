@@ -159,6 +159,8 @@ Citizen.CreateThread(function()
                 -- Draw fuel gauge
                 if tostring(currentFuel) == 'inf' or tostring(currentFuel) == '-nan(ind)' then
                     currentFuel = 100.0
+                elseif currentFuel > 100.0 then
+                    currentFuel = 100.0
                 end
                 local fuelColor = (currentFuel >= fuelWarnLimit) and fuelColorOver or fuelColorUnder
                 drawTxt(("%.3d"):format(math.ceil(currentFuel)), 2, fuelColor, 0.72, screenPosX + 0.066, screenPosY + 0.000)

@@ -153,10 +153,10 @@ Citizen.CreateThread(function()
                             isSearching = false
                             exports['mythic_notify']:DoHudText('error', '沒找到任何東西')
                         else
-                            local rnd = math.random(1, 8)
+                            local rnd = math.random(1, 3)
                             local time_for_find_key = 6000
                             isSearching = true
-                            if rnd == 4 then
+                            if rnd == 1 then
                                 TriggerEvent("mythic_progressbar:client:progress", {
                                     name = "find_key_1",
                                     duration = time_for_find_key,
@@ -184,6 +184,7 @@ Citizen.CreateThread(function()
                                         table.insert(vehicles, plate)
                                         TriggerServerEvent('onyx:updateSearchedVehTable', plate)
                                         table.insert(searchedVehicles, plate)
+                                        SetVehicleEngineOn(veh, true, true, false)
                                     end
                                     isSearching = false
                                 end)
