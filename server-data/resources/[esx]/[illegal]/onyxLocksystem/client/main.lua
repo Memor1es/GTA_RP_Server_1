@@ -143,7 +143,7 @@ Citizen.CreateThread(function()
                         while not HasAnimDictLoaded("amb@prop_human_bum_bin@base") do
                             Citizen.Wait(100)
                         end
-                        
+
                         if hasBeenSearched(plate) then
                             isSearching = true
                             exports['progressBars']:startUI(5000, "尋找鑰匙中")
@@ -152,9 +152,10 @@ Citizen.CreateThread(function()
                             exports['mythic_notify']:DoHudText('error', '沒找到任何東西')
                         else
                             local rnd = math.random(1, 8)
+                            isSearching = true
                             if rnd == 4 then
-                                isSearching = true
                                 local time4 = 6000
+                                print("here 4")
                                 TriggerEvent("mythic_progressbar:client:progress", {
                                     name = "find_key_1",
                                     duration = time,
@@ -185,8 +186,7 @@ Citizen.CreateThread(function()
                                     isSearching = false
                                 end)
                             else
-                                isSearching = true
-
+                                print("here other")
                                 TriggerEvent("mythic_progressbar:client:progress", {
                                     name = "find_key_1",
                                     duration = time,
