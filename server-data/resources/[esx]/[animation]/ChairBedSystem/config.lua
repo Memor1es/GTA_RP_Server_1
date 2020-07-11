@@ -27,14 +27,14 @@ Config.objects = {
 		[9] = {position = vector3(1768.3,2587.18,45.27), verticalOffsetX=0.0, verticalOffsetY=0.0, verticalOffsetZ=-1.4, direction=0.0, bed=true, coords=true},
 
 		--jail 1f sit other side
-		[10] = {position = vector3(1775.22,2578.86,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false, coords=true},
-		[11] = {position = vector3(1775.16,2582.95,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false, coords=true},
-		[12] = {position = vector3(1775.24,2586.65,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false, coords=true},
-		[13] = {position = vector3(1779.01,2586.64,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false, coords=true},
-		[14] = {position = vector3(1782.68,2586.66,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false, coords=true},
-		[15] = {position = vector3(1779.09,2582.95,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false, coords=true},
-		[16] = {position = vector3(1782.65,2582.97,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false, coords=true},
-		[17] = {position = vector3(1782.82,2578.98,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false, coords=true},
+		[10] = {position = vector3(1775.22,2578.86,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false},
+		[11] = {position = vector3(1775.16,2582.95,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false},
+		[12] = {position = vector3(1775.24,2586.65,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false},
+		[13] = {position = vector3(1779.01,2586.64,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false},
+		[14] = {position = vector3(1782.68,2586.66,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false},
+		[15] = {position = vector3(1779.09,2582.95,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false},
+		[16] = {position = vector3(1782.65,2582.97,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false},
+		[17] = {position = vector3(1782.82,2578.98,45.8), verticalOffsetX=0.4, verticalOffsetY=-0.1, verticalOffsetZ= 0.5, direction=213.3, bed=false},
 
 	}
 }
