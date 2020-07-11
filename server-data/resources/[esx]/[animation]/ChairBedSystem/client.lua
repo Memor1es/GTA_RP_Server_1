@@ -20,33 +20,24 @@ CreateThread(function()
         if (InUse == false) and (canSleep == true) then
             plyCoords = GetEntityCoords(PlayerPedId(), 0)
             for k, v in pairs(Config.objects.locations) do
-                if (v.coords) == true then
-                  local oObject = GetClosestObjectOfType(plyCoords.x, plyCoords.y, plyCoords.z, 1.0, GetHashKey(v.object), 0, 0, 0)
-                else then
-                  local oObject = k
-                end
+                --local oObject = GetClosestObjectOfType(plyCoords.x, plyCoords.y, plyCoords.z, 1.0, GetHashKey(v.object), 0, 0, 0)
+                local oObject = k
                 if (oObject ~= 0) then
-                    if (v.coords)  == true then
-                        local oObjectCoords = GetEntityCoords(oObject)
-                    else then
-                        local oObjectCoords = v.position
-                    end
+                    --local oObjectCoords = GetEntityCoords(oObject)
+                    local oObjectCoords = v.position
                     local ObjectDistance = #(vector3(oObjectCoords) - plyCoords)
                     if (ObjectDistance < 2) then
                         if (oObject ~= currObject) then
                             currObject = oObject
-                            if (v.coords)  == true then
-                                local oObjectExists = DoesEntityExist(oObject)
-                            end
+                            --local oObjectExists = DoesEntityExist(oObject)
                             ObjectAr = {
-                                fObject = oObject,
+                                fObject = k,
                                 fObjectCoords = oObjectCoords,
                                 fObjectcX = v.verticalOffsetX,
                                 fObjectcY = v.verticalOffsetY,
                                 fObjectcZ = v.verticalOffsetZ,
                                 fObjectDir = v.direction,
-                                fObjectIsBed = v.bed,
-                                fObjecttrue = v.coords
+                                fObjectIsBed = v.bed
                             }
                         end
                     end
@@ -148,84 +139,67 @@ end)
 
 RegisterNetEvent('ChairBedSystem:Client:Animation')
 AddEventHandler('ChairBedSystem:Client:Animation', function(v, objectcoords)
-    local object = v.fObject
+    --local object = v.fObject
     local vertx = v.fObjectcX
     local verty = v.fObjectcY
     local vertz = v.fObjectcZ
     local dir = v.fObjectDir
     local isBed = v.fObjectIsBed
     local objectcoords = v.fObjectCoords
-    local fObjecttrue = v.fObjecttrue
     
     local ped = PlayerPedId()
     PlyLastPos = GetEntityCoords(ped)
-    FreezeEntityPosition(object, true)
+    --FreezeEntityPosition(object, true)
     FreezeEntityPosition(ped, true)
     inUse = true
     if isBed == false then
         if Config.objects.SitAnimation.dict ~= nil then
             SetEntityCoords(ped, objectcoords.x, objectcoords.y, objectcoords.z + 0.5)
-            if fObjecttrue == true then
-                SetEntityHeading(ped, GetEntityHeading(object) - 180.0)
-            end
+            --SetEntityHeading(ped, GetEntityHeading(object) - 180.0)
             local dict = Config.objects.SitAnimation.dict
             local anim = Config.objects.SitAnimation.anim
             
             AnimLoadDict(dict, anim, ped)
         else
-            if fObjecttrue == true then
-              TaskStartScenarioAtPosition(ped, Config.objects.SitAnimation.anim, objectcoords.x + vertx, objectcoords.y + verty, objectcoords.z - vertz, GetEntityHeading(object) + dir, 0, true, true)
-            end
+            --TaskStartScenarioAtPosition(ped, Config.objects.SitAnimation.anim, objectcoords.x + vertx, objectcoords.y + verty, objectcoords.z - vertz, GetEntityHeading(object) + dir, 0, true, true)
             TaskStartScenarioAtPosition(ped, Config.objects.SitAnimation.anim, objectcoords.x + vertx, objectcoords.y + verty, objectcoords.z - vertz, dir, 0, true, true)
         end
     else
         if Anim == 'back' then
             if Config.objects.BedBackAnimation.dict ~= nil then
                 SetEntityCoords(ped, objectcoords.x, objectcoords.y, objectcoords.z + 0.5)
-                if fObjecttrue == true then
-                    SetEntityHeading(ped, GetEntityHeading(object) - 180.0)
-                end
+                --SetEntityHeading(ped, GetEntityHeading(object) - 180.0)
                 local dict = Config.objects.BedBackAnimation.dict
                 local anim = Config.objects.BedBackAnimation.anim
                 
                 Animation(dict, anim, ped)
             else
                 TaskStartScenarioAtPosition(ped, Config.objects.BedBackAnimation.anim, objectcoords.x + vertx, objectcoords.y + verty, objectcoords.z - vertz, dir, 0, true, true)
-                if fObjecttrue == true then
-                    TaskStartScenarioAtPosition(ped, Config.objects.BedBackAnimation.anim, objectcoords.x + vertx, objectcoords.y + verty, objectcoords.z - vertz, GetEntityHeading(object) + dir, 0, true, true)           
-                end
+                --TaskStartScenarioAtPosition(ped, Config.objects.BedBackAnimation.anim, objectcoords.x + vertx, objectcoords.y + verty, objectcoords.z - vertz, GetEntityHeading(object) + dir, 0, true, true)
             end
         elseif Anim == 'stomach' then
             if Config.objects.BedStomachAnimation.dict ~= nil then
                 SetEntityCoords(ped, objectcoords.x, objectcoords.y, objectcoords.z + 0.5)
-                if fObjecttrue == true then
-                    SetEntityHeading(ped, GetEntityHeading(object) - 180.0)
-                end
+                --SetEntityHeading(ped, GetEntityHeading(object) - 180.0)
                 local dict = Config.objects.BedStomachAnimation.dict
                 local anim = Config.objects.BedStomachAnimation.anim
                 
                 Animation(dict, anim, ped)
             else
                 TaskStartScenarioAtPosition(ped, Config.objects.BedStomachAnimation.anim, objectcoords.x + vertx, objectcoords.y + verty, objectcoords.z - vertz, dir, 0, true, true)
-                if fObjecttrue == true then
-                    TaskStartScenarioAtPosition(ped, Config.objects.BedStomachAnimation.anim, objectcoords.x + vertx, objectcoords.y + verty, objectcoords.z - vertz, GetEntityHeading(object) + dir, 0, true, true)
-                end
+                --TaskStartScenarioAtPosition(ped, Config.objects.BedStomachAnimation.anim, objectcoords.x + vertx, objectcoords.y + verty, objectcoords.z - vertz, GetEntityHeading(object) + dir, 0, true, true)
             end
         elseif Anim == 'sit' then
             if Config.objects.BedSitAnimation.dict ~= nil then
                 SetEntityCoords(ped, objectcoords.x, objectcoords.y, objectcoords.z + 0.5)
-                if fObjecttrue == true then
-                    SetEntityHeading(ped, GetEntityHeading(object) - 180.0)
-                end
+                --SetEntityHeading(ped, GetEntityHeading(object) - 180.0)
                 local dict = Config.objects.BedSitAnimation.dict
                 local anim = Config.objects.BedSitAnimation.anim
                 
                 Animation(dict, anim, ped)
             else
                 TaskStartScenarioAtPosition(ped, Config.objects.BedSitAnimation.anim, objectcoords.x + vertx, objectcoords.y + verty, objectcoords.z - vertz, 180.0, 0, true, true)
-                if fObjecttrue == true then
-                    TaskStartScenarioAtPosition(ped, Config.objects.BedSitAnimation.anim, objectcoords.x + vertx, objectcoords.y + verty, objectcoords.z - vertz, GetEntityHeading(object) + 180.0, 0, true, true)
-                end
+                --TaskStartScenarioAtPosition(ped, Config.objects.BedSitAnimation.anim, objectcoords.x + vertx, objectcoords.y + verty, objectcoords.z - vertz, GetEntityHeading(object) + 180.0, 0, true, true)
             end
         end
     end
