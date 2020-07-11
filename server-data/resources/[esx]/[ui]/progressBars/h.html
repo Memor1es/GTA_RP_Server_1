@@ -24,7 +24,7 @@
 					if (item !== undefined && item.type === "ui") {		                
 						if (item.display === true) {
 		                    $("#mina").show();
-		                    console.log("starting this shit!");
+							
 							var start = new Date();
 							var maxTime = item.time;
 							var text = item.text;
@@ -41,7 +41,7 @@
 								var now = new Date();
 								var timeDiff = now.getTime() - start.getTime();
 								var perc = Math.round((timeDiff/maxTime)*100);
-								
+
 								if (perc <= 100) {
 									updateProgress(perc);
 									setTimeout(animateUpdate, timeoutVal);
