@@ -12,6 +12,8 @@ local currentWorkout = {
 }
 local lastWorkTime = -1
 local ownsMembership = false
+local bellmodel = "prop_barbell_100kg"
+local netid = nil
 
 -- Get ESX and PlayerData
 Citizen.CreateThread(function()
@@ -55,6 +57,11 @@ function stopWorkout()
         animDict = "",
         animName = ""
     }
+    if netid then
+        DetachEntity(NetToObj(netid), 1, 1)
+        DeleteEntity(NetToObj(netid))
+        netid = nil
+    end
 end
 
 -- Create blip
@@ -125,6 +132,12 @@ Citizen.CreateThread(function()
                             while not HasAnimDictLoaded(
                                 Config.WorkoutScenarios[v.workout][1]) do
                                 Citizen.Wait(10)
+                            end
+                            if v.workout ==2 then
+                                local cSCoords = GetOffsetFromEntityInWorldCoords(GetPlayerPed(PlayerId()), 0.0, 0.0, -5.0)
+                                local bellspawn = CreateObject(GetHashKey(bellmodel), cSCoords.x, cSCoords.y, cSCoords.z, 1, 1, 1)
+                                netid = ObjToNet(bellspawn)
+                                AttachEntityToEntity(vassouspawn,GetPlayerPed(PlayerId()),GetPedBoneIndex(GetPlayerPed(PlayerId()), 28422),-0.005,0.0,0.0,360.0,360.0,0.0,1,1,0,1,0,1)
                             end
                             TaskPlayAnim(playerPed,
                                          Config.WorkoutScenarios[v.workout][1],
