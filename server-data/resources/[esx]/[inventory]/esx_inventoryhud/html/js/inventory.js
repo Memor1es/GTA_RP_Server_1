@@ -23,7 +23,9 @@ window.addEventListener("message", function (event) {
 			ownerHouse = event.data.owner;
 		} else if (type === "empresa") {
             $(".info-div").hide();
-			empresaName = event.data.empresaName;
+            empresaName = event.data.empresaName;
+        } else if (type === "vault") {
+            $(".info-div").show(); 
         } else if (type === "player") {
             $(".info-div").show();
         }
@@ -345,6 +347,12 @@ $(document).ready(function () {
                     number: parseInt($("#count").val()),
 					owner : ownerHouse
                 }));
+            } else if (type === "vault" && itemInventory === "second") {
+                disableInventory(500);
+                $.post("http://esx_inventoryhud/TakeFromVault", JSON.stringify({
+                    item: itemData,
+                    number: parseInt($("#count").val())
+                }));
             } else if (type === "player" && itemInventory === "second") {
                 disableInventory(500);
                 $.post("http://esx_inventoryhud/TakeFromPlayer", JSON.stringify({
@@ -376,6 +384,11 @@ $(document).ready(function () {
                 $.post("http://esx_inventoryhud/TakeFromFast", JSON.stringify({
                     item: itemData
                 }));
+            } else if (type === "store" && itemInventory === "second") {
+                disableInventory(500);
+                $.post("http://esx_inventoryhud/TakeFromStore", JSON.stringify({
+                    item: itemData
+                }));
             }
         }
     });
@@ -398,6 +411,12 @@ $(document).ready(function () {
                     number: parseInt($("#count").val()),
 					owner : ownerHouse
                 }));
+            } else if (type === "vault" && itemInventory === "main") {
+                disableInventory(500);
+                $.post("http://esx_inventoryhud/PutIntoVault", JSON.stringify({
+                    item: itemData,
+                    number: parseInt($("#count").val())
+                }));
             } else if (type === "motel" && itemInventory === "main") {
                 disableInventory(500);
                 $.post("http://esx_inventoryhud/PutIntoMotel", JSON.stringify({
@@ -415,6 +434,12 @@ $(document).ready(function () {
             } else if (type === "player" && itemInventory === "main") {
                 disableInventory(500);
                 $.post("http://esx_inventoryhud/PutIntoPlayer", JSON.stringify({
+                    item: itemData,
+                    number: parseInt($("#count").val())
+                }));
+            } else if (type === "store" && itemInventory === "main") {
+                disableInventory(500);
+                $.post("http://esx_inventoryhud/PutIntoStore", JSON.stringify({
                     item: itemData,
                     number: parseInt($("#count").val())
                 }));
