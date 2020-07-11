@@ -22,13 +22,13 @@ CreateThread(function()
             for k, v in pairs(Config.objects.locations) do
                 if (v.coords) == true then
                   local oObject = GetClosestObjectOfType(plyCoords.x, plyCoords.y, plyCoords.z, 1.0, GetHashKey(v.object), 0, 0, 0)
-                else then
+                else
                   local oObject = k
                 end
                 if (oObject ~= 0) then
                     if (v.coords)  == true then
                         local oObjectCoords = GetEntityCoords(oObject)
-                    else then
+                    else
                         local oObjectCoords = v.position
                     end
                     local ObjectDistance = #(vector3(oObjectCoords) - plyCoords)
