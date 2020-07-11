@@ -11,7 +11,7 @@ client_scripts {
   "client/main.lua",
   "client/shop.lua",
   "client/trunk.lua",
-  "client/vault.lua"
+  "client/vault.lua",
   "client/motel.lua",
   "client/property.lua",
   "client/empresas.lua",
