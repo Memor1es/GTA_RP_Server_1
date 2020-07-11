@@ -1780,7 +1780,7 @@ Citizen.CreateThread(function()
 					end
 				end
 
-				for i=1, #v.Vehicles, 1 do
+				--[[for i=1, #v.Vehicles, 1 do
 					local distance = GetDistanceBetweenCoords(coords, v.Vehicles[i].Spawner, true)
 
 					if distance < Config.DrawDistance then
@@ -1804,7 +1804,7 @@ Citizen.CreateThread(function()
 					if distance < Config.MarkerSize.x then
 						isInMarker, currentStation, currentPart, currentPartNum = true, k, 'Helicopters', i
 					end
-				end
+				end]]
 
 				if Config.EnablePlayerManagement and PlayerData.job.grade_name == 'boss' then
 					for i=1, #v.BossActions, 1 do
