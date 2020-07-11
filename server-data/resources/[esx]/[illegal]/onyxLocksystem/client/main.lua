@@ -330,9 +330,10 @@ AddEventHandler('onyx:beginHotwire', function(plate)
 
     if complete == true then
         table.insert(vehicles, vehPlate)
-        isHotwiring = false
         SetVehicleEngineOn(veh, true, true, false)
     end
+    
+    isHotwiring = false
 end)
 
 local isRobbing = false
