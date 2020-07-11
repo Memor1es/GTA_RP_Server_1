@@ -154,9 +154,9 @@ Citizen.CreateThread(function()
                             exports['mythic_notify']:DoHudText('error', '沒找到任何東西')
                         else
                             local rnd = math.random(1, 8)
+                            local time_for_find_key = 60000
                             isSearching = true
                             if rnd == 4 then
-                                local time_for_find_key = 60000
                                 TriggerEvent("mythic_progressbar:client:progress", {
                                     name = "find_key_1",
                                     duration = time_for_find_key,
