@@ -86,7 +86,7 @@ end
 --take out
 
 function OpenRoomInventoryMenu(owner)
-	ESX.TriggerServerCallback('esx_property:getStoreInventory', function(inventory)
+	ESX.TriggerServerCallback('esx_store:getStoreInventory', function(inventory)
         TriggerEvent('esx_inventoryhud:openStoreInventory',inventory)
         --[[local elements = {}
 

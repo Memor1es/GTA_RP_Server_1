@@ -126,9 +126,6 @@ ESX.RegisterServerCallback('esx_store:getStoreInventory', function(source, cb, o
 	local items      = {}
 	local weapons    = {}
 
-	TriggerEvent('esx_addonaccount:getAccount', 'store_black_money', xPlayer.identifier, function(account)
-		blackMoney = account.money
-	end)
 
 	TriggerEvent('esx_addoninventory:getInventory', 'store', xPlayer.identifier, function(inventory)
 		items = inventory.items
