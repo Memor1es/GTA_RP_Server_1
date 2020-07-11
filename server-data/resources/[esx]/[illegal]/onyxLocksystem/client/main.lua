@@ -205,9 +205,9 @@ AddEventHandler('onyx:beginHotwire', function(plate)
         Citizen.Wait(100)
     end
     
-    local time = (1000 * 3.5)
-    local time2 = (1000 * 3.5)
-    local time3 = math.random((2500 * 3.5),(4000 * 3.5))
+    local time = (100 * 3.5)
+    local time2 = (100 * 3.5)
+    local time3 = math.random((250 * 3.5),(400 * 3.5))
     
     local vehPlate = plate
     isHotwiring = true
@@ -332,7 +332,7 @@ AddEventHandler('onyx:beginHotwire', function(plate)
         table.insert(vehicles, vehPlate)
         SetVehicleEngineOn(veh, true, true, false)
     end
-    
+
     isHotwiring = false
 end)
 
