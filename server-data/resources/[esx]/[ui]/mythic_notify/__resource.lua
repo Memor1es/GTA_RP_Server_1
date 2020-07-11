@@ -23,5 +23,6 @@ exports {
 	'SendUniqueAlert',
 	'PersistentAlert',
 	'DoCustomHudText',
-	'DoLongHudText'
+	'DoLongHudText',
+	'DoHudText'
 }

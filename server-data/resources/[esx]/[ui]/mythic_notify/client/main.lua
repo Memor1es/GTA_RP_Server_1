@@ -66,3 +66,12 @@ function DoLongHudText(type, text, style)
 		style = style
 	})
 end
+
+function DoHudText(type, text, style)
+	SendNUIMessage({
+		type = type,
+		text = text,
+		length = 2500,
+		style = style
+	})
+end
