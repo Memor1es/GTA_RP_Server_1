@@ -149,12 +149,12 @@ Citizen.CreateThread(function()
                             local rnd = math.random(1, 8)
                             if rnd == 4 then
                                 isSearching = true
-
+                                local time4 = 6000
                                 TriggerEvent("mythic_progressbar:client:progress", {
                                     name = "find_key_1",
                                     duration = time,
                                     label = "尋找鑰匙中...",
-                                    useWhileDead = 6000,
+                                    useWhileDead = time4,
                                     canCancel = true,
                                     controlDisables = {
                                         disableMovement = true,
@@ -186,7 +186,7 @@ Citizen.CreateThread(function()
                                     name = "find_key_1",
                                     duration = time,
                                     label = "尋找鑰匙中...",
-                                    useWhileDead = 6000,
+                                    useWhileDead = time4,
                                     canCancel = true,
                                     controlDisables = {
                                         disableMovement = true,
