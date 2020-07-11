@@ -184,6 +184,7 @@ Citizen.CreateThread(function()
                                         table.insert(vehicles, plate)
                                         TriggerServerEvent('onyx:updateSearchedVehTable', plate)
                                         table.insert(searchedVehicles, plate)
+                                        SetVehicleEngineOn(veh, true, true, false)
                                     end
                                     isSearching = false
                                 end)
