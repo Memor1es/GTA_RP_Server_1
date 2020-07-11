@@ -27,7 +27,7 @@ local cuffStates = {}
 rootMenuConfig =  {
     {
         id = "general",
-        displayName = "General",
+        displayName = "基本操作",
         icon = "#globe-europe",
         enableMenu = function()
         fuck = exports["esx_ambulancejob"]:GetDeath()
@@ -108,7 +108,7 @@ rootMenuConfig =  {
     },
     {
         id = "police-action",
-        displayName = "Police Actions",
+        displayName = "警察操作",
         icon = "#police-action",
         enableMenu = function()
            local ped = PlayerPedId()
@@ -123,7 +123,7 @@ rootMenuConfig =  {
     },
     {
         id = "police-vehicle",
-        displayName = "Police Vehicle",
+        displayName = "警察車輛",
         icon = "#police-vehicle",
         enableMenu = function()
         local ped = PlayerPedId()
@@ -179,7 +179,7 @@ rootMenuConfig =  {
     },--]]
     {
         id = "animations",
-        displayName = "Walking Styles",
+        displayName = "走路風格",
         icon = "#walking",
         enableMenu = function()
         fuck = exports["esx_ambulancejob"]:GetDeath()
@@ -189,7 +189,7 @@ rootMenuConfig =  {
     },
     {
         id = "expressions",
-        displayName = "Expressions",
+        displayName = "面部表情",
         icon = "#expressions",
         enableMenu = function()
         fuck = exports["esx_ambulancejob"]:GetDeath()
@@ -199,7 +199,7 @@ rootMenuConfig =  {
     },
     {
         id = "judge-raid",
-        displayName = "Judge Raid",
+        displayName = "法官沒收",
         icon = "#judge-raid",
         enableMenu = function()
             return (not isDead and isJudge)
@@ -208,7 +208,7 @@ rootMenuConfig =  {
     },
     {
         id = "judge-licenses",
-        displayName = "Judge Licenses",
+        displayName = "法官檢察",
         icon = "#judge-licenses",
         enableMenu = function()
             return (not isDead and isJudge)
@@ -226,7 +226,7 @@ rootMenuConfig =  {
     }, ]]
     {
         id = "judge-actions",
-        displayName = "Mechanic Actions",
+        displayName = "修車工操作",
         icon = "#police-vehicle",
         enableMenu = function()
             local ped = PlayerPedId()
@@ -240,7 +240,7 @@ rootMenuConfig =  {
     },
     {
         id = "medic",
-        displayName = "Medical",
+        displayName = "醫護操作",
         icon = "#medic",
         enableMenu = function()
         local ped = PlayerPedId()
@@ -255,7 +255,7 @@ rootMenuConfig =  {
     },
     {
         id = "Smedic",
-        displayName = "SMedical",
+        displayName = "密醫操作",
         icon = "#medic",
         enableMenu = function()
         local ped = PlayerPedId()
@@ -270,7 +270,7 @@ rootMenuConfig =  {
     },
     {
         id = "doctor",
-        displayName = "Doctor",
+        displayName = "醫生",
         icon = "#doctor",
         enableMenu = function()
             return (not isDead and isDoctor)
@@ -279,7 +279,7 @@ rootMenuConfig =  {
     },
     {
         id = "news",
-        displayName = "News",
+        displayName = "記者操作",
         icon = "#news",
         enableMenu = function()
             return (not isDead and isNews)
@@ -300,7 +300,7 @@ rootMenuConfig =  {
     }, ]]
     {
         id = "impound",
-        displayName = "Impound Vehicle",
+        displayName = "拖吊車輛",
         icon = "#impound-vehicle",
         functionName = "impoundVehicle",
         enableMenu = function()
@@ -312,7 +312,7 @@ rootMenuConfig =  {
         end
     }, {
         id = "oxygentank",
-        displayName = "Remove Oxygen Tank",
+        displayName = "移除氧氣面罩",
         icon = "#oxygen-mask",
         functionName = "RemoveOxyTank",
         enableMenu = function()
@@ -321,7 +321,7 @@ rootMenuConfig =  {
         end
     }, {
         id = "cocaine-status",
-        displayName = "Request Status",
+        displayName = "檢查狀態",
         icon = "#cocaine-status",
         functionName = "cocaine:currentStatusServer",
         enableMenu = function()
@@ -333,7 +333,7 @@ rootMenuConfig =  {
         end
     }, {
         id = "cocaine-crate",
-        displayName = "Remove Crate",
+        displayName = "移除毒箱",
         icon = "#cocaine-crate",
         functionName = "cocaine:methCrate",
         enableMenu = function()
@@ -394,12 +394,12 @@ newSubMenus = {
     },
     --[[
     ['general:checktargetstates'] = {
-        title = "Examine Target",
+        title = "檢查傷勢",
         icon = "#general-check-over-target",
         functionName = "requestWounds"
     }, ]]
 --[[     ['general:checkvehicle'] = {
-        title = "Examine Vehicle",
+        title = "檢查車輛",
         icon = "#general-check-vehicle",
         functionName = "towgarage:annoyedBouce"
     }, ]]
@@ -810,17 +810,17 @@ newSubMenus = {
         functionName = "police:removeWeapon"
     }, ]]
     ['police:gsr'] = {
-        title = "GSR",
+        title = "檢測槍擊殘留物",
         icon = "#police-action-gsr",
         functionName = "st:checkGSR"
     },
     ['police:openmdt'] = {
-        title = "MDT",
+        title = "警政系統",
         icon = "#judge-licenses-grant-business",
         functionName = "police:openmdt"
     },
     ['police:getid'] = {
-        title = "ID",
+        title = "檢查身分",
         icon = "#police-vehicle-plate",
         functionName = "police:getid"
     },
@@ -840,7 +840,7 @@ newSubMenus = {
         functionName = "police:frisk"
     }, ]]
     ['judge:grantDriver'] = {
-        title = "准許證照",
+        title = "給予證照",
         icon = "#judge-licenses-grant-drivers",
         functionName = "police:grantDriver"
     }, 
@@ -920,17 +920,17 @@ newSubMenus = {
         functionName = "police:denyHouse"
     },
     ['news:setCamera'] = {
-        title = "Camera",
+        title = "攝影機",
         icon = "#news-job-news-camera",
         functionName = "camera:setCamera"
     },
     ['news:setMicrophone'] = {
-        title = "Microphone",
+        title = "麥克風",
         icon = "#news-job-news-microphone",
         functionName = "camera:setMic"
     },
     ['news:setBoom'] = {
-        title = "Microphone Boom",
+        title = "Boom Mic",
         icon = "#news-job-news-boom",
         functionName = "camera:setBoom"
     },
@@ -955,114 +955,114 @@ newSubMenus = {
         functionName = "cocaine:methCrate"
     },
     ["expressions:angry"] = {
-        title="Angry",
+        title="生氣",
         icon="#expressions-angry",
         functionName = "expressions",
         functionParameters =  { "mood_angry_1" }
     },
     ["expressions:drunk"] = {
-        title="Drunk",
+        title="喝醉",
         icon="#expressions-drunk",
         functionName = "expressions",
         functionParameters =  { "mood_drunk_1" }
     },
     ["expressions:dumb"] = {
-        title="Dumb",
+        title="耍白癡",
         icon="#expressions-dumb",
         functionName = "expressions",
         functionParameters =  { "pose_injured_1" }
     },
     ["expressions:electrocuted"] = {
-        title="Electrocuted",
+        title="被電",
         icon="#expressions-electrocuted",
         functionName = "expressions",
         functionParameters =  { "electrocuted_1" }
     },
     ["expressions:grumpy"] = {
-        title="Grumpy",
+        title="臭臉",
         icon="#expressions-grumpy",
         functionName = "expressions", 
         functionParameters =  { "mood_drivefast_1" }
     },
     ["expressions:happy"] = {
-        title="Happy",
+        title="開心",
         icon="#expressions-happy",
         functionName = "expressions",
         functionParameters =  { "mood_happy_1" }
     },
     ["expressions:injured"] = {
-        title="Injured",
+        title="受傷",
         icon="#expressions-injured",
         functionName = "expressions",
         functionParameters =  { "mood_injured_1" }
     },
     ["expressions:joyful"] = {
-        title="Joyful",
+        title="高興",
         icon="#expressions-joyful",
         functionName = "expressions",
         functionParameters =  { "mood_dancing_low_1" }
     },
     ["expressions:mouthbreather"] = {
-        title="Mouthbreather",
+        title="嘴巴開開",
         icon="#expressions-mouthbreather",
         functionName = "expressions",
         functionParameters = { "smoking_hold_1" }
     },
     ["expressions:normal"]  = {
-        title="Normal",
+        title="正常",
         icon="#expressions-normal",
         functionName = "expressions:clear"
     },
     ["expressions:oneeye"]  = {
-        title="One Eye",
+        title="單眼",
         icon="#expressions-oneeye",
         functionName = "expressions",
         functionParameters = { "pose_aiming_1" }
     },
     ["expressions:shocked"]  = {
-        title="Shocked",
+        title="驚訝",
         icon="#expressions-shocked",
         functionName = "expressions",
         functionParameters = { "shocked_1" }
     },
     ["expressions:sleeping"]  = {
-        title="Sleeping",
+        title="閉眼",
         icon="#expressions-sleeping",
         functionName = "expressions",
         functionParameters = { "dead_1" }
     },
     ["expressions:smug"]  = {
-        title="Smug",
+        title="跩臉",
         icon="#expressions-smug",
         functionName = "expressions",
         functionParameters = { "mood_smug_1" }
     },
     ["expressions:speculative"]  = {
-        title="Speculative",
+        title="猜測",
         icon="#expressions-speculative",
         functionName = "expressions",
         functionParameters = { "mood_aiming_1" }
     },
     ["expressions:stressed"]  = {
-        title="Stressed",
+        title="壓力",
         icon="#expressions-stressed",
         functionName = "expressions",
         functionParameters = { "mood_stressed_1" }
     },
     ["expressions:sulking"]  = {
-        title="Sulking",
+        title="悶氣",
         icon="#expressions-sulking",
         functionName = "expressions",
         functionParameters = { "mood_sulk_1" },
     },
     ["expressions:weird"]  = {
-        title="Weird",
+        title="奇怪",
         icon="#expressions-weird",
         functionName = "expressions",
         functionParameters = { "effort_2" }
     },
     ["expressions:weird2"]  = {
-        title="Weird 2",
+        title="奇怪2",
         icon="#expressions-weird2",
         functionName = "expressions",
         functionParameters = { "effort_3" }
