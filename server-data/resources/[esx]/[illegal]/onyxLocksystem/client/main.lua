@@ -12,6 +12,12 @@ Citizen.CreateThread(function()
     end
 end)
 
+RegisterNetEvent('disc-hotwire:forceTurnOver')
+AddEventHandler('disc-hotwire:forceTurnOver', function(vehicle)
+    local plate = GetVehicleNumberPlateText(vehicle)
+    givePlayerKeys(plate)
+end)
+
 function givePlayerKeys(plate)
     local vehPlate = plate
     table.insert(vehicles, vehPlate)
